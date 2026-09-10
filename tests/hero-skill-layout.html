@@ -1,0 +1,11 @@
+<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hero skill clone layout regression</title>
+<link rel="stylesheet" href="../dist/hero-skills.css">
+<style>*{box-sizing:border-box}body{background:#141923;color:white;font:16px sans-serif}.unit-wrapper{position:relative;width:70px;height:100px;background:#485868;margin:40px}.combat-ghost{position:fixed;margin:0}.hero-skill-icons img{background:#9cbadd}#result{white-space:pre-wrap}</style>
+<body class="in-battle"><div class="board"><div class="unit-wrapper"><div class="hero-skill-icons"><button class="hero-skill-icon active ready"><img alt=""><b>2</b></button><button class="hero-skill-icon passive"><img alt=""></button></div></div></div><div id="fx-layer"></div><output id="result"></output>
+<script>
+const unit=document.querySelector('.unit-wrapper'),ghost=unit.cloneNode(true);ghost.classList.add('combat-ghost');ghost.style.left='240px';ghost.style.top='60px';document.querySelector('#fx-layer').append(ghost);
+const results=[];function check(ok,label){results.push((ok?'PASS ':'FAIL ')+label);if(!ok)throw Error(label);}
+function relative(el){const icon=el.querySelector('.hero-skill-icon').getBoundingClientRect(),r=el.getBoundingClientRect();return {x:icon.x-r.x,y:icon.y-r.y,w:icon.width,h:icon.height};}
+for(const height of [60,100,150]){unit.style.height=ghost.style.height=height+'px';const source=relative(unit),clone=relative(ghost);check(JSON.stringify(source)===JSON.stringify(clone),'source / combat clone identical at '+height+'px');if(matchMedia('(pointer:coarse)').matches)check(source.h<=Math.min(height*.24,26)+.1,'touch badge scales with card '+height+'px');}
+const before=relative(ghost);ghost.style.transform='translate(85px,-35px)';const after=relative(ghost);check(JSON.stringify(before)===JSON.stringify(after),'badge stays attached throughout attack translation');document.querySelector('#result').textContent=results.join('\n');document.title='PASS hero skill clone layout';
+</script>

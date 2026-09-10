@@ -1,0 +1,462 @@
+{
+  "source": "https://raw.githubusercontent.com/odota/dotaconstants/master/build/abilities.json",
+  "abilities": {
+    "slark_dark_pact": {
+      "dname": "Dark Pact",
+      "behavior": [
+        "No Target",
+        "Instant Cast"
+      ],
+      "dmg_type": "Magical",
+      "bkbpierce": "No",
+      "desc": "After a short delay, Slark sacrifices some of his life blood, purging most negative debuffs and dealing damage to enemy units around him and to himself. Slark only takes 30% of the damage.\n\nDISPEL TYPE: Strong Dispel",
+      "attrib": [
+        {
+          "key": "delay",
+          "header": "DELAY:",
+          "value": "1.5"
+        },
+        {
+          "key": "pulse_duration",
+          "header": "PULSE DURATION:",
+          "value": "1",
+          "generated": true
+        },
+        {
+          "key": "radius",
+          "header": "RADIUS:",
+          "value": "325"
+        },
+        {
+          "key": "total_damage",
+          "header": "DAMAGE:",
+          "value": [
+            "75",
+            "150",
+            "225",
+            "300"
+          ]
+        },
+        {
+          "key": "total_pulses",
+          "header": "TOTAL PULSES:",
+          "value": "10",
+          "generated": true
+        },
+        {
+          "key": "pulse_interval",
+          "header": "PULSE INTERVAL:",
+          "value": "0.1",
+          "generated": true
+        },
+        {
+          "key": "self_damage_pct",
+          "header": "SELF DAMAGE PCT:",
+          "value": "30",
+          "generated": true
+        },
+        {
+          "key": "abilitycastpoint",
+          "header": "CAST TIME:",
+          "value": "0.001",
+          "generated": true
+        }
+      ],
+      "lore": "Slithereen are capable of quickly regrowing appendages, in case of critical injury, to save their own lives.",
+      "mc": "65",
+      "cd": [
+        "9",
+        "8",
+        "7",
+        "6"
+      ],
+      "img": "/apps/dota2/images/dota_react/abilities/slark_dark_pact.png"
+    },
+    "slark_pounce": {
+      "dname": "Pounce",
+      "behavior": "No Target",
+      "dmg_type": "Magical",
+      "bkbpierce": "No",
+      "dispellable": "No",
+      "desc": "Slark leaps forward, leashing and applying Essence Shift stacks to the first hero he connects. That unit can only move a limited distance away from Slark's landing position.",
+      "attrib": [
+        {
+          "key": "pounce_damage",
+          "header": "POUNCE DAMAGE:",
+          "value": "0",
+          "generated": true
+        },
+        {
+          "key": "pounce_distance",
+          "header": "DISTANCE:",
+          "value": "700"
+        },
+        {
+          "key": "pounce_speed",
+          "header": "POUNCE SPEED:",
+          "value": "933.33",
+          "generated": true
+        },
+        {
+          "key": "pounce_acceleration",
+          "header": "POUNCE ACCELERATION:",
+          "value": "7000",
+          "generated": true
+        },
+        {
+          "key": "pounce_radius",
+          "header": "POUNCE RADIUS:",
+          "value": "120",
+          "generated": true
+        },
+        {
+          "key": "leash_duration",
+          "header": "LEASH DURATION:",
+          "value": [
+            "2.5",
+            "2.75",
+            "3",
+            "3.25"
+          ]
+        },
+        {
+          "key": "leash_radius",
+          "header": "LEASH RADIUS:",
+          "value": "400"
+        },
+        {
+          "key": "essence_stacks",
+          "header": "ESSENCE SHIFT STACKS:",
+          "value": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        }
+      ],
+      "lore": "Time in the Dark Reef made Slark a dangerous assassin; aggressive and fearless.",
+      "mc": "75",
+      "cd": [
+        "24",
+        "20",
+        "16",
+        "12"
+      ],
+      "img": "/apps/dota2/images/dota_react/abilities/slark_pounce.png"
+    },
+    "slark_essence_shift": {
+      "dname": "Essence Shift",
+      "is_innate": true,
+      "behavior": [
+        "Passive",
+        "Hidden"
+      ],
+      "bkbpierce": "Yes",
+      "dispellable": "No",
+      "desc": "Slark steals the life essence of enemy heroes with his attacks, draining 1 of each of their attributes and converting them to bonus 3 Agility. If Slark kills an affected enemy hero, he permanently steals 1 Agility.",
+      "attrib": [
+        {
+          "key": "agi_gain",
+          "header": "AGI GAIN:",
+          "value": "3",
+          "generated": true
+        },
+        {
+          "key": "stat_loss",
+          "header": "STAT LOSS:",
+          "value": "1",
+          "generated": true
+        },
+        {
+          "key": "duration",
+          "header": "DURATION:",
+          "value": "10"
+        },
+        {
+          "key": "steal_radius",
+          "header": "STEAL RADIUS:",
+          "value": "300"
+        },
+        {
+          "key": "max_stacks_per_hero",
+          "header": "MAX STACKS PER HERO:",
+          "value": "0",
+          "generated": true
+        }
+      ],
+      "lore": "With each strike at his adversaries, Slark's knowledge of their weaknesses improves.",
+      "img": "/apps/dota2/images/dota_react/abilities/slark_essence_shift.png"
+    },
+    "slark_shadow_dance": {
+      "dname": "Shadow Dance",
+      "behavior": [
+        "Instant Cast",
+        "No Target"
+      ],
+      "dispellable": "No",
+      "desc": "When not visible to the enemy team, Slark passively gains bonus movement speed and health regeneration. If Slark is damaged by a neutral unit, the passive movement and health regeneration bonuses are lost for 2 seconds.\n\nWhen activated, Slark hides himself in a cloud of shadows, becoming immune to detection. Attacking, casting spells, and using items will not reveal Slark, but enemies can see the cloud itself.",
+      "attrib": [
+        {
+          "key": "bonus_movement_speed",
+          "header": "BONUS MOVEMENT SPEED:",
+          "value": [
+            "20%",
+            "30%",
+            "40%"
+          ]
+        },
+        {
+          "key": "bonus_regen",
+          "header": "HEALTH GAINED PER SECOND:",
+          "value": [
+            "60",
+            "90",
+            "120"
+          ]
+        },
+        {
+          "key": "activation_delay",
+          "header": "ACTIVATION DELAY:",
+          "value": "0.5",
+          "generated": true
+        },
+        {
+          "key": "neutral_disable",
+          "header": "NEUTRAL DISABLE:",
+          "value": "2",
+          "generated": true
+        },
+        {
+          "key": "duration",
+          "header": "DURATION:",
+          "value": [
+            "4",
+            "4.25",
+            "4.5"
+          ]
+        },
+        {
+          "key": "fade_time",
+          "header": "FADE TIME:",
+          "value": "0",
+          "generated": true
+        }
+      ],
+      "lore": "The hidden Thirteenth is a slippery foe.",
+      "mc": "100",
+      "cd": [
+        "50",
+        "40",
+        "30"
+      ],
+      "img": "/apps/dota2/images/dota_react/abilities/slark_shadow_dance.png"
+    },
+    "weaver_time_lapse": {
+      "dname": "Time Lapse",
+      "behavior": "No Target",
+      "target_team": "Friendly",
+      "target_type": "Hero",
+      "desc": "Weaver warps backward to whatever position it was in five seconds earlier--regaining the HP and mana from that time. No effect on cooldown, gold or experience.\n\nDISPEL TYPE: Strong Dispel",
+      "attrib": [
+        {
+          "key": "targets_allies",
+          "header": "TARGETS ALLIES:",
+          "value": "0",
+          "generated": true
+        },
+        {
+          "key": "abilitycastrange",
+          "header": "CAST RANGE:",
+          "value": "500",
+          "generated": true
+        },
+        {
+          "key": "abilitycastpoint",
+          "header": "CAST TIME:",
+          "value": "0.3",
+          "generated": true
+        }
+      ],
+      "lore": "If Skitskurr does not deem the current reality of the world to fit his desires, he simply crawls back in time to right what was wronged.",
+      "mc": [
+        "150",
+        "75",
+        "0"
+      ],
+      "cd": [
+        "70",
+        "55",
+        "40"
+      ],
+      "img": "/apps/dota2/images/dota_react/abilities/weaver_time_lapse.png"
+    },
+    "rubick_spell_steal": {
+      "dname": "Spell Steal",
+      "behavior": "Unit Target",
+      "bkbpierce": "Yes",
+      "dispellable": "No",
+      "target_team": "Enemy",
+      "target_type": "Hero",
+      "desc": "Rubick studies the trace magical essence of one enemy hero, learning the secrets of the last spell the hero cast. Rubick can use this spell as his own for several minutes or until he dies.",
+      "attrib": [
+        {
+          "key": "projectile_speed",
+          "header": "PROJECTILE SPEED:",
+          "value": "1500",
+          "generated": true
+        },
+        {
+          "key": "stolen_debuff_amp",
+          "header": "STOLEN DEBUFF AMP:",
+          "value": "0%"
+        },
+        {
+          "key": "stolen_mana_reduction",
+          "header": "STOLEN MANA COST REDUCTION:",
+          "value": "0%"
+        },
+        {
+          "key": "stolen_spell_cooldown_percent",
+          "header": "STOLEN SPELL COOLDOWN REDUCTION:",
+          "value": [
+            "10%",
+            "20%",
+            "30%"
+          ]
+        },
+        {
+          "key": "duration",
+          "header": "DURATION:",
+          "value": [
+            "180",
+            "240",
+            "300"
+          ]
+        },
+        {
+          "key": "curiosity_steal_factor",
+          "header": "CURIOSITY STEAL FACTOR:",
+          "value": "1",
+          "generated": true
+        },
+        {
+          "key": "abilitycastrange",
+          "header": "CAST RANGE:",
+          "value": "1000",
+          "generated": true
+        },
+        {
+          "key": "abilitycastpoint",
+          "header": "CAST TIME:",
+          "value": "0.1",
+          "generated": true
+        }
+      ],
+      "lore": "...but even their lesser magics can be a source of much utility.",
+      "mc": "25",
+      "cd": [
+        "16",
+        "10",
+        "4"
+      ],
+      "img": "/apps/dota2/images/dota_react/abilities/rubick_spell_steal.png"
+    },
+    "arc_warden_tempest_double": {
+      "dname": "Tempest Double",
+      "behavior": "Point Target",
+      "desc": "Briefly refocusing its fractured elements into a single form, the Arc Warden is able to create a perfect electrical duplication of itself. The duplicate can use all of Arc Warden's current items and spells, except most consumables and items that drop on death. The duplicate has separate item and ability cooldowns.\n\nThe Tempest Double loses its sense of self and fractures over time, becoming slower and less accurate.",
+      "attrib": [
+        {
+          "key": "abilitycastrange",
+          "header": "CAST RANGE:",
+          "value": "700",
+          "generated": true
+        },
+        {
+          "key": "bounty",
+          "header": "BOUNTY:",
+          "value": [
+            "180",
+            "240",
+            "300"
+          ],
+          "generated": true
+        },
+        {
+          "key": "bounty_gold",
+          "header": "BOUNTY:",
+          "value": "70"
+        },
+        {
+          "key": "bounty_xp",
+          "header": "BOUNTY XP:",
+          "value": "70",
+          "generated": true
+        },
+        {
+          "key": "duration",
+          "header": "DURATION:",
+          "value": [
+            "18",
+            "21",
+            "24"
+          ]
+        },
+        {
+          "key": "max_blind_chance",
+          "header": "MAX MISS CHANCE:",
+          "value": "35%"
+        },
+        {
+          "key": "max_slow",
+          "header": "MAX SELF SLOW:",
+          "value": "35%"
+        },
+        {
+          "key": "has_debuff",
+          "header": "HAS DEBUFF:",
+          "value": "1",
+          "generated": true
+        },
+        {
+          "key": "rune_duration",
+          "header": "RUNE DURATION:",
+          "value": "0",
+          "generated": true
+        },
+        {
+          "key": "invis_rune",
+          "header": "INVIS RUNE:",
+          "value": "0",
+          "generated": true
+        },
+        {
+          "key": "arcane_rune",
+          "header": "ARCANE RUNE:",
+          "value": "0",
+          "generated": true
+        },
+        {
+          "key": "haste_rune",
+          "header": "HASTE RUNE:",
+          "value": "0",
+          "generated": true
+        },
+        {
+          "key": "abilitycastpoint",
+          "header": "CAST TIME:",
+          "value": "0.15",
+          "generated": true
+        }
+      ],
+      "lore": "Warped by the power of its peers, Arc Warden becomes what it despises most: disharmony.",
+      "cd": [
+        "60",
+        "55",
+        "50"
+      ],
+      "img": "/apps/dota2/images/dota_react/abilities/arc_warden_tempest_double.png"
+    }
+  }
+}

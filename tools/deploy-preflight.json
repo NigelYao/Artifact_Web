@@ -1,0 +1,4 @@
+{
+  "cmdString": "id\ncat /etc/os-release\nuname -m\ncommand -v node || true\nnode --version 2>/dev/null || true\ncommand -v nginx || true\nsudo -n true && printf 'SUDO_READY\\n'\nsudo -n ss -ltnp\ndf -h /\nfree -m\nsystemctl is-active nginx 2>/dev/null || true\nls -ld /opt/artifact-threefold /var/lib/artifact-threefold /etc/nginx/sites-enabled 2>/dev/null || true",
+  "timeout": 30000
+}

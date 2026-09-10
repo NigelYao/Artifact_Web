@@ -1,0 +1,13 @@
+const assert=require('node:assert/strict'),cards=require('../dist/cards.json');
+const {Game,clone}=require('../dist/engine.js');require('../dist/effects.js');require('../dist/decks.js');
+const {DeploymentPlan,layout}=require('../dist/board.js');
+function arena(){const g=new Game(cards);g.newGame(ARTIFACT_DECKS[0],ARTIFACT_DECKS[1],1234);g.s.phase='shop';g.startRound();const axe=g.all(0).find(u=>u.k==='axe');axe.alive=false;axe.lane=-1;axe.readyRound=2;g.s.events=[];return g;}
+let g=arena(),plan=new DeploymentPlan(g),saved=clone(g.s),ids=plan.ready.map(u=>u.uid);
+plan.assign(ids[0],0);plan.assign(ids[0],2);plan.assign(ids[1],1);
+const actual=clone(g.s);delete actual.deploymentPlan;assert.deepEqual(actual,saved);assert.equal(g.s.seed,saved.seed);assert.equal(plan.lane(ids[0]),2);console.log('PASS tentative moves do not deploy, heal, consume RNG or emit events');
+plan=new DeploymentPlan(g);assert.equal(plan.lane(ids[0]),2);assert(plan.complete);plan.assign(ids[0],null);assert(!plan.complete);assert.throws(()=>plan.confirm());plan.assign(ids[0],0);console.log('PASS saved plan restores and unassigned heroes block confirmation');
+assert.throws(()=>plan.assign(ids[0],3));assert.throws(()=>plan.assign(-1,0));assert.equal(plan.lane(ids[0]),0);console.log('PASS invalid lane and ineligible hero leave plan intact');
+assert(g.ready(1).length>0);assert(g.ready(1).every(u=>!u.alive&&u.lane===-1));plan.confirm();assert.equal(g.ready(1).length,0);assert.equal(g.s.phase,'action');assert.equal(g.s.lane,0);assert(g.get(ids[0]).alive);assert.equal(g.get(ids[0]).lane,0);assert.equal(g.get(ids[1]).lane,1);assert.equal(g.get(ids[0]).damage,0);assert(!g.s.deploymentPlan);assert.throws(()=>plan.confirm());console.log('PASS confirm deploys once and enters first lane');
+g=arena();plan=new DeploymentPlan(g);plan.ready.forEach(u=>plan.assign(u.uid,1));saved=clone(g.s);const deploy=g.deploy;let n=0;g.deploy=function(...a){if(++n===2)throw Error('test failure');return deploy.apply(this,a);};assert.throws(()=>plan.confirm());assert.deepEqual(g.s,saved);console.log('PASS interrupted confirmation rolls back every deployment');
+for(const [w,h] of [[390,844],[844,390],[1280,720],[1920,1080],[2560,1080],[1024,768]])for(const focus of [null,0,2])for(const deploying of [false,true]){const b=layout(w,h,focus,deploying);assert(b.x>=0&&b.y>=0&&b.x+b.width<=w+.01&&b.y+b.height<=h);assert(Math.abs(b.laneWidth/b.height-b.ratio)<1e-8);if(focus!==null){assert(b.portalX>b.x&&b.portalX<b.x+b.width);assert(b.portalY>b.y&&b.portalY<b.y+b.height);}}
+console.log('PASS landscape, portrait and ultrawide cameras preserve artwork aspect ratio and socket anchors');

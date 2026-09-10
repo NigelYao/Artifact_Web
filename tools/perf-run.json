@@ -1,0 +1,1 @@
+{"cmdString": "sudo systemd-run --unit=artifact-capacity-bench --collect --property=User=ubuntu --property=CPUQuota=140% --property=MemoryLimit=2G --property=LimitNOFILE=65536 --property=RuntimeMaxSec=480 /usr/bin/nice -n 10 /opt/artifact-threefold/runtime/bin/node --max-old-space-size=768 /tmp/server-capacity-bench.cjs", "timeout": 15000}

@@ -1,0 +1,4 @@
+{
+  "timeout": 15000,
+  "cmdString": "sudo systemctl is-active artifact-threefold; sudo systemctl is-enabled artifact-threefold; readlink /opt/artifact-threefold/current; ps -o user,pid,args -C node; sudo cat /var/lib/artifact-threefold/admin-token"
+}

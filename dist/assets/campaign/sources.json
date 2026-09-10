@@ -1,0 +1,66 @@
+[
+  {
+    "key": "slark",
+    "name": "Slark",
+    "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/slark.png",
+    "metadata": "https://raw.githubusercontent.com/odota/dotaconstants/master/build/heroes.json",
+    "file": "dist\\assets\\campaign\\slark.png",
+    "reference": "https://www.dota2.com/hero/slark"
+  },
+  {
+    "key": "tiny",
+    "name": "Tiny",
+    "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/tiny.png",
+    "metadata": "https://raw.githubusercontent.com/odota/dotaconstants/master/build/heroes.json",
+    "file": "dist\\assets\\campaign\\tiny.png",
+    "reference": "https://www.dota2.com/hero/tiny"
+  },
+  {
+    "key": "broodmother",
+    "name": "Broodmother",
+    "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/broodmother.png",
+    "metadata": "https://raw.githubusercontent.com/odota/dotaconstants/master/build/heroes.json",
+    "file": "dist\\assets\\campaign\\broodmother.png",
+    "reference": "https://www.dota2.com/hero/broodmother"
+  },
+  {
+    "key": "slardar",
+    "name": "Slardar",
+    "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/slardar.png",
+    "metadata": "https://raw.githubusercontent.com/odota/dotaconstants/master/build/heroes.json",
+    "file": "dist\\assets\\campaign\\slardar.png",
+    "reference": "https://www.dota2.com/hero/slardar"
+  },
+  {
+    "key": "rubick",
+    "name": "Rubick",
+    "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/rubick.png",
+    "metadata": "https://raw.githubusercontent.com/odota/dotaconstants/master/build/heroes.json",
+    "file": "dist\\assets\\campaign\\rubick.png",
+    "reference": "https://www.dota2.com/hero/rubick"
+  },
+  {
+    "key": "weaver",
+    "name": "Weaver",
+    "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/weaver.png",
+    "metadata": "https://raw.githubusercontent.com/odota/dotaconstants/master/build/heroes.json",
+    "file": "dist\\assets\\campaign\\weaver.png",
+    "reference": "https://www.dota2.com/hero/weaver"
+  },
+  {
+    "key": "phoenix",
+    "name": "Phoenix",
+    "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/phoenix.png",
+    "metadata": "https://raw.githubusercontent.com/odota/dotaconstants/master/build/heroes.json",
+    "file": "dist\\assets\\campaign\\phoenix.png",
+    "reference": "https://www.dota2.com/hero/phoenix"
+  },
+  {
+    "key": "arc_warden",
+    "name": "Arc Warden",
+    "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/arc_warden.png",
+    "metadata": "https://raw.githubusercontent.com/odota/dotaconstants/master/build/heroes.json",
+    "file": "dist\\assets\\campaign\\arc_warden.png",
+    "reference": "https://www.dota2.com/hero/arcwarden"
+  }
+]

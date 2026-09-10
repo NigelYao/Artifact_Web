@@ -1,0 +1,199 @@
+{
+  "note": "AI-selected legal games, no database or socket; wire sizes use actual Colyseus message encoder, exclude websocket/TCP overhead. Shop actions grouped, not human action-frequency weighted.",
+  "games": [
+    {
+      "game": 0,
+      "decks": [
+        "苍翠锋线",
+        "暗月密谋"
+      ],
+      "round": 11,
+      "winner": 0,
+      "actions": 197
+    },
+    {
+      "game": 1,
+      "decks": [
+        "暗月密谋",
+        "赤红军团"
+      ],
+      "round": 8,
+      "winner": 0,
+      "actions": 146
+    },
+    {
+      "game": 2,
+      "decks": [
+        "赤红军团",
+        "黄金契约"
+      ],
+      "round": 9,
+      "winner": 0,
+      "actions": 145
+    },
+    {
+      "game": 3,
+      "decks": [
+        "黄金契约",
+        "苍翠锋线"
+      ],
+      "round": 9,
+      "winner": 1,
+      "actions": 149
+    }
+  ],
+  "stages": {
+    "early_round_1_2": {
+      "samples": 110,
+      "playerJSON": {
+        "min": 8991,
+        "median": 20670,
+        "p95": 28775,
+        "max": 31089,
+        "mean": 19805
+      },
+      "playerWire": {
+        "min": 6658,
+        "median": 15232,
+        "p95": 21213,
+        "max": 23034,
+        "mean": 14596
+      },
+      "spectatorWire": {
+        "min": 6089,
+        "median": 14528,
+        "p95": 20542,
+        "max": 22297,
+        "mean": 13917
+      },
+      "recordJSON": {
+        "min": 12603,
+        "median": 24352,
+        "p95": 32382,
+        "max": 34651,
+        "mean": 23439
+      },
+      "outboundBitsPerSecondAtOneActionEvery5s": {
+        "min": 21461,
+        "median": 48874,
+        "p95": 67994,
+        "max": 73600,
+        "mean": 46707
+      }
+    },
+    "middle_round_3_5": {
+      "samples": 213,
+      "playerJSON": {
+        "min": 27244,
+        "median": 52572,
+        "p95": 66836,
+        "max": 69512,
+        "mean": 50796
+      },
+      "playerWire": {
+        "min": 20182,
+        "median": 39096,
+        "p95": 49938,
+        "max": 51934,
+        "mean": 37812
+      },
+      "spectatorWire": {
+        "min": 19484,
+        "median": 38340,
+        "p95": 49261,
+        "max": 51207,
+        "mean": 37089
+      },
+      "recordJSON": {
+        "min": 30895,
+        "median": 56045,
+        "p95": 70221,
+        "max": 72868,
+        "mean": 54275
+      },
+      "outboundBitsPerSecondAtOneActionEvery5s": {
+        "min": 64784,
+        "median": 125054,
+        "p95": 159896,
+        "max": 166085,
+        "mean": 120997
+      }
+    },
+    "late_round_6_plus": {
+      "samples": 314,
+      "playerJSON": {
+        "min": 62618,
+        "median": 77118,
+        "p95": 91035,
+        "max": 98650,
+        "mean": 77527
+      },
+      "playerWire": {
+        "min": 46742,
+        "median": 57880,
+        "p95": 68728,
+        "max": 74342,
+        "mean": 58254
+      },
+      "spectatorWire": {
+        "min": 46031,
+        "median": 57144,
+        "p95": 67993,
+        "max": 73594,
+        "mean": 57546
+      },
+      "recordJSON": {
+        "min": 65999,
+        "median": 80322,
+        "p95": 93964,
+        "max": 101410,
+        "mean": 80646
+      },
+      "outboundBitsPerSecondAtOneActionEvery5s": {
+        "min": 149734,
+        "median": 185166,
+        "p95": 219885,
+        "max": 237698,
+        "mean": 186413
+      }
+    },
+    "all": {
+      "samples": 637,
+      "playerJSON": {
+        "min": 8991,
+        "median": 65443,
+        "p95": 86236,
+        "max": 98650,
+        "mean": 58621
+      },
+      "playerWire": {
+        "min": 6658,
+        "median": 48753,
+        "p95": 65580,
+        "max": 74342,
+        "mean": 43879
+      },
+      "spectatorWire": {
+        "min": 6089,
+        "median": 47961,
+        "p95": 64918,
+        "max": 73594,
+        "mean": 43172
+      },
+      "recordJSON": {
+        "min": 12603,
+        "median": 68802,
+        "p95": 89273,
+        "max": 101410,
+        "mean": 61949
+      },
+      "outboundBitsPerSecondAtOneActionEvery5s": {
+        "min": 21461,
+        "median": 155840,
+        "p95": 210051,
+        "max": 237698,
+        "mean": 140414
+      }
+    }
+  }
+}

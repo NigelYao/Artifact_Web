@@ -1,0 +1,77 @@
+/* Phone-sized landscape only. Desktop and portrait keep their existing styles. */
+@media (orientation:landscape) and (max-width:1024px) and (max-height:540px){
+ body{-webkit-text-size-adjust:100%}
+ .card-tooltip{display:none!important}
+ button,a,input,select{touch-action:manipulation}
+ .in-battle .topbar{height:38px;padding:0 max(10px,env(safe-area-inset-right)) 0 max(10px,env(safe-area-inset-left))}
+ .in-battle .topbar .wordmark{font-size:15px;letter-spacing:2px}
+ .in-battle .navlink{font-size:12px;min-height:36px;padding:0 9px}
+ .in-battle .header-tools .icon-button{min-width:34px;height:36px}
+ .in-battle .board-navigation{top:40px;left:max(8px,env(safe-area-inset-left));padding:3px;gap:0}
+ .in-battle .view-button{font-size:12px;min-width:49px;padding:5px;min-height:62px}
+ .in-battle .view-button>span{font-size:12px}.in-battle .view-button small{font-size:10px}
+ .in-battle .mini-towers b{font-size:12px}
+ .in-battle .camera-label{font-size:12px;letter-spacing:2px}
+ .in-battle .camera-gesture-hint{display:none}
+ .in-battle .opponent-block .player-meta strong,.in-battle .friendly-block .player-meta strong{font-size:12px}
+ .in-battle .player-meta small{font-size:10px}
+ .in-battle .board .lane-heading h2,.in-battle .board .lane-state{font-size:11px}
+ .in-battle .board .lane-number{display:none}
+ .in-battle .planning-deployment .board-navigation{top:36px}
+ .in-battle .planning-deployment .view-button{min-height:38px;padding:4px 5px}
+ .in-battle .planning-deployment .view-button .mini-towers,.in-battle .planning-deployment .view-button small{display:none}
+ .in-battle .board .slot{min-width:44px}
+ .in-battle .board .unit-wrapper{width:calc(var(--scene-unit-h)*.68);margin-inline:auto}
+ .in-battle .board .lane-units{--scene-slot:calc(var(--scene-unit-h)*.68)}
+ .in-battle .board.focused-board .lane-scroll{inset:20% 7% 9%;padding-bottom:5px!important}
+ .in-battle .board .card-stats>span,.in-battle .board:not(.focused-board) .card-stats>span{font-size:12px;min-width:15px;min-height:18px}
+ .in-battle .board .predicted{font-size:11px;min-width:16px}
+ .in-battle .lane-focused .turn-status>span:last-child{font-size:13px;background:#15211dcc;padding:3px 6px;border-radius:3px}
+ .in-battle .lane-focused .pass-button{min-width:44px;min-height:44px;font-size:13px}
+ .in-battle .camera-prev,.in-battle .camera-next{width:40px;min-height:48px}
+ .in-battle .hand-zone{height:88px;left:22%;right:22%}
+ .in-battle .hand-wrap{width:88px;margin-left:-6px}
+ .in-battle .hand-wrap .compact{height:125px}
+ .in-battle .hand-wrap .card-copy{height:24px;padding:4px 3px 3px 20px}
+ .in-battle .hand-wrap .compact .card-copy strong{font-size:12px;font-weight:500}
+ .in-battle .hand-wrap .cost{font-size:14px;top:4px}
+ .in-battle .hand-wrap .card-info{width:30px;height:30px;font-size:15px;top:27px}
+ .in-battle .hand-page{width:36px;min-height:44px;bottom:16px}
+ .in-battle .hand-prev{left:-38px}.in-battle .hand-next{right:-38px}
+ .in-battle .hand-label{display:none}
+ .in-battle .hand-tools{width:44px;right:max(7px,env(safe-area-inset-right));bottom:105px;gap:3px}
+ .in-battle .hand-tools .icon-button{width:36px;height:36px}
+ .in-battle .hand-tools .text-button{font-size:12px;min-height:32px;width:44px;padding:0;white-space:nowrap}
+ .in-battle .selection-banner{top:41px;font-size:13px;padding:6px 10px;max-width:55%;white-space:normal}
+ .in-battle .selection-banner .text-button{min-height:32px;font-size:12px}
+ .in-battle .last-cast{left:8px;bottom:88px;max-width:155px;padding:6px 8px}
+ .in-battle .last-cast strong{font-size:13px}.in-battle .last-cast small{font-size:10px}.in-battle .last-cast span{display:none}
+ .skill-reveal{top:43px;left:8px;width:260px;padding:8px;max-height:calc(100dvh - 145px);overflow:auto}
+ .skill-reveal strong{font-size:16px}.skill-reveal small,.skill-reveal p,.skill-results span{font-size:12px;line-height:1.5}
+ .skill-results{max-height:90px;overflow:auto}
+ .in-battle .phase-overlay{align-items:flex-start;padding:8px max(12px,env(safe-area-inset-left));overflow:auto}
+ .in-battle .shop-panel,.in-battle .end-panel{margin:auto;width:min(700px,100%);padding:16px 22px}
+ .in-battle .shop-heading{margin-bottom:12px}.in-battle .shop-heading h2{font-size:24px}
+ .in-battle .shop-heading p,.in-battle .shop-footer>span,.in-battle .shop-stall p{font-size:12px}
+ .in-battle .shop-stall>.primary,.in-battle .shop-stall>.secondary{font-size:13px;min-height:40px}
+ .in-battle .shop-stall>.text-button{font-size:11px;min-height:36px}
+ .deployment-tray{padding:7px 10px;bottom:max(5px,env(safe-area-inset-bottom))}
+ .deployment-heading h2{font-size:17px}.deployment-progress{font-size:12px}
+ .deployment-heading .primary,.deployment-heading .text-button{font-size:12px;min-height:36px}
+ .deployment-hero strong{font-size:13px}.deployment-hero small{font-size:11px}
+ .deployment-controls button{font-size:12px;min-height:34px;padding:5px 9px}
+ .deploy-lane-button{font-size:11px;min-height:26px}
+ dialog,dialog.wide{width:min(720px,calc(100% - 24px));max-height:calc(100dvh - 16px);padding:22px;box-sizing:border-box}
+ dialog .modal-close .icon-button{width:36px;height:36px}
+ .card-detail{grid-template-columns:145px minmax(0,1fr);gap:20px;padding:6px 0}
+ .card-detail>.game-card{width:145px;height:232px}
+ .card-detail .detail-rules{font-size:15px;line-height:1.6}.card-detail .rules-english{font-size:12px}
+ .card-detail h2{font-size:24px}.card-detail .art-credit{font-size:10px}
+ .inspector{top:40px;bottom:8px;right:8px;width:300px;overflow:auto}
+ .inspector p{font-size:14px;line-height:1.6}.inspector button{min-height:38px}
+ .collection-screen:not(.with-builder){padding:22px max(20px,env(safe-area-inset-left))}
+ .catalog-grid{grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:22px 16px}
+ .catalog-card-button .card-copy strong{font-size:15px}.catalog-card-button .card-rules{font-size:12px;line-height:1.5}
+ .collection-filters input,.collection-filters select{font-size:14px;min-height:40px}.color-filter{min-height:36px}
+ .audio-preview-button{font-size:13px;min-height:42px}.audio-gallery>p{font-size:13px}.audio-track h3{font-size:14px}
+}

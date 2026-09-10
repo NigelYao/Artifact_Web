@@ -1,0 +1,11 @@
+const {test}=require('node:test');
+const assert=require('node:assert/strict');
+const {HandGesture}=require('../dist/touch-cards.js');
+test('small finger jitter stays pending before the long-press threshold',()=>{const g=new HandGesture(100,100,0);assert.equal(g.move(105,103,200),'pending');});
+test('ordinary horizontal swipe scrolls and cannot turn into a held reading gesture',()=>{const g=new HandGesture(100,100,0);assert.equal(g.move(75,100,80),'scroll');assert.equal(g.hold(500),'scroll');assert.equal(g.move(20,100,800),'scroll');});
+test('stationary long press becomes continuous reading across cards',()=>{const g=new HandGesture(100,100,0);assert.equal(g.hold(339),'pending');assert.equal(g.hold(340),'read');assert.equal(g.move(250,100,450),'read');assert.equal(g.move(10,100,600),'read');});
+test('movement arriving after a held finger still reads rather than scrolling',()=>{const g=new HandGesture(100,100,0);assert.equal(g.move(170,100,400),'read');});
+test('vertical move cancels pending hold instead of selecting or playing',()=>{const g=new HandGesture(100,100,0);assert.equal(g.move(100,80,100),'scroll');assert.equal(g.hold(600),'scroll');});
+test('held reading becomes a drag only after deliberate upward movement',()=>{const g=new HandGesture(100,180,0);g.hold(350);assert.equal(g.move(140,150,400),'read');assert.equal(g.move(140,140,450),'drag');assert.equal(g.move(100,200,500),'drag');});
+test('scrolling quickly upward never plays even after the hold deadline',()=>{const g=new HandGesture(100,180,0);assert.equal(g.move(110,100,80),'scroll');assert.equal(g.move(140,20,700),'scroll');});
+test('long horizontal card reading can transition to upward drag of selected card',()=>{const g=new HandGesture(100,180,0);g.hold(350);assert.equal(g.move(350,178,450),'read');assert.equal(g.move(350,130,500),'drag');});

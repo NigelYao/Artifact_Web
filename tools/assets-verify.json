@@ -1,0 +1,1 @@
+{"cmdString":"sha256sum /tmp/artifact-assets-20260909.tar.gz\n/opt/artifact-threefold/runtime/bin/node --version\nsudo -n ss -ltnp","timeout":30000}

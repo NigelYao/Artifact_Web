@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+*.zip
+*.tar.gz
+node_modules/
+server/data/
+server/*.log
+*.sqlite-wal
+*.sqlite-shm
+.DS_Store
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+admin-token

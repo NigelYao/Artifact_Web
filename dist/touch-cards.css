@@ -1,0 +1,38 @@
+/* Touch reads are intentionally separate from PC hover and drag/drop. */
+.touch-card-preview{position:fixed;z-index:61;left:max(10px,env(safe-area-inset-left));top:max(34px,env(safe-area-inset-top));width:clamp(190px,25vw,300px);max-height:calc(100dvh - 150px);box-sizing:border-box;overflow:auto;padding:10px 12px;color:#ede3c9;background:#101921f5;border:1px solid #b7a16d;box-shadow:0 8px 24px #0009;border-radius:5px;font-family:inherit;touch-action:pan-y}
+.touch-card-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;color:#bda983;font-size:12px}
+.touch-card-close{border:0;background:transparent;color:#e1d6bf;min-width:36px;height:32px;font-size:24px;padding:0}
+.touch-card-name{display:block;font-size:18px;line-height:1.3;color:#f8e7b8}
+.touch-card-description{font-size:14px;line-height:1.55;margin:7px 0;white-space:pre-line}
+.touch-card-hint{display:block;font-size:12px;line-height:1.45;color:#c1c9c9}
+.touch-card-use{display:block;min-height:42px;width:100%;margin-top:9px;border:1px solid #c4a565;border-radius:3px;background:#405c50;color:#fff1cd;font-size:15px;touch-action:manipulation}
+.touch-card-use:disabled{opacity:.5}
+.touch-card-preview.is-scrubbing .touch-card-heading:before{content:'↔';color:#e8c571}
+@media(any-pointer:coarse){
+ .hand-cards [data-hand]{touch-action:none;-webkit-touch-callout:none;user-select:none;-webkit-user-select:none}
+
+ .hand-cards .touch-card-reading{outline:2px solid #f2d580;outline-offset:-2px;filter:brightness(1.14)}
+
+}
+.touch-hand-input .hand-cards [data-hand]{touch-action:none;-webkit-touch-callout:none;user-select:none}
+.touch-hand-input .hand-wrap:hover{transform:none!important}
+@media(min-height:600px) and (min-width:700px){.touch-card-preview{top:80px;left:max(16px,env(safe-area-inset-left));width:270px;padding:14px}.touch-card-name{font-size:21px}.touch-card-description{font-size:16px}}
+@media(orientation:portrait) and (max-width:699px){.touch-card-preview{top:46px;left:12px;right:12px;width:auto;max-height:35dvh}.touch-card-use{width:auto;min-width:120px}.touch-card-description{margin:5px 0}}
+.touch-card-art{float:left;width:62px;height:82px;object-fit:cover;object-position:center 25%;margin:3px 10px 6px 0;border:1px solid #9e8a65;border-radius:2px}.touch-card-name{font-size:16px}.touch-card-description{font-size:13px;line-height:1.5}.touch-card-hint{clear:both;font-size:11px}.touch-drag-ghost{position:fixed;z-index:100;pointer-events:none;width:78px;height:105px;transform:translate(-50%,-115%);border:2px solid #e3c67c;border-radius:4px;box-shadow:0 8px 25px #000b,0 0 15px #f1d88555;overflow:hidden;background:#19262d}.touch-drag-ghost img{width:100%;height:100%;object-fit:cover}.touch-drag-ghost strong{position:absolute;bottom:0;left:0;right:0;background:#101820e8;padding:4px 3px;font-size:12px;color:#fae9b6;text-align:center}.touch-drop-hover.targetable,.touch-drop-hover.lane-target{outline:3px solid #f7df98!important;outline-offset:2px}.touch-card-preview.is-scrubbing .touch-card-hint{color:#e0d3a5}@media(min-height:600px) and (min-width:700px){.touch-card-name{font-size:18px}.touch-card-description{font-size:14px}.touch-card-art{width:78px;height:104px}}
+
+/* A touch-capable laptop still gets full previews when operated with a mouse. */
+body.touch-card-input .card-tooltip{display:none!important}
+body.mouse-card-input .card-tooltip.visible{display:block!important;max-height:calc(100dvh - 24px);width:min(310px,calc(100vw - 24px));box-sizing:border-box}
+body.mouse-card-input.in-battle .hand-wrap:hover{transform:translateY(-48px) scale(1.22) rotate(0deg)!important;z-index:30;filter:brightness(1.08)}
+body.touch-card-input.in-battle .hand-wrap:hover{transform:none!important}
+.card-tooltip .tooltip-stats{margin:8px 0;color:#f0d79e;font-size:12px}
+
+.card-tooltip .tooltip-ability-heading{display:flex;align-items:center;gap:12px;padding:16px 16px 8px;margin:0}
+.card-tooltip .tooltip-ability-heading>img{width:58px;height:58px;flex:none;object-fit:cover;border:1px solid #bca36c;border-radius:4px;box-shadow:0 3px 12px #0008}
+.card-tooltip .tooltip-ability-heading+div{margin-top:0;padding:0 16px 12px}
+.card-tooltip .tooltip-ability-heading small{margin:5px 0 0}
+.card-tooltip .tooltip-empty-slot{padding:18px;margin:0}
+.card-tooltip .tooltip-equipment-ability{padding:8px 0;border-top:1px solid #9d926333}
+.card-tooltip .tooltip-equipment-ability strong{font-size:15px}
+.card-tooltip .tooltip-equipment-ability p{margin:5px 0}
+.equipment-dots>span:focus-visible{outline:2px solid #f0daa2;outline-offset:2px}

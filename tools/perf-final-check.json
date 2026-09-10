@@ -1,0 +1,1 @@
+{"cmdString":"systemctl is-active artifact-threefold.service; systemctl show artifact-capacity-bench.service --no-pager -p ActiveState -p SubState; ss -ltnp 'sport = :8799'; curl -s http://127.0.0.1/health; free -m","timeout":10000}

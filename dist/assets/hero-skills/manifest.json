@@ -1,0 +1,338 @@
+[
+  {
+    "hero": "farvhan_the_dreamer",
+    "file": "farvhan_the_dreamer.webp",
+    "source": "assets/cards/4000.webp",
+    "kind": "Artifact hero portrait fallback; official ability image unavailable",
+    "copyright": "Valve Corporation"
+  },
+  {
+    "hero": "keefe_the_bold",
+    "file": "keefe_the_bold.webp",
+    "source": "assets/cards/4003.webp",
+    "kind": "Artifact hero portrait fallback; official ability image unavailable",
+    "copyright": "Valve Corporation"
+  },
+  {
+    "hero": "debbi_the_cunning",
+    "file": "debbi_the_cunning.webp",
+    "source": "assets/cards/4005.webp",
+    "kind": "Artifact hero portrait fallback; official ability image unavailable",
+    "copyright": "Valve Corporation"
+  },
+  {
+    "hero": "jmuy_the_wise",
+    "file": "jmuy_the_wise.webp",
+    "source": "assets/cards/4008.webp",
+    "kind": "Artifact hero portrait fallback; official ability image unavailable",
+    "copyright": "Valve Corporation"
+  },
+  {
+    "hero": "venomancer",
+    "file": "venomancer.webp",
+    "source": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/venomancer_plague_ward.png",
+    "kind": "Dota 2 corresponding or semantically related ability illustration",
+    "copyright": "Valve Corporation"
+  },
+  {
+    "hero": "meepo",
+    "file": "meepo.webp",
+    "source": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/meepo_poof.png",
+    "kind": "Dota 2 corresponding or semantically related ability illustration",
+    "copyright": "Valve Corporation"
+  },
+  {
+    "hero": "luna",
+    "file": "luna.webp",
+    "source": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/luna_lucent_beam.png",
+    "kind": "Dota 2 corresponding or semantically related ability illustration",
+    "copyright": "Valve Corporation"
+  },
+  {
+    "hero": "winter_wyvern",
+    "file": "winter_wyvern.webp",
+    "source": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/winter_wyvern_arctic_burn.png",
+    "kind": "Dota 2 corresponding or semantically related ability illustration",
+    "copyright": "Valve Corporation"
+  },
+  {
+    "hero": "lycan",
+    "file": "lycan.webp",
+    "source": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/lycan_feral_impulse.png",
+    "kind": "Dota 2 corresponding or semantically related ability illustration",
+    "copyright": "Valve Corporation"
+  },
+  {
+    "hero": "abaddon",
+    "file": "abaddon.webp",
+    "source": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/abaddon_borrowed_time.png",
+    "kind": "Dota 2 corresponding or semantically related ability illustration",
+    "copyright": "Valve Corporation"
+  },
+  {
+    "hero": "chen",
+    "file": "chen.webp",
+    "source": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/chen_holy_persuasion.png",
+    "kind": "Dota 2 corresponding or semantically related ability illustration",
+    "copyright": "Valve Corporation"
+  },
+  {
+    "hero": "bloodseeker",
+    "file": "bloodseeker.webp",
+    "source": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/bloodseeker_blood_bath.png",
+    "kind": "Dota 2 corresponding or semantically related ability illustration",
+    "copyright": "Valve Corporation"
+  },
+  {
+    "hero": "axe",
+    "file": "axe.webp",
+    "source": "assets/cards/10020.webp",
+    "kind": "Artifact hero portrait fallback; official ability image unavailable",
+    "copyright": "Valve Corporation"
+  },
+  {
+    "hero": "centaur_warrunner",
+    "file": "centaur_warrunner.webp",
+    "source": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/centaur_return.png",
+    "kind": "Dota 2 corresponding or semantically related ability illustration",
+    "copyright": "Valve Corporation"
+  },
+  {
+    "hero": "timbersaw",
+    "file": "timbersaw.webp",
+    "source": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/shredder_reactive_armor.png",
+    "kind": "Dota 2 corresponding or semantically related ability illustration",
+    "copyright": "Valve Corporation"
+  },
+  {
+    "hero": "bounty_hunter",
+    "file": "bounty_hunter.webp",
+    "source": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/bounty_hunter_jinada.png",
+    "kind": "Dota 2 corresponding or semantically related ability illustration",
+    "copyright": "Valve Corporation"
+  },
+  {
+    "hero": "tidehunter",
+    "file": "tidehunter.webp",
+    "source": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/tidehunter_ravage.png",
+    "kind": "Dota 2 corresponding or semantically related ability illustration",
+    "copyright": "Valve Corporation"
+  },
+  {
+    "hero": "tinker",
+    "file": "tinker.webp",
+    "source": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/tinker_laser.png",
+    "kind": "Dota 2 corresponding or semantically related ability illustration",
+    "copyright": "Valve Corporation"
+  },
+  {
+    "hero": "rix",
+    "file": "rix.webp",
+    "source": "assets/cards/10026.webp",
+    "kind": "Artifact hero portrait fallback; official ability image unavailable",
+    "copyright": "Valve Corporation"
+  },
+  {
+    "hero": "viper",
+    "file": "viper.webp",
+    "source": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/viper_corrosive_skin.png",
+    "kind": "Dota 2 corresponding or semantically related ability illustration",
+    "copyright": "Valve Corporation"
+  },
+  {
+    "hero": "beastmaster",
+    "file": "beastmaster.webp",
+    "source": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/beastmaster_call_of_the_wild.png",
+    "kind": "Dota 2 corresponding or semantically related ability illustration",
+    "copyright": "Valve Corporation"
+  },
+  {
+    "hero": "bristleback",
+    "file": "bristleback.webp",
+    "source": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/bristleback_bristleback.png",
+    "kind": "Dota 2 corresponding or semantically related ability illustration",
+    "copyright": "Valve Corporation"
+  },
+  {
+    "hero": "kanna",
+    "file": "kanna.webp",
+    "source": "assets/cards/10031.webp",
+    "kind": "Artifact hero portrait fallback; official ability image unavailable",
+    "copyright": "Valve Corporation"
+  },
+  {
+    "hero": "drow_ranger",
+    "file": "drow_ranger.webp",
+    "source": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/drow_ranger_trueshot.png",
+    "kind": "Dota 2 corresponding or semantically related ability illustration",
+    "copyright": "Valve Corporation"
+  },
+  {
+    "hero": "earthshaker",
+    "file": "earthshaker.webp",
+    "source": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/earthshaker_fissure.png",
+    "kind": "Dota 2 corresponding or semantically related ability illustration",
+    "copyright": "Valve Corporation"
+  },
+  {
+    "hero": "enchantress",
+    "file": "enchantress.webp",
+    "source": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/enchantress_natures_attendants.png",
+    "kind": "Dota 2 corresponding or semantically related ability illustration",
+    "copyright": "Valve Corporation"
+  },
+  {
+    "hero": "lich",
+    "file": "lich.webp",
+    "source": "assets/cards/10038.webp",
+    "kind": "Artifact hero portrait fallback; official ability image unavailable",
+    "copyright": "Valve Corporation"
+  },
+  {
+    "hero": "ogre_magi",
+    "file": "ogre_magi.webp",
+    "source": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/ogre_magi_multicast.png",
+    "kind": "Dota 2 corresponding or semantically related ability illustration",
+    "copyright": "Valve Corporation"
+  },
+  {
+    "hero": "omniknight",
+    "file": "omniknight.webp",
+    "source": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/omniknight_purification.png",
+    "kind": "Dota 2 corresponding or semantically related ability illustration",
+    "copyright": "Valve Corporation"
+  },
+  {
+    "hero": "outworld_devourer",
+    "file": "outworld_devourer.webp",
+    "source": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/obsidian_destroyer_essence_aura.png",
+    "kind": "Dota 2 corresponding or semantically related ability illustration",
+    "copyright": "Valve Corporation"
+  },
+  {
+    "hero": "phantom_assassin",
+    "file": "phantom_assassin.webp",
+    "source": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/phantom_assassin_coup_de_grace.png",
+    "kind": "Dota 2 corresponding or semantically related ability illustration",
+    "copyright": "Valve Corporation"
+  },
+  {
+    "hero": "pugna",
+    "file": "pugna.webp",
+    "source": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/pugna_nether_blast.png",
+    "kind": "Dota 2 corresponding or semantically related ability illustration",
+    "copyright": "Valve Corporation"
+  },
+  {
+    "hero": "sniper",
+    "file": "sniper.webp",
+    "source": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/sniper_headshot.png",
+    "kind": "Dota 2 corresponding or semantically related ability illustration",
+    "copyright": "Valve Corporation"
+  },
+  {
+    "hero": "mazzie",
+    "file": "mazzie.webp",
+    "source": "assets/cards/10052.webp",
+    "kind": "Artifact hero portrait fallback; official ability image unavailable",
+    "copyright": "Valve Corporation"
+  },
+  {
+    "hero": "prellex",
+    "file": "prellex.webp",
+    "source": "assets/cards/10053.webp",
+    "kind": "Artifact hero portrait fallback; official ability image unavailable",
+    "copyright": "Valve Corporation"
+  },
+  {
+    "hero": "sven",
+    "file": "sven.webp",
+    "source": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/sven_great_cleave.png",
+    "kind": "Dota 2 corresponding or semantically related ability illustration",
+    "copyright": "Valve Corporation"
+  },
+  {
+    "hero": "treant_protector",
+    "file": "treant_protector.webp",
+    "source": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/treant_living_armor.png",
+    "kind": "Dota 2 corresponding or semantically related ability illustration",
+    "copyright": "Valve Corporation"
+  },
+  {
+    "hero": "sorla_khan",
+    "file": "sorla_khan.webp",
+    "source": "assets/cards/10058.webp",
+    "kind": "Artifact hero portrait fallback; official ability image unavailable",
+    "copyright": "Valve Corporation"
+  },
+  {
+    "hero": "necrophos",
+    "file": "necrophos.webp",
+    "source": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/necrolyte_sadist.png",
+    "kind": "Dota 2 corresponding or semantically related ability illustration",
+    "copyright": "Valve Corporation"
+  },
+  {
+    "hero": "lion",
+    "file": "lion.webp",
+    "source": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/lion_finger_of_death.png",
+    "kind": "Dota 2 corresponding or semantically related ability illustration",
+    "copyright": "Valve Corporation"
+  },
+  {
+    "hero": "skywrath_mage",
+    "file": "skywrath_mage.webp",
+    "source": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/skywrath_mage_concussive_shot.png",
+    "kind": "Dota 2 corresponding or semantically related ability illustration",
+    "copyright": "Valve Corporation"
+  },
+  {
+    "hero": "crystal_maiden",
+    "file": "crystal_maiden.webp",
+    "source": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/crystal_maiden_brilliance_aura.png",
+    "kind": "Dota 2 corresponding or semantically related ability illustration",
+    "copyright": "Valve Corporation"
+  },
+  {
+    "hero": "zeus",
+    "file": "zeus.webp",
+    "source": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/zuus_static_field.png",
+    "kind": "Dota 2 corresponding or semantically related ability illustration",
+    "copyright": "Valve Corporation"
+  },
+  {
+    "hero": "magnus",
+    "file": "magnus.webp",
+    "source": "assets/cards/10067.webp",
+    "kind": "Artifact hero portrait fallback; official ability image unavailable",
+    "copyright": "Valve Corporation"
+  },
+  {
+    "hero": "dark_seer",
+    "file": "dark_seer.webp",
+    "source": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/dark_seer_surge.png",
+    "kind": "Dota 2 corresponding or semantically related ability illustration",
+    "copyright": "Valve Corporation"
+  },
+  {
+    "hero": "legion_commander",
+    "file": "legion_commander.webp",
+    "source": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/legion_commander_moment_of_courage.png",
+    "kind": "Dota 2 corresponding or semantically related ability illustration",
+    "copyright": "Valve Corporation"
+  },
+  {
+    "hero": "ursa",
+    "file": "ursa.webp",
+    "source": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/ursa_fury_swipes.png",
+    "kind": "Dota 2 corresponding or semantically related ability illustration",
+    "copyright": "Valve Corporation"
+  },
+  {
+    "hero": "storm_spirit",
+    "file": "storm_spirit.webp",
+    "source": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/storm_spirit_overload.png",
+    "kind": "Dota 2 corresponding or semantically related ability illustration",
+    "copyright": "Valve Corporation"
+  }
+]

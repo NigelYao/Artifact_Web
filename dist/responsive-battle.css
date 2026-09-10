@@ -1,0 +1,85 @@
+/* Keep board artwork, cards and the pass control on shared geometry at every size. */
+.battle-nav-toggle{display:none}
+.in-battle .camera-label{top:max(38px,calc(var(--scene-y) - 25px));pointer-events:none}
+.in-battle .camera-gesture-hint{display:none}
+@media(min-width:601px) and (min-height:541px){
+ .in-battle .board-navigation{width:260px;padding:3px;top:38px}
+ .in-battle .view-button{flex-direction:row;flex-wrap:wrap;justify-content:center;align-content:center;gap:2px 5px;padding:3px 4px;min-height:38px}
+ .in-battle .view-button:first-child{flex-basis:42px}
+ .in-battle .mini-towers{flex-direction:row;gap:4px;font-size:11px}
+ .in-battle .view-button small{display:none}
+ .in-battle .match-strip{width:185px;top:38px}
+ .in-battle .opponent-block{padding:5px 8px;gap:3px}
+ .in-battle .opponent-block .roster{display:none}
+ .in-battle .round-indicator{right:195px;top:2px}
+ .in-battle .campaign-objective{top:76px;font-size:11px;padding:3px 12px;width:min(760px,72%)}
+}
+/* Tablets retain the navigation and richer controls; they have room for them. */
+@media(pointer:coarse) and (min-width:601px) and (min-height:541px){
+ .in-battle .topbar{height:42px}
+ .in-battle .topbar .navlink{font-size:13px;min-height:42px;padding:0 8px}
+ .in-battle .topbar nav{gap:8px}
+ .in-battle .header-tools .icon-button{width:40px;height:40px}
+ .in-battle .board-navigation{top:46px;width:300px}
+ .in-battle .view-button{font-size:13px;min-height:44px}
+ .in-battle .mini-towers{font-size:12px}
+ .in-battle .match-strip{top:46px}
+ .in-battle .camera-label{top:max(48px,calc(var(--scene-y) - 24px));font-size:13px}
+ .in-battle .board .card-stats>span{font-size:clamp(13px,2.2vw,22px)}
+ .in-battle .board .lane-heading h2,.in-battle .board .lane-state{font-size:12px}
+ .in-battle .hand-tools .icon-button{width:42px;height:42px}
+}
+@media(max-width:600px), (orientation:landscape) and (max-height:540px) and (max-width:1366px){
+ .in-battle .topbar{height:auto;min-height:54px;padding:5px max(10px,env(safe-area-inset-right)) 5px max(10px,env(safe-area-inset-left));gap:5px 12px;flex-wrap:wrap;z-index:80;background:#0b1319f5;transform:translateY(-110%);visibility:hidden;pointer-events:none;transition:transform .2s ease,visibility .2s}
+ .in-battle .topbar nav{order:3;flex:1 0 100%;height:40px;margin:0;justify-content:center;gap:8px}
+ .in-battle .topbar .navlink{font-size:12px;min-height:40px;display:inline-flex;align-items:center;padding:0 5px;letter-spacing:0}
+ .in-battle .topbar .wordmark{font-size:13px;letter-spacing:2px}
+ .in-battle .topbar .header-tools{margin-left:auto}
+ .in-battle .topbar .header-tools .icon-button{display:inline-flex;width:40px;height:40px}
+ .in-battle.battle-nav-open .topbar{visibility:visible;transform:translateY(0);pointer-events:auto}
+ .in-battle .battle-nav-toggle:not([hidden]){display:block;position:fixed;right:max(8px,env(safe-area-inset-right));top:0;z-index:81;min-width:68px;min-height:30px;border:1px solid #9d8c5b88;border-top:0;border-radius:0 0 7px 7px;background:#111b22f2;color:#e3d4aa;font-size:12px;padding:4px 12px;touch-action:manipulation}
+ .in-battle.battle-nav-open .battle-nav-toggle{top:94px}
+ .in-battle .board-navigation,.in-battle .planning-deployment .board-navigation{top:2px;left:max(5px,env(safe-area-inset-left));width:218px;padding:1px;border-color:#887b5a66}
+ .in-battle .view-button,.in-battle .planning-deployment .view-button{min-height:25px;min-width:0;flex-direction:row;justify-content:center;align-items:center;padding:3px;font-size:11px}
+ .in-battle .view-button:first-child{flex-basis:62px}
+ .in-battle .view-button>span{font-size:11px}
+ .in-battle .view-button .mini-towers,.in-battle .view-button small{display:none}
+ .in-battle .camera-label{top:5px;font-size:11px;padding:0 6px;letter-spacing:1px;max-width:35%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+ .in-battle .match-strip{top:33px;right:max(7px,env(safe-area-inset-right));width:128px;background:#11191ac9}
+ .in-battle .opponent-block{padding:5px 7px}
+ .in-battle .opponent-block .roster,.in-battle .round-indicator,.in-battle .enemy-hand{display:none}
+ .in-battle .opponent-block .player-meta strong{font-size:11px}
+ .in-battle .opponent-block .player-meta small{font-size:9px}
+ .in-battle .enemy-gold{font-size:11px;bottom:-18px}
+ .in-battle .selection-banner{top:30px;left:50%;max-width:57%;font-size:12px;padding:3px 8px;z-index:27}
+ .in-battle .campaign-objective{top:29px;width:55%;font-size:10px;line-height:1.35;padding:2px 7px}
+ .in-battle .campaign-objective .pursuit-intent{font-size:10px}
+ .in-battle .camera-prev,.in-battle .camera-next{top:calc(var(--scene-y) + var(--scene-h)*.46);min-height:44px}
+ .in-battle .board .unit-wrapper{width:calc(var(--scene-unit-h)*.68);margin-inline:auto}
+ .in-battle .board .lane-units{--scene-slot:calc(var(--scene-unit-h)*.68)}
+ .in-battle .board.focused-board .lane-scroll{inset:20% 7% 9%;padding-bottom:5px!important}
+ .in-battle .board .card-stats>span{font-size:12px;min-width:15px;min-height:18px}
+ .in-battle .lane-focused .pass-button{min-width:44px;min-height:44px;font-size:13px}
+ .in-battle .lane-focused .turn-status>span:last-child{font-size:12px;background:#14201de6;padding:3px 6px}
+ .in-battle .skill-reveal{left:max(7px,env(safe-area-inset-left));top:36px;bottom:auto;width:clamp(165px,23vw,230px);padding:7px;max-height:calc(100dvh - 135px);overflow:auto}
+ .in-battle .skill-reveal>img{width:44px;max-height:64px;object-fit:cover}
+ .in-battle .skill-reveal strong{font-size:14px}
+ .in-battle .skill-reveal small,.in-battle .skill-reveal p,.in-battle .skill-results span{font-size:11px;line-height:1.45}
+ .in-battle .last-cast{left:max(7px,env(safe-area-inset-left));top:auto;bottom:94px;max-width:145px;padding:5px 7px}
+ .in-battle .last-cast strong{font-size:12px}.in-battle .last-cast small{font-size:10px}.in-battle .last-cast span{display:none}
+ .in-battle .bottom-strip{width:130px;right:5px}
+ .in-battle .bottom-strip .player-meta strong{font-size:11px}
+ .in-battle .bottom-strip .player-meta small{font-size:9px}
+}
+@media(max-width:600px) and (orientation:portrait){
+ .in-battle .camera-label{top:36px;max-width:85%}
+ .in-battle .match-strip{display:none}
+ .in-battle .topbar nav{gap:2px}
+ .in-battle .topbar .navlink{font-size:11px}
+ .in-battle .board-navigation{width:calc(100% - 88px)}
+ .in-battle .skill-reveal{width:180px;top:65px;max-height:180px}
+}
+@media(prefers-reduced-motion:reduce){.in-battle .topbar{transition:none}}
+
+/* Spectators keep the board and camera controls, never player inputs. */
+.spectator #pass-button,.spectator .pass-area,.spectator .hand-page,.spectator .hand-tools [data-action="surrender"],.spectator .hand-tools [data-action="save-match"],.spectator .action-tip,.spectator .hand-label{display:none!important}.spectator-hand-note{color:#c6b891;font-size:14px;line-height:1.5;margin:18px}.spectator .hand-cards{justify-content:center}.spectator .turn-status{margin-left:auto}

@@ -1,0 +1,14 @@
+/* Only campaign pages opt into variable fronts. Classic's three-front layout stays intact. */
+.campaign-native .board{grid-template-columns:repeat(var(--front-count),minmax(0,1fr))!important}
+.campaign-native .board.focused-board{width:calc(var(--front-count)*100%)!important;transform:translateX(calc(var(--focus)*-100%/var(--front-count)))!important}
+.campaign-native .topbar nav{align-items:center;gap:24px;font-size:13px}.campaign-native .topbar nav>span{color:#859995}
+.campaign-objective{position:absolute;top:68px;left:50%;transform:translateX(-50%);z-index:9;text-align:center;width:min(780px,85%);font-size:12px;pointer-events:none;text-shadow:0 2px 4px #000;background:linear-gradient(90deg,transparent,#081714d9,transparent);padding:5px 15px}
+.campaign-objective b{color:#ead4a1;margin-right:12px}.campaign-objective span{color:#c0cdbf}.pursuit-intent{display:block;font-size:11px;color:#f4b9a1;margin-top:3px}
+.campaign-native .phase-track{display:none}.campaign-native .enemy-hand{display:none}
+.campaign-native .camera-gesture-hint{font-size:0}.campaign-native .camera-gesture-hint:after{content:'双击棋盘空白切换视角 · 单击战线放大';font-size:10px}
+.campaign-native .board-navigation>span{display:none}
+.campaign-native .end-panel .primary{display:inline-flex;align-items:center;text-decoration:none}
+@media(orientation:landscape) and (max-height:540px){.campaign-native .campaign-objective{top:28px;font-size:11px}.campaign-native .pursuit-intent{font-size:10px}.campaign-native .topbar nav>span{display:none}}
+.campaign-native.campaign-no-towers .tower-body,.campaign-native.campaign-no-towers .tower-symbol{visibility:hidden}.campaign-native.campaign-no-towers .mini-towers{display:none}
+
+.campaign-native .gold-balance,.campaign-native .enemy-gold{display:none}

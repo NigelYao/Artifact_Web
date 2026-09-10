@@ -1,0 +1,4539 @@
+{
+  "version": 1,
+  "seed": -1043344138,
+  "serial": 278,
+  "round": 4,
+  "lane": 1,
+  "phase": "action",
+  "turn": 0,
+  "initiative": 0,
+  "passes": 0,
+  "winner": null,
+  "units": [
+    {
+      "uid": 1,
+      "k": "axe",
+      "owner": 0,
+      "lane": 2,
+      "pos": 2,
+      "alive": true,
+      "hero": true,
+      "copy": false,
+      "damage": 0,
+      "mods": [],
+      "items": {},
+      "cooldowns": {},
+      "arrow": 0,
+      "target": null,
+      "readyRound": 4,
+      "hitType": null
+    },
+    {
+      "uid": 3,
+      "k": "drow_ranger",
+      "owner": 0,
+      "lane": 1,
+      "pos": 3,
+      "alive": true,
+      "hero": true,
+      "copy": false,
+      "damage": 0,
+      "mods": [],
+      "items": {},
+      "cooldowns": {},
+      "arrow": 0,
+      "target": null,
+      "readyRound": 4,
+      "hitType": "Hero"
+    },
+    {
+      "uid": 5,
+      "k": "legion_commander",
+      "owner": 0,
+      "lane": -1,
+      "pos": 1,
+      "alive": false,
+      "hero": true,
+      "copy": false,
+      "damage": 12,
+      "mods": [],
+      "items": {
+        "Weapon": {
+          "k": "short_sword",
+          "charges": 0,
+          "growth": 0
+        },
+        "Accessory": {
+          "k": "travelers_cloak",
+          "charges": 0,
+          "growth": 0
+        }
+      },
+      "cooldowns": {},
+      "arrow": 0,
+      "target": null,
+      "readyRound": 6,
+      "hitType": null
+    },
+    {
+      "uid": 7,
+      "k": "treant_protector",
+      "owner": 0,
+      "lane": 2,
+      "pos": 0,
+      "alive": true,
+      "hero": true,
+      "copy": false,
+      "damage": 2,
+      "mods": [],
+      "items": {},
+      "cooldowns": {},
+      "arrow": 0,
+      "target": null,
+      "readyRound": 2,
+      "hitType": null
+    },
+    {
+      "uid": 9,
+      "k": "lycan",
+      "owner": 0,
+      "lane": 1,
+      "pos": 1,
+      "alive": true,
+      "hero": true,
+      "copy": false,
+      "damage": 2,
+      "mods": [],
+      "items": {
+        "Weapon": {
+          "k": "blade_of_the_vigil",
+          "charges": 0,
+          "growth": 0
+        }
+      },
+      "cooldowns": {},
+      "arrow": 0,
+      "target": null,
+      "readyRound": 3,
+      "hitType": null
+    },
+    {
+      "uid": 11,
+      "k": "melee_creep",
+      "owner": 0,
+      "lane": -1,
+      "pos": 0,
+      "alive": false,
+      "hero": false,
+      "copy": false,
+      "damage": 4,
+      "mods": [],
+      "items": {},
+      "cooldowns": {},
+      "arrow": 0,
+      "target": null,
+      "readyRound": 6,
+      "hitType": null
+    },
+    {
+      "uid": 13,
+      "k": "melee_creep",
+      "owner": 0,
+      "lane": -1,
+      "pos": 1,
+      "alive": false,
+      "hero": false,
+      "copy": false,
+      "damage": 4,
+      "mods": [],
+      "items": {},
+      "cooldowns": {},
+      "arrow": 0,
+      "target": null,
+      "readyRound": 3,
+      "hitType": null
+    },
+    {
+      "uid": 15,
+      "k": "melee_creep",
+      "owner": 0,
+      "lane": -1,
+      "pos": 1,
+      "alive": false,
+      "hero": false,
+      "copy": false,
+      "damage": 4,
+      "mods": [],
+      "items": {},
+      "cooldowns": {},
+      "arrow": 0,
+      "target": null,
+      "readyRound": 4,
+      "hitType": "Creep"
+    },
+    {
+      "uid": 23,
+      "k": "luna",
+      "owner": 1,
+      "lane": 1,
+      "pos": 2,
+      "alive": true,
+      "hero": true,
+      "copy": false,
+      "damage": 2,
+      "mods": [],
+      "items": {
+        "Weapon": {
+          "k": "blink_dagger",
+          "charges": 0,
+          "growth": 0
+        }
+      },
+      "cooldowns": {
+        "blink_dagger": 1
+      },
+      "arrow": 0,
+      "target": null,
+      "readyRound": 3,
+      "hitType": null
+    },
+    {
+      "uid": 25,
+      "k": "phantom_assassin",
+      "owner": 1,
+      "lane": -1,
+      "pos": 0,
+      "alive": false,
+      "hero": true,
+      "copy": false,
+      "damage": 17,
+      "mods": [],
+      "items": {},
+      "cooldowns": {},
+      "arrow": 0,
+      "target": null,
+      "readyRound": 5,
+      "hitType": "Creep"
+    },
+    {
+      "uid": 27,
+      "k": "zeus",
+      "owner": 1,
+      "lane": 1,
+      "pos": 0,
+      "alive": true,
+      "hero": true,
+      "copy": false,
+      "damage": 6,
+      "mods": [],
+      "items": {},
+      "cooldowns": {},
+      "arrow": 0,
+      "target": null,
+      "readyRound": 0,
+      "hitType": null
+    },
+    {
+      "uid": 29,
+      "k": "crystal_maiden",
+      "owner": 1,
+      "lane": 0,
+      "pos": 0,
+      "alive": true,
+      "hero": true,
+      "copy": false,
+      "damage": 0,
+      "mods": [],
+      "items": {},
+      "cooldowns": {},
+      "arrow": 0,
+      "target": null,
+      "readyRound": 4,
+      "hitType": null,
+      "arcaneUsed": {
+        "4:0": true
+      }
+    },
+    {
+      "uid": 31,
+      "k": "sniper",
+      "owner": 1,
+      "lane": -1,
+      "pos": 1,
+      "alive": false,
+      "hero": true,
+      "copy": false,
+      "damage": 10,
+      "mods": [],
+      "items": {},
+      "cooldowns": {
+        "sniper": 0
+      },
+      "arrow": 0,
+      "target": null,
+      "readyRound": 5,
+      "hitType": "Hero"
+    },
+    {
+      "uid": 33,
+      "k": "melee_creep",
+      "owner": 1,
+      "lane": -1,
+      "pos": 1,
+      "alive": false,
+      "hero": false,
+      "copy": false,
+      "damage": 9,
+      "mods": [],
+      "items": {},
+      "cooldowns": {},
+      "arrow": 0,
+      "target": null,
+      "readyRound": 3,
+      "hitType": "Hero"
+    },
+    {
+      "uid": 35,
+      "k": "melee_creep",
+      "owner": 1,
+      "lane": -1,
+      "pos": 1,
+      "alive": false,
+      "hero": false,
+      "copy": false,
+      "damage": 6,
+      "mods": [],
+      "items": {},
+      "cooldowns": {},
+      "arrow": 0,
+      "target": null,
+      "readyRound": 4,
+      "hitType": "Creep"
+    },
+    {
+      "uid": 37,
+      "k": "melee_creep",
+      "owner": 1,
+      "lane": -1,
+      "pos": 1,
+      "alive": false,
+      "hero": false,
+      "copy": false,
+      "damage": 5,
+      "mods": [],
+      "items": {},
+      "cooldowns": {},
+      "arrow": 0,
+      "target": null,
+      "readyRound": 4,
+      "hitType": "Creep"
+    },
+    {
+      "uid": 70,
+      "k": "untested_grunt",
+      "owner": 1,
+      "lane": -1,
+      "pos": 2,
+      "alive": false,
+      "hero": false,
+      "copy": false,
+      "damage": 3,
+      "mods": [],
+      "items": {},
+      "cooldowns": {},
+      "arrow": 0,
+      "target": null,
+      "readyRound": 4,
+      "hitType": "Creep"
+    },
+    {
+      "uid": 92,
+      "k": "melee_creep",
+      "owner": 0,
+      "lane": -1,
+      "pos": 1,
+      "alive": false,
+      "hero": false,
+      "copy": false,
+      "damage": 4,
+      "mods": [
+        {
+          "attack": 2,
+          "armor": 1,
+          "until": "permanent",
+          "round": 3,
+          "source": "arm_the_rebellion"
+        }
+      ],
+      "items": {},
+      "cooldowns": {},
+      "arrow": 0,
+      "target": null,
+      "readyRound": 5,
+      "hitType": null
+    },
+    {
+      "uid": 94,
+      "k": "melee_creep",
+      "owner": 0,
+      "lane": -1,
+      "pos": 0,
+      "alive": false,
+      "hero": false,
+      "copy": false,
+      "damage": 4,
+      "mods": [],
+      "items": {},
+      "cooldowns": {},
+      "arrow": 0,
+      "target": null,
+      "readyRound": 5,
+      "hitType": null
+    },
+    {
+      "uid": 99,
+      "k": "melee_creep",
+      "owner": 1,
+      "lane": 1,
+      "pos": 1,
+      "alive": true,
+      "hero": false,
+      "copy": false,
+      "damage": 3,
+      "mods": [],
+      "items": {},
+      "cooldowns": {},
+      "arrow": 0,
+      "target": null,
+      "readyRound": 0,
+      "hitType": null
+    },
+    {
+      "uid": 101,
+      "k": "melee_creep",
+      "owner": 1,
+      "lane": -1,
+      "pos": 3,
+      "alive": false,
+      "hero": false,
+      "copy": false,
+      "damage": 4,
+      "mods": [],
+      "items": {},
+      "cooldowns": {},
+      "arrow": 0,
+      "target": null,
+      "readyRound": 4,
+      "hitType": "Hero"
+    },
+    {
+      "uid": 123,
+      "k": "savage_wolf",
+      "owner": 0,
+      "lane": 1,
+      "pos": 0,
+      "alive": true,
+      "hero": false,
+      "copy": false,
+      "damage": 2,
+      "mods": [
+        {
+          "attack": 1,
+          "health": 2,
+          "until": "permanent",
+          "round": 2,
+          "source": null
+        },
+        {
+          "attack": 2,
+          "armor": 1,
+          "until": "permanent",
+          "round": 3,
+          "source": "arm_the_rebellion"
+        },
+        {
+          "attack": 1,
+          "health": 2,
+          "until": "permanent",
+          "round": 3,
+          "source": null
+        }
+      ],
+      "items": {},
+      "cooldowns": {},
+      "arrow": 0,
+      "target": null,
+      "readyRound": 0,
+      "hitType": null
+    },
+    {
+      "uid": 143,
+      "k": "savage_wolf",
+      "owner": 0,
+      "lane": -1,
+      "pos": 0,
+      "alive": false,
+      "hero": false,
+      "copy": false,
+      "damage": 5,
+      "mods": [
+        {
+          "attack": 1,
+          "health": 2,
+          "until": "permanent",
+          "round": 2,
+          "source": null
+        },
+        {
+          "attack": 2,
+          "armor": 1,
+          "until": "permanent",
+          "round": 3,
+          "source": "arm_the_rebellion"
+        }
+      ],
+      "items": {},
+      "cooldowns": {},
+      "arrow": 0,
+      "target": null,
+      "readyRound": 5,
+      "hitType": "Hero"
+    },
+    {
+      "uid": 169,
+      "k": "melee_creep",
+      "owner": 0,
+      "lane": -1,
+      "pos": 2,
+      "alive": false,
+      "hero": false,
+      "copy": false,
+      "damage": 5,
+      "mods": [],
+      "items": {},
+      "cooldowns": {},
+      "arrow": 0,
+      "target": null,
+      "readyRound": 6,
+      "hitType": null
+    },
+    {
+      "uid": 171,
+      "k": "melee_creep",
+      "owner": 0,
+      "lane": 2,
+      "pos": 1,
+      "alive": true,
+      "hero": false,
+      "copy": false,
+      "damage": 0,
+      "mods": [
+        {
+          "attack": 2,
+          "armor": 1,
+          "until": "permanent",
+          "round": 3,
+          "source": "arm_the_rebellion"
+        }
+      ],
+      "items": {},
+      "cooldowns": {},
+      "arrow": 0,
+      "target": null,
+      "readyRound": 0,
+      "hitType": null
+    },
+    {
+      "uid": 176,
+      "k": "melee_creep",
+      "owner": 1,
+      "lane": -1,
+      "pos": 3,
+      "alive": false,
+      "hero": false,
+      "copy": false,
+      "damage": 6,
+      "mods": [],
+      "items": {},
+      "cooldowns": {},
+      "arrow": 0,
+      "target": null,
+      "readyRound": 5,
+      "hitType": "Hero"
+    },
+    {
+      "uid": 178,
+      "k": "melee_creep",
+      "owner": 1,
+      "lane": -1,
+      "pos": 2,
+      "alive": false,
+      "hero": false,
+      "copy": false,
+      "damage": 10,
+      "mods": [],
+      "items": {},
+      "cooldowns": {},
+      "arrow": 0,
+      "target": null,
+      "readyRound": 5,
+      "hitType": "Creep"
+    },
+    {
+      "uid": 246,
+      "k": "melee_creep",
+      "owner": 0,
+      "lane": 1,
+      "pos": 2,
+      "alive": true,
+      "hero": false,
+      "copy": false,
+      "damage": 1,
+      "mods": [],
+      "items": {},
+      "cooldowns": {},
+      "arrow": 0,
+      "target": null,
+      "readyRound": 0
+    },
+    {
+      "uid": 248,
+      "k": "melee_creep",
+      "owner": 0,
+      "lane": -1,
+      "pos": 3,
+      "alive": false,
+      "hero": false,
+      "copy": false,
+      "damage": 4,
+      "mods": [],
+      "items": {},
+      "cooldowns": {},
+      "arrow": 0,
+      "target": null,
+      "readyRound": 6
+    },
+    {
+      "uid": 253,
+      "k": "melee_creep",
+      "owner": 1,
+      "lane": 2,
+      "pos": 1,
+      "alive": true,
+      "hero": false,
+      "copy": false,
+      "damage": 0,
+      "mods": [],
+      "items": {},
+      "cooldowns": {},
+      "arrow": 0,
+      "target": null,
+      "readyRound": 0
+    },
+    {
+      "uid": 255,
+      "k": "melee_creep",
+      "owner": 1,
+      "lane": 0,
+      "pos": 1,
+      "alive": true,
+      "hero": false,
+      "copy": false,
+      "damage": 0,
+      "mods": [],
+      "items": {},
+      "cooldowns": {},
+      "arrow": 0,
+      "target": null,
+      "readyRound": 0,
+      "hitType": null
+    }
+  ],
+  "players": [
+    {
+      "name": "苍翠锋线",
+      "gold": 2,
+      "deck": [
+        {
+          "k": "bronze_legionnaire",
+          "charges": 0
+        },
+        {
+          "k": "berserkers_call",
+          "charges": 0
+        },
+        {
+          "k": "berserkers_call",
+          "charges": 0
+        },
+        {
+          "k": "roseleaf_druid",
+          "charges": 0
+        },
+        {
+          "k": "bronze_legionnaire",
+          "charges": 0
+        },
+        {
+          "k": "roseleaf_druid",
+          "charges": 0
+        },
+        {
+          "k": "time_of_triumph",
+          "charges": 0
+        },
+        {
+          "k": "defensive_stance",
+          "charges": 0
+        },
+        {
+          "k": "stonehall_elite",
+          "charges": 0
+        },
+        {
+          "k": "gust",
+          "charges": 0
+        },
+        {
+          "k": "stonehall_elite",
+          "charges": 0
+        },
+        {
+          "k": "berserkers_call",
+          "charges": 0
+        },
+        {
+          "k": "mist_of_avernus",
+          "charges": 0
+        },
+        {
+          "k": "stonehall_elite",
+          "charges": 0
+        },
+        {
+          "k": "fight_through_the_pain",
+          "charges": 0
+        },
+        {
+          "k": "arm_the_rebellion",
+          "charges": 0
+        },
+        {
+          "k": "bronze_legionnaire",
+          "charges": 0
+        },
+        {
+          "k": "avernus_blessing",
+          "charges": 0
+        },
+        {
+          "k": "gust",
+          "charges": 0
+        },
+        {
+          "k": "avernus_blessing",
+          "charges": 0
+        },
+        {
+          "k": "time_of_triumph",
+          "charges": 0
+        },
+        {
+          "k": "stars_align",
+          "charges": 0
+        },
+        {
+          "k": "avernus_blessing",
+          "charges": 0
+        },
+        {
+          "k": "gust",
+          "charges": 0
+        },
+        {
+          "k": "thunderhide_pack",
+          "charges": 0
+        },
+        {
+          "k": "fight_through_the_pain",
+          "charges": 0
+        },
+        {
+          "k": "roseleaf_druid",
+          "charges": 0
+        },
+        {
+          "k": "stars_align",
+          "charges": 0
+        },
+        {
+          "k": "savage_wolf",
+          "charges": 0
+        }
+      ],
+      "hand": [
+        {
+          "uid": 17,
+          "k": "thunderhide_pack",
+          "charges": 0,
+          "lock": 0
+        },
+        {
+          "uid": 21,
+          "k": "stars_align",
+          "charges": 0,
+          "lock": 0
+        },
+        {
+          "uid": 90,
+          "k": "mist_of_avernus",
+          "charges": 0,
+          "lock": 0
+        },
+        {
+          "uid": 235,
+          "k": "assassins_veil",
+          "lock": 0
+        },
+        {
+          "uid": 237,
+          "k": "short_sword",
+          "lock": 0
+        },
+        {
+          "uid": 239,
+          "k": "leather_armor",
+          "lock": 0
+        },
+        {
+          "uid": 243,
+          "k": "defensive_stance",
+          "charges": 0,
+          "lock": 0
+        },
+        {
+          "uid": 244,
+          "k": "duel",
+          "charges": 0,
+          "lock": 0
+        }
+      ],
+      "discard": [
+        "duel",
+        "melee_creep",
+        "duel",
+        "melee_creep",
+        "melee_creep",
+        "arm_the_rebellion",
+        "melee_creep",
+        "arm_the_rebellion",
+        "savage_wolf",
+        "melee_creep",
+        "melee_creep",
+        "melee_creep"
+      ],
+      "itemDeck": [
+        "blink_dagger",
+        "short_sword",
+        "travelers_cloak",
+        "blink_dagger",
+        "leather_armor"
+      ],
+      "shop": {
+        "secret": "assassins_veil",
+        "deck": "blink_dagger",
+        "consumable": "potion_of_knowledge",
+        "hold": false,
+        "consumed": false,
+        "secretBought": true
+      },
+      "freeShop": false,
+      "heroes": [
+        "axe",
+        "drow_ranger",
+        "legion_commander",
+        "treant_protector",
+        "lycan"
+      ],
+      "eclipse": 0
+    },
+    {
+      "name": "暗月密谋",
+      "gold": 10,
+      "deck": [
+        {
+          "k": "coup_de_grace",
+          "charges": 0
+        },
+        {
+          "k": "dimensional_portal",
+          "charges": 0
+        },
+        {
+          "k": "dimensional_portal",
+          "charges": 0
+        },
+        {
+          "k": "slay",
+          "charges": 0
+        },
+        {
+          "k": "eclipse",
+          "charges": 4
+        },
+        {
+          "k": "foresight",
+          "charges": 0
+        },
+        {
+          "k": "foresight",
+          "charges": 0
+        },
+        {
+          "k": "lightning_strike",
+          "charges": 0
+        },
+        {
+          "k": "frostbite",
+          "charges": 0
+        },
+        {
+          "k": "assassinate",
+          "charges": 0
+        },
+        {
+          "k": "bolt_of_damocles",
+          "charges": 0
+        },
+        {
+          "k": "untested_grunt",
+          "charges": 0
+        },
+        {
+          "k": "annihilation",
+          "charges": 0
+        },
+        {
+          "k": "foresight",
+          "charges": 0
+        },
+        {
+          "k": "annihilation",
+          "charges": 0
+        },
+        {
+          "k": "grazing_shot",
+          "charges": 0
+        },
+        {
+          "k": "eclipse",
+          "charges": 4
+        },
+        {
+          "k": "thundergods_wrath",
+          "charges": 0
+        },
+        {
+          "k": "slay",
+          "charges": 0
+        },
+        {
+          "k": "dimensional_portal",
+          "charges": 0
+        },
+        {
+          "k": "lightning_strike",
+          "charges": 0
+        },
+        {
+          "k": "lightning_strike",
+          "charges": 0
+        },
+        {
+          "k": "hip_fire",
+          "charges": 0
+        },
+        {
+          "k": "thundergods_wrath",
+          "charges": 0
+        },
+        {
+          "k": "eclipse",
+          "charges": 4
+        },
+        {
+          "k": "assassinate",
+          "charges": 0
+        },
+        {
+          "k": "assassinate",
+          "charges": 0
+        },
+        {
+          "k": "thunderstorm",
+          "charges": 0
+        },
+        {
+          "k": "frostbite",
+          "charges": 0
+        }
+      ],
+      "hand": [
+        {
+          "uid": 39,
+          "k": "coup_de_grace",
+          "charges": 0,
+          "lock": 0
+        },
+        {
+          "uid": 42,
+          "k": "thundergods_wrath",
+          "charges": 0,
+          "lock": 0
+        },
+        {
+          "uid": 97,
+          "k": "coup_de_grace",
+          "charges": 0,
+          "lock": 0
+        },
+        {
+          "uid": 164,
+          "k": "leather_armor",
+          "lock": 0
+        },
+        {
+          "uid": 241,
+          "k": "leather_armor",
+          "lock": 0
+        },
+        {
+          "uid": 250,
+          "k": "untested_grunt",
+          "charges": 0,
+          "lock": 0
+        },
+        {
+          "uid": 251,
+          "k": "bolt_of_damocles",
+          "charges": 0,
+          "lock": 0
+        }
+      ],
+      "discard": [
+        "melee_creep",
+        "grazing_shot",
+        "melee_creep",
+        "hip_fire",
+        "melee_creep",
+        "untested_grunt",
+        "melee_creep",
+        "grazing_shot",
+        "frostbite",
+        "melee_creep",
+        "melee_creep",
+        "thunderstorm"
+      ],
+      "itemDeck": [
+        "travelers_cloak",
+        "blink_dagger",
+        "leather_armor",
+        "travelers_cloak",
+        "blink_dagger",
+        "travelers_cloak"
+      ],
+      "shop": {
+        "secret": "bracers_of_sacrifice",
+        "deck": "travelers_cloak",
+        "consumable": "potion_of_knowledge",
+        "hold": false,
+        "consumed": false,
+        "secretBought": false
+      },
+      "freeShop": false,
+      "heroes": [
+        "luna",
+        "phantom_assassin",
+        "zeus",
+        "crystal_maiden",
+        "sniper"
+      ],
+      "eclipse": 0
+    }
+  ],
+  "lanes": [
+    {
+      "towers": [
+        {
+          "hp": 36,
+          "max": 40,
+          "fallen": false,
+          "damageRound": 4,
+          "regen": 0
+        },
+        {
+          "hp": 21,
+          "max": 40,
+          "fallen": false,
+          "damageRound": 0,
+          "regen": 0
+        }
+      ],
+      "mana": [
+        6,
+        2
+      ],
+      "manaBase": [
+        0,
+        0
+      ],
+      "improvements": [
+        [],
+        []
+      ]
+    },
+    {
+      "towers": [
+        {
+          "hp": 30,
+          "max": 40,
+          "fallen": false,
+          "damageRound": 0,
+          "regen": 0
+        },
+        {
+          "hp": 36,
+          "max": 40,
+          "fallen": false,
+          "damageRound": 0,
+          "regen": 0
+        }
+      ],
+      "mana": [
+        6,
+        6
+      ],
+      "manaBase": [
+        0,
+        0
+      ],
+      "improvements": [
+        [],
+        []
+      ]
+    },
+    {
+      "towers": [
+        {
+          "hp": 30,
+          "max": 40,
+          "fallen": false,
+          "damageRound": 0,
+          "regen": 0
+        },
+        {
+          "hp": 36,
+          "max": 40,
+          "fallen": false,
+          "damageRound": 0,
+          "regen": 0
+        }
+      ],
+      "mana": [
+        6,
+        6
+      ],
+      "manaBase": [
+        0,
+        0
+      ],
+      "improvements": [
+        [],
+        []
+      ]
+    }
+  ],
+  "events": [
+    {
+      "id": 273,
+      "type": "pass",
+      "text": "夜魇让过",
+      "round": 4,
+      "lane": 0
+    },
+    {
+      "id": 274,
+      "type": "combat",
+      "text": "上路战斗结算",
+      "round": 4,
+      "lane": 0,
+      "attacks": [
+        {
+          "unit": 29,
+          "target": null,
+          "owner": 1
+        },
+        {
+          "unit": 255,
+          "target": null,
+          "owner": 1
+        }
+      ]
+    },
+    {
+      "id": 275,
+      "type": "tower",
+      "text": "天辉防御建筑受到 4 点战斗伤害",
+      "round": 4,
+      "lane": 0,
+      "owner": 0,
+      "amount": 4
+    },
+    {
+      "id": 276,
+      "type": "passive",
+      "text": "露娜 · 月光",
+      "round": 4,
+      "lane": 1,
+      "unit": 23,
+      "card": "luna",
+      "owner": 1,
+      "skill": "月光",
+      "target": 246
+    },
+    {
+      "id": 277,
+      "type": "damage",
+      "text": "近战小兵受到 1 点伤害",
+      "round": 4,
+      "lane": 1,
+      "unit": 246,
+      "amount": 1,
+      "source": 23
+    },
+    {
+      "id": 278,
+      "type": "lane",
+      "text": "中路行动阶段",
+      "round": 4,
+      "lane": 1
+    }
+  ],
+  "log": [
+    {
+      "id": 2,
+      "type": "summon",
+      "text": "斧王进入下路",
+      "round": 1,
+      "lane": 0,
+      "unit": 1
+    },
+    {
+      "id": 4,
+      "type": "summon",
+      "text": "卓尔游侠进入中路",
+      "round": 1,
+      "lane": 0,
+      "unit": 3
+    },
+    {
+      "id": 6,
+      "type": "summon",
+      "text": "军团指挥官进入上路",
+      "round": 1,
+      "lane": 0,
+      "unit": 5
+    },
+    {
+      "id": 8,
+      "type": "summon",
+      "text": "树精卫士进入上路",
+      "round": 1,
+      "lane": 0,
+      "unit": 7
+    },
+    {
+      "id": 10,
+      "type": "summon",
+      "text": "狼人进入上路",
+      "round": 1,
+      "lane": 0,
+      "unit": 9
+    },
+    {
+      "id": 12,
+      "type": "summon",
+      "text": "近战小兵进入上路",
+      "round": 1,
+      "lane": 0,
+      "unit": 11
+    },
+    {
+      "id": 14,
+      "type": "summon",
+      "text": "近战小兵进入中路",
+      "round": 1,
+      "lane": 0,
+      "unit": 13
+    },
+    {
+      "id": 16,
+      "type": "summon",
+      "text": "近战小兵进入下路",
+      "round": 1,
+      "lane": 0,
+      "unit": 15
+    },
+    {
+      "id": 22,
+      "type": "draw",
+      "text": "天辉抽取 5 张牌",
+      "round": 1,
+      "lane": 0
+    },
+    {
+      "id": 24,
+      "type": "summon",
+      "text": "露娜进入上路",
+      "round": 1,
+      "lane": 0,
+      "unit": 23
+    },
+    {
+      "id": 26,
+      "type": "summon",
+      "text": "幻影刺客进入下路",
+      "round": 1,
+      "lane": 0,
+      "unit": 25
+    },
+    {
+      "id": 28,
+      "type": "summon",
+      "text": "宙斯进入中路",
+      "round": 1,
+      "lane": 0,
+      "unit": 27
+    },
+    {
+      "id": 30,
+      "type": "summon",
+      "text": "冰晶圣女进入上路",
+      "round": 1,
+      "lane": 0,
+      "unit": 29
+    },
+    {
+      "id": 32,
+      "type": "summon",
+      "text": "狙击手进入上路",
+      "round": 1,
+      "lane": 0,
+      "unit": 31
+    },
+    {
+      "id": 34,
+      "type": "summon",
+      "text": "近战小兵进入上路",
+      "round": 1,
+      "lane": 0,
+      "unit": 33
+    },
+    {
+      "id": 36,
+      "type": "summon",
+      "text": "近战小兵进入中路",
+      "round": 1,
+      "lane": 0,
+      "unit": 35
+    },
+    {
+      "id": 38,
+      "type": "summon",
+      "text": "近战小兵进入下路",
+      "round": 1,
+      "lane": 0,
+      "unit": 37
+    },
+    {
+      "id": 44,
+      "type": "draw",
+      "text": "夜魇抽取 5 张牌",
+      "round": 1,
+      "lane": 0
+    },
+    {
+      "id": 45,
+      "type": "passive",
+      "text": "露娜 · 月光",
+      "round": 1,
+      "lane": 0,
+      "unit": 23,
+      "card": "luna",
+      "owner": 1,
+      "skill": "月光",
+      "target": 5
+    },
+    {
+      "id": 46,
+      "type": "damage",
+      "text": "军团指挥官受到 1 点伤害",
+      "round": 1,
+      "lane": 0,
+      "unit": 5,
+      "amount": 1,
+      "source": 23
+    },
+    {
+      "id": 47,
+      "type": "round",
+      "text": "第 1 回合 · 上路开始",
+      "round": 1,
+      "lane": 0
+    },
+    {
+      "id": 48,
+      "type": "card",
+      "text": "天辉打出 决斗 → 天辉·军团指挥官、夜魇·露娜；军团指挥官：伤害 −2；露娜：伤害 −9 / 阵亡",
+      "round": 1,
+      "lane": 0,
+      "card": "duel",
+      "owner": 0,
+      "targets": [
+        {
+          "kind": "unit",
+          "uid": 5,
+          "k": "legion_commander",
+          "name": "军团指挥官",
+          "owner": 0,
+          "lane": 0,
+          "alive": true,
+          "attack": 7,
+          "armor": 1,
+          "health": 8,
+          "regen": 0,
+          "cleave": 0,
+          "retaliate": 2,
+          "siege": 0,
+          "hp": 7,
+          "mods": "[]",
+          "items": "{}",
+          "flags": {
+            "stun": false,
+            "silence": false,
+            "disarm": false,
+            "immune": false,
+            "root": false,
+            "deathShield": false
+          }
+        },
+        {
+          "kind": "unit",
+          "uid": 23,
+          "k": "luna",
+          "name": "露娜",
+          "owner": 1,
+          "lane": 0,
+          "alive": true,
+          "attack": 3,
+          "armor": 0,
+          "health": 8,
+          "regen": 0,
+          "cleave": 0,
+          "retaliate": 0,
+          "siege": 0,
+          "hp": 8,
+          "mods": "[]",
+          "items": "{}",
+          "flags": {
+            "stun": false,
+            "silence": false,
+            "disarm": false,
+            "immune": false,
+            "root": false,
+            "deathShield": false
+          }
+        }
+      ],
+      "source": null,
+      "label": "决斗",
+      "outcomes": [
+        {
+          "uid": 5,
+          "k": "legion_commander",
+          "name": "军团指挥官",
+          "owner": 0,
+          "lane": 0,
+          "alive": true,
+          "attack": 7,
+          "armor": 1,
+          "health": 8,
+          "regen": 0,
+          "cleave": 0,
+          "retaliate": 2,
+          "siege": 0,
+          "hp": 5,
+          "mods": "[]",
+          "items": "{}",
+          "flags": {
+            "stun": false,
+            "silence": false,
+            "disarm": false,
+            "immune": false,
+            "root": false,
+            "deathShield": false
+          },
+          "changes": [
+            "伤害 −2"
+          ]
+        },
+        {
+          "uid": 23,
+          "k": "luna",
+          "name": "露娜",
+          "owner": 1,
+          "lane": 0,
+          "alive": false,
+          "attack": 3,
+          "armor": 0,
+          "health": 8,
+          "regen": 0,
+          "cleave": 0,
+          "retaliate": 0,
+          "siege": 0,
+          "hp": 0,
+          "mods": "[]",
+          "items": "{}",
+          "flags": {
+            "stun": false,
+            "silence": false,
+            "disarm": false,
+            "immune": false,
+            "root": false,
+            "deathShield": false
+          },
+          "changes": [
+            "伤害 −9",
+            "阵亡"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "type": "damage",
+      "text": "露娜受到 7 点伤害",
+      "round": 1,
+      "lane": 0,
+      "unit": 23,
+      "amount": 7,
+      "source": 5
+    },
+    {
+      "id": 50,
+      "type": "damage",
+      "text": "军团指挥官受到 2 点伤害",
+      "round": 1,
+      "lane": 0,
+      "unit": 5,
+      "amount": 2,
+      "source": 23
+    },
+    {
+      "id": 51,
+      "type": "damage",
+      "text": "露娜受到 2 点伤害",
+      "round": 1,
+      "lane": 0,
+      "unit": 23,
+      "amount": 2,
+      "source": null
+    },
+    {
+      "id": 52,
+      "type": "death",
+      "text": "露娜阵亡",
+      "round": 1,
+      "lane": 0,
+      "unit": 23
+    },
+    {
+      "id": 53,
+      "type": "pass",
+      "text": "夜魇让过",
+      "round": 1,
+      "lane": 0
+    },
+    {
+      "id": 54,
+      "type": "pass",
+      "text": "天辉让过",
+      "round": 1,
+      "lane": 0
+    },
+    {
+      "id": 55,
+      "type": "combat",
+      "text": "上路战斗结算",
+      "round": 1,
+      "lane": 0,
+      "attacks": [
+        {
+          "unit": 5,
+          "target": 33,
+          "owner": 0
+        },
+        {
+          "unit": 11,
+          "target": null,
+          "owner": 0
+        },
+        {
+          "unit": 33,
+          "target": 5,
+          "owner": 1
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "type": "damage",
+      "text": "军团指挥官受到 1 点战斗伤害",
+      "round": 1,
+      "lane": 0,
+      "unit": 5,
+      "amount": 1
+    },
+    {
+      "id": 57,
+      "type": "damage",
+      "text": "近战小兵受到 9 点战斗伤害",
+      "round": 1,
+      "lane": 0,
+      "unit": 33,
+      "amount": 9
+    },
+    {
+      "id": 58,
+      "type": "tower",
+      "text": "夜魇防御建筑受到 3 点战斗伤害",
+      "round": 1,
+      "lane": 0,
+      "owner": 1,
+      "amount": 3
+    },
+    {
+      "id": 59,
+      "type": "death",
+      "text": "近战小兵阵亡",
+      "round": 1,
+      "lane": 0,
+      "unit": 33
+    },
+    {
+      "id": 60,
+      "type": "lane",
+      "text": "中路行动阶段",
+      "round": 1,
+      "lane": 1
+    },
+    {
+      "id": 61,
+      "type": "pass",
+      "text": "夜魇让过",
+      "round": 1,
+      "lane": 1
+    },
+    {
+      "id": 62,
+      "type": "pass",
+      "text": "天辉让过",
+      "round": 1,
+      "lane": 1
+    },
+    {
+      "id": 63,
+      "type": "combat",
+      "text": "中路战斗结算",
+      "round": 1,
+      "lane": 1,
+      "attacks": [
+        {
+          "unit": 3,
+          "target": 27,
+          "owner": 0
+        },
+        {
+          "unit": 13,
+          "target": 35,
+          "owner": 0
+        },
+        {
+          "unit": 27,
+          "target": 3,
+          "owner": 1
+        },
+        {
+          "unit": 35,
+          "target": 13,
+          "owner": 1
+        }
+      ]
+    },
+    {
+      "id": 64,
+      "type": "damage",
+      "text": "卓尔游侠受到 3 点战斗伤害",
+      "round": 1,
+      "lane": 1,
+      "unit": 3,
+      "amount": 3
+    },
+    {
+      "id": 65,
+      "type": "damage",
+      "text": "近战小兵受到 2 点战斗伤害",
+      "round": 1,
+      "lane": 1,
+      "unit": 13,
+      "amount": 2
+    },
+    {
+      "id": 66,
+      "type": "damage",
+      "text": "宙斯受到 3 点战斗伤害",
+      "round": 1,
+      "lane": 1,
+      "unit": 27,
+      "amount": 3
+    },
+    {
+      "id": 67,
+      "type": "damage",
+      "text": "近战小兵受到 3 点战斗伤害",
+      "round": 1,
+      "lane": 1,
+      "unit": 35,
+      "amount": 3
+    },
+    {
+      "id": 68,
+      "type": "lane",
+      "text": "下路行动阶段",
+      "round": 1,
+      "lane": 2
+    },
+    {
+      "id": 69,
+      "type": "card",
+      "text": "夜魇打出 未经考验的士兵 → 下路召唤位；未经考验的士兵：进入战场",
+      "round": 1,
+      "lane": 2,
+      "card": "untested_grunt",
+      "owner": 1,
+      "targets": [
+        {
+          "kind": "position",
+          "lane": 2,
+          "name": "下路召唤位"
+        }
+      ],
+      "source": null,
+      "label": "未经考验的士兵",
+      "outcomes": [
+        {
+          "uid": 70,
+          "k": "untested_grunt",
+          "name": "未经考验的士兵",
+          "owner": 1,
+          "lane": 2,
+          "alive": true,
+          "attack": 4,
+          "armor": 0,
+          "health": 2,
+          "regen": 0,
+          "cleave": 0,
+          "retaliate": 0,
+          "siege": 0,
+          "hp": 2,
+          "mods": "[]",
+          "items": "{}",
+          "flags": {
+            "stun": false,
+            "silence": false,
+            "disarm": false,
+            "immune": false,
+            "root": false,
+            "deathShield": false
+          },
+          "changes": [
+            "进入战场"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 71,
+      "type": "summon",
+      "text": "未经考验的士兵进入下路",
+      "round": 1,
+      "lane": 2,
+      "unit": 70
+    },
+    {
+      "id": 72,
+      "type": "pass",
+      "text": "天辉让过",
+      "round": 1,
+      "lane": 2
+    },
+    {
+      "id": 73,
+      "type": "card",
+      "text": "夜魇打出 擦肩之矢 → 天辉·近战小兵；近战小兵：伤害 −2 / 阵亡",
+      "round": 1,
+      "lane": 2,
+      "card": "grazing_shot",
+      "owner": 1,
+      "targets": [
+        {
+          "kind": "unit",
+          "uid": 13,
+          "k": "melee_creep",
+          "name": "近战小兵",
+          "owner": 0,
+          "lane": 1,
+          "alive": true,
+          "attack": 3,
+          "armor": 0,
+          "health": 4,
+          "regen": 0,
+          "cleave": 0,
+          "retaliate": 0,
+          "siege": 0,
+          "hp": 2,
+          "mods": "[]",
+          "items": "{}",
+          "flags": {
+            "stun": false,
+            "silence": false,
+            "disarm": false,
+            "immune": false,
+            "root": false,
+            "deathShield": false
+          }
+        }
+      ],
+      "source": null,
+      "label": "擦肩之矢",
+      "outcomes": [
+        {
+          "uid": 13,
+          "k": "melee_creep",
+          "name": "近战小兵",
+          "owner": 0,
+          "lane": 1,
+          "alive": false,
+          "attack": 2,
+          "armor": 0,
+          "health": 4,
+          "regen": 0,
+          "cleave": 0,
+          "retaliate": 0,
+          "siege": 0,
+          "hp": 0,
+          "mods": "[]",
+          "items": "{}",
+          "flags": {
+            "stun": false,
+            "silence": false,
+            "disarm": false,
+            "immune": false,
+            "root": false,
+            "deathShield": false
+          },
+          "changes": [
+            "伤害 −2",
+            "阵亡"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 74,
+      "type": "damage",
+      "text": "近战小兵受到 2 点伤害",
+      "round": 1,
+      "lane": 2,
+      "unit": 13,
+      "amount": 2,
+      "source": null
+    },
+    {
+      "id": 75,
+      "type": "death",
+      "text": "近战小兵阵亡",
+      "round": 1,
+      "lane": 2,
+      "unit": 13
+    },
+    {
+      "id": 76,
+      "type": "pass",
+      "text": "天辉让过",
+      "round": 1,
+      "lane": 2
+    },
+    {
+      "id": 77,
+      "type": "pass",
+      "text": "夜魇让过",
+      "round": 1,
+      "lane": 2
+    },
+    {
+      "id": 78,
+      "type": "combat",
+      "text": "下路战斗结算",
+      "round": 1,
+      "lane": 2,
+      "attacks": [
+        {
+          "unit": 1,
+          "target": 25,
+          "owner": 0
+        },
+        {
+          "unit": 15,
+          "target": 37,
+          "owner": 0
+        },
+        {
+          "unit": 25,
+          "target": 1,
+          "owner": 1
+        },
+        {
+          "unit": 37,
+          "target": 15,
+          "owner": 1
+        },
+        {
+          "unit": 70,
+          "target": null,
+          "owner": 1
+        }
+      ]
+    },
+    {
+      "id": 79,
+      "type": "damage",
+      "text": "斧王受到 8 点战斗伤害",
+      "round": 1,
+      "lane": 2,
+      "unit": 1,
+      "amount": 8
+    },
+    {
+      "id": 80,
+      "type": "damage",
+      "text": "近战小兵受到 2 点战斗伤害",
+      "round": 1,
+      "lane": 2,
+      "unit": 15,
+      "amount": 2
+    },
+    {
+      "id": 81,
+      "type": "damage",
+      "text": "幻影刺客受到 7 点战斗伤害",
+      "round": 1,
+      "lane": 2,
+      "unit": 25,
+      "amount": 7
+    },
+    {
+      "id": 82,
+      "type": "damage",
+      "text": "近战小兵受到 3 点战斗伤害",
+      "round": 1,
+      "lane": 2,
+      "unit": 37,
+      "amount": 3
+    },
+    {
+      "id": 83,
+      "type": "tower",
+      "text": "天辉防御建筑受到 4 点战斗伤害",
+      "round": 1,
+      "lane": 2,
+      "owner": 0,
+      "amount": 4
+    },
+    {
+      "id": 84,
+      "type": "shop",
+      "text": "商店开张 · 使用战斗获得的金币购买物品",
+      "round": 1,
+      "lane": 2
+    },
+    {
+      "id": 86,
+      "type": "buy",
+      "text": "天辉购买了 旅者斗篷",
+      "round": 1,
+      "lane": 2,
+      "card": "travelers_cloak"
+    },
+    {
+      "id": 88,
+      "type": "buy",
+      "text": "天辉购买了 短剑",
+      "round": 1,
+      "lane": 2,
+      "card": "short_sword"
+    },
+    {
+      "id": 91,
+      "type": "draw",
+      "text": "天辉抽取 2 张牌",
+      "round": 2,
+      "lane": 0
+    },
+    {
+      "id": 93,
+      "type": "summon",
+      "text": "近战小兵进入中路",
+      "round": 2,
+      "lane": 0,
+      "unit": 92
+    },
+    {
+      "id": 95,
+      "type": "summon",
+      "text": "近战小兵进入中路",
+      "round": 2,
+      "lane": 0,
+      "unit": 94
+    },
+    {
+      "id": 98,
+      "type": "draw",
+      "text": "夜魇抽取 2 张牌",
+      "round": 2,
+      "lane": 0
+    },
+    {
+      "id": 100,
+      "type": "summon",
+      "text": "近战小兵进入中路",
+      "round": 2,
+      "lane": 0,
+      "unit": 99
+    },
+    {
+      "id": 102,
+      "type": "summon",
+      "text": "近战小兵进入下路",
+      "round": 2,
+      "lane": 0,
+      "unit": 101
+    },
+    {
+      "id": 103,
+      "type": "round",
+      "text": "第 2 回合 · 部署英雄",
+      "round": 2,
+      "lane": 0
+    },
+    {
+      "id": 104,
+      "type": "summon",
+      "text": "树精卫士部署至下路",
+      "round": 2,
+      "lane": 0,
+      "unit": 7
+    },
+    {
+      "id": 105,
+      "type": "summon",
+      "text": "冰晶圣女部署至上路",
+      "round": 2,
+      "lane": 0,
+      "unit": 29
+    },
+    {
+      "id": 106,
+      "type": "lane",
+      "text": "上路行动阶段",
+      "round": 2,
+      "lane": 0
+    },
+    {
+      "id": 107,
+      "type": "card",
+      "text": "天辉打出 决斗 → 天辉·军团指挥官、夜魇·冰晶圣女；军团指挥官：伤害 −1；冰晶圣女：伤害 −9 / 阵亡",
+      "round": 2,
+      "lane": 0,
+      "card": "duel",
+      "owner": 0,
+      "targets": [
+        {
+          "kind": "unit",
+          "uid": 5,
+          "k": "legion_commander",
+          "name": "军团指挥官",
+          "owner": 0,
+          "lane": 0,
+          "alive": true,
+          "attack": 7,
+          "armor": 1,
+          "health": 8,
+          "regen": 0,
+          "cleave": 0,
+          "retaliate": 2,
+          "siege": 0,
+          "hp": 4,
+          "mods": "[]",
+          "items": "{}",
+          "flags": {
+            "stun": false,
+            "silence": false,
+            "disarm": false,
+            "immune": false,
+            "root": false,
+            "deathShield": false
+          }
+        },
+        {
+          "kind": "unit",
+          "uid": 29,
+          "k": "crystal_maiden",
+          "name": "冰晶圣女",
+          "owner": 1,
+          "lane": 0,
+          "alive": true,
+          "attack": 2,
+          "armor": 0,
+          "health": 5,
+          "regen": 0,
+          "cleave": 0,
+          "retaliate": 0,
+          "siege": 0,
+          "hp": 5,
+          "mods": "[]",
+          "items": "{}",
+          "flags": {
+            "stun": false,
+            "silence": false,
+            "disarm": false,
+            "immune": false,
+            "root": false,
+            "deathShield": false
+          }
+        }
+      ],
+      "source": null,
+      "label": "决斗",
+      "outcomes": [
+        {
+          "uid": 5,
+          "k": "legion_commander",
+          "name": "军团指挥官",
+          "owner": 0,
+          "lane": 0,
+          "alive": true,
+          "attack": 7,
+          "armor": 1,
+          "health": 8,
+          "regen": 0,
+          "cleave": 0,
+          "retaliate": 2,
+          "siege": 0,
+          "hp": 3,
+          "mods": "[]",
+          "items": "{}",
+          "flags": {
+            "stun": false,
+            "silence": false,
+            "disarm": false,
+            "immune": false,
+            "root": false,
+            "deathShield": false
+          },
+          "changes": [
+            "伤害 −1"
+          ]
+        },
+        {
+          "uid": 29,
+          "k": "crystal_maiden",
+          "name": "冰晶圣女",
+          "owner": 1,
+          "lane": 0,
+          "alive": false,
+          "attack": 2,
+          "armor": 0,
+          "health": 5,
+          "regen": 0,
+          "cleave": 0,
+          "retaliate": 0,
+          "siege": 0,
+          "hp": 0,
+          "mods": "[]",
+          "items": "{}",
+          "flags": {
+            "stun": false,
+            "silence": false,
+            "disarm": false,
+            "immune": false,
+            "root": false,
+            "deathShield": false
+          },
+          "changes": [
+            "伤害 −9",
+            "阵亡"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 108,
+      "type": "damage",
+      "text": "冰晶圣女受到 7 点伤害",
+      "round": 2,
+      "lane": 0,
+      "unit": 29,
+      "amount": 7,
+      "source": 5
+    },
+    {
+      "id": 109,
+      "type": "damage",
+      "text": "军团指挥官受到 1 点伤害",
+      "round": 2,
+      "lane": 0,
+      "unit": 5,
+      "amount": 1,
+      "source": 29
+    },
+    {
+      "id": 110,
+      "type": "damage",
+      "text": "冰晶圣女受到 2 点伤害",
+      "round": 2,
+      "lane": 0,
+      "unit": 29,
+      "amount": 2,
+      "source": null
+    },
+    {
+      "id": 111,
+      "type": "death",
+      "text": "冰晶圣女阵亡",
+      "round": 2,
+      "lane": 0,
+      "unit": 29
+    },
+    {
+      "id": 112,
+      "type": "pass",
+      "text": "夜魇让过",
+      "round": 2,
+      "lane": 0
+    },
+    {
+      "id": 113,
+      "type": "card",
+      "text": "天辉打出 短剑 → 天辉·军团指挥官；军团指挥官：攻击+2 / 装备更新",
+      "round": 2,
+      "lane": 0,
+      "card": "short_sword",
+      "owner": 0,
+      "targets": [
+        {
+          "kind": "unit",
+          "uid": 5,
+          "k": "legion_commander",
+          "name": "军团指挥官",
+          "owner": 0,
+          "lane": 0,
+          "alive": true,
+          "attack": 7,
+          "armor": 1,
+          "health": 8,
+          "regen": 0,
+          "cleave": 0,
+          "retaliate": 2,
+          "siege": 0,
+          "hp": 3,
+          "mods": "[]",
+          "items": "{}",
+          "flags": {
+            "stun": false,
+            "silence": false,
+            "disarm": false,
+            "immune": false,
+            "root": false,
+            "deathShield": false
+          }
+        }
+      ],
+      "source": null,
+      "label": "短剑",
+      "outcomes": [
+        {
+          "uid": 5,
+          "k": "legion_commander",
+          "name": "军团指挥官",
+          "owner": 0,
+          "lane": 0,
+          "alive": true,
+          "attack": 9,
+          "armor": 1,
+          "health": 8,
+          "regen": 0,
+          "cleave": 0,
+          "retaliate": 2,
+          "siege": 0,
+          "hp": 3,
+          "mods": "[]",
+          "items": "{\"Weapon\":{\"k\":\"short_sword\",\"charges\":0,\"growth\":0}}",
+          "flags": {
+            "stun": false,
+            "silence": false,
+            "disarm": false,
+            "immune": false,
+            "root": false,
+            "deathShield": false
+          },
+          "changes": [
+            "攻击+2",
+            "装备更新"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 114,
+      "type": "pass",
+      "text": "夜魇让过",
+      "round": 2,
+      "lane": 0
+    },
+    {
+      "id": 115,
+      "type": "card",
+      "text": "天辉打出 旅者斗篷 → 天辉·军团指挥官；军团指挥官：生命上限+4 / 装备更新",
+      "round": 2,
+      "lane": 0,
+      "card": "travelers_cloak",
+      "owner": 0,
+      "targets": [
+        {
+          "kind": "unit",
+          "uid": 5,
+          "k": "legion_commander",
+          "name": "军团指挥官",
+          "owner": 0,
+          "lane": 0,
+          "alive": true,
+          "attack": 9,
+          "armor": 1,
+          "health": 8,
+          "regen": 0,
+          "cleave": 0,
+          "retaliate": 2,
+          "siege": 0,
+          "hp": 3,
+          "mods": "[]",
+          "items": "{\"Weapon\":{\"k\":\"short_sword\",\"charges\":0,\"growth\":0}}",
+          "flags": {
+            "stun": false,
+            "silence": false,
+            "disarm": false,
+            "immune": false,
+            "root": false,
+            "deathShield": false
+          }
+        }
+      ],
+      "source": null,
+      "label": "旅者斗篷",
+      "outcomes": [
+        {
+          "uid": 5,
+          "k": "legion_commander",
+          "name": "军团指挥官",
+          "owner": 0,
+          "lane": 0,
+          "alive": true,
+          "attack": 9,
+          "armor": 1,
+          "health": 12,
+          "regen": 0,
+          "cleave": 0,
+          "retaliate": 2,
+          "siege": 0,
+          "hp": 7,
+          "mods": "[]",
+          "items": "{\"Weapon\":{\"k\":\"short_sword\",\"charges\":0,\"growth\":0},\"Accessory\":{\"k\":\"travelers_cloak\",\"charges\":0,\"growth\":0}}",
+          "flags": {
+            "stun": false,
+            "silence": false,
+            "disarm": false,
+            "immune": false,
+            "root": false,
+            "deathShield": false
+          },
+          "changes": [
+            "生命上限+4",
+            "装备更新"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 116,
+      "type": "pass",
+      "text": "夜魇让过",
+      "round": 2,
+      "lane": 0
+    },
+    {
+      "id": 117,
+      "type": "pass",
+      "text": "天辉让过",
+      "round": 2,
+      "lane": 0
+    },
+    {
+      "id": 118,
+      "type": "combat",
+      "text": "上路战斗结算",
+      "round": 2,
+      "lane": 0,
+      "attacks": [
+        {
+          "unit": 5,
+          "target": null,
+          "owner": 0
+        },
+        {
+          "unit": 11,
+          "target": null,
+          "owner": 0
+        }
+      ]
+    },
+    {
+      "id": 119,
+      "type": "tower",
+      "text": "夜魇防御建筑受到 12 点战斗伤害",
+      "round": 2,
+      "lane": 0,
+      "owner": 1,
+      "amount": 12
+    },
+    {
+      "id": 120,
+      "type": "lane",
+      "text": "中路行动阶段",
+      "round": 2,
+      "lane": 1
+    },
+    {
+      "id": 121,
+      "type": "pass",
+      "text": "夜魇让过",
+      "round": 2,
+      "lane": 1
+    },
+    {
+      "id": 122,
+      "type": "card",
+      "text": "天辉打出 野蛮灵狼 → 中路召唤位；野蛮灵狼：进入战场",
+      "round": 2,
+      "lane": 1,
+      "card": "savage_wolf",
+      "owner": 0,
+      "targets": [
+        {
+          "kind": "position",
+          "lane": 1,
+          "name": "中路召唤位"
+        }
+      ],
+      "source": null,
+      "label": "野蛮灵狼",
+      "outcomes": [
+        {
+          "uid": 123,
+          "k": "savage_wolf",
+          "name": "野蛮灵狼",
+          "owner": 0,
+          "lane": 1,
+          "alive": true,
+          "attack": 4,
+          "armor": 0,
+          "health": 3,
+          "regen": 0,
+          "cleave": 0,
+          "retaliate": 0,
+          "siege": 0,
+          "hp": 3,
+          "mods": "[]",
+          "items": "{}",
+          "flags": {
+            "stun": false,
+            "silence": false,
+            "disarm": false,
+            "immune": false,
+            "root": false,
+            "deathShield": false
+          },
+          "changes": [
+            "进入战场"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 124,
+      "type": "summon",
+      "text": "野蛮灵狼进入中路",
+      "round": 2,
+      "lane": 1,
+      "unit": 123
+    },
+    {
+      "id": 125,
+      "type": "pass",
+      "text": "夜魇让过",
+      "round": 2,
+      "lane": 1
+    },
+    {
+      "id": 126,
+      "type": "pass",
+      "text": "天辉让过",
+      "round": 2,
+      "lane": 1
+    },
+    {
+      "id": 127,
+      "type": "combat",
+      "text": "中路战斗结算",
+      "round": 2,
+      "lane": 1,
+      "attacks": [
+        {
+          "unit": 3,
+          "target": 27,
+          "owner": 0
+        },
+        {
+          "unit": 27,
+          "target": 3,
+          "owner": 1
+        },
+        {
+          "unit": 35,
+          "target": 94,
+          "owner": 1
+        },
+        {
+          "unit": 92,
+          "target": 99,
+          "owner": 0
+        },
+        {
+          "unit": 94,
+          "target": 35,
+          "owner": 0
+        },
+        {
+          "unit": 99,
+          "target": 92,
+          "owner": 1
+        },
+        {
+          "unit": 123,
+          "target": null,
+          "owner": 0
+        }
+      ]
+    },
+    {
+      "id": 128,
+      "type": "damage",
+      "text": "卓尔游侠受到 3 点战斗伤害",
+      "round": 2,
+      "lane": 1,
+      "unit": 3,
+      "amount": 3
+    },
+    {
+      "id": 129,
+      "type": "damage",
+      "text": "宙斯受到 3 点战斗伤害",
+      "round": 2,
+      "lane": 1,
+      "unit": 27,
+      "amount": 3
+    },
+    {
+      "id": 130,
+      "type": "damage",
+      "text": "近战小兵受到 3 点战斗伤害",
+      "round": 2,
+      "lane": 1,
+      "unit": 35,
+      "amount": 3
+    },
+    {
+      "id": 131,
+      "type": "damage",
+      "text": "近战小兵受到 2 点战斗伤害",
+      "round": 2,
+      "lane": 1,
+      "unit": 92,
+      "amount": 2
+    },
+    {
+      "id": 132,
+      "type": "damage",
+      "text": "近战小兵受到 2 点战斗伤害",
+      "round": 2,
+      "lane": 1,
+      "unit": 94,
+      "amount": 2
+    },
+    {
+      "id": 133,
+      "type": "damage",
+      "text": "近战小兵受到 3 点战斗伤害",
+      "round": 2,
+      "lane": 1,
+      "unit": 99,
+      "amount": 3
+    },
+    {
+      "id": 134,
+      "type": "tower",
+      "text": "夜魇防御建筑受到 4 点战斗伤害",
+      "round": 2,
+      "lane": 1,
+      "owner": 1,
+      "amount": 4
+    },
+    {
+      "id": 135,
+      "type": "death",
+      "text": "卓尔游侠阵亡",
+      "round": 2,
+      "lane": 1,
+      "unit": 3
+    },
+    {
+      "id": 136,
+      "type": "death",
+      "text": "近战小兵阵亡",
+      "round": 2,
+      "lane": 1,
+      "unit": 35
+    },
+    {
+      "id": 137,
+      "type": "lane",
+      "text": "下路行动阶段",
+      "round": 2,
+      "lane": 2
+    },
+    {
+      "id": 138,
+      "type": "card",
+      "text": "夜魇打出 腰射 → 天辉·斧王；斧王：伤害 −2 / 阵亡",
+      "round": 2,
+      "lane": 2,
+      "card": "hip_fire",
+      "owner": 1,
+      "targets": [
+        {
+          "kind": "unit",
+          "uid": 1,
+          "k": "axe",
+          "name": "斧王",
+          "owner": 0,
+          "lane": 2,
+          "alive": true,
+          "attack": 6,
+          "armor": 2,
+          "health": 10,
+          "regen": 0,
+          "cleave": 0,
+          "retaliate": 0,
+          "siege": 0,
+          "hp": 2,
+          "mods": "[]",
+          "items": "{}",
+          "flags": {
+            "stun": false,
+            "silence": false,
+            "disarm": false,
+            "immune": false,
+            "root": false,
+            "deathShield": false
+          }
+        }
+      ],
+      "source": null,
+      "label": "腰射",
+      "outcomes": [
+        {
+          "uid": 1,
+          "k": "axe",
+          "name": "斧王",
+          "owner": 0,
+          "lane": 2,
+          "alive": false,
+          "attack": 6,
+          "armor": 2,
+          "health": 10,
+          "regen": 0,
+          "cleave": 0,
+          "retaliate": 0,
+          "siege": 0,
+          "hp": 0,
+          "mods": "[]",
+          "items": "{}",
+          "flags": {
+            "stun": false,
+            "silence": false,
+            "disarm": false,
+            "immune": false,
+            "root": false,
+            "deathShield": false
+          },
+          "changes": [
+            "伤害 −2",
+            "阵亡"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 139,
+      "type": "damage",
+      "text": "斧王受到 2 点伤害",
+      "round": 2,
+      "lane": 2,
+      "unit": 1,
+      "amount": 2,
+      "source": null
+    },
+    {
+      "id": 140,
+      "type": "death",
+      "text": "斧王阵亡",
+      "round": 2,
+      "lane": 2,
+      "unit": 1
+    },
+    {
+      "id": 141,
+      "type": "pass",
+      "text": "夜魇让过",
+      "round": 2,
+      "lane": 2
+    },
+    {
+      "id": 142,
+      "type": "card",
+      "text": "天辉打出 野蛮灵狼 → 下路召唤位；野蛮灵狼：进入战场",
+      "round": 2,
+      "lane": 2,
+      "card": "savage_wolf",
+      "owner": 0,
+      "targets": [
+        {
+          "kind": "position",
+          "lane": 2,
+          "name": "下路召唤位"
+        }
+      ],
+      "source": null,
+      "label": "野蛮灵狼",
+      "outcomes": [
+        {
+          "uid": 143,
+          "k": "savage_wolf",
+          "name": "野蛮灵狼",
+          "owner": 0,
+          "lane": 2,
+          "alive": true,
+          "attack": 3,
+          "armor": 2,
+          "health": 3,
+          "regen": 0,
+          "cleave": 0,
+          "retaliate": 0,
+          "siege": 0,
+          "hp": 3,
+          "mods": "[]",
+          "items": "{}",
+          "flags": {
+            "stun": false,
+            "silence": false,
+            "disarm": false,
+            "immune": false,
+            "root": false,
+            "deathShield": false
+          },
+          "changes": [
+            "进入战场"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 144,
+      "type": "summon",
+      "text": "野蛮灵狼进入下路",
+      "round": 2,
+      "lane": 2,
+      "unit": 143
+    },
+    {
+      "id": 145,
+      "type": "pass",
+      "text": "夜魇让过",
+      "round": 2,
+      "lane": 2
+    },
+    {
+      "id": 146,
+      "type": "pass",
+      "text": "天辉让过",
+      "round": 2,
+      "lane": 2
+    },
+    {
+      "id": 147,
+      "type": "combat",
+      "text": "下路战斗结算",
+      "round": 2,
+      "lane": 2,
+      "attacks": [
+        {
+          "unit": 7,
+          "target": 101,
+          "owner": 0
+        },
+        {
+          "unit": 15,
+          "target": 37,
+          "owner": 0
+        },
+        {
+          "unit": 25,
+          "target": null,
+          "owner": 1
+        },
+        {
+          "unit": 37,
+          "target": 15,
+          "owner": 1
+        },
+        {
+          "unit": 70,
+          "target": 143,
+          "owner": 1
+        },
+        {
+          "unit": 101,
+          "target": 7,
+          "owner": 1
+        },
+        {
+          "unit": 143,
+          "target": 70,
+          "owner": 0
+        }
+      ]
+    },
+    {
+      "id": 148,
+      "type": "damage",
+      "text": "树精卫士受到 2 点战斗伤害",
+      "round": 2,
+      "lane": 2,
+      "unit": 7,
+      "amount": 2
+    },
+    {
+      "id": 149,
+      "type": "damage",
+      "text": "近战小兵受到 2 点战斗伤害",
+      "round": 2,
+      "lane": 2,
+      "unit": 15,
+      "amount": 2
+    },
+    {
+      "id": 150,
+      "type": "damage",
+      "text": "近战小兵受到 2 点战斗伤害",
+      "round": 2,
+      "lane": 2,
+      "unit": 37,
+      "amount": 2
+    },
+    {
+      "id": 151,
+      "type": "damage",
+      "text": "未经考验的士兵受到 3 点战斗伤害",
+      "round": 2,
+      "lane": 2,
+      "unit": 70,
+      "amount": 3
+    },
+    {
+      "id": 152,
+      "type": "damage",
+      "text": "近战小兵受到 4 点战斗伤害",
+      "round": 2,
+      "lane": 2,
+      "unit": 101,
+      "amount": 4
+    },
+    {
+      "id": 153,
+      "type": "damage",
+      "text": "野蛮灵狼受到 2 点战斗伤害",
+      "round": 2,
+      "lane": 2,
+      "unit": 143,
+      "amount": 2
+    },
+    {
+      "id": 154,
+      "type": "tower",
+      "text": "天辉防御建筑受到 6 点战斗伤害",
+      "round": 2,
+      "lane": 2,
+      "owner": 0,
+      "amount": 6
+    },
+    {
+      "id": 155,
+      "type": "death",
+      "text": "近战小兵阵亡",
+      "round": 2,
+      "lane": 2,
+      "unit": 15
+    },
+    {
+      "id": 156,
+      "type": "death",
+      "text": "近战小兵阵亡",
+      "round": 2,
+      "lane": 2,
+      "unit": 37
+    },
+    {
+      "id": 157,
+      "type": "death",
+      "text": "未经考验的士兵阵亡",
+      "round": 2,
+      "lane": 2,
+      "unit": 70
+    },
+    {
+      "id": 158,
+      "type": "death",
+      "text": "近战小兵阵亡",
+      "round": 2,
+      "lane": 2,
+      "unit": 101
+    },
+    {
+      "id": 159,
+      "type": "shop",
+      "text": "商店开张 · 使用战斗获得的金币购买物品",
+      "round": 2,
+      "lane": 2
+    },
+    {
+      "id": 161,
+      "type": "buy",
+      "text": "天辉购买了 守夜大剑",
+      "round": 2,
+      "lane": 2,
+      "card": "blade_of_the_vigil"
+    },
+    {
+      "id": 163,
+      "type": "buy",
+      "text": "夜魇购买了 闪烁匕首",
+      "round": 2,
+      "lane": 2,
+      "card": "blink_dagger"
+    },
+    {
+      "id": 165,
+      "type": "buy",
+      "text": "夜魇购买了 皮革护甲",
+      "round": 2,
+      "lane": 2,
+      "card": "leather_armor"
+    },
+    {
+      "id": 168,
+      "type": "draw",
+      "text": "天辉抽取 2 张牌",
+      "round": 3,
+      "lane": 0
+    },
+    {
+      "id": 170,
+      "type": "summon",
+      "text": "近战小兵进入上路",
+      "round": 3,
+      "lane": 0,
+      "unit": 169
+    },
+    {
+      "id": 172,
+      "type": "summon",
+      "text": "近战小兵进入下路",
+      "round": 3,
+      "lane": 0,
+      "unit": 171
+    },
+    {
+      "id": 175,
+      "type": "draw",
+      "text": "夜魇抽取 2 张牌",
+      "round": 3,
+      "lane": 0
+    },
+    {
+      "id": 177,
+      "type": "summon",
+      "text": "近战小兵进入中路",
+      "round": 3,
+      "lane": 0,
+      "unit": 176
+    },
+    {
+      "id": 179,
+      "type": "summon",
+      "text": "近战小兵进入中路",
+      "round": 3,
+      "lane": 0,
+      "unit": 178
+    },
+    {
+      "id": 180,
+      "type": "round",
+      "text": "第 3 回合 · 部署英雄",
+      "round": 3,
+      "lane": 0
+    },
+    {
+      "id": 181,
+      "type": "summon",
+      "text": "狼人部署至中路",
+      "round": 3,
+      "lane": 0,
+      "unit": 9
+    },
+    {
+      "id": 182,
+      "type": "summon",
+      "text": "露娜部署至上路",
+      "round": 3,
+      "lane": 0,
+      "unit": 23
+    },
+    {
+      "id": 183,
+      "type": "summon",
+      "text": "狙击手部署至上路",
+      "round": 3,
+      "lane": 0,
+      "unit": 31
+    },
+    {
+      "id": 184,
+      "type": "passive",
+      "text": "露娜 · 月光",
+      "round": 3,
+      "lane": 0,
+      "unit": 23,
+      "card": "luna",
+      "owner": 1,
+      "skill": "月光",
+      "target": 169
+    },
+    {
+      "id": 185,
+      "type": "damage",
+      "text": "近战小兵受到 1 点伤害",
+      "round": 3,
+      "lane": 0,
+      "unit": 169,
+      "amount": 1,
+      "source": 23
+    },
+    {
+      "id": 186,
+      "type": "lane",
+      "text": "上路行动阶段",
+      "round": 3,
+      "lane": 0
+    },
+    {
+      "id": 187,
+      "type": "card",
+      "text": "夜魇打出 擦肩之矢 → 天辉·近战小兵；近战小兵：伤害 −2 / 阵亡",
+      "round": 3,
+      "lane": 0,
+      "card": "grazing_shot",
+      "owner": 1,
+      "targets": [
+        {
+          "kind": "unit",
+          "uid": 94,
+          "k": "melee_creep",
+          "name": "近战小兵",
+          "owner": 0,
+          "lane": 1,
+          "alive": true,
+          "attack": 2,
+          "armor": 0,
+          "health": 4,
+          "regen": 0,
+          "cleave": 0,
+          "retaliate": 0,
+          "siege": 0,
+          "hp": 2,
+          "mods": "[]",
+          "items": "{}",
+          "flags": {
+            "stun": false,
+            "silence": false,
+            "disarm": false,
+            "immune": false,
+            "root": false,
+            "deathShield": false
+          }
+        }
+      ],
+      "source": null,
+      "label": "擦肩之矢",
+      "outcomes": [
+        {
+          "uid": 94,
+          "k": "melee_creep",
+          "name": "近战小兵",
+          "owner": 0,
+          "lane": 1,
+          "alive": false,
+          "attack": 2,
+          "armor": 0,
+          "health": 4,
+          "regen": 0,
+          "cleave": 0,
+          "retaliate": 0,
+          "siege": 0,
+          "hp": 0,
+          "mods": "[]",
+          "items": "{}",
+          "flags": {
+            "stun": false,
+            "silence": false,
+            "disarm": false,
+            "immune": false,
+            "root": false,
+            "deathShield": false
+          },
+          "changes": [
+            "伤害 −2",
+            "阵亡"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 188,
+      "type": "damage",
+      "text": "近战小兵受到 2 点伤害",
+      "round": 3,
+      "lane": 0,
+      "unit": 94,
+      "amount": 2,
+      "source": null
+    },
+    {
+      "id": 189,
+      "type": "death",
+      "text": "近战小兵阵亡",
+      "round": 3,
+      "lane": 0,
+      "unit": 94
+    },
+    {
+      "id": 190,
+      "type": "pass",
+      "text": "天辉让过",
+      "round": 3,
+      "lane": 0
+    },
+    {
+      "id": 191,
+      "type": "card",
+      "text": "夜魇打出 闪烁匕首 → 夜魇·露娜；露娜：攻击+2 / 装备更新",
+      "round": 3,
+      "lane": 0,
+      "card": "blink_dagger",
+      "owner": 1,
+      "targets": [
+        {
+          "kind": "unit",
+          "uid": 23,
+          "k": "luna",
+          "name": "露娜",
+          "owner": 1,
+          "lane": 0,
+          "alive": true,
+          "attack": 3,
+          "armor": 0,
+          "health": 8,
+          "regen": 0,
+          "cleave": 0,
+          "retaliate": 0,
+          "siege": 0,
+          "hp": 8,
+          "mods": "[]",
+          "items": "{}",
+          "flags": {
+            "stun": false,
+            "silence": false,
+            "disarm": false,
+            "immune": false,
+            "root": false,
+            "deathShield": false
+          }
+        }
+      ],
+      "source": null,
+      "label": "闪烁匕首",
+      "outcomes": [
+        {
+          "uid": 23,
+          "k": "luna",
+          "name": "露娜",
+          "owner": 1,
+          "lane": 0,
+          "alive": true,
+          "attack": 5,
+          "armor": 0,
+          "health": 8,
+          "regen": 0,
+          "cleave": 0,
+          "retaliate": 0,
+          "siege": 0,
+          "hp": 8,
+          "mods": "[]",
+          "items": "{\"Weapon\":{\"k\":\"blink_dagger\",\"charges\":0,\"growth\":0}}",
+          "flags": {
+            "stun": false,
+            "silence": false,
+            "disarm": false,
+            "immune": false,
+            "root": false,
+            "deathShield": false
+          },
+          "changes": [
+            "攻击+2",
+            "装备更新"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 192,
+      "type": "pass",
+      "text": "天辉让过",
+      "round": 3,
+      "lane": 0
+    },
+    {
+      "id": 193,
+      "type": "ability",
+      "text": "露娜 · 闪烁匕首 → 中路；露娜：转移至中路",
+      "round": 3,
+      "lane": 0,
+      "unit": 23,
+      "card": "blink_dagger",
+      "owner": 1,
+      "targets": [
+        {
+          "kind": "lane",
+          "lane": 1,
+          "name": "中路"
+        }
+      ],
+      "source": {
+        "uid": 23,
+        "k": "luna",
+        "name": "露娜",
+        "owner": 1,
+        "lane": 0,
+        "alive": true,
+        "attack": 5,
+        "armor": 0,
+        "health": 8,
+        "regen": 0,
+        "cleave": 0,
+        "retaliate": 0,
+        "siege": 0,
+        "hp": 8,
+        "mods": "[]",
+        "items": "{\"Weapon\":{\"k\":\"blink_dagger\",\"charges\":0,\"growth\":0}}",
+        "flags": {
+          "stun": false,
+          "silence": false,
+          "disarm": false,
+          "immune": false,
+          "root": false,
+          "deathShield": false
+        }
+      },
+      "label": "闪烁匕首",
+      "outcomes": [
+        {
+          "uid": 23,
+          "k": "luna",
+          "name": "露娜",
+          "owner": 1,
+          "lane": 0,
+          "alive": true,
+          "attack": 5,
+          "armor": 0,
+          "health": 8,
+          "regen": 0,
+          "cleave": 0,
+          "retaliate": 0,
+          "siege": 0,
+          "hp": 8,
+          "mods": "[]",
+          "items": "{\"Weapon\":{\"k\":\"blink_dagger\",\"charges\":0,\"growth\":0}}",
+          "flags": {
+            "stun": false,
+            "silence": false,
+            "disarm": false,
+            "immune": false,
+            "root": false,
+            "deathShield": false
+          },
+          "changes": [
+            "转移至中路"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 194,
+      "type": "move",
+      "text": "露娜转移至中路",
+      "round": 3,
+      "lane": 0,
+      "unit": 23,
+      "from": 0,
+      "to": 1
+    },
+    {
+      "id": 195,
+      "type": "pass",
+      "text": "天辉让过",
+      "round": 3,
+      "lane": 0
+    },
+    {
+      "id": 196,
+      "type": "pass",
+      "text": "夜魇让过",
+      "round": 3,
+      "lane": 0
+    },
+    {
+      "id": 197,
+      "type": "combat",
+      "text": "上路战斗结算",
+      "round": 3,
+      "lane": 0,
+      "attacks": [
+        {
+          "unit": 5,
+          "target": 31,
+          "owner": 0
+        },
+        {
+          "unit": 11,
+          "target": null,
+          "owner": 0
+        },
+        {
+          "unit": 31,
+          "target": 5,
+          "owner": 1
+        },
+        {
+          "unit": 169,
+          "target": null,
+          "owner": 0
+        }
+      ]
+    },
+    {
+      "id": 198,
+      "type": "damage",
+      "text": "军团指挥官受到 4 点战斗伤害",
+      "round": 3,
+      "lane": 0,
+      "unit": 5,
+      "amount": 4
+    },
+    {
+      "id": 199,
+      "type": "damage",
+      "text": "狙击手受到 10 点战斗伤害",
+      "round": 3,
+      "lane": 0,
+      "unit": 31,
+      "amount": 10
+    },
+    {
+      "id": 200,
+      "type": "tower",
+      "text": "夜魇防御建筑受到 4 点战斗伤害",
+      "round": 3,
+      "lane": 0,
+      "owner": 1,
+      "amount": 4
+    },
+    {
+      "id": 201,
+      "type": "death",
+      "text": "狙击手阵亡",
+      "round": 3,
+      "lane": 0,
+      "unit": 31
+    },
+    {
+      "id": 202,
+      "type": "passive",
+      "text": "露娜 · 月光",
+      "round": 3,
+      "lane": 1,
+      "unit": 23,
+      "card": "luna",
+      "owner": 1,
+      "skill": "月光",
+      "target": 123
+    },
+    {
+      "id": 203,
+      "type": "damage",
+      "text": "野蛮灵狼受到 1 点伤害",
+      "round": 3,
+      "lane": 1,
+      "unit": 123,
+      "amount": 1,
+      "source": 23
+    },
+    {
+      "id": 204,
+      "type": "lane",
+      "text": "中路行动阶段",
+      "round": 3,
+      "lane": 1
+    },
+    {
+      "id": 205,
+      "type": "card",
+      "text": "天辉打出 武装叛军；近战小兵：攻击+2 / 护甲+1；野蛮灵狼：攻击+2 / 护甲+1",
+      "round": 3,
+      "lane": 1,
+      "card": "arm_the_rebellion",
+      "owner": 0,
+      "targets": [],
+      "source": null,
+      "label": "武装叛军",
+      "outcomes": [
+        {
+          "uid": 92,
+          "k": "melee_creep",
+          "name": "近战小兵",
+          "owner": 0,
+          "lane": 1,
+          "alive": true,
+          "attack": 4,
+          "armor": 1,
+          "health": 4,
+          "regen": 0,
+          "cleave": 0,
+          "retaliate": 0,
+          "siege": 0,
+          "hp": 2,
+          "mods": "[{\"attack\":2,\"armor\":1,\"until\":\"permanent\",\"round\":3,\"source\":\"arm_the_rebellion\"}]",
+          "items": "{}",
+          "flags": {
+            "stun": false,
+            "silence": false,
+            "disarm": false,
+            "immune": false,
+            "root": false,
+            "deathShield": false
+          },
+          "changes": [
+            "攻击+2",
+            "护甲+1"
+          ]
+        },
+        {
+          "uid": 123,
+          "k": "savage_wolf",
+          "name": "野蛮灵狼",
+          "owner": 0,
+          "lane": 1,
+          "alive": true,
+          "attack": 8,
+          "armor": 1,
+          "health": 5,
+          "regen": 0,
+          "cleave": 0,
+          "retaliate": 0,
+          "siege": 0,
+          "hp": 4,
+          "mods": "[{\"attack\":1,\"health\":2,\"until\":\"permanent\",\"round\":2,\"source\":null},{\"attack\":2,\"armor\":1,\"until\":\"permanent\",\"round\":3,\"source\":\"arm_the_rebellion\"}]",
+          "items": "{}",
+          "flags": {
+            "stun": false,
+            "silence": false,
+            "disarm": false,
+            "immune": false,
+            "root": false,
+            "deathShield": false
+          },
+          "changes": [
+            "攻击+2",
+            "护甲+1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 206,
+      "type": "card",
+      "text": "夜魇打出 冰封禁制 → 天辉·近战小兵；近战小兵：伤害 −2 / 阵亡",
+      "round": 3,
+      "lane": 1,
+      "card": "frostbite",
+      "owner": 1,
+      "targets": [
+        {
+          "kind": "unit",
+          "uid": 92,
+          "k": "melee_creep",
+          "name": "近战小兵",
+          "owner": 0,
+          "lane": 1,
+          "alive": true,
+          "attack": 4,
+          "armor": 1,
+          "health": 4,
+          "regen": 0,
+          "cleave": 0,
+          "retaliate": 0,
+          "siege": 0,
+          "hp": 2,
+          "mods": "[{\"attack\":2,\"armor\":1,\"until\":\"permanent\",\"round\":3,\"source\":\"arm_the_rebellion\"}]",
+          "items": "{}",
+          "flags": {
+            "stun": false,
+            "silence": false,
+            "disarm": false,
+            "immune": false,
+            "root": false,
+            "deathShield": false
+          }
+        }
+      ],
+      "source": null,
+      "label": "冰封禁制",
+      "outcomes": [
+        {
+          "uid": 92,
+          "k": "melee_creep",
+          "name": "近战小兵",
+          "owner": 0,
+          "lane": 1,
+          "alive": false,
+          "attack": 4,
+          "armor": 1,
+          "health": 4,
+          "regen": 0,
+          "cleave": 0,
+          "retaliate": 0,
+          "siege": 0,
+          "hp": 0,
+          "mods": "[{\"attack\":2,\"armor\":1,\"until\":\"permanent\",\"round\":3,\"source\":\"arm_the_rebellion\"}]",
+          "items": "{}",
+          "flags": {
+            "stun": false,
+            "silence": false,
+            "disarm": false,
+            "immune": false,
+            "root": false,
+            "deathShield": false
+          },
+          "changes": [
+            "伤害 −2",
+            "阵亡"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 207,
+      "type": "damage",
+      "text": "近战小兵受到 1 点伤害",
+      "round": 3,
+      "lane": 1,
+      "unit": 92,
+      "amount": 1,
+      "source": null
+    },
+    {
+      "id": 208,
+      "type": "passive",
+      "text": "宙斯 · 静电场",
+      "round": 3,
+      "lane": 1,
+      "unit": 27,
+      "card": "zeus",
+      "owner": 1,
+      "skill": "静电场"
+    },
+    {
+      "id": 209,
+      "type": "damage",
+      "text": "近战小兵受到 1 点伤害",
+      "round": 3,
+      "lane": 1,
+      "unit": 92,
+      "amount": 1,
+      "source": 27
+    },
+    {
+      "id": 210,
+      "type": "death",
+      "text": "近战小兵阵亡",
+      "round": 3,
+      "lane": 1,
+      "unit": 92
+    },
+    {
+      "id": 211,
+      "type": "card",
+      "text": "天辉打出 守夜大剑 → 天辉·狼人；狼人：攻击+2 / 溅射+2 / 装备更新",
+      "round": 3,
+      "lane": 1,
+      "card": "blade_of_the_vigil",
+      "owner": 0,
+      "targets": [
+        {
+          "kind": "unit",
+          "uid": 9,
+          "k": "lycan",
+          "name": "狼人",
+          "owner": 0,
+          "lane": 1,
+          "alive": true,
+          "attack": 4,
+          "armor": 0,
+          "health": 10,
+          "regen": 0,
+          "cleave": 0,
+          "retaliate": 0,
+          "siege": 0,
+          "hp": 10,
+          "mods": "[]",
+          "items": "{}",
+          "flags": {
+            "stun": false,
+            "silence": false,
+            "disarm": false,
+            "immune": false,
+            "root": false,
+            "deathShield": false
+          }
+        }
+      ],
+      "source": null,
+      "label": "守夜大剑",
+      "outcomes": [
+        {
+          "uid": 9,
+          "k": "lycan",
+          "name": "狼人",
+          "owner": 0,
+          "lane": 1,
+          "alive": true,
+          "attack": 6,
+          "armor": 0,
+          "health": 10,
+          "regen": 0,
+          "cleave": 2,
+          "retaliate": 0,
+          "siege": 0,
+          "hp": 10,
+          "mods": "[]",
+          "items": "{\"Weapon\":{\"k\":\"blade_of_the_vigil\",\"charges\":0,\"growth\":0}}",
+          "flags": {
+            "stun": false,
+            "silence": false,
+            "disarm": false,
+            "immune": false,
+            "root": false,
+            "deathShield": false
+          },
+          "changes": [
+            "攻击+2",
+            "溅射+2",
+            "装备更新"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 212,
+      "type": "pass",
+      "text": "夜魇让过",
+      "round": 3,
+      "lane": 1
+    },
+    {
+      "id": 213,
+      "type": "pass",
+      "text": "天辉让过",
+      "round": 3,
+      "lane": 1
+    },
+    {
+      "id": 214,
+      "type": "combat",
+      "text": "中路战斗结算",
+      "round": 3,
+      "lane": 1,
+      "attacks": [
+        {
+          "unit": 9,
+          "target": 176,
+          "owner": 0
+        },
+        {
+          "unit": 23,
+          "target": null,
+          "owner": 1
+        },
+        {
+          "unit": 27,
+          "target": null,
+          "owner": 1
+        },
+        {
+          "unit": 99,
+          "target": null,
+          "owner": 1
+        },
+        {
+          "unit": 123,
+          "target": 178,
+          "owner": 0
+        },
+        {
+          "unit": 176,
+          "target": 9,
+          "owner": 1
+        },
+        {
+          "unit": 178,
+          "target": 123,
+          "owner": 1
+        }
+      ]
+    },
+    {
+      "id": 215,
+      "type": "damage",
+      "text": "狼人受到 2 点战斗伤害",
+      "round": 3,
+      "lane": 1,
+      "unit": 9,
+      "amount": 2
+    },
+    {
+      "id": 216,
+      "type": "damage",
+      "text": "露娜受到 2 点战斗伤害",
+      "round": 3,
+      "lane": 1,
+      "unit": 23,
+      "amount": 2
+    },
+    {
+      "id": 217,
+      "type": "damage",
+      "text": "野蛮灵狼受到 1 点战斗伤害",
+      "round": 3,
+      "lane": 1,
+      "unit": 123,
+      "amount": 1
+    },
+    {
+      "id": 218,
+      "type": "damage",
+      "text": "近战小兵受到 6 点战斗伤害",
+      "round": 3,
+      "lane": 1,
+      "unit": 176,
+      "amount": 6
+    },
+    {
+      "id": 219,
+      "type": "damage",
+      "text": "近战小兵受到 10 点战斗伤害",
+      "round": 3,
+      "lane": 1,
+      "unit": 178,
+      "amount": 10
+    },
+    {
+      "id": 220,
+      "type": "tower",
+      "text": "天辉防御建筑受到 10 点战斗伤害",
+      "round": 3,
+      "lane": 1,
+      "owner": 0,
+      "amount": 10
+    },
+    {
+      "id": 221,
+      "type": "death",
+      "text": "近战小兵阵亡",
+      "round": 3,
+      "lane": 1,
+      "unit": 176
+    },
+    {
+      "id": 222,
+      "type": "death",
+      "text": "近战小兵阵亡",
+      "round": 3,
+      "lane": 1,
+      "unit": 178
+    },
+    {
+      "id": 223,
+      "type": "lane",
+      "text": "下路行动阶段",
+      "round": 3,
+      "lane": 2
+    },
+    {
+      "id": 224,
+      "type": "pass",
+      "text": "夜魇让过",
+      "round": 3,
+      "lane": 2
+    },
+    {
+      "id": 225,
+      "type": "card",
+      "text": "天辉打出 武装叛军；野蛮灵狼：攻击+2 / 护甲+1；近战小兵：攻击+2 / 护甲+1",
+      "round": 3,
+      "lane": 2,
+      "card": "arm_the_rebellion",
+      "owner": 0,
+      "targets": [],
+      "source": null,
+      "label": "武装叛军",
+      "outcomes": [
+        {
+          "uid": 143,
+          "k": "savage_wolf",
+          "name": "野蛮灵狼",
+          "owner": 0,
+          "lane": 2,
+          "alive": true,
+          "attack": 6,
+          "armor": 3,
+          "health": 5,
+          "regen": 0,
+          "cleave": 0,
+          "retaliate": 0,
+          "siege": 0,
+          "hp": 3,
+          "mods": "[{\"attack\":1,\"health\":2,\"until\":\"permanent\",\"round\":2,\"source\":null},{\"attack\":2,\"armor\":1,\"until\":\"permanent\",\"round\":3,\"source\":\"arm_the_rebellion\"}]",
+          "items": "{}",
+          "flags": {
+            "stun": false,
+            "silence": false,
+            "disarm": false,
+            "immune": false,
+            "root": false,
+            "deathShield": false
+          },
+          "changes": [
+            "攻击+2",
+            "护甲+1"
+          ]
+        },
+        {
+          "uid": 171,
+          "k": "melee_creep",
+          "name": "近战小兵",
+          "owner": 0,
+          "lane": 2,
+          "alive": true,
+          "attack": 4,
+          "armor": 3,
+          "health": 4,
+          "regen": 0,
+          "cleave": 0,
+          "retaliate": 0,
+          "siege": 0,
+          "hp": 4,
+          "mods": "[{\"attack\":2,\"armor\":1,\"until\":\"permanent\",\"round\":3,\"source\":\"arm_the_rebellion\"}]",
+          "items": "{}",
+          "flags": {
+            "stun": false,
+            "silence": false,
+            "disarm": false,
+            "immune": false,
+            "root": false,
+            "deathShield": false
+          },
+          "changes": [
+            "攻击+2",
+            "护甲+1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 226,
+      "type": "pass",
+      "text": "夜魇让过",
+      "round": 3,
+      "lane": 2
+    },
+    {
+      "id": 227,
+      "type": "pass",
+      "text": "天辉让过",
+      "round": 3,
+      "lane": 2
+    },
+    {
+      "id": 228,
+      "type": "combat",
+      "text": "下路战斗结算",
+      "round": 3,
+      "lane": 2,
+      "attacks": [
+        {
+          "unit": 7,
+          "target": 25,
+          "owner": 0
+        },
+        {
+          "unit": 25,
+          "target": 143,
+          "owner": 1
+        },
+        {
+          "unit": 143,
+          "target": 25,
+          "owner": 0
+        },
+        {
+          "unit": 171,
+          "target": null,
+          "owner": 0
+        }
+      ]
+    },
+    {
+      "id": 229,
+      "type": "damage",
+      "text": "幻影刺客受到 10 点战斗伤害",
+      "round": 3,
+      "lane": 2,
+      "unit": 25,
+      "amount": 10
+    },
+    {
+      "id": 230,
+      "type": "damage",
+      "text": "野蛮灵狼受到 3 点战斗伤害",
+      "round": 3,
+      "lane": 2,
+      "unit": 143,
+      "amount": 3
+    },
+    {
+      "id": 231,
+      "type": "tower",
+      "text": "夜魇防御建筑受到 4 点战斗伤害",
+      "round": 3,
+      "lane": 2,
+      "owner": 1,
+      "amount": 4
+    },
+    {
+      "id": 232,
+      "type": "death",
+      "text": "幻影刺客阵亡",
+      "round": 3,
+      "lane": 2,
+      "unit": 25
+    },
+    {
+      "id": 233,
+      "type": "death",
+      "text": "野蛮灵狼阵亡",
+      "round": 3,
+      "lane": 2,
+      "unit": 143
+    },
+    {
+      "id": 234,
+      "type": "shop",
+      "text": "商店开张 · 使用战斗获得的金币购买物品",
+      "round": 3,
+      "lane": 2
+    },
+    {
+      "id": 236,
+      "type": "buy",
+      "text": "天辉购买了 刺客面纱",
+      "round": 3,
+      "lane": 2,
+      "card": "assassins_veil"
+    },
+    {
+      "id": 238,
+      "type": "buy",
+      "text": "天辉购买了 短剑",
+      "round": 3,
+      "lane": 2,
+      "card": "short_sword"
+    },
+    {
+      "id": 240,
+      "type": "buy",
+      "text": "天辉购买了 皮革护甲",
+      "round": 3,
+      "lane": 2,
+      "card": "leather_armor"
+    },
+    {
+      "id": 242,
+      "type": "buy",
+      "text": "夜魇购买了 皮革护甲",
+      "round": 3,
+      "lane": 2,
+      "card": "leather_armor"
+    },
+    {
+      "id": 245,
+      "type": "draw",
+      "text": "天辉抽取 2 张牌",
+      "round": 4,
+      "lane": 0
+    },
+    {
+      "id": 247,
+      "type": "summon",
+      "text": "近战小兵进入中路",
+      "round": 4,
+      "lane": 0,
+      "unit": 246
+    },
+    {
+      "id": 249,
+      "type": "summon",
+      "text": "近战小兵进入上路",
+      "round": 4,
+      "lane": 0,
+      "unit": 248
+    },
+    {
+      "id": 252,
+      "type": "draw",
+      "text": "夜魇抽取 2 张牌",
+      "round": 4,
+      "lane": 0
+    },
+    {
+      "id": 254,
+      "type": "summon",
+      "text": "近战小兵进入下路",
+      "round": 4,
+      "lane": 0,
+      "unit": 253
+    },
+    {
+      "id": 256,
+      "type": "summon",
+      "text": "近战小兵进入上路",
+      "round": 4,
+      "lane": 0,
+      "unit": 255
+    },
+    {
+      "id": 257,
+      "type": "round",
+      "text": "第 4 回合 · 部署英雄",
+      "round": 4,
+      "lane": 0
+    },
+    {
+      "id": 258,
+      "type": "summon",
+      "text": "斧王部署至下路",
+      "round": 4,
+      "lane": 0,
+      "unit": 1
+    },
+    {
+      "id": 259,
+      "type": "summon",
+      "text": "卓尔游侠部署至中路",
+      "round": 4,
+      "lane": 0,
+      "unit": 3
+    },
+    {
+      "id": 260,
+      "type": "summon",
+      "text": "冰晶圣女部署至上路",
+      "round": 4,
+      "lane": 0,
+      "unit": 29
+    },
+    {
+      "id": 261,
+      "type": "lane",
+      "text": "上路行动阶段",
+      "round": 4,
+      "lane": 0
+    },
+    {
+      "id": 262,
+      "type": "card",
+      "text": "夜魇打出 雷霆风暴；军团指挥官：伤害 −3 / 阵亡；近战小兵：伤害 −4 / 阵亡；近战小兵：伤害 −4 / 阵亡；近战小兵：伤害 −4 / 阵亡",
+      "round": 4,
+      "lane": 0,
+      "card": "thunderstorm",
+      "owner": 1,
+      "targets": [],
+      "source": null,
+      "label": "雷霆风暴",
+      "outcomes": [
+        {
+          "uid": 5,
+          "k": "legion_commander",
+          "name": "军团指挥官",
+          "owner": 0,
+          "lane": 0,
+          "alive": false,
+          "attack": 8,
+          "armor": 1,
+          "health": 12,
+          "regen": 0,
+          "cleave": 0,
+          "retaliate": 0,
+          "siege": 0,
+          "hp": 0,
+          "mods": "[]",
+          "items": "{\"Weapon\":{\"k\":\"short_sword\",\"charges\":0,\"growth\":0},\"Accessory\":{\"k\":\"travelers_cloak\",\"charges\":0,\"growth\":0}}",
+          "flags": {
+            "stun": false,
+            "silence": false,
+            "disarm": false,
+            "immune": false,
+            "root": false,
+            "deathShield": false
+          },
+          "changes": [
+            "伤害 −3",
+            "阵亡"
+          ]
+        },
+        {
+          "uid": 11,
+          "k": "melee_creep",
+          "name": "近战小兵",
+          "owner": 0,
+          "lane": 0,
+          "alive": false,
+          "attack": 2,
+          "armor": 0,
+          "health": 4,
+          "regen": 0,
+          "cleave": 0,
+          "retaliate": 0,
+          "siege": 0,
+          "hp": 0,
+          "mods": "[]",
+          "items": "{}",
+          "flags": {
+            "stun": false,
+            "silence": false,
+            "disarm": false,
+            "immune": false,
+            "root": false,
+            "deathShield": false
+          },
+          "changes": [
+            "伤害 −4",
+            "阵亡"
+          ]
+        },
+        {
+          "uid": 169,
+          "k": "melee_creep",
+          "name": "近战小兵",
+          "owner": 0,
+          "lane": 0,
+          "alive": false,
+          "attack": 2,
+          "armor": 0,
+          "health": 4,
+          "regen": 0,
+          "cleave": 0,
+          "retaliate": 0,
+          "siege": 0,
+          "hp": 0,
+          "mods": "[]",
+          "items": "{}",
+          "flags": {
+            "stun": false,
+            "silence": false,
+            "disarm": false,
+            "immune": false,
+            "root": false,
+            "deathShield": false
+          },
+          "changes": [
+            "伤害 −4",
+            "阵亡"
+          ]
+        },
+        {
+          "uid": 248,
+          "k": "melee_creep",
+          "name": "近战小兵",
+          "owner": 0,
+          "lane": 0,
+          "alive": false,
+          "attack": 2,
+          "armor": 0,
+          "health": 4,
+          "regen": 0,
+          "cleave": 0,
+          "retaliate": 0,
+          "siege": 0,
+          "hp": 0,
+          "mods": "[]",
+          "items": "{}",
+          "flags": {
+            "stun": false,
+            "silence": false,
+            "disarm": false,
+            "immune": false,
+            "root": false,
+            "deathShield": false
+          },
+          "changes": [
+            "伤害 −4",
+            "阵亡"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 263,
+      "type": "damage",
+      "text": "军团指挥官受到 3 点伤害",
+      "round": 4,
+      "lane": 0,
+      "unit": 5,
+      "amount": 3,
+      "source": null
+    },
+    {
+      "id": 264,
+      "type": "damage",
+      "text": "近战小兵受到 4 点伤害",
+      "round": 4,
+      "lane": 0,
+      "unit": 11,
+      "amount": 4,
+      "source": null
+    },
+    {
+      "id": 265,
+      "type": "damage",
+      "text": "近战小兵受到 4 点伤害",
+      "round": 4,
+      "lane": 0,
+      "unit": 169,
+      "amount": 4,
+      "source": null
+    },
+    {
+      "id": 266,
+      "type": "damage",
+      "text": "近战小兵受到 4 点伤害",
+      "round": 4,
+      "lane": 0,
+      "unit": 248,
+      "amount": 4,
+      "source": null
+    },
+    {
+      "id": 267,
+      "type": "passive",
+      "text": "冰晶圣女 · 奥术灵气",
+      "round": 4,
+      "lane": 0,
+      "unit": 29,
+      "card": "crystal_maiden",
+      "owner": 1,
+      "skill": "奥术灵气"
+    },
+    {
+      "id": 268,
+      "type": "death",
+      "text": "军团指挥官阵亡",
+      "round": 4,
+      "lane": 0,
+      "unit": 5
+    },
+    {
+      "id": 269,
+      "type": "death",
+      "text": "近战小兵阵亡",
+      "round": 4,
+      "lane": 0,
+      "unit": 11
+    },
+    {
+      "id": 270,
+      "type": "death",
+      "text": "近战小兵阵亡",
+      "round": 4,
+      "lane": 0,
+      "unit": 169
+    },
+    {
+      "id": 271,
+      "type": "death",
+      "text": "近战小兵阵亡",
+      "round": 4,
+      "lane": 0,
+      "unit": 248
+    },
+    {
+      "id": 272,
+      "type": "pass",
+      "text": "天辉让过",
+      "round": 4,
+      "lane": 0
+    },
+    {
+      "id": 273,
+      "type": "pass",
+      "text": "夜魇让过",
+      "round": 4,
+      "lane": 0
+    },
+    {
+      "id": 274,
+      "type": "combat",
+      "text": "上路战斗结算",
+      "round": 4,
+      "lane": 0,
+      "attacks": [
+        {
+          "unit": 29,
+          "target": null,
+          "owner": 1
+        },
+        {
+          "unit": 255,
+          "target": null,
+          "owner": 1
+        }
+      ]
+    },
+    {
+      "id": 275,
+      "type": "tower",
+      "text": "天辉防御建筑受到 4 点战斗伤害",
+      "round": 4,
+      "lane": 0,
+      "owner": 0,
+      "amount": 4
+    },
+    {
+      "id": 276,
+      "type": "passive",
+      "text": "露娜 · 月光",
+      "round": 4,
+      "lane": 1,
+      "unit": 23,
+      "card": "luna",
+      "owner": 1,
+      "skill": "月光",
+      "target": 246
+    },
+    {
+      "id": 277,
+      "type": "damage",
+      "text": "近战小兵受到 1 点伤害",
+      "round": 4,
+      "lane": 1,
+      "unit": 246,
+      "amount": 1,
+      "source": 23
+    },
+    {
+      "id": 278,
+      "type": "lane",
+      "text": "中路行动阶段",
+      "round": 4,
+      "lane": 1
+    }
+  ],
+  "deckSpecs": [
+    {
+      "id": "verdant",
+      "name": "苍翠锋线",
+      "desc": "红绿 · 军团与森林并肩",
+      "heroes": [
+        "axe",
+        "drow_ranger",
+        "legion_commander",
+        "treant_protector",
+        "lycan"
+      ],
+      "main": [
+        "bronze_legionnaire",
+        "bronze_legionnaire",
+        "bronze_legionnaire",
+        "avernus_blessing",
+        "avernus_blessing",
+        "avernus_blessing",
+        "stars_align",
+        "stars_align",
+        "stars_align",
+        "arm_the_rebellion",
+        "arm_the_rebellion",
+        "arm_the_rebellion",
+        "stonehall_elite",
+        "stonehall_elite",
+        "stonehall_elite",
+        "defensive_stance",
+        "defensive_stance",
+        "time_of_triumph",
+        "time_of_triumph",
+        "thunderhide_pack",
+        "thunderhide_pack",
+        "mist_of_avernus",
+        "mist_of_avernus",
+        "fight_through_the_pain",
+        "fight_through_the_pain"
+      ],
+      "items": [
+        "short_sword",
+        "short_sword",
+        "short_sword",
+        "travelers_cloak",
+        "travelers_cloak",
+        "leather_armor",
+        "leather_armor",
+        "blink_dagger",
+        "blink_dagger"
+      ]
+    },
+    {
+      "id": "arcane",
+      "name": "暗月密谋",
+      "desc": "蓝黑 · 控场、狙杀与法术",
+      "heroes": [
+        "luna",
+        "phantom_assassin",
+        "zeus",
+        "crystal_maiden",
+        "sniper"
+      ],
+      "main": [
+        "grazing_shot",
+        "grazing_shot",
+        "grazing_shot",
+        "dimensional_portal",
+        "dimensional_portal",
+        "dimensional_portal",
+        "annihilation",
+        "annihilation",
+        "foresight",
+        "foresight",
+        "foresight",
+        "hip_fire",
+        "hip_fire",
+        "lightning_strike",
+        "lightning_strike",
+        "lightning_strike",
+        "thunderstorm",
+        "thunderstorm",
+        "slay",
+        "slay",
+        "bolt_of_damocles",
+        "bolt_of_damocles",
+        "untested_grunt",
+        "untested_grunt",
+        "untested_grunt"
+      ],
+      "items": [
+        "travelers_cloak",
+        "travelers_cloak",
+        "travelers_cloak",
+        "leather_armor",
+        "leather_armor",
+        "leather_armor",
+        "blink_dagger",
+        "blink_dagger",
+        "blink_dagger"
+      ]
+    }
+  ]
+}

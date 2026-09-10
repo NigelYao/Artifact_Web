@@ -1,0 +1,11 @@
+{
+  "url": "https://raw.githubusercontent.com/SteamDatabase/GameTracking-Artifact/master/game/dcg/resource/card_set_01_english.txt",
+  "status": 200,
+  "verified": "2026-09-09",
+  "excerpts": [
+    "\"CardText_10006\"\t\t\"[abilityname[Lucent Beam]][g:200[Before the action phase]], deal 1 [g:508[piercing]] damage to a random enemy and add a charge to three random [[Eclipse]] cards in your hand or deck.\"",
+    "\"CardText_10022\"\t\t\"[abilityname[Reactive Armor]]{s:thisCardName} has +1 [g:504[Armor]] for each of its attackers. {s:thisCardName}'s attackers have -1 [g:504[Armor]].\"",
+    "\"CardText_10028\"\t\t\"[abilityname[Corrosive Skin]]When a [g:607[unit]] deals [g:609[battle damage]] to {s:thisCardName}, [g:401[modify]] that [g:607[unit]] with -1 [g:509[Attack]].\"",
+    "\"CardText_10060\"\t\t\"[abilityname[Finger of Death]][activatedability[[color:ability[Active &#9632;4:]] Deal 8 [g:508[piercing]] damage to a [g:607[unit]].  Quicken (reduce cooldown by 1, but not below 1).]]\""
+  ]
+}

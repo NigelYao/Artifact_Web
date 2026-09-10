@@ -1,0 +1,29 @@
+{
+  "source": "E:\\AI\\game_sound\\sounds",
+  "files": {
+    "draw": "cards/draw_01.wav",
+    "card": "cards/deploy_01.wav",
+    "summon": "cards/deploy_02.wav",
+    "swing": "cards/woosh_01.wav",
+    "damage": "general/card_damage_01.wav",
+    "combat": "general/fight_big_clash.wav",
+    "death": "cards/creep_death_shatter_01.wav",
+    "pass": "general/pass.wav",
+    "select": "general/card_inspect_open.wav",
+    "error": "general/click_invalid.wav",
+    "buy": "shop/buy.wav",
+    "hold": "shop/hold.wav",
+    "shop-open": "shop/open.wav",
+    "shop-close": "shop/close.wav",
+    "lane": "camera/left_to_right.wav",
+    "round": "general/hero_deploy_lockin.wav",
+    "equip": "ui/common_equip.wav",
+    "buff": "general/buff_gain.wav",
+    "heal": "general/buff_gain.wav",
+    "frostbite": "effects/set_01/spells/frostbite.wav",
+    "gust": "effects/set_01/spells/gust.wav",
+    "duel": "effects/set_01/spells/duel_intro.wav",
+    "berserkers_call": "effects/set_01/spells/berserkers_call.wav",
+    "axe-voice": "responses/set_01/axe/axe_berserkers_call.mp3"
+  }
+}

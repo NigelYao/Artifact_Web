@@ -1,0 +1,1 @@
+{"cmdString": "sudo systemctl show artifact-capacity-bench --no-pager -p ActiveState -p SubState -p MemoryCurrent -p CPUUsageNSec; sudo journalctl -u artifact-capacity-bench -n 8 --no-pager -o cat; curl -s http://127.0.0.1/health", "timeout": 15000}

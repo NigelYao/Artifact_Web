@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><base href="../dist/"><title>赛后构筑收藏验证</title>
+<link rel="stylesheet" href="style.css"><link rel="stylesheet" href="battle-scene.css"><link rel="stylesheet" href="board-layout.css"><link rel="stylesheet" href="audio-gallery.css"><link rel="stylesheet" href="mobile-landscape.css"><link rel="stylesheet" href="responsive-battle.css"><link rel="stylesheet" href="touch-cards.css?v=20260909-touchdrag1">
+<style>.fixture-tools{position:fixed;right:145px;top:0;z-index:99;display:flex;align-items:center;gap:4px;background:#111d;color:#fff;font:11px sans-serif}.fixture-tools button{font-size:11px;padding:5px;min-height:28px}.fixture-tools output{max-width:230px}.fixture-tools[hidden]{display:none}</style></head><body><div id="app"></div>
+<script src="data.js"></script><script src="engine.js?v=20260909-touchdrag1"></script><script src="effects.js?v=20260909-touchdrag1"></script><script src="feedback.js"></script><script src="decks.js"></script><script src="deck-share.js?v=20260909-watchtouch1"></script><script src="action-audio.js"></script><script src="audio.js"></script>
+<script>
+if(location.port!=='8788')throw Error('Use dedicated test origin 8788; never run on production');
+const fixture=new ArtifactEngine.Game(ARTIFACT_CARDS);fixture.newGame(ARTIFACT_DECKS[0],ARTIFACT_DECKS[1],1234);
+for(const u of fixture.s.units){u.alive=false;u.lane=-1;u.readyRound=99;}fixture.s.lane=0;fixture.s.phase='action';fixture.s.turn=0;fixture.s.passes=0;fixture.s.events=[];
+fixture.spawn('axe',0,0,1);fixture.spawn('zeus',0,0,2);fixture.spawn('drow_ranger',0,0,3);fixture.spawn('axe',1,0,2);
+fixture.s.lanes[0].mana[0]=50;fixture.s.players[0].gold=100;
+fixture.s.players[0].hand=['defensive_stance','frostbite','short_sword','healing_salve','gust','lightning_strike','defensive_stance','frostbite','short_sword','healing_salve','gust','lightning_strike','defensive_stance','frostbite'].map(k=>({uid:fixture.id(),k,lock:0}));
+fixture.s.phase='ended';fixture.s.winner=null;fixture.s.deckSpecs[1].name='赛后收藏验证';localStorage.setItem('artifact.match',JSON.stringify(fixture.s));localStorage.setItem('artifact.settings',JSON.stringify({muted:true,speed:1}));
+</script>
+<script src="scene.js"></script><script src="board.js"></script><script src="app.js?v=20260909-touchdrag1"></script><script src="board-input.js"></script><script src="responsive-battle.js"></script><script src="touch-cards.js?v=20260909-touchdrag1"></script>
+<script>document.querySelector('[data-action="resume"]').click();</script><output id="save-test"></output></body></html>

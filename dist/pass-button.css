@@ -1,0 +1,12 @@
+/* The scene portal owns position and size; the medallion scales inside it. */
+.in-battle .pass-area .pass-button{position:relative;isolation:isolate;display:grid;place-items:center;width:88px;height:88px;min-width:44px;min-height:44px;padding:0!important;border:0!important;border-radius:50%;background:transparent!important;box-shadow:none!important;color:#fff0c4;overflow:visible;cursor:pointer;filter:drop-shadow(0 4px 4px #000b);transition:filter .2s,scale .15s}
+.in-battle .lane-focused .pass-area .pass-button{width:var(--scene-portal-size);height:var(--scene-portal-size)}
+.pass-medallion{position:absolute;inset:-5%;width:110%;height:110%;pointer-events:none;transition:filter .25s,transform .25s}
+.pass-label{position:absolute;bottom:15%;left:5%;right:5%;font-size:clamp(10px,1vw,13px);line-height:1.2;font-weight:600;letter-spacing:1px;text-shadow:0 1px 3px #000,0 0 5px #000;pointer-events:none}
+.in-battle .pass-button.combat-ready .pass-medallion{filter:drop-shadow(0 0 6px #f9a345)}
+@media(hover:hover){.in-battle .pass-area .pass-button:hover:not(:disabled){filter:drop-shadow(0 0 9px #edb45a88) brightness(1.15)}.pass-button:hover:not(:disabled) .pass-medallion{transform:rotate(-4deg)}}
+.in-battle .pass-area .pass-button:active:not(:disabled){scale:.95;filter:brightness(.92)}
+.in-battle .pass-area .pass-button:focus-visible{outline:2px solid #fff0b4;outline-offset:5px}
+.in-battle .pass-area .pass-button:disabled{cursor:default;opacity:.62;filter:grayscale(.8) brightness(.75) drop-shadow(0 2px 3px #000a)}
+@media(max-height:540px){.pass-label{font-size:10px;letter-spacing:0}.in-battle .pass-area .pass-button{width:64px;height:64px}.in-battle .lane-focused .pass-area .pass-button{width:var(--scene-portal-size);height:var(--scene-portal-size)}}
+@media(prefers-reduced-motion:reduce){.pass-medallion,.in-battle .pass-area .pass-button{transition:none}}

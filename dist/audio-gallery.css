@@ -1,0 +1,11 @@
+/* Audio browsing is deliberately separate from card play controls. */
+.audio-preview-button{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:8px 12px;min-height:36px;border:1px solid #8f815851;border-radius:3px;background:#182729;color:#decea3;font-size:12px;cursor:pointer}
+.catalog-item>.audio-preview-button{width:100%;margin-top:8px}
+.audio-preview-button:hover{background:#2a3c3b;border-color:#c8b57b}
+.audio-preview-button:focus-visible{outline:2px solid #efd89a;outline-offset:3px}
+.card-detail .audio-preview-button{margin-top:18px}
+.audio-gallery>p{color:#aebdb4;font-size:13px}
+.audio-track-list{display:grid;gap:12px;margin-top:20px}
+.audio-track{border-top:1px solid #8f81583d;padding-top:10px}
+.audio-track h3{margin:0 0 8px;font:14px 'Microsoft YaHei',sans-serif;color:#e5d5af}
+.audio-audition{display:block;width:100%;height:42px;color-scheme:dark}

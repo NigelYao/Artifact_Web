@@ -1,0 +1,14 @@
+[
+  {
+    "url": "https://store.steampowered.com/api/appdetails?appids=646570",
+    "retrieved": true
+  },
+  {
+    "url": "https://slay-the-spire.fandom.com/wiki/Strike",
+    "retrieved": false
+  },
+  {
+    "url": "https://slay-the-spire.fandom.com/wiki/Defend",
+    "retrieved": false
+  }
+]

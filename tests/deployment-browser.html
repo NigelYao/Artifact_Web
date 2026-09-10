@@ -1,0 +1,12 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><base href="../dist/"><title>棋盘与英雄部署实机场景</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="battle-scene.css?v=20260909-support2"><link rel="stylesheet" href="board-layout.css?v=20260909-feel2"><link rel="stylesheet" href="audio-gallery.css?v=20260909-mobile2"><link rel="stylesheet" href="mobile-landscape.css?v=20260909-mobile2"></head><body><div id="app"></div><script src="data.js"></script><script src="engine.js"></script><script src="effects.js"></script><script src="feedback.js?v=20260908-audio3"></script><script src="decks.js"></script><script src="action-audio.js?v=20260909-mobile2"></script><script src="audio.js?v=20260909-mobile2"></script><script src="scene.js?v=20260909-support2"></script><script>
+if(location.port!=='8788')throw Error('Use isolated test server 8788');
+const g=new ArtifactEngine.Game(ARTIFACT_CARDS);g.newGame(ARTIFACT_DECKS[0],ARTIFACT_DECKS[1],1234);for(const u of g.s.units){u.alive=false;u.lane=-1;u.readyRound=99;}g.s.events=[];g.s.lane=0;g.s.turn=0;
+for(let p=0;p<2;p++){g.s.players[p].hand=[];g.s.lanes[0].mana[p]=50;g.spawn('axe',p,0,0);g.spawn('zeus',p,0,1);g.spawn('drow_ranger',p,0,2);}
+g.s.players[0].hand=['frostbite','defensive_stance','gust','short_sword'].map(k=>({uid:g.id(),k,lock:0}));g.s.players[1].hand=[];
+g.s.round=2;g.s.phase='deploy';g.s.players[0].gold=100;
+for(const k of ['axe','treant_protector','lycan']){const u=g.s.units.find(u=>u.owner===0&&u.k===k);u.alive=false;u.lane=-1;u.readyRound=2;}
+g.s.lanes[0].towers[0].hp=12;g.s.lanes[1].towers[1].hp=17;g.s.lanes[2].towers[0].hp=28;
+g.spawn('phantom_assassin',1,1,0);g.spawn('melee_creep',0,1,0);g.spawn('melee_creep',1,2,0);g.spawn('melee_creep',0,2,0);
+const returningEnemy=g.spawn('lion',1,2,3);returningEnemy.alive=false;returningEnemy.lane=-1;returningEnemy.readyRound=2;
+g.s.events=[];localStorage.setItem('artifact.match',JSON.stringify(g.s));localStorage.setItem('artifact.settings',JSON.stringify({muted:false,music:.28,effects:.6,speed:1}));
+</script><script src="board.js?v=20260909-feel2"></script><script src="app.js?v=20260909-mobile2"></script><script src="board-input.js?v=20260908-layout6"></script></body></html>

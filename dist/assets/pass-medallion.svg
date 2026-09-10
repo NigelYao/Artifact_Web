@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+ <defs>
+  <linearGradient id="steel" x2=".8" y2="1"><stop stop-color="#f5ebc6"/><stop offset=".23" stop-color="#8e927f"/><stop offset=".5" stop-color="#3f4b45"/><stop offset=".72" stop-color="#a6af9a"/><stop offset="1" stop-color="#333f39"/></linearGradient>
+  <linearGradient id="gold" x2=".7" y2="1"><stop stop-color="#fff9d9"/><stop offset=".3" stop-color="#e5ca80"/><stop offset=".6" stop-color="#8d652e"/><stop offset="1" stop-color="#f7e3a6"/></linearGradient>
+  <radialGradient id="enamel" cx="35%" cy="20%" r="85%"><stop stop-color="#fa9c51"/><stop offset=".5" stop-color="#b84324"/><stop offset="1" stop-color="#5f241a"/></radialGradient>
+  <radialGradient id="core" cx="35%" cy="25%"><stop stop-color="#3b4039"/><stop offset=".7" stop-color="#232a27"/><stop offset="1" stop-color="#111917"/></radialGradient>
+ </defs>
+ <circle cx="100" cy="100" r="96" fill="#0b1210" stroke="#141a15" stroke-width="3"/>
+ <circle cx="100" cy="100" r="92" fill="url(#enamel)" stroke="url(#steel)" stroke-width="7"/>
+ <g fill="none" stroke="url(#steel)" stroke-width="6" stroke-linejoin="round">
+  <path d="M52 22 62 39 43 48 24 48M84 9 77 29 94 34 109 9M140 20 128 35 150 49 179 51M190 83 169 77 159 94 190 111M177 153 155 151 149 173M114 192 120 169 101 161 85 190M48 178 50 156 28 149M9 112 32 120 38 102 11 86"/>
+ </g>
+ <circle cx="100" cy="100" r="73" fill="#332b1d" stroke="url(#steel)" stroke-width="9"/>
+ <circle cx="100" cy="100" r="66" fill="url(#core)" stroke="url(#gold)" stroke-width="7"/>
+ <circle cx="100" cy="100" r="59" fill="none" stroke="#a17b3d" stroke-opacity=".55"/>
+ <g fill="url(#gold)" stroke="#362918" stroke-width="1.5" stroke-linejoin="round">
+  <path d="m69 66 25 2 6 42-12 10z"/>
+  <path d="m102 68 42 3-18 22-21-6z"/>
+  <path d="m105 96 15 5-12 12z"/>
+  <path d="m128 106-25 37-12-17z"/>
+ </g>
+ <path d="M39 62a72 72 0 0 1 105-23" fill="none" stroke="#fff8d9" stroke-width="2" opacity=".65"/>
+ <g fill="#e9d9aa"><circle cx="100" cy="19" r="2"/><circle cx="181" cy="100" r="2"/><circle cx="100" cy="181" r="2"/><circle cx="19" cy="100" r="2"/></g>
+</svg>

@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><base href="../dist/"><title>Threefold 战斗回归场景</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="battle-scene.css?v=20260909-support2"><link rel="stylesheet" href="board-layout.css?v=20260909-feel2"><link rel="stylesheet" href="audio-gallery.css?v=20260909-mobile2"><link rel="stylesheet" href="mobile-landscape.css?v=20260909-mobile2"></head>
+<body><div id="app"></div><script src="data.js"></script><script src="engine.js"></script><script src="effects.js"></script><script src="feedback.js?v=20260908-audio3"></script><script src="decks.js"></script><script src="action-audio.js?v=20260909-mobile2"></script><script src="audio.js?v=20260909-mobile2"></script>
+<script>
+// Expose visible entrance restarts for browser regression checks.
+document.addEventListener('animationstart',event=>{
+ if(event.animationName==='shop-arrive'&&event.elapsedTime===0)
+  document.body.dataset.shopEntrances=String(Number(document.body.dataset.shopEntrances||0)+1);
+});
+// Serve the repository on a separate test origin; never reuse a player's saved match.
+if(location.port!=='8788')throw Error('Use the dedicated fixture server on port 8788');
+const fixture=new ArtifactEngine.Game(ARTIFACT_CARDS);
+fixture.newGame(ARTIFACT_DECKS[0],ARTIFACT_DECKS[1],1234);
+for(const u of fixture.s.units){u.alive=false;u.lane=-1;u.readyRound=99;}fixture.s.lane=2;fixture.s.passes=1;fixture.s.turn=0;fixture.s.initiative=0;
+fixture.spawn('axe',0,2,0);fixture.spawn('zeus',1,2,0);fixture.spawn('melee_creep',0,2,1);
+fixture.s.players[0].gold=100;fixture.s.events=[];
+localStorage.setItem('artifact.match',JSON.stringify(fixture.s));
+localStorage.setItem('artifact.settings',JSON.stringify({muted:true,speed:1}));
+</script><script src="scene.js?v=20260909-support2"></script><script src="board.js?v=20260909-feel2"></script><script src="app.js?v=20260909-mobile2"></script><script src="board-input.js?v=20260908-layout6"></script></body></html>

@@ -1,0 +1,1 @@
+{"cmdString": "set -e\nprintf '%s  %s\\n' '1b44571d26fc0107c63e8c6a8b51474deed617745e98fb261d7b875d4858ec8c' '/tmp/artifact-20260909-placement1.tar.gz' | sha256sum --check -\nbash /tmp/artifact-deploy-activate.sh 20260909-placement1", "timeout": 300000}

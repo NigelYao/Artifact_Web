@@ -1,0 +1,151 @@
+{
+  "release": "/opt/artifact-threefold/releases/20260909-matchmaking1",
+  "started": "2026-09-09T06:59:10.117Z",
+  "seed": {
+    "round": 4,
+    "units": 31,
+    "log": 216
+  },
+  "intervalMs": 5000,
+  "notes": [
+    "same-host load generator; loopback excludes public bandwidth/latency",
+    "all rooms seeded at legal midgame; matchmaking battle tickets retained; 25s presence heartbeats",
+    "test service and generator lower scheduling priority; combined cgroup CPU quota 140%, memory limit 2GB"
+  ],
+  "stages": [
+    {
+      "rooms": 10,
+      "players": 20,
+      "seconds": 35.009,
+      "completedCommands": 70,
+      "actions": {
+        "play": 60,
+        "pass": 10
+      },
+      "errors": [],
+      "errorCount": 0,
+      "finishedRooms": 0,
+      "commandRate": 1.9994858464966152,
+      "rttMs": {
+        "median": 8.933457000006456,
+        "p95": 15.233273000005283,
+        "max": 19.88581499999782
+      },
+      "outboundMbps": 1.2417515496015312,
+      "bytesPerRoomPerSec": 15521.89437001914,
+      "snapshotMessages": 140,
+      "server": {
+        "cpuMean": 3.0023431892182946,
+        "cpuP95": 4.4589,
+        "rssMaxMB": 93.5,
+        "loopP95ms": 10.469375,
+        "loopMaxMs": 21.708799
+      },
+      "hostCpuP95": 5.472636815920396,
+      "productionHealthP95ms": 2.476567000000159,
+      "driverCpuPercent": 1.7486674855037276,
+      "stopReason": null
+    },
+    {
+      "rooms": 30,
+      "players": 60,
+      "seconds": 35.007,
+      "completedCommands": 210,
+      "actions": {
+        "play": 180,
+        "pass": 30
+      },
+      "errors": [],
+      "errorCount": 0,
+      "finishedRooms": 0,
+      "commandRate": 5.99880023995201,
+      "rttMs": {
+        "median": 8.457657999999356,
+        "p95": 12.88437800000247,
+        "max": 23.963384000002407
+      },
+      "outboundMbps": 3.725467477932985,
+      "bytesPerRoomPerSec": 15522.781158054104,
+      "snapshotMessages": 420,
+      "server": {
+        "cpuMean": 7.980509147450268,
+        "cpuP95": 13.521350546176762,
+        "rssMaxMB": 99.8125,
+        "loopP95ms": 12.492799,
+        "loopMaxMs": 40.599551
+      },
+      "hostCpuP95": 13.793103448275868,
+      "productionHealthP95ms": 1.6055659999983618,
+      "driverCpuPercent": 3.54693632702031,
+      "stopReason": null
+    },
+    {
+      "rooms": 60,
+      "players": 120,
+      "seconds": 35.008,
+      "completedCommands": 420,
+      "actions": {
+        "play": 360,
+        "pass": 60
+      },
+      "errors": [],
+      "errorCount": 0,
+      "finishedRooms": 0,
+      "commandRate": 11.99725776965265,
+      "rttMs": {
+        "median": 8.061908000003314,
+        "p95": 55.99887499999022,
+        "max": 75.40972399999737
+      },
+      "outboundMbps": 7.450722120658135,
+      "bytesPerRoomPerSec": 15522.337751371115,
+      "snapshotMessages": 840,
+      "server": {
+        "cpuMean": 15.0380065746839,
+        "cpuP95": 23.15868263473054,
+        "rssMaxMB": 113.51171875,
+        "loopP95ms": 14.483455,
+        "loopMaxMs": 94.371839
+      },
+      "hostCpuP95": 20.707070707070706,
+      "productionHealthP95ms": 1.550373000005493,
+      "driverCpuPercent": 6.315939213893967,
+      "stopReason": null
+    },
+    {
+      "rooms": 100,
+      "players": 200,
+      "seconds": 35.01,
+      "completedCommands": 700,
+      "actions": {
+        "play": 600,
+        "pass": 100
+      },
+      "errors": [],
+      "errorCount": 0,
+      "finishedRooms": 0,
+      "commandRate": 19.994287346472436,
+      "rttMs": {
+        "median": 8.020892000000458,
+        "p95": 87.19397500000196,
+        "max": 108.13386000000173
+      },
+      "outboundMbps": 12.417160811196803,
+      "bytesPerRoomPerSec": 15521.451013996002,
+      "snapshotMessages": 1400,
+      "server": {
+        "cpuMean": 23.363125771759787,
+        "cpuP95": 31.1715,
+        "rssMaxMB": 120.05859375,
+        "loopP95ms": 17.088511,
+        "loopMaxMs": 141.688831
+      },
+      "hostCpuP95": 24.390243902439025,
+      "productionHealthP95ms": 3.168854999996256,
+      "driverCpuPercent": 9.546552413596116,
+      "stopReason": null
+    }
+  ],
+  "finished": "2026-09-09T07:02:26.882Z",
+  "stopReason": null
+}
