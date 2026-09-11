@@ -10,9 +10,9 @@ Artifact Threefold is an unofficial browser recreation of Valve's Artifact Class
 
 ## Features
 
-- 303 Classic cards and derived units, including 48 heroes
+- 303 Classic cards and derived units, plus a custom Dota 2 expansion: 2 heroes, 4 spells, and 1 token (50 heroes total)
 - Three independent lanes, towers, ancients, initiative, deployment, combat, and shopping
-- Four starter decks, custom deck building, deck validation, and JSON import/export
+- Five starter decks, custom deck building, deck validation, and JSON import/export
 - Local single-player matches with a computer opponent and browser-based saves
 - An 18-stage **Dark Moon Shards** campaign with separate progression
 - Match-code multiplayer with reconnectable, server-persisted rooms
@@ -63,6 +63,12 @@ To use a different address or port:
 ```bash
 python start.py --host 127.0.0.1 --port 8080 --no-browser
 ```
+
+## Custom Dota 2 expansion
+
+Choose **荆棘与剑舞** in the deck selector to play Pangolier (石鳞剑士) and Dark Willow (邪影芳灵). They use official Valve hero art, ability icons, and localized names, with custom Threefold mechanics. These are not Artifact Classic cards. Signature spells are included automatically; Rolling Thunder and Terrorize can be added through the deck builder.
+
+See [the expansion rules and source credits](research/dota2-expansion.md) for damage, shield, root, Shadow Realm, delayed Jex, and face-down rules. Run `npm run test:expansion` for focused engine coverage.
 
 ## Multiplayer
 

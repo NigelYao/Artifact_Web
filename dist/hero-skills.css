@@ -5,12 +5,36 @@
 .hero-skill-icon img{display:block;width:100%;height:100%;object-fit:cover;border-radius:2px;pointer-events:none}
 .hero-skill-icon.active.ready{border-color:#e7d99a;box-shadow:0 0 8px #e1c066aa,inset 0 0 3px #fff}
 .hero-skill-icon.unavailable img{filter:grayscale(.75) brightness(.42)}
-.hero-skill-icon b{position:absolute;inset:0;display:grid;place-items:center;color:#fff;font:bold 20px Georgia;text-shadow:0 1px 4px #000}
-.hero-skill-icon .skill-kind{position:absolute;right:-2px;bottom:-3px;background:#253644;border:1px solid #82909a;color:#e1eaf1;font:9px/12px sans-serif;padding:0 2px;border-radius:2px}
+.hero-skill-icon b{position:absolute;inset:0;display:grid;place-items:center;color:#fff;font:bold 20px 'Artifact KaiTi',Georgia;text-shadow:0 1px 4px #000}
+.hero-skill-icon .skill-kind{position:absolute;right:-2px;bottom:-3px;background:#253644;border:1px solid #82909a;color:#e1eaf1;font:9px/12px 'Artifact KaiTi',sans-serif;padding:0 2px;border-radius:2px}
 .hero-skill-icon:focus-visible{outline:2px solid #f5e4a0;outline-offset:3px}
 .in-battle .board .ability-shortcut.equipment-ability,.combat-ghost .ability-shortcut.equipment-ability{left:auto;right:0;bottom:28%;z-index:12}
 .hero-skill-detail{padding:14px 0;border-top:1px solid #78828244}.hero-skill-heading{display:flex;align-items:center;gap:12px}.hero-skill-heading img{width:42px;height:42px;border:1px solid #ab9a70;object-fit:cover}.hero-skill-heading strong{display:block;font-size:17px;color:#ebdca8}.hero-skill-heading small{display:block;margin-top:4px;color:#aebfc7;font-size:12px}.hero-skill-detail p{font-size:14px;line-height:1.7;margin:12px 0}.passive-explanation{display:block;font-size:12px;line-height:1.6;color:#9eb5bf}.inspector.skill-focused .inspector-art{display:none}.inspector.skill-focused .inspector-content{padding-top:15px}.hero-skill-detail .ability-button{width:100%;min-height:44px}
-@media(pointer:coarse){.in-battle .board .hero-skill-icons,.combat-ghost .hero-skill-icons{height:24%;max-height:26px;gap:2px}.in-battle .board .hero-skill-icon,.combat-ghost .hero-skill-icon{width:auto;height:100%;aspect-ratio:1;min-width:0;min-height:0;flex:none}.hero-skill-icon b{font-size:clamp(11px,1.8vh,18px)}.hero-skill-icon .skill-kind{font:8px/10px sans-serif;padding:0 1px}.hero-skill-icon:before{content:'';position:absolute;inset:-5px}.hero-skill-detail p{font-size:15px}.inspector.skill-focused{width:min(350px,calc(100vw - 16px));max-height:calc(100dvh - 24px);top:12px;bottom:auto;overflow:auto;z-index:45}.inspector.skill-focused .inspector-content{padding:12px 16px}.inspector.skill-focused h2{font-size:21px;margin:4px 0}.inspector.skill-focused .inspector-stats{margin:9px 0}.inspector.skill-focused .inspector-top button{min-width:44px;min-height:44px}}
+@media(pointer:coarse){.in-battle .board .hero-skill-icons,.combat-ghost .hero-skill-icons{height:24%;max-height:26px;gap:2px}.in-battle .board .hero-skill-icon,.combat-ghost .hero-skill-icon{width:auto;height:100%;aspect-ratio:1;min-width:0;min-height:0;flex:none}.hero-skill-icon b{font-size:clamp(11px,1.8vh,18px)}.hero-skill-icon .skill-kind{font:8px/10px 'Artifact KaiTi',sans-serif;padding:0 1px}.hero-skill-icon:before{content:'';position:absolute;inset:-5px}.hero-skill-detail p{font-size:15px}.inspector.skill-focused{width:min(350px,calc(100vw - 16px));max-height:calc(100dvh - 24px);top:12px;bottom:auto;overflow:auto;z-index:45}.inspector.skill-focused .inspector-content{padding:12px 16px}.inspector.skill-focused h2{font-size:21px;margin:4px 0}.inspector.skill-focused .inspector-stats{margin:9px 0}.inspector.skill-focused .inspector-top button{min-width:44px;min-height:44px}}
 .passive-skill-float{position:fixed;transform:translate(-50%,-100%);max-width:250px;width:max-content;color:#e3eaff;background:#121d2eef;border:1px solid #849dc0aa;padding:5px 9px;border-radius:3px;font-size:12px;line-height:1.4;text-align:center;pointer-events:none;animation:passive-label 2.2s ease both;text-shadow:0 1px 2px #000}
 .passive-target-ring{position:fixed;width:65px;height:65px;border-radius:50%;transform:translate(-50%,-50%);border:2px solid #a3d9b3;box-shadow:0 0 22px #9cd5a599;pointer-events:none;animation:passive-ring 1s ease-out both}.passive-target-ring.moonlight{border-color:#c3ceff;background:radial-gradient(ellipse,#d8dfffaa,transparent 65%);box-shadow:0 -30px 28px #b2c2ff88}.passive-target-ring.static-field{border-style:dashed;border-color:#9bdcfa;box-shadow:0 0 20px #74bdffbb}
 @keyframes passive-label{0%{opacity:0;translate:0 5px}12%,80%{opacity:1;translate:0 0}100%{opacity:0;translate:0 -9px}}@keyframes passive-ring{0%{opacity:0;scale:.5}25%{opacity:1}100%{opacity:0;scale:1.65}}@media(prefers-reduced-motion:reduce){.passive-skill-float,.passive-target-ring{animation-duration:.1s}}
+/* Dota 2 expansion: persistent board states and recorded ability effects. */
+.expansion-card .card-art{object-fit:contain;background:#11121b}
+.expansion-card.hero-card .card-art{object-fit:cover;object-position:center 30%;background:radial-gradient(ellipse at center,#403143,#101317 75%)}
+.expansion-card .card-rules{font-size:11px;line-height:1.5}
+.unit-wrapper.in-shadow-realm .game-card{filter:saturate(.6);box-shadow:0 0 22px #a854e899;outline:2px solid #a06bd2}
+.unit-wrapper.in-shadow-realm .card-art{opacity:.42}
+.unit-wrapper.has-damage-shield .game-card{outline:2px solid #88ddd5;box-shadow:0 0 16px #7dfff45c}
+.flipped-card{display:flex!important;align-items:center;justify-content:center;flex-direction:column;gap:5px;background:repeating-linear-gradient(45deg,#201b31 0px,#201b31 8px,#29213c 8px,#29213c 10px)!important;border:2px solid #a575c1!important;transform:rotateY(180deg);animation:expansion-flip .55s ease both;cursor:default}
+.flipped-card>*{transform:rotateY(180deg);color:#d6bbec;text-align:center}
+.flipped-card>span{font-size:36px}.flipped-card>strong{font-size:12px}.flipped-card>small{font-size:8px;line-height:1.2}
+.unit-flipped{cursor:default!important}
+.slot{position:relative}
+.jex-marker{position:absolute;z-index:9;top:0;right:-7px;display:flex;align-items:center;flex-direction:column;pointer-events:none;color:#ddc1f7;text-shadow:0 1px 3px #000}
+.jex-marker img{width:30px;height:30px;border:1px solid #b582da;border-radius:50%;box-shadow:0 0 14px #b582da88}
+.jex-marker b{font-size:10px}.jex-marker small{font-size:8px;white-space:nowrap;background:#171024dd;padding:2px 4px}
+.jex-marker.enhanced img{border-color:#f6aee6;box-shadow:0 0 18px #f293d5}
+.shield-jump-ghost{position:fixed!important;z-index:35;pointer-events:none!important}
+.rolling-ball{position:fixed;width:76px;height:76px;border-radius:50%;background-position:center;background-size:cover;border:3px solid #ecce99;box-shadow:inset 0 0 15px #170e09,0 0 26px #e4a245;z-index:35;pointer-events:none}
+.rolling-trajectory{position:fixed;inset:0;width:100%;height:100%;z-index:32;pointer-events:none}.rolling-trajectory polyline{fill:none;stroke:#ffca77;stroke-width:3;stroke-dasharray:5 6;opacity:.6}
+.expansion-ring{position:fixed;z-index:36;pointer-events:none;width:40px;height:40px;border:3px solid #bc8eee;border-radius:50%;animation:expansion-ring .9s ease-out forwards}
+.shield-crash-ring{border-color:#7be9e1;box-shadow:0 0 32px #4cb5b1}.roll-hit-ring{border-color:#ffd079}.terror-ring{border-color:#f4abdd;box-shadow:0 0 28px #b34cc2}
+@keyframes expansion-ring{from{transform:translate(-50%,-50%) scale(.3);opacity:1}to{transform:translate(-50%,-50%) scale(4);opacity:0}}
+@keyframes expansion-flip{from{transform:rotateY(0deg)}to{transform:rotateY(180deg)}}
+@media(prefers-reduced-motion:reduce){.flipped-card{animation:none}.expansion-ring{animation-duration:.1s}}

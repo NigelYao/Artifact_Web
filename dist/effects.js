@@ -5,6 +5,7 @@ const {Game,clone}=root.ArtifactEngine;
 const G=Game.prototype;
 const previousTargets=G.targets;
 G.targets=function(k,p,source=null){
+ if(!source){if(k==='pangolier_lucky_shot')return [{kind:'unit',side:'enemy'}];if(k==='dark_willow_bramble_maze')return [];if(k==='pangolier_gyroshell')return [{kind:'position',cross:false,free:true}];if(k==='dark_willow_terrorize')return [{kind:'position',cross:false,free:true,occupied:true}];}
  if(source){if(['tinker','cheating_death'].includes(k))return [{kind:'unit',side:'any'}];if(k==='winter_wyvern')return [{kind:'position',cross:false}];}
  if(!source){if(k==='shop_deed')return [];if(k==='gust')return [{kind:'unit',side:'enemy',hero:true}];if(['arm_the_rebellion','routed'].includes(k))return [];if(k==='astral_imprisonment')return [{kind:'unit',side:'any'}];}
  return previousTargets.call(this,k,p,source);
@@ -12,11 +13,39 @@ G.targets=function(k,p,source=null){
 G.removeImp=function(id){for(let l=0;l<3;l++)for(let p=0;p<2;p++){const a=this.imps(p,l),i=a.findIndex(v=>v.uid===id);if(i>=0){const [c]=a.splice(i,1);this.emit('destroy',this.card(c.k).name+'被摧毁');return;}}};
 G.chooseCombat=function(a,b){if(!a||!b||a.owner===b.owner||a.lane!==b.lane)throw Error('战斗目标须为同路敌方单位');a.target=b.uid;a.arrow=b.pos-a.pos;};
 G.takeControl=function(u,p){const l=u.lane;u.owner=p;const occupied=this.all(p,l).filter(v=>v!==u);if(occupied.some(v=>v.pos===u.pos)){let pos=0;while(occupied.some(v=>v.pos===pos))pos++;u.pos=pos;}u.target=null;u.arrow=0;this.emit('control',this.card(u.k).name+'改变阵营',{unit:u.uid});};
+// Persisted, seeded path: damage and displacement use exactly the curve displayed by the client.
+G.rollThunder=function(u,destination){
+ if(!this.canMove(u))throw Error('缠绕或翻牌期间无法滚动');
+ const p=u.owner,l=u.lane,start=u.pos,end=destination.pos,max=Math.max(end,...this.all(null,l).map(v=>v.pos));
+ const points=[{x:start,y:0},{x:this.random()*(max+.5),y:1},{x:this.random()*(max+.5),y:0},{x:this.random()*(max+.5),y:1},{x:end,y:0}],path=[];
+ for(let i=0;i<points.length-1;i++){const a=points[Math.max(0,i-1)],b=points[i],c=points[i+1],d=points[Math.min(points.length-1,i+2)];for(let n=0;n<24;n++){const t=n/24,t2=t*t,t3=t2*t;const coordinate=k=>.5*((2*b[k])+(-a[k]+c[k])*t+(2*a[k]-5*b[k]+4*c[k]-d[k])*t2+(-a[k]+3*b[k]-3*c[k]+d[k])*t3);path.push({pos:Math.max(0,Math.min(max,coordinate('x'))),row:Math.max(0,Math.min(1,coordinate('y')))});}}
+ path.push({pos:end,row:0});
+ const event=this.emit('rolling',this.card(u.k).name+' · 地雷滚滚',{unit:u.uid,owner:p,lane:l,start,end,columns:max+1,path,hits:[]}),counts=new Map(),touching=new Set();
+ for(const [step,point] of path.entries())for(const v of this.all(null,l)){
+  if(v===u||!this.selectable(v)||this.stats(v).hp<=0)continue;
+  const close=Math.hypot(v.pos-point.pos,(v.owner===p?0:1)-point.row)<.52;
+  if(!close){touching.delete(v.uid);continue;}if(touching.has(v.uid)||(counts.get(v.uid)||0)>=2)continue;touching.add(v.uid);
+  const damage=this.damage(v,1,false,u.uid);if(!damage)continue;counts.set(v.uid,(counts.get(v.uid)||0)+1);
+  const from=v.pos,options=[from-1,from+1].filter(pos=>pos>=0&&pos<=max&&!this.at(v.owner,l,pos)&&!(v.owner===p&&pos===end));
+  if(options.length&&this.canMove(v)){v.pos=this.pick(options);this.resetArrow(v);this.emit('displace',this.card(v.k).name+'移动一格',{unit:v.uid,fromPos:from,toPos:v.pos,lane:l});}
+  event.hits.push({unit:v.uid,step,fromPos:from,toPos:v.pos,amount:damage});
+ }
+ this.move(u,l,end);
+};
+G.triggerJex=function(p,handId){
+ const ready=(this.s.jex||[]).filter(j=>j.owner===p&&j.createdBy!==handId);
+ this.s.jex=(this.s.jex||[]).filter(j=>!ready.includes(j));
+ for(const j of ready){const target=this.at(1-p,j.lane,j.pos);this.emit('jex',j.enhanced?'杰克斯 · 恐吓':'杰克斯 · 作祟',{owner:p,lane:j.lane,pos:j.pos,enhanced:j.enhanced,target:target?.uid});if(!this.selectable(target))continue;this.damage(target,j.enhanced?3:2);this.buff(target,j.enhanced?{flipped:1}:{disarm:1},'round');}
+};
 G.resolve=function(k,p,t,h){
  const l=this.s.lane,pl=this.s.players[p],op=this.s.players[1-p],a=this.get(t[0]),b=this.get(t[1]);
  const allies=()=>this.all(p,l),enemies=()=>this.all(1-p,l),units=()=>this.all(null,l);
  const buff=(u,v,d='permanent')=>this.buff(u,v,d,k),hit=(u,n,pierce=false)=>this.damage(u,n,pierce),spawn=(name,n=1,lane=l)=>{for(let i=0;i<n;i++)this.spawn(name,p,lane);},other=()=>this.pick([0,1,2].filter(v=>v!==a.lane));
  switch(k){
+ case 'pangolier_lucky_shot':hit(a,2);if(this.random()<.5)buff(a,{disarm:1},'round');break;
+ case 'pangolier_gyroshell':{const u=this.named(p,'pangolier',l).find(v=>this.canMove(v));if(!u)throw Error('本路需要可行动且未被缠绕的石鳞剑士');this.rollThunder(u,t[0]);break;}
+ case 'dark_willow_bramble_maze':{const max=Math.max(0,...units().map(u=>u.pos),...(this.s.jex||[]).filter(j=>j.lane===l).map(j=>j.pos));for(let pos=0;pos<=max;pos++)if(!this.at(p,l,pos)){const flower=this.spawn('dark_willow_bramble',p,l,pos);flower.expiresRound=this.s.round;}break;}
+ case 'dark_willow_terrorize':{const pos=t[0].pos,flower=this.at(p,l,pos);(this.s.jex||=[]).push({uid:this.id(),owner:p,lane:l,pos,enhanced:flower?.k==='dark_willow_bramble',createdBy:h.uid});this.emit('jex-summon','杰克斯等待下一张技能牌',{owner:p,lane:l,pos,enhanced:flower?.k==='dark_willow_bramble'});break;}
  case 'and_one_for_me':{const i=this.pick(Object.values(a.items));if(!i)throw Error('目标英雄没有装备');pl.hand.push({uid:this.id(),k:i.k,lock:0});break;}
  case 'act_of_defiance':buff(a,{silence:1},'round');break;
  case 'allseeing_ones_favor':buff(a,{auraRegen:2});break;
@@ -155,6 +184,8 @@ G.canActivate=function(p,uid,k){
  if(u.hero!==undefined&&(u.owner!==p||u.lane!==l||!this.enabled(u)))return '该单位当前无法使用技能';
  const a=this.abilities(u).find(a=>a.k===k);if(!a)return '这是自动生效的被动技能';
  if(a.remaining>0)return '冷却剩余 '+a.remaining+' 回合';
+ if(['blink_dagger','winter_wyvern','meepo','phase_boots'].includes(k)&&!this.canMove(u))return '缠绕期间无法移动';
+ if(k==='dark_willow'&&this.flag(u,'shadowRealm'))return '已经处于暗影之境';
  if(['pugna','demagicking_maul'].includes(k)&&!this.imps(1-p,l).length)return '敌方没有强化';
  if(k==='demagicking_maul'&&this.target(u))return '英雄被阻挡，无法使用';
  if(k==='meepo'&&!this.all(p).some(v=>v.k==='meepo'&&v.lane!==l))return '其他战线没有友方米波';
@@ -166,9 +197,12 @@ G.activate=function(p,uid,k,t=[]){const backup=clone(this.s);try{
  if(!u){u=this.imps(p,l).find(i=>i.uid===uid);imp=true;}if(!u)throw Error('找不到技能来源');
  if(!imp&&(u.owner!==p||u.lane!==l||!this.enabled(u)))throw Error('该单位当前无法使用技能');
  const ability=this.abilities(u).find(a=>a.k===k);if(!ability||ability.remaining>0)throw Error('技能尚在冷却');
+ if(k==='dark_willow'&&this.flag(u,'shadowRealm'))throw Error('已经处于暗影之境');
  this.validateTargets(this.card(k),p,t,u);const a=this.get(t[0]),b=this.get(t[1]),it=Object.values(u.items||{}).find(i=>i.k===k);
  this.emit('ability',this.card(u.k).name+' · '+ability.name,{unit:uid,card:k});
  switch(k){
+ case 'pangolier':{let shield=0;for(const v of this.neighbors(u,true))if(this.damage(v,2,false,u.uid)>0)shield+=v.hero?2:1;if(shield)this.buff(u,{shield},'round');this.emit('shield-crash','甲盾冲击 · 护盾 '+shield,{unit:u.uid,owner:p,lane:l,shield});break;}
+ case 'dark_willow':this.buff(u,{shadowRealm:1,shadowBonus:1},'death');break;
  case 'abaddon':this.heal(u,999);this.buff(u,{immune:1},'round');break;
  case 'beastmaster':this.spawn('loyal_beast',p,l);break;
  case 'chen':case 'helm_of_the_dominator':this.takeControl(a,p);break;
@@ -217,13 +251,13 @@ G.activate=function(p,uid,k,t=[]){const backup=clone(this.s);try{
 // Heuristic AI uses the same public action API and validation as the player.
 G.candidateTargets=function(k,p,source=null){const spec=this.targets(k,p,source),choices=[];for(const s of spec){let a=[];
  if(s.kind==='lane')a=[0,1,2];
- else if(s.kind==='position'){for(const l of s.cross?[0,1,2]:[this.s.lane])for(const pos of this.placementPositions(p,l,source))a.push({lane:l,pos});}
+ else if(s.kind==='position'){for(const l of s.cross?[0,1,2]:[this.s.lane])for(const pos of this.positionTargets(p,l,s,source))a.push({lane:l,pos});}
  else if(s.kind==='improvement'){for(let l=0;l<3;l++)if(s.cross||l===this.s.lane)for(let q=0;q<2;q++)if(!s.enemy||q!==p)a.push(...this.imps(q,l).map(i=>i.uid));}
- else a=this.all(null,s.cross?null:this.s.lane).filter(u=>(s.side!=='ally'||u.owner===p)&&(s.side!=='enemy'||u.owner!==p)&&(!s.hero||u.hero)&&(!s.creep||!u.hero)&&(!s.color||this.card(u.k).color===s.color)&&(!s.other||u.uid!==source?.uid)).map(u=>u.uid);
+ else a=this.all(null,s.cross?null:this.s.lane).filter(u=>this.selectable(u)&&(s.side!=='ally'||u.owner===p)&&(s.side!=='enemy'||u.owner!==p)&&(!s.hero||u.hero)&&(!s.creep||!u.hero)&&(!s.color||this.card(u.k).color===s.color)&&(!s.other||u.uid!==source?.uid)).map(u=>u.uid);
  if(!a.length)return [];choices.push(a);}
  let out=[[]];for(const a of choices)out=out.flatMap(t=>a.filter(v=>!t.includes(v)).map(v=>[...t,v])).slice(0,150);return out;
 };
-G.evaluate=function(p){let n=0;for(let l=0;l<3;l++){for(let q=0;q<2;q++){const sign=q===p?1:-1,t=this.s.lanes[l].towers[q];n+=sign*((t.fallen?-55:0)+t.hp*.42);for(const u of this.all(q,l)){const st=this.stats(u);n+=sign*(st.attack*1.1+st.hp*.55+st.armor*1.3+(u.hero?7:1)+(st.immune?12:0)-(this.flag(u,'stun')?st.attack+3:0)-(this.flag(u,'silence')&&u.hero?4:0));}n+=sign*this.imps(q,l).reduce((x,i)=>x+(this.card(i.k).mana||1)*1.7,0);}const f=this.combatForecast(l);n+=(f.tower[1-p]-f.tower[p])*.65;}n+=(this.s.players[p].gold-this.s.players[1-p].gold)*.28+(this.s.players[p].hand.length-this.s.players[1-p].hand.length)*1.3;if(this.s.winner!==null)n+=this.s.winner===p?100000:this.s.winner===2?0:-100000;return n;};
+G.evaluate=function(p){let n=0;for(let l=0;l<3;l++){for(let q=0;q<2;q++){const sign=q===p?1:-1,t=this.s.lanes[l].towers[q];n+=sign*((t.fallen?-55:0)+t.hp*.42);for(const u of this.all(q,l)){const st=this.stats(u);n+=sign*(st.attack*1.1+st.hp*.55+st.armor*1.3+(u.hero?7:1)+(st.immune?12:0)-(this.flag(u,'stun')?st.attack+3:0)-(this.flag(u,'silence')&&u.hero?4:0));}n+=sign*this.imps(q,l).reduce((x,i)=>x+(this.card(i.k).mana||1)*1.7,0);}const f=this.combatForecast(l);n+=(f.tower[1-p]-f.tower[p])*.65;}n+=(this.s.players[p].gold-this.s.players[1-p].gold)*.28+(this.s.players[p].hand.length-this.s.players[1-p].hand.length)*1.3;for(const u of this.all()){const sign=u.owner===p?1:-1;n+=sign*(this.shield(u)*.55+(this.flag(u,'shadowRealm')?3:0)-(this.flag(u,'flipped')?this.stats(u).attack+3:0));}for(const j of this.s.jex||[])n+=(j.owner===p?1:-1)*(j.enhanced?4:3);if(this.s.winner!==null)n+=this.s.winner===p?100000:this.s.winner===2?0:-100000;return n;};
 G.bestAction=function(p){if(this.s.phase!=='action'||this.s.turn!==p)return null;const saved=clone(this.s),baseline=this.evaluate(p);let best=null,bestScore=.1;const actions=[];
  for(const h of this.s.players[p].hand){if(this.canPlay(p,h))continue;for(const t of this.candidateTargets(h.k,p))actions.push({kind:'play',id:h.uid,k:h.k,t});}
  for(const u of [...this.all(p,this.s.lane),...this.imps(p,this.s.lane)]){if(u.alive&&!this.enabled(u))continue;for(const a of this.abilities(u))if(!a.remaining)for(const t of this.candidateTargets(a.k,p,u))actions.push({kind:'ability',id:u.uid,k:a.k,t});}

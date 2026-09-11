@@ -24,6 +24,8 @@ node tests/touch-cards.test.cjs
 node tests/hand-drag-targets.test.cjs
 node tests/placement-rules.test.cjs
 node tests/battle-regressions.cjs
+node tests/dota-expansion.test.cjs
+node tests/engine.test.cjs
 node tests/hero-skills.test.cjs
 node tests/hero-skills-ui.test.cjs
 sudo chown -R root:root "$DEST"

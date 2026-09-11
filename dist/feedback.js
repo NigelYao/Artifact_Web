@@ -2,7 +2,7 @@
    No rule mutation: snapshots survive death, movement, control and equipment changes. */
 (function(){'use strict';
 const G=ArtifactEngine.Game.prototype,lanes=['上路','中路','下路'];
-const flags={stun:'眩晕',silence:'沉默',disarm:'缴械',immune:'伤害免疫',root:'缠绕',deathShield:'死亡护盾'};
+const flags={flipped:'恐惧翻牌',shadowRealm:'暗影之境',shield:'伤害护盾',stun:'眩晕',silence:'沉默',disarm:'缴械',immune:'伤害免疫',root:'缠绕',deathShield:'死亡护盾'};
 function snapshot(game,u){const s=game.stats(u);return {uid:u.uid,k:u.k,name:game.card(u.k).name,owner:u.owner,lane:u.lane,alive:u.alive,attack:s.attack,armor:s.armor,health:s.health,regen:s.regen,cleave:s.cleave,retaliate:s.retaliate,siege:s.siege,hp:s.hp,mods:JSON.stringify(u.mods),items:JSON.stringify(u.items),flags:Object.fromEntries(Object.keys(flags).map(k=>[k,game.flag(u,k)]))};}
 for(const method of ['play','activate']){const original=G[method];G[method]=function(p,id,...args){
  const k=method==='play'?this.s.players[p].hand.find(h=>h.uid===Number(id))?.k:args[0],raw=method==='play'?(args[0]||[]):(args[1]||[]);

@@ -1,1 +1,1 @@
-{"cmdString": "set -e\nprintf '%s  %s\\n' '1b44571d26fc0107c63e8c6a8b51474deed617745e98fb261d7b875d4858ec8c' '/tmp/artifact-20260909-placement1.tar.gz' | sha256sum --check -\nbash /tmp/artifact-deploy-activate.sh 20260909-placement1", "timeout": 300000}
+{"cmdString": "set -e\nprintf '%s  %s\\n' '5e799efcc2f995420f42fd81ca8431f1665b9be140c7955959f2640b658e1ade' '/tmp/artifact-20260911-dota2-expansion1.tar.gz' | sha256sum --check -\nbash /tmp/artifact-deploy-activate.sh 20260911-dota2-expansion1", "timeout": 300000}

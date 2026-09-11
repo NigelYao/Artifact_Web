@@ -1,0 +1,492 @@
+
+> artifact-threefold@1.0.0 test
+> npm run test:online && npm run test:touch && npm run test:share && npm run test:matchmaking && npm run test:placement && npm run test:expansion
+
+
+> artifact-threefold@1.0.0 test:online
+> node server/match.test.cjs && node server/admin.test.cjs && node tests/online-client.test.cjs && node tests/online-adapter.test.cjs && node tests/online-integration.cjs
+
+PASS invalid turn and replay never advance combat twice
+PASS one shopper cannot advance round and purchases do not attack
+PASS deployment is hidden, validated and jointly committed
+PASS seat identity and room state survive a fresh Match instance
+PASS failed deployment leaves random seed and state unchanged
+PASS concession uses original end-screen phase and persists winner
+PASS cast snapshots retain feedback outcomes and reconnection drops effects
+PASS confirmed deployment restores only the requesting seat plan after reload
+8 online room logic checks passed
+(node:47380) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:51952) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS administrator secret route, persistence, no credential leak, live connections, presence expiry and paginated history
+TAP version 13
+# Subtest: connect stores anonymous identity, restores seat and command carries revision
+ok 1 - connect stores anonymous identity, restores seat and command carries revision
+  ---
+  duration_ms: 6.562
+  type: 'test'
+  ...
+# Subtest: server command rejection rejects pending promise without applying stale state
+ok 2 - server command rejection rejects pending promise without applying stale state
+  ---
+  duration_ms: 3.3661
+  type: 'test'
+  ...
+# Subtest: disconnect rejects outstanding operation; offline never sends commands
+ok 3 - disconnect rejects outstanding operation; offline never sends commands
+  ---
+  duration_ms: 2.6218
+  type: 'test'
+  ...
+# Subtest: a replacement page stops automatic reconnection and rejects pending action
+ok 4 - a replacement page stops automatic reconnection and rejects pending action
+  ---
+  duration_ms: 3.1933
+  type: 'test'
+  ...
+# Subtest: spectator cannot submit commands or overwrite last player room
+ok 5 - spectator cannot submit commands or overwrite last player room
+  ---
+  duration_ms: 2.1865
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 23.9899
+PASS seat projection: identities, owner metadata, towers, stats, forecasts, reversibility, no source mutation
+PASS online save writes and AI isolated; offline pages do not load online runtime
+PASS same-revision presence during dynamic app loading is retained; presence never reapplies combat state
+colyseus.js - onError => (403) 房间已满
+Room connection was closed unexpectedly (4002):
+colyseus.js - onError => (4002)
+PASS anonymous rooms, two seats, spectator isolation and hidden hands
+PASS command deduplication, stale rejection, shop barrier, simultaneous deployment
+PASS browser reconnect, server restart persistence, surrender and spectator recovery
+
+> artifact-threefold@1.0.0 test:touch
+> node tests/responsive-board.test.cjs && node tests/touch-cards.test.cjs && node tests/hand-drag-targets.test.cjs
+
+PASS desktop board recovers approximately 80px above the hand shelf
+PASS phone landscape enlarges artwork and leaves hand space with aligned pass socket
+PASS tablet portrait and landscape preserve all campaign lane counts
+PASS deployment keeps the measured return-hero tray unobstructed
+TAP version 13
+# Subtest: small finger jitter stays pending before the long-press threshold
+ok 1 - small finger jitter stays pending before the long-press threshold
+  ---
+  duration_ms: 1.1985
+  type: 'test'
+  ...
+# Subtest: ordinary horizontal swipe scrolls and cannot turn into a held reading gesture
+ok 2 - ordinary horizontal swipe scrolls and cannot turn into a held reading gesture
+  ---
+  duration_ms: 0.1468
+  type: 'test'
+  ...
+# Subtest: stationary long press becomes continuous reading across cards
+ok 3 - stationary long press becomes continuous reading across cards
+  ---
+  duration_ms: 0.1313
+  type: 'test'
+  ...
+# Subtest: movement arriving after a held finger still reads rather than scrolling
+ok 4 - movement arriving after a held finger still reads rather than scrolling
+  ---
+  duration_ms: 0.1211
+  type: 'test'
+  ...
+# Subtest: vertical move cancels pending hold instead of selecting or playing
+ok 5 - vertical move cancels pending hold instead of selecting or playing
+  ---
+  duration_ms: 0.1362
+  type: 'test'
+  ...
+# Subtest: held reading becomes a drag only after deliberate upward movement
+ok 6 - held reading becomes a drag only after deliberate upward movement
+  ---
+  duration_ms: 0.7889
+  type: 'test'
+  ...
+# Subtest: scrolling quickly upward never plays even after the hold deadline
+ok 7 - scrolling quickly upward never plays even after the hold deadline
+  ---
+  duration_ms: 0.1623
+  type: 'test'
+  ...
+# Subtest: long horizontal card reading can transition to upward drag of selected card
+ok 8 - long horizontal card reading can transition to upward drag of selected card
+  ---
+  duration_ms: 0.1204
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 14.8208
+PASS dragging spends nothing until legal release; equipment ownership, occupied slots, cross-lane rejection, summon placement and spectator guard
+
+> artifact-threefold@1.0.0 test:share
+> node server/deck-share.test.cjs && node tests/deck-library.test.cjs
+
+(node:52644) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS share/import HTTP, complete ordered decks, duplicate reuse, immutable persistence after reopening, malformed input, size limit and no identity leakage
+PASS opponent deck collection persists ordered snapshots, deduplicates, preserves custom deck and propagates storage failure
+
+> artifact-threefold@1.0.0 test:matchmaking
+> node server/matchmaking.test.cjs && node tests/matchmaking-http.test.cjs && node tests/matchmaking-ui.test.cjs
+
+(node:2472) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+TAP version 13
+# Subtest: FIFO eligible players each wait ten seconds; lone queue remains until cancelled or heartbeat expires
+ok 1 - FIFO eligible players each wait ten seconds; lone queue remains until cancelled or heartbeat expires
+  ---
+  duration_ms: 6.8556
+  type: 'test'
+  ...
+# Subtest: ready is explicit, validates deck, creates one battle with reserved seats and survives duplicate requests
+ok 2 - ready is explicit, validates deck, creates one battle with reserved seats and survives duplicate requests
+  ---
+  duration_ms: 10.5505
+  type: 'test'
+  ...
+# Subtest: thirty-second timeout requeues only ready active player and resets ten-second eligibility
+ok 3 - thirty-second timeout requeues only ready active player and resets ten-second eligibility
+  ---
+  duration_ms: 2.2206
+  type: 'test'
+  ...
+# Subtest: cancel reparks opponent and stale cancellation cannot remove new ticket
+ok 4 - cancel reparks opponent and stale cancellation cannot remove new ticket
+  ---
+  duration_ms: 1.8939
+  type: 'test'
+  ...
+# Subtest: inactive ready participant does not automatically requeue
+ok 5 - inactive ready participant does not automatically requeue
+  ---
+  duration_ms: 1.321
+  type: 'test'
+  ...
+# Subtest: queue, preparation and resulting battle association survive real database reopen
+ok 6 - queue, preparation and resulting battle association survive real database reopen
+  ---
+  duration_ms: 53.7496
+  type: 'test'
+  ...
+# Subtest: eligible queue pairs oldest first and respects distinct arrival times
+ok 7 - eligible queue pairs oldest first and respects distinct arrival times
+  ---
+  duration_ms: 3.7755
+  type: 'test'
+  ...
+# Subtest: prepared snapshot reveals only own deck and an existing manual battle prevents a second match
+ok 8 - prepared snapshot reveals only own deck and an existing manual battle prevents a second match
+  ---
+  duration_ms: 5.7786
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 98.2602
+(node:50304) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+TAP version 13
+# Subtest: HTTP matchmaking validates sessions, timings, readiness, timeout recovery and idempotent parallel requests
+ok 1 - HTTP matchmaking validates sessions, timings, readiness, timeout recovery and idempotent parallel requests
+  ---
+  duration_ms: 191.0277
+  type: 'test'
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 1
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 200.0636
+TAP version 13
+# Subtest: ready uploads explicit match id and selected deck with anonymous token
+ok 1 - ready uploads explicit match id and selected deck with anonymous token
+  ---
+  duration_ms: 1.7128
+  type: 'test'
+  ...
+# Subtest: cancel suppresses stale battle response and runs after in-flight ready
+ok 2 - cancel suppresses stale battle response and runs after in-flight ready
+  ---
+  duration_ms: 5.1801
+  type: 'test'
+  ...
+# Subtest: cancellation arriving after room creation honors actual battle response
+ok 3 - cancellation arriving after room creation honors actual battle response
+  ---
+  duration_ms: 0.3128
+  type: 'test'
+  ...
+# Subtest: network failure reports error and a later status request recovers
+ok 4 - network failure reports error and a later status request recovers
+  ---
+  duration_ms: 0.6573
+  type: 'test'
+  ...
+# Subtest: deadline countdown uses server clock and never becomes negative
+ok 5 - deadline countdown uses server clock and never becomes negative
+  ---
+  duration_ms: 0.2207
+  type: 'test'
+  ...
+# Subtest: hung network request times out and cannot block cancellation forever
+ok 6 - hung network request times out and cannot block cancellation forever
+  ---
+  duration_ms: 11.2198
+  type: 'test'
+  ...
+# Subtest: heartbeat reuses anonymous token instead of scanning sessions every time
+ok 7 - heartbeat reuses anonymous token instead of scanning sessions every time
+  ---
+  duration_ms: 0.9753
+  type: 'test'
+  ...
+# Subtest: ready deck restoration matches submitted cards and hero order, not display name
+ok 8 - ready deck restoration matches submitted cards and hero order, not display name
+  ---
+  duration_ms: 0.511
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 27.7882
+
+> artifact-threefold@1.0.0 test:placement
+> node tests/placement-rules.test.cjs && node tests/battle-regressions.cjs && node tests/hand-drag-targets.test.cjs
+
+TAP version 13
+# Subtest: user example: single-sided vacancy remains, double-empty pair disappears together
+ok 1 - user example: single-sided vacancy remains, double-empty pair disappears together
+  ---
+  duration_ms: 8.3186
+  type: 'test'
+  ...
+# Subtest: opposite one-sided columns never merge into a new pair
+ok 2 - opposite one-sided columns never merge into a new pair
+  ---
+  duration_ms: 0.9804
+  type: 'test'
+  ...
+# Subtest: hand creeps must fill enemy gaps; invalid placement rolls back all state
+ok 3 - hand creeps must fill enemy gaps; invalid placement rolls back all state
+  ---
+  duration_ms: 3.5097
+  type: 'test'
+  ...
+# Subtest: without opposing vacancies, player can extend either edge preserving every existing pair
+ok 4 - without opposing vacancies, player can extend either edge preserving every existing pair
+  ---
+  duration_ms: 2.1144
+  type: 'test'
+  ...
+# Subtest: summons, cross-lane arrivals and returning heroes prioritize opposing vacancies
+ok 5 - summons, cross-lane arrivals and returning heroes prioritize opposing vacancies
+  ---
+  duration_ms: 2.0369
+  type: 'test'
+  ...
+# Subtest: dead hand creeps leave the board and cannot enter hero deployment
+ok 6 - dead hand creeps leave the board and cannot enter hero deployment
+  ---
+  duration_ms: 1.071
+  type: 'test'
+  ...
+# Subtest: unblocked arrows retain the 25/50/25 distribution even without neighboring enemies
+ok 7 - unblocked arrows retain the 25/50/25 distribution even without neighboring enemies
+  ---
+  duration_ms: 3.9568
+  type: 'test'
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 32.4301
+PASS only shared empty columns close and normalization is idempotent
+PASS existing opposing pairs remain aligned while gaps collapse
+PASS a one-sided lane becomes a compact rank and still attacks the tower
+PASS combat records attackers and targets before simultaneous deaths
+PASS disarmed and stunned units do not produce attack animations
+PASS shopping after third-lane combat cannot replay damage or mutate health
+PASS invalid shop slots are rejected without changing state
+7 battle regression suites passed.
+PASS dragging spends nothing until legal release; equipment ownership, occupied slots, cross-lane rejection, summon placement and spectator guard
+
+> artifact-threefold@1.0.0 test:expansion
+> node tests/dota-expansion.test.cjs && node tests/hero-skills.test.cjs
+
+(node:51368) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+TAP version 13
+# Subtest: expansion deck is valid; signatures auto-include and rebuild data stays in sync
+ok 1 - expansion deck is valid; signatures auto-include and rebuild data stays in sync
+  ---
+  duration_ms: 7.6248
+  type: 'test'
+  ...
+# Subtest: Shield Crash grants shield only for real damage and absorbs across hits until round end
+ok 2 - Shield Crash grants shield only for real damage and absorbs across hits until round end
+  ---
+  duration_ms: 2.6662
+  type: 'test'
+  ...
+# Subtest: forecast consumes a shared shield budget and agrees with simultaneous combat
+ok 3 - forecast consumes a shared shield budget and agrees with simultaneous combat
+  ---
+  duration_ms: 2.5473
+  type: 'test'
+  ...
+# Subtest: an absorbed attack does not proc Fury Swipes because another attacker penetrated the shield
+ok 4 - an absorbed attack does not proc Fury Swipes because another attacker penetrated the shield
+  ---
+  duration_ms: 1.2305
+  type: 'test'
+  ...
+# Subtest: Lucky Shot has seeded success and failure branches and one-round disarm
+ok 5 - Lucky Shot has seeded success and failure branches and one-round disarm
+  ---
+  duration_ms: 24.3232
+  type: 'test'
+  ...
+# Subtest: flowers fill only existing friendly gaps, retaliate on attacks and expire without bounty
+ok 6 - flowers fill only existing friendly gaps, retaliate on attacks and expire without bounty
+  ---
+  duration_ms: 1.8368
+  type: 'test'
+  ...
+# Subtest: flower recoil/root works in combat forecast and actual simultaneous combat
+ok 7 - flower recoil/root works in combat forecast and actual simultaneous combat
+  ---
+  duration_ms: 0.8934
+  type: 'test'
+  ...
+# Subtest: root blocks movement, swaps, blink and return with complete action rollback
+ok 8 - root blocks movement, swaps, blink and return with complete action rollback
+  ---
+  duration_ms: 2.3557
+  type: 'test'
+  ...
+# Subtest: Shadow Realm blocks attacks but permits spell damage, red-card stacks cap at 3 and one attack consumes it
+ok 9 - Shadow Realm blocks attacks but permits spell damage, red-card stacks cap at 3 and one attack consumes it
+  ---
+  duration_ms: 2.4356
+  type: 'test'
+  ...
+# Subtest: Shadow Realm bonus applies once to tower attack and survives a disarmed combat
+ok 10 - Shadow Realm bonus applies once to tower attack and survives a disarmed combat
+  ---
+  duration_ms: 1.3703
+  type: 'test'
+  ...
+# Subtest: normal Jex waits for next own spell, not its summoning card, equipment, enemy spell or hero ability
+ok 11 - normal Jex waits for next own spell, not its summoning card, equipment, enemy spell or hero ability
+  ---
+  duration_ms: 1.7989
+  type: 'test'
+  ...
+# Subtest: enhanced Jex snapshots flower, hits future opposite occupant for 3 then flips; marker persists through save/projection
+ok 12 - enhanced Jex snapshots flower, hits future opposite occupant for 3 then flips; marker persists through save/projection
+  ---
+  duration_ms: 2.4764
+  type: 'test'
+  ...
+# Subtest: flipped unit cannot be selected, use skills, attack, take damage, be killed by spells or move
+ok 13 - flipped unit cannot be selected, use skills, attack, take damage, be killed by spells or move
+  ---
+  duration_ms: 1.3038
+  type: 'test'
+  ...
+# Subtest: opposing hero deals exactly half final tower damage including fractions; opposing creep cannot attack a flipped blocker
+ok 14 - opposing hero deals exactly half final tower damage including fractions; opposing creep cannot attack a flipped blocker
+  ---
+  duration_ms: 1.3954
+  type: 'test'
+  ...
+# Subtest: rolling path is seeded, hits real curve contacts at most twice, moves by at most one empty slot and reserves destination
+ok 15 - rolling path is seeded, hits real curve contacts at most twice, moves by at most one empty slot and reserves destination
+  ---
+  duration_ms: 176.077
+  type: 'test'
+  ...
+# Subtest: ultimate validates source hero and same-lane slot before spending resources
+ok 16 - ultimate validates source hero and same-lane slot before spending resources
+  ---
+  duration_ms: 1.5236
+  type: 'test'
+  ...
+# Subtest: AI values delayed Jex setup and deck validation requires the ultimate hero
+ok 17 - AI values delayed Jex setup and deck validation requires the ultimate hero
+  ---
+  duration_ms: 1.5596
+  type: 'test'
+  ...
+# Subtest: waiting Jex tracks shared column insertion and resolves after spell on-cast damage
+ok 18 - waiting Jex tracks shared column insertion and resolves after spell on-cast damage
+  ---
+  duration_ms: 0.8003
+  type: 'test'
+  ...
+# Subtest: new delayed effects survive authoritative room persistence and seat projection
+ok 19 - new delayed effects survive authoritative room persistence and seat projection
+  ---
+  duration_ms: 13.0069
+  type: 'test'
+  ...
+1..19
+# tests 19
+# suites 0
+# pass 19
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 266.0894
+PASS 48 Classic and 2 expansion heroes are explicitly classified, with two Meepo abilities and four intentional exceptions
+PASS Luna automatically deals piercing damage and charges exactly three random Eclipse copies in current Classic
+PASS silenced Luna neither damages nor charges
+PASS Timbersaw gains armor per attacker and reduces each attacker armor; silence removes both
+PASS Viper defensive passive triggers even if attacking unit is silenced
+PASS active skill availability is read-only, respects cooldown and target availability
+PASS global aura affects other lanes, adjacent aura excludes self
+PASS Ursa, Bristleback and Necrophos persist their triggered stat modifications
+PASS spell passives preserve card event and generate separate source-labelled feedback
+PASS death passives follow actual diagonal blockers and do not trigger for a different target
+10 hero skill suites passed.

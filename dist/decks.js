@@ -8,5 +8,6 @@ const presets=[
  {id:'gold',name:'黄金契约',desc:'黑绿 · 经济运营与攻城',heroes:['bounty_hunter','drow_ranger','sorla_khan','lycan','rix'],main:copies(['payday',3],['iron_fog_goldmine',3],['untested_grunt',3],['grazing_shot',3],['mist_of_avernus',3],['revtel_convoy',3],['stars_align',3],['thunderhide_pack',2],['pick_off',2]),items:copies(['short_sword',2],['travelers_cloak',2],['blink_dagger',2],['horn_of_the_alpha',1],['apotheosis_blade',1],['heros_cape',1])}
 ];
 
+presets.push({id:'dark-willow-pangolier',name:'荆棘与剑舞',desc:'红黑 · 石鳞剑士 / 邪影芳灵扩展',heroes:['pangolier','dark_willow','axe','sorla_khan','phantom_assassin'],main:copies(['pangolier_gyroshell',3],['dark_willow_terrorize',3],['defensive_stance',3],['fight_through_the_pain',3],['bronze_legionnaire',3],['new_orders',3],['grazing_shot',3],['hip_fire',2],['untested_grunt',2]),items:defaultItems});
 root.ARTIFACT_DECKS=presets;
 })(typeof window!=='undefined'?window:globalThis);

@@ -1,0 +1,68 @@
+{
+  "retrieved": "2026-09-11",
+  "copyright": "Valve Corporation",
+  "heroPages": [
+    "https://www.dota2.com/hero/pangolier?l=schinese",
+    "https://www.dota2.com/hero/darkwillow?l=schinese"
+  ],
+  "dataFeeds": [
+    "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=120",
+    "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=119"
+  ],
+  "assets": [
+    {
+      "url": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/pangolier.png",
+      "file": "dist/assets/dota2/pangolier.png",
+      "sha256": "60407d7c4644790c5f9fa8446eef4f3a47926c0f20ddf1974a06bff808dd69de",
+      "bytes": 1171099
+    },
+    {
+      "url": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/dark_willow.png",
+      "file": "dist/assets/dota2/dark_willow.png",
+      "sha256": "98fb7268cb1f574b1e54170dc63c9e3f7e6b600cd0a225945c1f5eaa5b85bce3",
+      "bytes": 1001964
+    },
+    {
+      "url": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/pangolier_shield_crash.png",
+      "file": "dist/assets/dota2/pangolier_shield_crash.png",
+      "sha256": "c4bc68418876e942ed57bdfceb4ccdba30da9ea135732ab2e683541ac52d6921",
+      "bytes": 32098
+    },
+    {
+      "url": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/pangolier_lucky_shot.png",
+      "file": "dist/assets/dota2/pangolier_lucky_shot.png",
+      "sha256": "7e4d589dfdd7daab99bb91aef13101606dd1bd322f5b9002366fd866b9bf229a",
+      "bytes": 28521
+    },
+    {
+      "url": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/pangolier_gyroshell.png",
+      "file": "dist/assets/dota2/pangolier_gyroshell.png",
+      "sha256": "14e6c795a2c6e7c6f3983c1d950935fc4938ce3a3ee5a9d2bede663471c6071f",
+      "bytes": 29223
+    },
+    {
+      "url": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/dark_willow_bramble_maze.png",
+      "file": "dist/assets/dota2/dark_willow_bramble_maze.png",
+      "sha256": "234d36a121a6a6ceb6b6223503ed76c86aa59bc3821fb1bd746203ed4ba9b663",
+      "bytes": 35250
+    },
+    {
+      "url": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/dark_willow_shadow_realm.png",
+      "file": "dist/assets/dota2/dark_willow_shadow_realm.png",
+      "sha256": "7420b098294023eb5e4dcbf57e88d11687d3daf81b1d427fd0a8f47d57cc8c31",
+      "bytes": 25954
+    },
+    {
+      "url": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/dark_willow_bedlam.png",
+      "file": "dist/assets/dota2/dark_willow_bedlam.png",
+      "sha256": "32c9469d7d4a1c37b415d9550bf46bd9bd11f982519d43b8fade06b9c8be14c5",
+      "bytes": 39740
+    },
+    {
+      "url": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/dark_willow_terrorize.png",
+      "file": "dist/assets/dota2/dark_willow_terrorize.png",
+      "sha256": "48b7c47e55efbb1ef3d64d5181a0e19af603337cab60e58ccd7e9ad2c11c4fae",
+      "bytes": 37480
+    }
+  ]
+}

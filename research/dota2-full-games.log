@@ -1,0 +1,57 @@
+seed 77 · round 1 · units 11
+seed 77 · round 2 · units 17
+seed 77 · round 3 · units 20
+seed 77 · round 4 · units 24
+seed 77 · round 5 · units 17
+seed 77 · round 6 · units 17
+seed 77 · round 7 · units 21
+seed 77 · round 8 · units 10
+COMPLETE {"seed":77,"deckA":"苍翠锋线","deckB":"暗月密谋","rounds":8,"steps":126,"winner":0}
+seed 195 · round 1 · units 13
+seed 195 · round 2 · units 16
+seed 195 · round 3 · units 18
+seed 195 · round 4 · units 15
+seed 195 · round 5 · units 23
+seed 195 · round 6 · units 21
+seed 195 · round 7 · units 15
+seed 195 · round 8 · units 16
+seed 195 · round 9 · units 17
+seed 195 · round 10 · units 18
+COMPLETE {"seed":195,"deckA":"赤红军团","deckB":"黄金契约","rounds":10,"steps":152,"winner":0}
+seed 823 · round 1 · units 12
+seed 823 · round 2 · units 16
+seed 823 · round 3 · units 20
+seed 823 · round 4 · units 21
+seed 823 · round 5 · units 16
+seed 823 · round 6 · units 20
+seed 823 · round 7 · units 15
+seed 823 · round 8 · units 18
+seed 823 · round 9 · units 18
+seed 823 · round 10 · units 18
+COMPLETE {"seed":823,"deckA":"暗月密谋","deckB":"苍翠锋线","rounds":10,"steps":149,"winner":1}
+seed 419 · round 1 · units 12
+seed 419 · round 2 · units 14
+seed 419 · round 3 · units 18
+seed 419 · round 4 · units 14
+seed 419 · round 5 · units 18
+seed 419 · round 6 · units 14
+seed 419 · round 7 · units 16
+seed 419 · round 8 · units 18
+COMPLETE {"seed":419,"deckA":"黄金契约","deckB":"赤红军团","rounds":8,"steps":136,"winner":1}
+seed 951 · round 1 · units 12
+seed 951 · round 2 · units 15
+seed 951 · round 3 · units 14
+seed 951 · round 4 · units 18
+seed 951 · round 5 · units 16
+seed 951 · round 6 · units 19
+seed 951 · round 7 · units 16
+COMPLETE {"seed":951,"deckA":"荆棘与剑舞","deckB":"苍翠锋线","rounds":7,"steps":110,"winner":1}
+seed 2026 · round 1 · units 12
+seed 2026 · round 2 · units 17
+seed 2026 · round 3 · units 19
+seed 2026 · round 4 · units 21
+seed 2026 · round 5 · units 16
+seed 2026 · round 6 · units 21
+seed 2026 · round 7 · units 11
+COMPLETE {"seed":2026,"deckA":"暗月密谋","deckB":"荆棘与剑舞","rounds":7,"steps":105,"winner":0}
+Six deterministic full games completed, including the Dota 2 expansion. [{"seed":77,"deckA":"苍翠锋线","deckB":"暗月密谋","rounds":8,"steps":126,"winner":0},{"seed":195,"deckA":"赤红军团","deckB":"黄金契约","rounds":10,"steps":152,"winner":0},{"seed":823,"deckA":"暗月密谋","deckB":"苍翠锋线","rounds":10,"steps":149,"winner":1},{"seed":419,"deckA":"黄金契约","deckB":"赤红军团","rounds":8,"steps":136,"winner":1},{"seed":951,"deckA":"荆棘与剑舞","deckB":"苍翠锋线","rounds":7,"steps":110,"winner":1},{"seed":2026,"deckA":"暗月密谋","deckB":"荆棘与剑舞","rounds":7,"steps":105,"winner":0}]

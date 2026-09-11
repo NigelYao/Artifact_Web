@@ -1,7 +1,7 @@
 const assert=require('node:assert/strict');
 const cards=require('../dist/cards.json');const {Game}=require('../dist/engine.js');require('../dist/effects.js');require('../dist/decks.js');
 const results=[];
-for(const [seed,a,b] of [[77,0,1],[195,2,3],[823,1,0],[419,3,2]]){
+for(const [seed,a,b] of [[77,0,1],[195,2,3],[823,1,0],[419,3,2],[951,4,0],[2026,1,4]]){
  const g=new Game(cards);g.newGame(ARTIFACT_DECKS[a],ARTIFACT_DECKS[b],seed);let steps=0,lastRound=0;
  while(g.s.winner===null&&steps++<750){
   if(g.s.phase==='action')g.aiStep(g.s.turn);
@@ -14,4 +14,4 @@ for(const [seed,a,b] of [[77,0,1],[195,2,3],[823,1,0],[419,3,2]]){
  }
  assert.notEqual(g.s.winner,null,'game must terminate');results.push({seed,deckA:ARTIFACT_DECKS[a].name,deckB:ARTIFACT_DECKS[b].name,rounds:g.s.round,steps,winner:g.s.winner});console.log('COMPLETE',JSON.stringify(results.at(-1)));
 }
-console.log('Four deterministic full games completed.',JSON.stringify(results));
+console.log('Six deterministic full games completed, including the Dota 2 expansion.',JSON.stringify(results));

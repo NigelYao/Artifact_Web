@@ -83,3 +83,31 @@ root.ArtifactScene={
  }
 };
 })(window);
+
+// Expansion animations consume the engine's recorded curve; they never roll random outcomes.
+window.ArtifactExpansionFX=function(events,layer,game){
+ const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+ const center=el=>{const r=el.getBoundingClientRect();return {x:r.left+r.width/2,y:r.top+r.height/2};};
+ const pulse=(el,kind)=>{if(!el||el.closest('[inert]'))return;const p=center(el),ring=document.createElement('span');ring.className='expansion-ring '+kind;Object.assign(ring.style,{left:p.x+'px',top:p.y+'px'});layer.appendChild(ring);setTimeout(()=>ring.remove(),1000);};
+ for(const e of events){
+  const unit=document.querySelector(`[data-unit="${e.unit}"]`);
+  if(e.type==='shield-crash'&&unit&&!unit.closest('[inert]')){
+   if(!reduced){const ghost=unit.cloneNode(true),r=unit.getBoundingClientRect();ghost.removeAttribute('data-unit');ghost.inert=true;ghost.classList.add('shield-jump-ghost');Object.assign(ghost.style,{left:r.left+'px',top:r.top+'px',width:r.width+'px',height:r.height+'px'});layer.appendChild(ghost);ghost.animate([{transform:'translateY(0) scale(1)'},{transform:'translateY(-65px) scale(1.15)',offset:.45},{transform:'translateY(0) scale(1)',offset:.72},{opacity:0}],{duration:850}).onfinish=()=>ghost.remove();}
+   pulse(unit,'shield-crash-ring');
+  }
+  if(e.type==='jex'||e.type==='jex-summon'){
+   const slot=document.querySelector(`.lane[data-lane="${e.lane}"] .slot[data-owner="${e.owner}"][data-slot="${e.pos}"]`);
+   pulse(e.target?document.querySelector(`[data-unit="${e.target}"]`):slot,e.enhanced?'terror-ring':'jex-ring');
+  }
+  if(e.type!=='rolling'||!unit||unit.closest('[inert]'))continue;
+  const lane=unit.closest('.lane'),own=lane.querySelector(`.unit-row.${e.owner?'enemy':'ally'}`),enemy=lane.querySelector(`.unit-row.${e.owner?'ally':'enemy'}`),slots=[...own.querySelectorAll('.slot')];
+  if(!slots.length)continue;const first=center(slots[0]),gap=slots[1]?center(slots[1]).x-first.x:slots[0].getBoundingClientRect().width+8;
+  const py=center(own).y,ey=center(enemy).y,ball=document.createElement('div');ball.className='rolling-ball';ball.style.backgroundImage='url(assets/dota2/pangolier_gyroshell.png)';ball.setAttribute('aria-label','石鳞剑士卷成球，沿曲线滚动');layer.appendChild(ball);
+  const frames=e.path.map((point,i)=>({left:first.x+point.pos*gap+'px',top:py+(ey-py)*point.row+'px',transform:`translate(-50%,-50%) rotate(${i*24}deg) scale(${i===0||i===e.path.length-1?.8:1})`}));
+  unit.style.visibility='hidden';
+  if(reduced){Object.assign(ball.style,frames.at(-1));setTimeout(()=>ball.remove(),350);continue;}
+  const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.classList.add('rolling-trajectory');svg.setAttribute('viewBox',`0 0 ${innerWidth} ${innerHeight}`);const line=document.createElementNS(svg.namespaceURI,'polyline');line.setAttribute('points',e.path.map(p=>`${first.x+p.pos*gap},${py+(ey-py)*p.row}`).join(' '));svg.appendChild(line);layer.appendChild(svg);
+  ball.animate(frames,{duration:1900,easing:'linear',fill:'forwards'}).onfinish=()=>{ball.remove();svg.remove();};
+  for(const h of e.hits)setTimeout(()=>{const target=document.querySelector(`[data-unit="${h.unit}"]`);pulse(target,'roll-hit-ring');if(target&&h.fromPos!==h.toPos)target.animate([{transform:`translateX(${(h.fromPos-Number(target.dataset.pos))*gap}px)`},{transform:`translateX(${(h.toPos-Number(target.dataset.pos))*gap}px)`}],{duration:180,fill:'forwards'});},h.step/(e.path.length-1)*1900);
+ }
+};

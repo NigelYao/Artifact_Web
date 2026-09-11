@@ -46,6 +46,8 @@ for c in allcards:
 # Published Classic balance changes (Valve, 20 Dec 2018), not Foundry balance.
 patches={'axe':{'attack':6,'health':10},'bloodseeker':{'health':7},'blood_rage':{'mana':4},'drow_ranger':{'attack':3,'health':6},'jasper_daggers':{'gold':5},'cheating_death':{'abilities':[{'name':'逃脱死亡','en':'Cheating Death','text':'本回合赋予一个单位死亡护盾；本路需要绿色友方英雄。','cooldown':1}]}}
 for c in out:c.update(patches.get(c['key'],{}))
+from build_expansion_data import expansion_cards
+out.extend(expansion_cards())
 (root/'dist/data.js').write_text('/* Public Classic card metadata, localized client text and credited card art. */\nwindow.ARTIFACT_CARDS = '+json.dumps(out,ensure_ascii=False,separators=(',',':'))+';\n',encoding='utf8')
 (root/'dist/cards.json').write_text(json.dumps(out,ensure_ascii=False,indent=2),encoding='utf8')
 print('Generated',len(out),'cards;',sum(c['type']=='Hero' for c in out),'heroes')

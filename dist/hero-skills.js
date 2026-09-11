@@ -634,5 +634,7 @@ const all={
   ]
 };
 const api={all,get:key=>all[key]?.[0]||null,list:key=>all[key]||[]};
+all.pangolier=[{key:'pangolier',k:'pangolier',name:'甲盾冲击',en:'Shield Crash',type:'active',description:'跃起对正对及相邻敌人造成2点伤害。每个实际受伤的英雄提供2点护盾，小兵提供1点护盾，本回合有效。',cooldown:1,icon:'assets/dota2/pangolier_shield_crash.png'}];
+all.dark_willow=[{key:'dark_willow',k:'dark_willow',name:'暗影之境',en:'Shadow Realm',type:'active',description:'无法被攻击；下次攻击额外造成1点伤害，期间每使用一张与自身英雄颜色相同的卡牌再+1，额外伤害最多3点。攻击后结束。',cooldown:2,icon:'assets/dota2/dark_willow_shadow_realm.png'}];
 root.ArtifactHeroSkills=api;if(typeof module!=='undefined'&&module.exports)module.exports=api;
 })(typeof globalThis!=='undefined'?globalThis:this);
