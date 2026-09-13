@@ -9,7 +9,7 @@
     "test:expansion": "node tests/dota-expansion.test.cjs && node tests/hero-skills.test.cjs",
     "test:online": "node server/match.test.cjs && node server/admin.test.cjs && node tests/online-client.test.cjs && node tests/online-adapter.test.cjs && node tests/online-integration.cjs",
     "test:touch": "node tests/responsive-board.test.cjs && node tests/touch-cards.test.cjs && node tests/hand-drag-targets.test.cjs",
-    "test:share": "node server/deck-share.test.cjs && node tests/deck-library.test.cjs",
+    "test:share": "node server/deck-share.test.cjs && node tests/deck-library.test.cjs && node tests/i18n.test.cjs",
     "test:matchmaking": "node server/matchmaking.test.cjs && node tests/matchmaking-http.test.cjs && node tests/matchmaking-ui.test.cjs",
     "test:placement": "node tests/placement-rules.test.cjs && node tests/battle-regressions.cjs && node tests/hand-drag-targets.test.cjs"
   },

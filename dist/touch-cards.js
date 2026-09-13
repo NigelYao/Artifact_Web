@@ -6,9 +6,12 @@ class HandGesture {
  move(x,y,at){this.hold(at);if(this.mode==='pending'&&Math.hypot(x-this.x,y-this.y)>8)this.mode='scroll';if(this.mode==='read'&&this.y-y>36)this.mode='drag';return this.mode;}
 }
 if(typeof module==='object'&&module.exports){module.exports={HandGesture};return;}
+const I18N=(typeof ArtifactI18n!=='undefined'?ArtifactI18n:null)||(typeof require==='function'?(function(){try{return require('./i18n.js')}catch(e){return null}})():null);
+const T=I18N?I18N.T:(z,e)=>z,cardName=I18N?I18N.cardName:c=>c?c.name:'',cardText=I18N?I18N.cardText:c=>c?c.text||'':'';
+const L=I18N?I18N.localize:v=>v;
 const app=root.ArtifactApp;if(!app)return;
 const cards=new Map((root.ArtifactCampaignBridge?.cards||root.ARTIFACT_CARDS).map(c=>[c.key,c]));
-const types={Hero:'英雄',Creep:'小兵',Spell:'法术',Improvement:'强化',Item:'装备 / 物品'};
+const types={Hero:['英雄','Hero'],Creep:['小兵','Creep'],Spell:['法术','Spell'],Improvement:['强化','Improvement'],Item:['装备 / 物品','Equipment / Item']};
 let active=null,selected=null,panel=null,ghost=null,holdTimer=0,ignoreUntil=0,frame=0;
 const hand=()=>document.querySelector('.hand-scroll');
 function close(){selected=null;panel?.remove();panel=null;document.querySelectorAll('.touch-card-reading').forEach(c=>c.classList.remove('touch-card-reading'));}
@@ -18,22 +21,23 @@ function refresh(){
  if(!selected)return;
  const h=app.game.s?.players[0].hand.find(c=>c.uid===selected.uid);
  if(!h||app.ui.route!=='battle'||app.ui.intro||document.querySelector('#modal[open]')){close();return;}
- const why=app.ui.busy?'战场结算中…':app.game.canPlay(0,h);
+ const why=app.ui.busy?T('战场结算中…','Resolving combat…'):app.game.canPlay(0,h);
  panel.querySelector('.touch-card-use').disabled=!!why;
- panel.querySelector('.touch-card-hint').textContent=why||'长按向上拖出牌，或点击使用选择目标';
+ panel.querySelector('.touch-card-hint').textContent=L(why)||T('长按向上拖出牌，或点击使用选择目标','Hold and drag up to play, or tap Use to pick targets');
 }
 function show(el){
  if(!el)return;const c=cards.get(el.dataset.card);if(!c)return;
  const uid=Number(el.dataset.hand);if(selected?.uid===uid){refresh();return;}
- close();selected={uid};panel=document.createElement('aside');panel.className='touch-card-preview';panel.setAttribute('aria-label','手牌说明');
- panel.innerHTML='<div class="touch-card-heading"><span></span><button type="button" class="touch-card-close" aria-label="关闭手牌说明">×</button></div><img class="touch-card-art" alt="" draggable="false"><strong class="touch-card-name"></strong><p class="touch-card-description"></p><small class="touch-card-hint"></small><button type="button" class="touch-card-use">使用此牌</button>';
- panel.querySelector('.touch-card-heading span').textContent=`${types[c.type]||'卡牌'} · ${c.type==='Item'?'不消耗魔力':`${c.mana||0} 魔力`}`;
- panel.querySelector('.touch-card-name').textContent=c.name;panel.querySelector('.touch-card-art').src=c.art;panel.querySelector('.touch-card-art').alt=c.name;
- panel.querySelector('.touch-card-description').textContent=c.text||'无额外技能。';
+ close();selected={uid};panel=document.createElement('aside');panel.className='touch-card-preview';panel.setAttribute('aria-label',T('手牌说明','Card details'));
+ panel.innerHTML=`<div class="touch-card-heading"><span></span><button type="button" class="touch-card-close" aria-label="${T('关闭手牌说明','Close card details')}">×</button></div><img class="touch-card-art" alt="" draggable="false"><strong class="touch-card-name"></strong><p class="touch-card-description"></p><small class="touch-card-hint"></small><button type="button" class="touch-card-use">${T('使用此牌','Play this card')}</button>`;
+ panel.querySelector('.touch-card-heading span').textContent=`${types[c.type]?T(types[c.type][0],types[c.type][1]):T('卡牌','Card')} · ${c.type==='Item'?T('不消耗魔力','No mana cost'):`${c.mana||0} ${T('魔力','mana')}`}`;
+ panel.querySelector('.touch-card-name').textContent=cardName(c);panel.querySelector('.touch-card-art').src=c.art;panel.querySelector('.touch-card-art').alt=cardName(c);
+ panel.querySelector('.touch-card-description').textContent=cardText(c)||T('无额外技能。','No additional abilities.');
  panel.querySelector('.touch-card-close').onclick=close;
  panel.querySelector('.touch-card-use').onclick=()=>{const id=selected?.uid;close();if(id!=null)app.playHand(id);};
  document.body.appendChild(panel);el.classList.add('touch-card-reading');refresh();
 }
+I18N&&I18N.onChange&&I18N.onChange(()=>close());
 function readAt(x){
  const strip=hand();if(!strip)return;const bounds=strip.getBoundingClientRect();
  const visible=[...strip.querySelectorAll('[data-hand]')].filter(el=>{const r=el.getBoundingClientRect();return r.right>bounds.left&&r.left<bounds.right;});

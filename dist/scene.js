@@ -1,5 +1,8 @@
 /* Original procedural effects. This module never mutates game state. */
 (function(root){'use strict';
+const I18N=(typeof ArtifactI18n!=='undefined'?ArtifactI18n:null)||(typeof require==='function'?(function(){try{return require('./i18n.js')}catch(e){return null}})():null);
+const T=I18N?I18N.T:(z,e)=>z,pick=I18N?I18N.pick:(o,b)=>o?o[b]:'',cardName=I18N?I18N.cardName:c=>c?c.name:'',cardText=I18N?I18N.cardText:c=>c?c.text||'':'';
+const L=I18N?I18N.localize:v=>v;
 const landingRects=new WeakMap();
 const reduced=()=>matchMedia('(prefers-reduced-motion: reduce)').matches;
 function fragment(layer,cls,x,y,vars={},life=900){const e=document.createElement('i');e.className=cls;e.style.left=x+'px';e.style.top=y+'px';for(const [k,v] of Object.entries(vars))e.style.setProperty(k,v);layer.appendChild(e);setTimeout(()=>e.remove(),life);return e;}
@@ -25,7 +28,8 @@ root.ArtifactScene={
  cast(layer,cast,c,escape){
   if(!layer)return;layer.querySelectorAll('.skill-reveal').forEach(e=>e.remove());const e=document.createElement('section');e.className='skill-reveal';e.style.setProperty('--spell-color',({Blue:'#8ddaff',Red:'#ffad63',Green:'#b7ed8c',Black:'#caadff'})[c.color]||'#ffe4a0');
   const targets=cast.targets||[],outcomes=cast.outcomes||[];
-  e.innerHTML=`<img src="${c.art}" alt=""><div><small>${cast.owner?'夜魇':'天辉'} · ${cast.type==='ability'?'主动技能':'出牌'}${cast.source?' · '+escape(cast.source.name):''}</small><strong>${escape(cast.label||c.name)}</strong><p>${targets.length?'目标：'+targets.map(t=>escape((t.owner===undefined?'':t.owner?'夜魇 · ':'天辉 · ')+(t.kind==='unit'?['上路','中路','下路'][t.lane]+' · ':'')+t.name)).join('、'):'作用于'+['上路','中路','下路'][cast.lane]}</p><div class="skill-results">${outcomes.map(o=>`<span>${escape((o.owner?'夜魇 · ':'天辉 · ')+o.name)} <b>${escape(o.changes.join(' · '))}</b></span>`).join('')||`<span>${escape(c.text||c.description||'效果已结算，详见卡牌说明')}</span>`}</div></div>`;
+  const ZS=o=>o===undefined?'':o?T('夜魇 · ','Dire · '):T('天辉 · ','Radiant · ');
+ e.innerHTML=`<img src="${c.art}" alt=""><div><small>${cast.owner?T('夜魇','Dire'):T('天辉','Radiant')} · ${cast.type==='ability'?T('主动技能','Ability'):T('出牌','Card played')}${cast.source?' · '+escape(L(cast.source.name)):''}</small><strong>${escape(cast.label?L(cast.label):cardName(c)||c.name)}</strong><p>${targets.length?T('目标：','Targets: ')+targets.map(t=>escape(ZS(t.owner)+(t.kind==='unit'?T(['上路','中路','下路'][t.lane],['Top Lane','Middle Lane','Bottom Lane'][t.lane])+' · ':'')+L(t.name))).join('、'):T('作用于','Affects ')+T(['上路','中路','下路'][cast.lane],['Top Lane','Middle Lane','Bottom Lane'][cast.lane])}</p><div class="skill-results">${outcomes.map(o=>`<span>${escape(ZS(o.owner)+L(o.name))} <b>${escape(o.changes.map(L).join(' · '))}</b></span>`).join('')||`<span>${escape(cardText(c)||c.description||T('效果已结算，详见卡牌说明','Effect resolved — see the card text'))}</span>`}</div></div>`;
   layer.appendChild(e);setTimeout(()=>e.remove(),cast.owner?6500:2500);
   const ids=new Set([...targets,...outcomes].map(t=>t.uid).filter(Boolean));
   for(const id of ids){const target=document.querySelector(`[data-unit="${id}"]`);if(!target||target.closest('[inert]'))continue;target.classList.add('spell-target');const kind=effectKind(c,cast,outcomes.find(o=>o.uid===id));target.style.setProperty('--spell-color',({healing:'#86efac',equip:'#ffcf70',summon:'#b7abff',blessing:'#f5da8b',binding:'#c9a3f7',movement:'#8edcdb',frost:'#99e7ff'})[kind]||e.style.getPropertyValue('--spell-color'));setTimeout(()=>target.classList.remove('spell-target'),2400);}
@@ -102,7 +106,7 @@ window.ArtifactExpansionFX=function(events,layer,game){
   if(e.type!=='rolling'||!unit||unit.closest('[inert]'))continue;
   const lane=unit.closest('.lane'),own=lane.querySelector(`.unit-row.${e.owner?'enemy':'ally'}`),enemy=lane.querySelector(`.unit-row.${e.owner?'ally':'enemy'}`),slots=[...own.querySelectorAll('.slot')];
   if(!slots.length)continue;const first=center(slots[0]),gap=slots[1]?center(slots[1]).x-first.x:slots[0].getBoundingClientRect().width+8;
-  const py=center(own).y,ey=center(enemy).y,ball=document.createElement('div');ball.className='rolling-ball';ball.style.backgroundImage='url(assets/dota2/pangolier_gyroshell.png)';ball.setAttribute('aria-label','石鳞剑士卷成球，沿曲线滚动');layer.appendChild(ball);
+  const py=center(own).y,ey=center(enemy).y,ball=document.createElement('div');ball.className='rolling-ball';ball.style.backgroundImage='url(assets/dota2/pangolier_gyroshell.png)';ball.setAttribute('aria-label',T('石鳞剑士卷成球，沿曲线滚动','Pangolier rolls along a curve inside a ball'));layer.appendChild(ball);
   const frames=e.path.map((point,i)=>({left:first.x+point.pos*gap+'px',top:py+(ey-py)*point.row+'px',transform:`translate(-50%,-50%) rotate(${i*24}deg) scale(${i===0||i===e.path.length-1?.8:1})`}));
   unit.style.visibility='hidden';
   if(reduced){Object.assign(ball.style,frames.at(-1));setTimeout(()=>ball.remove(),350);continue;}

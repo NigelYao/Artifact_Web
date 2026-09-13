@@ -2,6 +2,9 @@
 (function(root){
 'use strict';
 const {Game,clone}=root.ArtifactEngine;
+const I18N=(typeof ArtifactI18n!=='undefined'&&ArtifactI18n)||(typeof require==='function'?(function(){try{return require('./i18n.js')}catch(e){return null}})():null);
+const T=I18N?I18N.T:(z,e)=>z;
+const NM=c=>T(c.name,c.en||''),EN=c=>c.en||c.name;
 const G=Game.prototype;
 const previousTargets=G.targets;
 G.targets=function(k,p,source=null){
@@ -10,24 +13,24 @@ G.targets=function(k,p,source=null){
  if(!source){if(k==='shop_deed')return [];if(k==='gust')return [{kind:'unit',side:'enemy',hero:true}];if(['arm_the_rebellion','routed'].includes(k))return [];if(k==='astral_imprisonment')return [{kind:'unit',side:'any'}];}
  return previousTargets.call(this,k,p,source);
 };
-G.removeImp=function(id){for(let l=0;l<3;l++)for(let p=0;p<2;p++){const a=this.imps(p,l),i=a.findIndex(v=>v.uid===id);if(i>=0){const [c]=a.splice(i,1);this.emit('destroy',this.card(c.k).name+'被摧毁');return;}}};
-G.chooseCombat=function(a,b){if(!a||!b||a.owner===b.owner||a.lane!==b.lane)throw Error('战斗目标须为同路敌方单位');a.target=b.uid;a.arrow=b.pos-a.pos;};
-G.takeControl=function(u,p){const l=u.lane;u.owner=p;const occupied=this.all(p,l).filter(v=>v!==u);if(occupied.some(v=>v.pos===u.pos)){let pos=0;while(occupied.some(v=>v.pos===pos))pos++;u.pos=pos;}u.target=null;u.arrow=0;this.emit('control',this.card(u.k).name+'改变阵营',{unit:u.uid});};
+G.removeImp=function(id){for(let l=0;l<3;l++)for(let p=0;p<2;p++){const a=this.imps(p,l),i=a.findIndex(v=>v.uid===id);if(i>=0){const [c]=a.splice(i,1);this.emit('destroy',T(this.card(c.k).name+'被摧毁',EN(this.card(c.k))+' is destroyed'));return;}}};
+G.chooseCombat=function(a,b){if(!a||!b||a.owner===b.owner||a.lane!==b.lane)throw Error(T('战斗目标须为同路敌方单位','Combat target must be an enemy in the same lane'));a.target=b.uid;a.arrow=b.pos-a.pos;};
+G.takeControl=function(u,p){const l=u.lane;u.owner=p;const occupied=this.all(p,l).filter(v=>v!==u);if(occupied.some(v=>v.pos===u.pos)){let pos=0;while(occupied.some(v=>v.pos===pos))pos++;u.pos=pos;}u.target=null;u.arrow=0;this.emit('control',T(this.card(u.k).name+'改变阵营',EN(this.card(u.k))+' changes allegiance'),{unit:u.uid});};
 // Persisted, seeded path: damage and displacement use exactly the curve displayed by the client.
 G.rollThunder=function(u,destination){
- if(!this.canMove(u))throw Error('缠绕或翻牌期间无法滚动');
+ if(!this.canMove(u))throw Error(T('缠绕或翻牌期间无法滚动','Cannot roll while rooted or flipped'));
  const p=u.owner,l=u.lane,start=u.pos,end=destination.pos,max=Math.max(end,...this.all(null,l).map(v=>v.pos));
  const points=[{x:start,y:0},{x:this.random()*(max+.5),y:1},{x:this.random()*(max+.5),y:0},{x:this.random()*(max+.5),y:1},{x:end,y:0}],path=[];
  for(let i=0;i<points.length-1;i++){const a=points[Math.max(0,i-1)],b=points[i],c=points[i+1],d=points[Math.min(points.length-1,i+2)];for(let n=0;n<24;n++){const t=n/24,t2=t*t,t3=t2*t;const coordinate=k=>.5*((2*b[k])+(-a[k]+c[k])*t+(2*a[k]-5*b[k]+4*c[k]-d[k])*t2+(-a[k]+3*b[k]-3*c[k]+d[k])*t3);path.push({pos:Math.max(0,Math.min(max,coordinate('x'))),row:Math.max(0,Math.min(1,coordinate('y')))});}}
  path.push({pos:end,row:0});
- const event=this.emit('rolling',this.card(u.k).name+' · 地雷滚滚',{unit:u.uid,owner:p,lane:l,start,end,columns:max+1,path,hits:[]}),counts=new Map(),touching=new Set();
+ const event=this.emit('rolling',T(this.card(u.k).name+' · 地雷滚滚',EN(this.card(u.k))+' · Rolling Thunder'),{unit:u.uid,owner:p,lane:l,start,end,columns:max+1,path,hits:[]}),counts=new Map(),touching=new Set();
  for(const [step,point] of path.entries())for(const v of this.all(null,l)){
   if(v===u||!this.selectable(v)||this.stats(v).hp<=0)continue;
   const close=Math.hypot(v.pos-point.pos,(v.owner===p?0:1)-point.row)<.52;
   if(!close){touching.delete(v.uid);continue;}if(touching.has(v.uid)||(counts.get(v.uid)||0)>=2)continue;touching.add(v.uid);
   const damage=this.damage(v,1,false,u.uid);if(!damage)continue;counts.set(v.uid,(counts.get(v.uid)||0)+1);
   const from=v.pos,options=[from-1,from+1].filter(pos=>pos>=0&&pos<=max&&!this.at(v.owner,l,pos)&&!(v.owner===p&&pos===end));
-  if(options.length&&this.canMove(v)){v.pos=this.pick(options);this.resetArrow(v);this.emit('displace',this.card(v.k).name+'移动一格',{unit:v.uid,fromPos:from,toPos:v.pos,lane:l});}
+  if(options.length&&this.canMove(v)){v.pos=this.pick(options);this.resetArrow(v);this.emit('displace',T(this.card(v.k).name+'移动一格',EN(this.card(v.k))+' shifts one slot'),{unit:v.uid,fromPos:from,toPos:v.pos,lane:l});}
   event.hits.push({unit:v.uid,step,fromPos:from,toPos:v.pos,amount:damage});
  }
  this.move(u,l,end);
@@ -35,7 +38,7 @@ G.rollThunder=function(u,destination){
 G.triggerJex=function(p,handId){
  const ready=(this.s.jex||[]).filter(j=>j.owner===p&&j.createdBy!==handId);
  this.s.jex=(this.s.jex||[]).filter(j=>!ready.includes(j));
- for(const j of ready){const target=this.at(1-p,j.lane,j.pos);this.emit('jex',j.enhanced?'杰克斯 · 恐吓':'杰克斯 · 作祟',{owner:p,lane:j.lane,pos:j.pos,enhanced:j.enhanced,target:target?.uid});if(!this.selectable(target))continue;this.damage(target,j.enhanced?3:2);this.buff(target,j.enhanced?{flipped:1}:{disarm:1},'round');}
+ for(const j of ready){const target=this.at(1-p,j.lane,j.pos);this.emit('jex',T(j.enhanced?'杰克斯 · 恐吓':'杰克斯 · 作祟',j.enhanced?'Jex · Menace':'Jex · Hijinks'),{owner:p,lane:j.lane,pos:j.pos,enhanced:j.enhanced,target:target?.uid});if(!this.selectable(target))continue;this.damage(target,j.enhanced?3:2);this.buff(target,j.enhanced?{flipped:1}:{disarm:1},'round');}
 };
 G.resolve=function(k,p,t,h){
  const l=this.s.lane,pl=this.s.players[p],op=this.s.players[1-p],a=this.get(t[0]),b=this.get(t[1]);
@@ -43,10 +46,10 @@ G.resolve=function(k,p,t,h){
  const buff=(u,v,d='permanent')=>this.buff(u,v,d,k),hit=(u,n,pierce=false)=>this.damage(u,n,pierce),spawn=(name,n=1,lane=l)=>{for(let i=0;i<n;i++)this.spawn(name,p,lane);},other=()=>this.pick([0,1,2].filter(v=>v!==a.lane));
  switch(k){
  case 'pangolier_lucky_shot':hit(a,2);if(this.random()<.5)buff(a,{disarm:1},'round');break;
- case 'pangolier_gyroshell':{const u=this.named(p,'pangolier',l).find(v=>this.canMove(v));if(!u)throw Error('本路需要可行动且未被缠绕的石鳞剑士');this.rollThunder(u,t[0]);break;}
+ case 'pangolier_gyroshell':{const u=this.named(p,'pangolier',l).find(v=>this.canMove(v));if(!u)throw Error(T('本路需要可行动且未被缠绕的石鳞剑士','Requires a ready, unrooted Pangolier in this lane'));this.rollThunder(u,t[0]);break;}
  case 'dark_willow_bramble_maze':{const max=Math.max(0,...units().map(u=>u.pos),...(this.s.jex||[]).filter(j=>j.lane===l).map(j=>j.pos));for(let pos=0;pos<=max;pos++)if(!this.at(p,l,pos)){const flower=this.spawn('dark_willow_bramble',p,l,pos);flower.expiresRound=this.s.round;}break;}
- case 'dark_willow_terrorize':{const pos=t[0].pos,flower=this.at(p,l,pos);(this.s.jex||=[]).push({uid:this.id(),owner:p,lane:l,pos,enhanced:flower?.k==='dark_willow_bramble',createdBy:h.uid});this.emit('jex-summon','杰克斯等待下一张技能牌',{owner:p,lane:l,pos,enhanced:flower?.k==='dark_willow_bramble'});break;}
- case 'and_one_for_me':{const i=this.pick(Object.values(a.items));if(!i)throw Error('目标英雄没有装备');pl.hand.push({uid:this.id(),k:i.k,lock:0});break;}
+ case 'dark_willow_terrorize':{const pos=t[0].pos,flower=this.at(p,l,pos);(this.s.jex||=[]).push({uid:this.id(),owner:p,lane:l,pos,enhanced:flower?.k==='dark_willow_bramble',createdBy:h.uid});this.emit('jex-summon',T('杰克斯等待下一张技能牌','Jex awaits the next allied spell'),{owner:p,lane:l,pos,enhanced:flower?.k==='dark_willow_bramble'});break;}
+ case 'and_one_for_me':{const i=this.pick(Object.values(a.items));if(!i)throw Error(T('目标英雄没有装备','Target hero has no equipment'));pl.hand.push({uid:this.id(),k:i.k,lock:0});break;}
  case 'act_of_defiance':buff(a,{silence:1},'round');break;
  case 'allseeing_ones_favor':buff(a,{auraRegen:2});break;
  case 'annihilation':units().forEach(u=>this.condemn(u));break;
@@ -58,7 +61,7 @@ G.resolve=function(k,p,t,h){
  case 'astral_imprisonment':buff(a,{stun:1,immune:1},'round');break;
  case 'at_any_cost':units().forEach(u=>hit(u,6));break;
  case 'avernus_blessing':buff(a,{attack:2});break;
- case 'ball_lightning':if(a.lane===t[1])throw Error('请选择另一条战线');this.move(a,t[1]);break;
+ case 'ball_lightning':if(a.lane===t[1])throw Error(T('请选择另一条战线','Choose a different lane'));this.move(a,t[1]);break;
  case 'battlefield_control':this.chooseCombat(a,b);break;
  case 'bellow':this.move(a,other());break;
  case 'berserkers_call':for(const e of this.neighbors(a,true))if(a.alive)this.battle(a,e);break;
@@ -78,7 +81,7 @@ G.resolve=function(k,p,t,h){
  case 'corrosive_mist':units().forEach(u=>u.items={});break;
  case 'coup_de_grace':this.condemn(a);if(pl.hand.length){const i=Math.floor(this.random()*pl.hand.length);pl.discard.push(pl.hand.splice(i,1)[0].k);}break;
  case 'crippling_blow':buff(a,{attack:-2});break;
- case 'cunning_plan':if(Math.abs(a.pos-b.pos)!==1)throw Error('只能交换相邻友军');this.swap(a,b);this.draw(p,1);break;
+ case 'cunning_plan':if(Math.abs(a.pos-b.pos)!==1)throw Error(T('只能交换相邻友军','Can only swap adjacent allies'));this.swap(a,b);this.draw(p,1);break;
  case 'curse_of_atrophy':enemies().filter(u=>u.hero).forEach(u=>buff(u,{attack:-2}));break;
  case 'defend_the_weak':buff(a,{neighborArmor:2});break;
  case 'defensive_bloom':spawn('roseleaf_wall',2);break;
@@ -114,7 +117,7 @@ G.resolve=function(k,p,t,h){
  case 'intimidation':this.move(a,other());break;
  case 'ion_shell':buff(a,{retaliate:3});break;
  case 'iron_branch_protection':buff(a,{armor:3},'combat');break;
- case 'juke':if(Math.abs(a.pos-b.pos)!==1)throw Error('请选择相邻友方单位');this.swap(a,b);break;
+ case 'juke':if(Math.abs(a.pos-b.pos)!==1)throw Error(T('请选择相邻友方单位','Choose adjacent allied units'));this.swap(a,b);break;
  case 'kraken_shell':buff(a,{armor:1});break;
  case 'lightning_strike':this.towerDamage(1-p,l,6);break;
  case 'lodestone_demolition':this.towerDamage(1-p,l,Math.max(0,enemies().reduce((n,u)=>n+this.stats(u).armor,0)));break;
@@ -129,9 +132,9 @@ G.resolve=function(k,p,t,h){
  case 'pick_a_fight':buff(a,{taunt:1},'round');this.taunt(a);this.chooseCombat(a,b);break;
  case 'poised_to_strike':buff(a,{attack:4},'round');break;
  case 'prey_on_the_weak':spawn('hound_of_war',units().filter(u=>u.damage>0).length);break;
- case 'primal_roar':{const e=this.target(a);if(!e)throw Error('此英雄没有阻挡单位');for(const u of this.neighbors(e))this.move(u,this.pick([0,1,2].filter(v=>v!==l)));buff(e,{stun:1},'round');break;}
+ case 'primal_roar':{const e=this.target(a);if(!e)throw Error(T('此英雄没有阻挡单位','That hero has no blocker'));for(const u of this.neighbors(e))this.move(u,this.pick([0,1,2].filter(v=>v!==l)));buff(e,{stun:1},'round');break;}
  case 'raze':this.imps(1-p,l).splice(0);break;
- case 'relentless_pursuit':{if(a.lane===l)throw Error('目标须在另一战线');const u=this.pick(allies().filter(u=>u.hero&&this.card(u.k).color==='Black'));if(!u)throw Error('本路没有黑色英雄');this.move(u,a.lane);hit(a,2);break;}
+ case 'relentless_pursuit':{if(a.lane===l)throw Error(T('目标须在另一战线','Target must be in another lane'));const u=this.pick(allies().filter(u=>u.hero&&this.card(u.k).color==='Black'));if(!u)throw Error(T('本路没有黑色英雄','No black hero in this lane'));this.move(u,a.lane);hit(a,2);break;}
  case 'remote_detonation':enemies().filter(u=>!this.at(p,l,u.pos)).forEach(u=>hit(u,5));break;
  case 'rend_armor':buff(a,{armor:-this.stats(a).armor});break;
  case 'restoration_effort':this.healTower(p,l,8);break;
@@ -149,8 +152,8 @@ G.resolve=function(k,p,t,h){
  case 'stars_align':this.s.lanes[l].mana[p]+=3;break;
  case 'steal_strength':buff(a,{attack:-4},'round');buff(b,{attack:4},'round');break;
  case 'strafing_run':enemies().filter(u=>!u.hero).forEach(u=>hit(u,2));break;
- case 'sucker_punch':{const e=this.target(a);if(!e)throw Error('此英雄没有阻挡单位');hit(e,2);buff(e,{stun:1},'round');break;}
- case 'the_cover_of_night':if(a.lane===t[1])throw Error('请选择另一条战线');this.move(a,t[1]);buff(a,{attack:4,siege:7},'combat');break;
+ case 'sucker_punch':{const e=this.target(a);if(!e)throw Error(T('此英雄没有阻挡单位','That hero has no blocker'));hit(e,2);buff(e,{stun:1},'round');break;}
+ case 'the_cover_of_night':if(a.lane===t[1])throw Error(T('请选择另一条战线','Choose a different lane'));this.move(a,t[1]);buff(a,{attack:4,siege:7},'combat');break;
  case 'thundergods_wrath':this.all(1-p).filter(u=>u.hero).forEach(u=>hit(u,4,true));break;
  case 'thunderstorm':enemies().forEach(u=>hit(u,4));break;
  case 'time_of_triumph':allies().filter(u=>u.hero).forEach(u=>buff(u,{attack:4,armor:4,health:4,cleave:4,retaliate:4,siege:4}));break;
@@ -171,70 +174,70 @@ G.resolve=function(k,p,t,h){
  case 'potion_of_knowledge':this.draw(p,1);break;
  case 'shop_deed':pl.freeShop=true;break;
  case 'town_portal_scroll':this.returnHero(a);break;
- default:throw Error('尚未实现的卡牌效果：'+k);
+ default:throw Error(T('尚未实现的卡牌效果：','Card effect not implemented: ')+k);
  }
 };
 G.taunt=function(u){for(const e of this.neighbors(u,true)){e.target=u.uid;e.arrow=u.pos-e.pos;}};
 G.abilities=function(u){const a=[];const c=this.card(u.k);if(c.abilities?.length)a.push({k:u.k,...c.abilities[0],remaining:u.cooldowns?.[u.k]||u.cooldown||0});for(const it of Object.values(u.items||{})){const c=this.card(it.k);if(c.abilities?.length)a.push({k:it.k,...c.abilities[0],remaining:u.cooldowns?.[it.k]||0});}return a;};
 // Read-only availability for both hero icons and equipment controls.
 G.canActivate=function(p,uid,k){
- if(!this.s||this.s.phase!=='action'||this.s.turn!==p)return '尚未轮到你行动';
+ if(!this.s||this.s.phase!=='action'||this.s.turn!==p)return T('尚未轮到你行动','Not your turn to act');
  const l=this.s.lane,u=this.get(uid)||this.imps(p,l).find(i=>i.uid===Number(uid));
- if(!u)return '找不到技能来源';
- if(u.hero!==undefined&&(u.owner!==p||u.lane!==l||!this.enabled(u)))return '该单位当前无法使用技能';
- const a=this.abilities(u).find(a=>a.k===k);if(!a)return '这是自动生效的被动技能';
- if(a.remaining>0)return '冷却剩余 '+a.remaining+' 回合';
- if(['blink_dagger','winter_wyvern','meepo','phase_boots'].includes(k)&&!this.canMove(u))return '缠绕期间无法移动';
- if(k==='dark_willow'&&this.flag(u,'shadowRealm'))return '已经处于暗影之境';
- if(['pugna','demagicking_maul'].includes(k)&&!this.imps(1-p,l).length)return '敌方没有强化';
- if(k==='demagicking_maul'&&this.target(u))return '英雄被阻挡，无法使用';
- if(k==='meepo'&&!this.all(p).some(v=>v.k==='meepo'&&v.lane!==l))return '其他战线没有友方米波';
- if(!this.candidateTargets(k,p,u).some(t=>{try{this.validateTargets(this.card(k),p,t,u);return !(k==='dark_seer'&&t[1]===l)&&!(k==='blink_dagger'&&t[0]===l);}catch{return false;}}))return '没有可选择的有效目标';
+ if(!u)return T('找不到技能来源','Ability source not found');
+ if(u.hero!==undefined&&(u.owner!==p||u.lane!==l||!this.enabled(u)))return T('该单位当前无法使用技能','This unit cannot use abilities right now');
+ const a=this.abilities(u).find(a=>a.k===k);if(!a)return T('这是自动生效的被动技能','This passive ability triggers automatically');
+ if(a.remaining>0)return T('冷却剩余 '+a.remaining+' 回合','Cooldown: '+a.remaining+' rounds remaining');
+ if(['blink_dagger','winter_wyvern','meepo','phase_boots'].includes(k)&&!this.canMove(u))return T('缠绕期间无法移动','Cannot move while rooted');
+ if(k==='dark_willow'&&this.flag(u,'shadowRealm'))return T('已经处于暗影之境','Already in Shadow Realm');
+ if(['pugna','demagicking_maul'].includes(k)&&!this.imps(1-p,l).length)return T('敌方没有强化','The enemy has no improvements');
+ if(k==='demagicking_maul'&&this.target(u))return T('英雄被阻挡，无法使用','Hero is blocked and cannot use it');
+ if(k==='meepo'&&!this.all(p).some(v=>v.k==='meepo'&&v.lane!==l))return T('其他战线没有友方米波','No allied Meepo in another lane');
+ if(!this.candidateTargets(k,p,u).some(t=>{try{this.validateTargets(this.card(k),p,t,u);return !(k==='dark_seer'&&t[1]===l)&&!(k==='blink_dagger'&&t[0]===l);}catch{return false;}}))return T('没有可选择的有效目标','No valid targets available');
  return '';
 };
 G.activate=function(p,uid,k,t=[]){const backup=clone(this.s);try{
- if(this.s.phase!=='action'||this.s.turn!==p)throw Error('尚未轮到你行动');this.s.events=[];let u=this.get(uid),imp=false,l=this.s.lane;
- if(!u){u=this.imps(p,l).find(i=>i.uid===uid);imp=true;}if(!u)throw Error('找不到技能来源');
- if(!imp&&(u.owner!==p||u.lane!==l||!this.enabled(u)))throw Error('该单位当前无法使用技能');
- const ability=this.abilities(u).find(a=>a.k===k);if(!ability||ability.remaining>0)throw Error('技能尚在冷却');
- if(k==='dark_willow'&&this.flag(u,'shadowRealm'))throw Error('已经处于暗影之境');
+ if(this.s.phase!=='action'||this.s.turn!==p)throw Error(T('尚未轮到你行动','Not your turn to act'));this.s.events=[];let u=this.get(uid),imp=false,l=this.s.lane;
+ if(!u){u=this.imps(p,l).find(i=>i.uid===uid);imp=true;}if(!u)throw Error(T('找不到技能来源','Ability source not found'));
+ if(!imp&&(u.owner!==p||u.lane!==l||!this.enabled(u)))throw Error(T('该单位当前无法使用技能','This unit cannot use abilities right now'));
+ const ability=this.abilities(u).find(a=>a.k===k);if(!ability||ability.remaining>0)throw Error(T('技能尚在冷却','Ability is still on cooldown'));
+ if(k==='dark_willow'&&this.flag(u,'shadowRealm'))throw Error(T('已经处于暗影之境','Already in Shadow Realm'));
  this.validateTargets(this.card(k),p,t,u);const a=this.get(t[0]),b=this.get(t[1]),it=Object.values(u.items||{}).find(i=>i.k===k);
- this.emit('ability',this.card(u.k).name+' · '+ability.name,{unit:uid,card:k});
+ this.emit('ability',NM(this.card(u.k))+' · '+T(ability.name,(root.ArtifactHeroSkills?.all?.[u.k]||[]).find(a=>a.name===ability.name)?.en||''),{unit:uid,card:k});
  switch(k){
- case 'pangolier':{let shield=0;for(const v of this.neighbors(u,true))if(this.damage(v,2,false,u.uid)>0)shield+=v.hero?2:1;if(shield)this.buff(u,{shield},'round');this.emit('shield-crash','甲盾冲击 · 护盾 '+shield,{unit:u.uid,owner:p,lane:l,shield});break;}
+ case 'pangolier':{let shield=0;for(const v of this.neighbors(u,true))if(this.damage(v,2,false,u.uid)>0)shield+=v.hero?2:1;if(shield)this.buff(u,{shield},'round');this.emit('shield-crash',T('甲盾冲击 · 护盾 '+shield,'Shield Crash · Shield '+shield),{unit:u.uid,owner:p,lane:l,shield});break;}
  case 'dark_willow':this.buff(u,{shadowRealm:1,shadowBonus:1},'death');break;
  case 'abaddon':this.heal(u,999);this.buff(u,{immune:1},'round');break;
  case 'beastmaster':this.spawn('loyal_beast',p,l);break;
  case 'chen':case 'helm_of_the_dominator':this.takeControl(a,p);break;
- case 'dark_seer':if(t[1]===l)throw Error('请选择另一条战线');this.move(a,t[1]);break;
+ case 'dark_seer':if(t[1]===l)throw Error(T('请选择另一条战线','Choose a different lane'));this.move(a,t[1]);break;
  case 'earthshaker':this.neighbors(u,true).forEach(v=>this.buff(v,{stun:1},'round'));break;
  case 'jmuy_the_wise':this.draw(p,1);break;
- case 'lich':{if(a.uid===u.uid)throw Error('不能献祭自己');const n=this.stats(a).attack>=6?2:1;this.condemn(a);this.draw(p,n);break;}
+ case 'lich':{if(a.uid===u.uid)throw Error(T('不能献祭自己','Cannot condemn itself'));const n=this.stats(a).attack>=6?2:1;this.condemn(a);this.draw(p,n);break;}
  case 'lion':this.damage(a,8,true);u.quicken=(u.quicken||0)+1;break;
- case 'meepo':if(t[0]===l||!this.named(p,'meepo',t[0]).length)throw Error('另一条战线必须有友方米波');this.move(u,t[0]);this.neighbors(u,true).forEach(v=>this.damage(v,2));break;
+ case 'meepo':if(t[0]===l||!this.named(p,'meepo',t[0]).length)throw Error(T('另一条战线必须有友方米波','Another lane must have an allied Meepo'));this.move(u,t[0]);this.neighbors(u,true).forEach(v=>this.damage(v,2));break;
  case 'omniknight':this.heal(a,3);break;
- case 'pugna':case 'demagicking_maul':{if(k==='demagicking_maul'&&this.target(u))throw Error('英雄被阻挡，无法使用');const i=this.pick(this.imps(1-p,l));if(!i)throw Error('敌方没有强化');this.removeImp(i.uid);break;}
+ case 'pugna':case 'demagicking_maul':{if(k==='demagicking_maul'&&this.target(u))throw Error('英雄被阻挡，无法使用');const i=this.pick(this.imps(1-p,l));if(!i)throw Error(T('敌方没有强化','The enemy has no improvements'));this.removeImp(i.uid);break;}
  case 'skywrath_mage':this.neighbors(a,false,true).forEach(v=>this.buff(v,{armor:-2},'round'));break;
  case 'sniper':this.damage(a,5);break;
  case 'tidehunter':this.all(1-p,l).forEach(v=>{if(Math.abs(v.pos-u.pos)<=1||this.random()<.5)this.buff(v,{stun:1},'round');});break;
  case 'tinker':this.damage(a,3);this.buff(a,{disarm:1},'round');break;
- case 'winter_wyvern':if(t[0].lane!==l)throw Error('严寒烧灼只能改变本路位置');this.move(u,l,t[0].pos);this.buff(u,{attack:4},'round');break;
+ case 'winter_wyvern':if(t[0].lane!==l)throw Error(T('严寒烧灼只能改变本路位置','Cold Embrace can only move within this lane'));this.move(u,l,t[0].pos);this.buff(u,{attack:4},'round');break;
  case 'assassins_apprentice':case 'sister_of_the_veil':case 'assassins_veil':this.chooseCombat(u,a);break;
  case 'emissary_of_the_quorum':this.all(p,l).forEach(v=>this.buff(v,{attack:2,health:2}));break;
  case 'mercenary_exiles':{const n=Math.floor(this.s.players[p].gold/2);this.s.players[p].gold=0;this.buff(u,{attack:n,health:n});break;}
- case 'ravenhook':{const e=this.target(u);if(!e)throw Error('没有阻挡单位');const slots=Object.keys(e.items);if(!slots.length)throw Error('目标没有装备');const slot=this.pick(slots),v=e.items[slot];delete e.items[slot];this.s.players[p].gold+=this.card(v.k).gold;break;}
+ case 'ravenhook':{const e=this.target(u);if(!e)throw Error(T('没有阻挡单位','No blocking unit'));const slots=Object.keys(e.items);if(!slots.length)throw Error(T('目标没有装备','Target has no equipment'));const slot=this.pick(slots),v=e.items[slot];delete e.items[slot];this.s.players[p].gold+=this.card(v.k).gold;break;}
  case 'ravenous_mass':for(const v of this.neighbors(u)){const s=this.stats(v);this.buff(u,{attack:s.attack,health:s.health});this.condemn(v);}break;
- case 'rebel_decoy':case 'phase_boots':if(a===u)throw Error('请选择另一个友军');this.swap(u,a);break;
+ case 'rebel_decoy':case 'phase_boots':if(a===u)throw Error(T('请选择另一个友军','Choose a different ally'));this.swap(u,a);break;
  case 'satyr_magician':case 'aghanims_sanctum':this.s.lanes[l].mana[p]=this.maxMana(p,l);break;
  case 'escape_route':this.returnHero(a);break;
  case 'messenger_rookery':this.chooseCombat(a,b);break;
- case 'cheating_death':if(!this.all(p,l).some(v=>v.hero&&this.card(v.k).color==='Green'&&this.enabled(v)))throw Error('本路需要绿色友方英雄');this.buff(a,{deathShield:1},'round');break;
+ case 'cheating_death':if(!this.all(p,l).some(v=>v.hero&&this.card(v.k).color==='Green'&&this.enabled(v)))throw Error(T('本路需要绿色友方英雄','Requires an allied green hero in this lane'));this.buff(a,{deathShield:1},'round');break;
  case 'keenfolk_turret':this.damage(a,2,true);break;
  case 'steam_cannon':this.damage(a,4,true);break;
  case 'revtel_investments':this.s.players[p].gold+=4*u.charges;this.removeImp(u.uid);break;
- case 'unsupervised_artillery':if(this.all(1-p,l).some(v=>!this.target(v)))throw Error('有未被阻挡的敌人');this.towerDamage(1-p,l,4,true);break;
+ case 'unsupervised_artillery':if(this.all(1-p,l).some(v=>!this.target(v)))throw Error(T('有未被阻挡的敌人','Some enemies are unblocked'));this.towerDamage(1-p,l,4,true);break;
  case 'apotheosis_blade':this.imps(1-p,l).splice(0);{const e=this.target(u);if(e)e.items={};}break;
- case 'blink_dagger':if(t[0]===l)throw Error('请选择另一条战线');this.move(u,t[0]);break;
+ case 'blink_dagger':if(t[0]===l)throw Error(T('请选择另一条战线','Choose a different lane'));this.move(u,t[0]);break;
  case 'book_of_the_dead':for(let n=0;n<(it.charges||0);n++)this.spawn('zombie',p,l);it.charges=0;break;
  case 'bracers_of_sacrifice':this.neighbors(u,true).forEach(v=>this.damage(v,6));this.condemn(u);break;
  case 'horn_of_the_alpha':this.spawn('thunderhide_pack',p,l);break;
@@ -243,7 +246,7 @@ G.activate=function(p,uid,k,t=[]){const backup=clone(this.s);try{
  case 'rumusque_vestments':this.heal(a,4);break;
  case 'shivas_guard':this.neighbors(a,false,true).forEach(v=>this.buff(v,{attack:-2}));break;
  case 'wingfall_hammer':{const n=Math.floor(this.stats(u).attack/2);this.neighbors(u,false,true).forEach(v=>this.buff(v,{regen:n},'round'));break;}
- default:throw Error('尚未实现的主动技能：'+k);
+ default:throw Error(T('尚未实现的主动技能：','Active ability not implemented: ')+k);
  }
  if(imp)u.cooldown=ability.cooldown;else u.cooldowns[k]=k==='lion'?Math.max(1,ability.cooldown-(u.quicken||0)):ability.cooldown;
  this.s.passes=0;this.s.turn=1-p;this.sweep();return this.s;

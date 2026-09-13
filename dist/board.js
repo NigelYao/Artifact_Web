@@ -1,5 +1,8 @@
 /* Camera geometry and reversible deployment planning, independent of the DOM. */
 (function(root){'use strict';
+const I18N=(typeof ArtifactI18n!=='undefined'?ArtifactI18n:null)||(typeof require==='function'?(function(){try{return require('./i18n.js')}catch(e){return null}})():null);
+const T=I18N?I18N.T:(z,e)=>z,pick=I18N?I18N.pick:(o,b)=>o?o[b]:'',cardName=I18N?I18N.cardName:c=>c?c.name:'',cardText=I18N?I18N.cardText:c=>c?c.text||'':'';
+const L=I18N?I18N.localize:v=>v;
 function layout(width,height,focus,deploy=false,reserved=0,fronts=3){
  // Recover the empty upper band while keeping the artwork and pass socket in
  // the same coordinate system. Short landscape leaves a dedicated hand shelf.
@@ -15,9 +18,9 @@ class DeploymentPlan{
  get ready(){return this.game.ready(0);}
  get complete(){return this.ready.every(u=>Number.isInteger(this.assignments[u.uid]));}
  lane(id){return this.assignments[id];}
- assign(id,lane){if(this.game.s.phase!=='deploy'||!this.ready.some(u=>u.uid===Number(id)))throw Error('该英雄不在待部署列表中');if(lane!==null&&(!Number.isInteger(lane)||lane<0||lane>2))throw Error('请选择有效战线');if(lane===null)delete this.assignments[id];else this.assignments[id]=lane;this.game.s.deploymentPlan={...this.assignments};}
+ assign(id,lane){if(this.game.s.phase!=='deploy'||!this.ready.some(u=>u.uid===Number(id)))throw Error(T('该英雄不在待部署列表中','That hero is not waiting to deploy'));if(lane!==null&&(!Number.isInteger(lane)||lane<0||lane>2))throw Error(T('请选择有效战线','Choose a valid lane'));if(lane===null)delete this.assignments[id];else this.assignments[id]=lane;this.game.s.deploymentPlan={...this.assignments};}
  reset(){this.assignments={};this.game.s.deploymentPlan={};}
- confirm(){if(this.game.s.phase!=='deploy'||!this.complete)throw Error('请先安排所有待回归英雄');const saved=JSON.parse(JSON.stringify(this.game.s));try{this.game.s.events=[];this.game.aiDeploy(1);for(const u of this.ready)this.game.deploy(u.uid,this.assignments[u.uid]);this.game.finishDeployment();delete this.game.s.deploymentPlan;}catch(e){this.game.s=saved;throw e;}}
+ confirm(){if(this.game.s.phase!=='deploy'||!this.complete)throw Error(T('请先安排所有待回归英雄','Assign all returning heroes first'));const saved=JSON.parse(JSON.stringify(this.game.s));try{this.game.s.events=[];this.game.aiDeploy(1);for(const u of this.ready)this.game.deploy(u.uid,this.assignments[u.uid]);this.game.finishDeployment();delete this.game.s.deploymentPlan;}catch(e){this.game.s=saved;throw e;}}
 }
 const api={layout,DeploymentPlan};root.ArtifactBoard=api;if(typeof module!=='undefined')module.exports=api;
 })(typeof window!=='undefined'?window:globalThis);
