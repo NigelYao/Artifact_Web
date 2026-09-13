@@ -215,7 +215,7 @@ G.activate=function(p,uid,k,t=[]){const backup=clone(this.s);try{
  switch(k){
  case 'pangolier':{let shield=0;for(const v of this.neighbors(u,true))if(this.damage(v,2,false,u.uid)>0)shield+=v.hero?2:1;if(shield)this.buff(u,{shield},'round');this.emit('shield-crash',T('甲盾冲击 · 护盾 '+shield,'Shield Crash · Shield '+shield),{unit:u.uid,owner:p,lane:l,shield});break;}
  case 'monkey_king':{u.charges-=3;this.damage(a,4,false,u.uid);this.s.players[p].monkeyBonus=(this.s.players[p].monkeyBonus||0)+1;this.emit('buff',T('此后召唤的猴子猴孙攻击永久 +1（当前 +'+this.s.players[p].monkeyBonus+'）','Monkey Soldiers summoned later gain +1 attack permanently (now +'+this.s.players[p].monkeyBonus+')'),{unit:u.uid});break;}
- case 'techies':{const d=Math.ceil(this.stats(a).hp/2);this.damage(a,d,true,u.uid);const n=Math.min(d,this.stats(u).hp-1);if(n>0){u.damage+=n;this.emit('damage',T(this.card(u.k).name+'受到 '+n+' 点伤害',EN(this.card(u.k))+' takes '+n+' damage'),{unit:u.uid,amount:n,source:u.uid});}break;}
+ case 'techies':{const d=Math.ceil(this.stats(u).hp/2);this.damage(a,d,true,u.uid);const n=Math.min(d,this.stats(u).hp-1);if(n>0){u.damage+=n;this.emit('damage',T(this.card(u.k).name+'受到 '+n+' 点伤害',EN(this.card(u.k))+' takes '+n+' damage'),{unit:u.uid,amount:n,source:u.uid});}break;}
  case 'dark_willow':this.buff(u,{shadowRealm:1,shadowBonus:1},'death');break;
  case 'abaddon':this.heal(u,999);this.buff(u,{immune:1},'round');break;
  case 'beastmaster':this.spawn('loyal_beast',p,l);break;

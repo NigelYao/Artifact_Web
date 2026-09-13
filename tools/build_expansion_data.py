@@ -56,12 +56,12 @@ def expansion_cards():
         token=True, art=ART+'monkey_king_wukongs_command.png',
         text=soldier_text,
         textEn='Summoned Monkey Soldier. It never attacks buildings; each attack is counted and after attacking twice it vanishes immediately, without bounty or death triggers.')
-    blast = '选择一个单位，造成等同于其当前生命值一半（向上取整）的透甲伤害；炸弹人受到同等数值的伤害，但生命最低维持1点。'
+    blast = '选择一个单位，造成等同于炸弹人当前生命值一半（向上取整）的透甲伤害；炸弹人受到同等数值的伤害，但生命最低维持1点。'
     add('techies', '炸弹人', 'Techies', 'Hero', 'Red', attack=2, health=8,
         signature='proximity_mines', aliases='炸弹 工程师 地精 techies', text=blast,
-        textEn='Choose a unit: deal piercing damage equal to half its current health (rounded up). Techies takes the same amount of damage but always keeps at least 1 health.',
+        textEn="Choose a unit: deal piercing damage equal to half of Techies' current health (rounded up). Techies takes the same amount of damage but always keeps at least 1 health.",
         abilities=[dict(key='techies', name='爆破起飞', en='Blast Off', text=blast,
-                        textEn='Deal piercing damage to a unit equal to half its current health (rounded up); Techies takes the same amount but keeps at least 1 health.', cooldown=2)])
+                        textEn="Deal piercing damage to a unit equal to half of Techies' current health (rounded up); Techies takes the same amount but keeps at least 1 health.", cooldown=2)])
     add('proximity_mines', '感应地雷', 'Proximity Mines', 'Spell', 'Red', mana=4,
         signatureOf='techies',
         art=ART+'techies_proximity_mines.png',

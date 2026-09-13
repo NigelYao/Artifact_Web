@@ -8224,8 +8224,8 @@
     "attack": 2,
     "armor": 0,
     "health": 8,
-    "text": "选择一个单位，造成等同于其当前生命值一半（向上取整）的透甲伤害；炸弹人受到同等数值的伤害，但生命最低维持1点。",
-    "textEn": "Choose a unit: deal piercing damage equal to half its current health (rounded up). Techies takes the same amount of damage but always keeps at least 1 health.",
+    "text": "选择一个单位，造成等同于炸弹人当前生命值一半（向上取整）的透甲伤害；炸弹人受到同等数值的伤害，但生命最低维持1点。",
+    "textEn": "Choose a unit: deal piercing damage equal to half of Techies' current health (rounded up). Techies takes the same amount of damage but always keeps at least 1 health.",
     "rarity": "Rare",
     "itemType": null,
     "signature": "proximity_mines",
@@ -8238,8 +8238,8 @@
         "key": "techies",
         "name": "爆破起飞",
         "en": "Blast Off",
-        "text": "选择一个单位，造成等同于其当前生命值一半（向上取整）的透甲伤害；炸弹人受到同等数值的伤害，但生命最低维持1点。",
-        "textEn": "Deal piercing damage to a unit equal to half its current health (rounded up); Techies takes the same amount but keeps at least 1 health.",
+        "text": "选择一个单位，造成等同于炸弹人当前生命值一半（向上取整）的透甲伤害；炸弹人受到同等数值的伤害，但生命最低维持1点。",
+        "textEn": "Deal piercing damage to a unit equal to half of Techies' current health (rounded up); Techies takes the same amount but keeps at least 1 health.",
         "cooldown": 2
       }
     ],
