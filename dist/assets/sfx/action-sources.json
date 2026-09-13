@@ -537,6 +537,10 @@
     "monkey_king_command": {
       "voice": "voice-monkey_king_command",
       "effect": "cards-monkey_king_command"
+    },
+    "tree_dance": {
+      "voice": "voice-ability-monkey_king_spring",
+      "effect": "abilities-monkey_king_spring"
     }
   },
   "abilities": {
@@ -658,10 +662,6 @@
     "monkey_king": {
       "voice": "voice-ability-monkey_king",
       "effect": "abilities-monkey_king"
-    },
-    "monkey_king_spring": {
-      "voice": "voice-ability-monkey_king_spring",
-      "effect": "abilities-monkey_king_spring"
     }
   },
   "samples": {

@@ -37,24 +37,25 @@ def expansion_cards():
     add('dark_willow_bramble', '荆棘', 'Bramble', 'Creep', 'Black', health=1, token=True,
         art=ART+'dark_willow_bramble_maze.png', text='本回合存在。被攻击时对攻击者造成1点透甲伤害并缠绕一回合。')
     strike = '被动：齐天大圣每次攻击获得1点能量。主动：消耗3点能量，对一个单位造成4点伤害；此后召唤的猴子猴孙永久+1攻击，可叠加。'
-    spring = '将齐天大圣移至本路一个己方空位，并在其原位置召唤一个1攻击、1生命的猴子猴孙。'
-    soldier_text = '猴子猴孙衍生生物。每次攻击记录出击次数；出击两次后立即消散，不触发阵亡效果，也不提供赏金。'
+    soldier_text = '猴子猴孙衍生生物。不会攻击建筑；每次攻击记录出击次数；出击两次后立即消散，不触发阵亡效果，也不提供赏金。'
     add('monkey_king', '齐天大圣', 'Monkey King', 'Hero', 'Green', attack=4, health=8,
         signature='monkey_king_command', aliases='孙悟空 大圣 mk',
         text=strike, textEn='Passive: gains 1 energy each time he attacks. Active: spend 3 energy to deal 4 damage to a unit; all Monkey Soldiers summoned afterwards gain +1 attack permanently (stacks).',
         abilities=[dict(key='monkey_king', name='棒击蓄势', en='Primed Strike', text=strike,
-                        textEn='Passive: gains 1 energy each time he attacks. Active: spend 3 energy to deal 4 damage to a unit; all Monkey Soldiers summoned afterwards gain +1 attack permanently (stacks).', cooldown=0),
-                   dict(key='monkey_king_spring', name='就地腾挪', en='Nimble Shift', text=spring,
-                        textEn='Move Monkey King to an empty friendly slot in this lane and summon a 1/1 Monkey Soldier where he stood.', cooldown=2)])
+                        textEn='Passive: gains 1 energy each time he attacks. Active: spend 3 energy to deal 4 damage to a unit; all Monkey Soldiers summoned afterwards gain +1 attack permanently (stacks).', cooldown=0)])
     add('monkey_king_command', '猴子猴孙', "Wukong's Command", 'Spell', 'Green', mana=5,
         signatureOf='monkey_king', requiredHero='monkey_king',
         art=ART+'monkey_king_wukongs_command.png',
-        text='需要本路可行动的齐天大圣。以猴子猴孙填满本路己方空位；每个猴子猴孙出击两次后消散，不触发阵亡效果，也不提供赏金。',
-        textEn='Requires an enabled Monkey King in this lane. Fill every empty friendly slot here with Monkey Soldiers; each vanishes after attacking twice, without bounty or death triggers.')
+        text='需要本路可行动的齐天大圣。以猴子猴孙填满本路己方空位；猴子猴孙不会攻击建筑，出击两次后消散，不触发阵亡效果，也不提供赏金。',
+        textEn='Requires an enabled Monkey King in this lane. Fill every empty friendly slot here with Monkey Soldiers; they never attack buildings, vanish after attacking twice, and grant no bounty or death triggers.')
+    add('tree_dance', '就地腾挪', 'Nimble Shift', 'Spell', 'Green', mana=3,
+        art=ART+'monkey_king_tree_dance.png', aliases='丛林一跃 树舞 tree dance',
+        text='选择本路一名己方英雄，将其移至本路一个己方空位，并在其原位置召唤一个1攻击、1生命的猴子猴孙。',
+        textEn='Choose an allied hero in this lane, move it to an empty friendly slot here, and summon a 1/1 Monkey Soldier where it stood.')
     add('monkey_soldier', '猴子猴孙', 'Monkey Soldier', 'Creep', 'Green', attack=1, health=1,
         token=True, art=ART+'monkey_king_wukongs_command.png',
         text=soldier_text,
-        textEn='Summoned Monkey Soldier. Each attack is counted; after attacking twice it vanishes immediately, without bounty or death triggers.')
+        textEn='Summoned Monkey Soldier. It never attacks buildings; each attack is counted and after attacking twice it vanishes immediately, without bounty or death triggers.')
     return cards
 
 if __name__ == '__main__':

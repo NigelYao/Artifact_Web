@@ -8,8 +8,8 @@ const NM=c=>T(c.name,c.en||''),EN=c=>c.en||c.name;
 const G=Game.prototype;
 const previousTargets=G.targets;
 G.targets=function(k,p,source=null){
- if(!source){if(k==='pangolier_lucky_shot')return [{kind:'unit',side:'enemy'}];if(k==='dark_willow_bramble_maze')return [];if(k==='monkey_king_command')return [];if(k==='pangolier_gyroshell')return [{kind:'position',cross:false,free:true}];if(k==='dark_willow_terrorize')return [{kind:'position',cross:false,free:true,occupied:true}];}
- if(source){if(['tinker','cheating_death','monkey_king'].includes(k))return [{kind:'unit',side:'any'}];if(k==='monkey_king_spring')return [{kind:'position',cross:false,free:true}];if(k==='winter_wyvern')return [{kind:'position',cross:false}];}
+ if(!source){if(k==='pangolier_lucky_shot')return [{kind:'unit',side:'enemy'}];if(k==='dark_willow_bramble_maze')return [];if(k==='monkey_king_command')return [];if(k==='tree_dance')return [{kind:'unit',side:'ally',hero:true},{kind:'position',cross:false,free:true}];if(k==='pangolier_gyroshell')return [{kind:'position',cross:false,free:true}];if(k==='dark_willow_terrorize')return [{kind:'position',cross:false,free:true,occupied:true}];}
+ if(source){if(['tinker','cheating_death','monkey_king'].includes(k))return [{kind:'unit',side:'any'}];if(k==='winter_wyvern')return [{kind:'position',cross:false}];}
  if(!source){if(k==='shop_deed')return [];if(k==='gust')return [{kind:'unit',side:'enemy',hero:true}];if(['arm_the_rebellion','routed'].includes(k))return [];if(k==='astral_imprisonment')return [{kind:'unit',side:'any'}];}
  return previousTargets.call(this,k,p,source);
 };
@@ -50,6 +50,7 @@ G.resolve=function(k,p,t,h){
  case 'dark_willow_bramble_maze':{const max=Math.max(0,...units().map(u=>u.pos),...(this.s.jex||[]).filter(j=>j.lane===l).map(j=>j.pos));for(let pos=0;pos<=max;pos++)if(!this.at(p,l,pos)){const flower=this.spawn('dark_willow_bramble',p,l,pos);flower.expiresRound=this.s.round;}break;}
  case 'dark_willow_terrorize':{const pos=t[0].pos,flower=this.at(p,l,pos);(this.s.jex||=[]).push({uid:this.id(),owner:p,lane:l,pos,enhanced:flower?.k==='dark_willow_bramble',createdBy:h.uid});this.emit('jex-summon',T('杰克斯等待下一张技能牌','Jex awaits the next allied spell'),{owner:p,lane:l,pos,enhanced:flower?.k==='dark_willow_bramble'});break;}
  case 'monkey_king_command':{for(const pos of this.positionTargets(p,l,{free:true}))this.spawn('monkey_soldier',p,l,pos);break;}
+ case 'tree_dance':{const from=a.pos;this.move(a,l,t[1].pos);this.spawn('monkey_soldier',p,l,from);break;}
  case 'and_one_for_me':{const i=this.pick(Object.values(a.items));if(!i)throw Error(T('目标英雄没有装备','Target hero has no equipment'));pl.hand.push({uid:this.id(),k:i.k,lock:0});break;}
  case 'act_of_defiance':buff(a,{silence:1},'round');break;
  case 'allseeing_ones_favor':buff(a,{auraRegen:2});break;
@@ -188,7 +189,7 @@ G.canActivate=function(p,uid,k){
  if(u.hero!==undefined&&(u.owner!==p||u.lane!==l||!this.enabled(u)))return T('该单位当前无法使用技能','This unit cannot use abilities right now');
  const a=this.abilities(u).find(a=>a.k===k);if(!a)return T('这是自动生效的被动技能','This passive ability triggers automatically');
  if(a.remaining>0)return T('冷却剩余 '+a.remaining+' 回合','Cooldown: '+a.remaining+' rounds remaining');
- if(['blink_dagger','winter_wyvern','meepo','phase_boots','monkey_king_spring'].includes(k)&&!this.canMove(u))return T('缠绕期间无法移动','Cannot move while rooted');
+ if(['blink_dagger','winter_wyvern','meepo','phase_boots'].includes(k)&&!this.canMove(u))return T('缠绕期间无法移动','Cannot move while rooted');
  if(k==='dark_willow'&&this.flag(u,'shadowRealm'))return T('已经处于暗影之境','Already in Shadow Realm');
  if(k==='monkey_king'&&(u.charges||0)<3)return T('棒击蓄势需要 3 点能量（当前 '+(u.charges||0)+' 点）','Primed Strike needs 3 energy (currently '+(u.charges||0)+')');
  if(['pugna','demagicking_maul'].includes(k)&&!this.imps(1-p,l).length)return T('敌方没有强化','The enemy has no improvements');
@@ -204,13 +205,11 @@ G.activate=function(p,uid,k,t=[]){const backup=clone(this.s);try{
  const ability=this.abilities(u).find(a=>a.k===k);if(!ability||ability.remaining>0)throw Error(T('技能尚在冷却','Ability is still on cooldown'));
  if(k==='dark_willow'&&this.flag(u,'shadowRealm'))throw Error(T('已经处于暗影之境','Already in Shadow Realm'));
  if(k==='monkey_king'&&(u.charges||0)<3)throw Error(T('棒击蓄势需要 3 点能量','Primed Strike needs 3 energy'));
- if(k==='monkey_king_spring'&&!this.canMove(u))throw Error(T('缠绕或翻牌期间无法移动','Cannot move while rooted or flipped'));
  this.validateTargets({key:k},p,t,u);const a=this.get(t[0]),b=this.get(t[1]),it=Object.values(u.items||{}).find(i=>i.k===k);
  this.emit('ability',NM(this.card(u.k))+' · '+T(ability.name,(root.ArtifactHeroSkills?.all?.[u.k]||[]).find(a=>a.name===ability.name)?.en||''),{unit:uid,card:this.card(k)?k:u.k,skill:k});
  switch(k){
  case 'pangolier':{let shield=0;for(const v of this.neighbors(u,true))if(this.damage(v,2,false,u.uid)>0)shield+=v.hero?2:1;if(shield)this.buff(u,{shield},'round');this.emit('shield-crash',T('甲盾冲击 · 护盾 '+shield,'Shield Crash · Shield '+shield),{unit:u.uid,owner:p,lane:l,shield});break;}
  case 'monkey_king':{u.charges-=3;this.damage(a,4,false,u.uid);this.s.players[p].monkeyBonus=(this.s.players[p].monkeyBonus||0)+1;this.emit('buff',T('此后召唤的猴子猴孙攻击永久 +1（当前 +'+this.s.players[p].monkeyBonus+'）','Monkey Soldiers summoned later gain +1 attack permanently (now +'+this.s.players[p].monkeyBonus+')'),{unit:u.uid});break;}
- case 'monkey_king_spring':{const from=u.pos;this.move(u,t[0].lane,t[0].pos);this.spawn('monkey_soldier',p,l,from);break;}
  case 'dark_willow':this.buff(u,{shadowRealm:1,shadowBonus:1},'death');break;
  case 'abaddon':this.heal(u,999);this.buff(u,{immune:1},'round');break;
  case 'beastmaster':this.spawn('loyal_beast',p,l);break;

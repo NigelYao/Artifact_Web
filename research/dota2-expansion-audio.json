@@ -180,8 +180,8 @@
       "bytes": 81536
     },
     {
-      "section": "abilities",
-      "key": "monkey_king_spring",
+      "section": "cards",
+      "key": "tree_dance",
       "slot": "voice",
       "ident": "voice-ability-monkey_king_spring",
       "title": "vo_monkey_king_monkey_ability1_03.mp3",
@@ -191,8 +191,8 @@
       "bytes": 20547
     },
     {
-      "section": "abilities",
-      "key": "monkey_king_spring",
+      "section": "cards",
+      "key": "tree_dance",
       "slot": "effect",
       "ident": "abilities-monkey_king_spring",
       "title": "Tree Dance cast 1.mp3",
