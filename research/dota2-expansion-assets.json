@@ -3,11 +3,13 @@
   "copyright": "Valve Corporation",
   "heroPages": [
     "https://www.dota2.com/hero/pangolier?l=schinese",
-    "https://www.dota2.com/hero/darkwillow?l=schinese"
+    "https://www.dota2.com/hero/darkwillow?l=schinese",
+    "https://www.dota2.com/hero/monkeyking?l=schinese"
   ],
   "dataFeeds": [
     "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=120",
-    "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=119"
+    "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=119",
+    "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=114"
   ],
   "assets": [
     {
@@ -21,6 +23,12 @@
       "file": "dist/assets/dota2/dark_willow.png",
       "sha256": "98fb7268cb1f574b1e54170dc63c9e3f7e6b600cd0a225945c1f5eaa5b85bce3",
       "bytes": 1001964
+    },
+    {
+      "url": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/monkey_king.png",
+      "file": "dist/assets/dota2/monkey_king.png",
+      "sha256": "9097827d1e6f68bdbfca2b2c898bf1e51d3f64ae3874b7458b360ff54435b7d3",
+      "bytes": 832572
     },
     {
       "url": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/pangolier_shield_crash.png",
@@ -63,6 +71,24 @@
       "file": "dist/assets/dota2/dark_willow_terrorize.png",
       "sha256": "48b7c47e55efbb1ef3d64d5181a0e19af603337cab60e58ccd7e9ad2c11c4fae",
       "bytes": 37480
+    },
+    {
+      "url": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/monkey_king_boundless_strike.png",
+      "file": "dist/assets/dota2/monkey_king_boundless_strike.png",
+      "sha256": "42371266574680e1ad77b4d65e2357e6333a36a89f202a0ca1af705683867d16",
+      "bytes": 28470
+    },
+    {
+      "url": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/monkey_king_tree_dance.png",
+      "file": "dist/assets/dota2/monkey_king_tree_dance.png",
+      "sha256": "e72e2eab6d9868dde3bca0d612c806c83313282f9059ccbb0de36e391d86dc6b",
+      "bytes": 30910
+    },
+    {
+      "url": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/monkey_king_wukongs_command.png",
+      "file": "dist/assets/dota2/monkey_king_wukongs_command.png",
+      "sha256": "5c397f8f630982966b322f3b305a18b5c3703f3d0b46d1f918a04d1a0133024d",
+      "bytes": 39353
     }
   ]
 }

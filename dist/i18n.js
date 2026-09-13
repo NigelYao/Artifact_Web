@@ -136,6 +136,11 @@ const rules = [
   [/^(\S[^；：，、→]*?)无法行动，持续 (\d+) 回合$/, m => `${seg(m[1])} cannot act for ${m[2]} more rounds`],
   [/^回合 (\d+)$/, m => `Round ${m[1]}`],
   [/^为武器充能$/, () => 'charges its weapon'],
+  [/^能量 (\d+)$/, m => `Energy ${m[1]}`],
+  [/^(\S[^；：，、→]*?)出击完成，消散$/, m => `${seg(m[1])} finishes its attacks and vanishes`],
+  [/^此后召唤的猴子猴孙攻击永久 \+(\d+)（当前 \+(\d+)）$/, m => `Monkey Soldiers summoned later gain +${m[1]} attack permanently (now +${m[2]})`],
+  [/^棒击蓄势需要 3 点能量（当前 (\d+) 点）$/, m => `Primed Strike needs 3 energy (currently ${m[1]})`],
+  [/^棒击蓄势需要 3 点能量$/, () => 'Primed Strike needs 3 energy'],
 ];
 function seg(s) {
   if (!s || typeof s !== 'string') return s;
@@ -186,6 +191,11 @@ const backRules = [
   [/^Status updated$/, () => '状态更新'],
   [/^Heal \+(\d+)$/, m => `回复 +${m[1]}`],
   [/^Damage −(\d+)$/, m => `伤害 −${m[1]}`],
+  [/^Energy (\d+)$/, m => `能量 ${m[1]}`],
+  [/^(\S[^;：，、→]*?) finishes its attacks and vanishes$/, m => `${segZh(m[1])}出击完成，消散`],
+  [/^Monkey Soldiers summoned later gain \+(\d+) attack permanently \(now \+(\d+)\)$/, m => `此后召唤的猴子猴孙攻击永久 +${m[1]}（当前 +${m[2]}）`],
+  [/^Primed Strike needs 3 energy \(currently (\d+)\)$/, m => `棒击蓄势需要 3 点能量（当前 ${m[1]} 点）`],
+  [/^Primed Strike needs 3 energy$/, () => '棒击蓄势需要 3 点能量'],
 ];
 function segZh(s) {
   if (!s || typeof s !== 'string') return s;

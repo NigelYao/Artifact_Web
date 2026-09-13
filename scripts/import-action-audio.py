@@ -46,7 +46,15 @@ for c in cards:
   voice=next((voiceRoot/(owner+'_'+k+suffix+'.mp3') for suffix in ['', '_intro'] if (voiceRoot/(owner+'_'+k+suffix+'.mp3')).exists()),None)
   if voice:
    manifest['cards'].setdefault(k,{})['voice']=add(voice,'voice',k)
-manifest['unmatchedAbilities']=[c['key'] for c in cards if c.get('abilities') and c['key'] not in manifest['abilities']]
+# Re-merge Dota 2 expansion audio (imported from the wiki CDN by scripts/import-monkey-king.py).
+extra=Path('research/dota2-expansion-audio.json')
+if extra.exists():
+ manifest.setdefault('heroes',{})
+ for f in json.loads(extra.read_text(encoding='utf-8'))['files']:
+  manifest['samples'][f['ident']]=f['file'].split('assets/sfx/')[-1]
+  manifest['sources'][f['ident']]=f['url']
+  manifest[f['section']].setdefault(f['key'],{})[f['slot']]=f['ident']
+manifest['unmatchedAbilities']=[c['key'] for c in cards if c.get('abilities') and c['key'] not in manifest['abilities'] and all(k not in manifest['abilities'] for k in [a.get('key') for a in c['abilities'] if a.get('key')])]
 manifest['unmatchedSpells']=[c['key'] for c in cards if c['type']=='Spell' and not manifest['cards'].get(c['key'],{}).get('effect')]
 Path('dist/action-audio.js').write_text('/* Explicit action-to-resource mapping. Regenerate with scripts/import-action-audio.py. */\nwindow.ARTIFACT_ACTION_AUDIO='+json.dumps(manifest,ensure_ascii=False,separators=(',',':'))+';\n',encoding='utf-8')
 Path('dist/assets/sfx/action-sources.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding='utf-8')

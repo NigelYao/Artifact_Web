@@ -9,5 +9,6 @@ const presets=[
 ];
 
 presets.push({id:'dark-willow-pangolier',name:'荆棘与剑舞',nameEn:'Thorns and Flourish',desc:'红黑 · 石鳞剑士 / 邪影芳灵扩展',descEn:'Red/Black · Pangolier / Dark Willow expansion',heroes:['pangolier','dark_willow','axe','sorla_khan','phantom_assassin'],main:copies(['pangolier_gyroshell',3],['dark_willow_terrorize',3],['defensive_stance',3],['fight_through_the_pain',3],['bronze_legionnaire',3],['new_orders',3],['grazing_shot',3],['hip_fire',2],['untested_grunt',2]),items:defaultItems});
+presets.push({id:'monkey-king',name:'猴王临世',nameEn:'The Monkey King Arrives',desc:'红绿 · 齐天大圣与召唤大军',descEn:'Red/Green · Monkey King and the summoned army',heroes:['monkey_king','treant_protector','lycan','axe','legion_commander'],main:copies(['arm_the_rebellion',3],['avernus_blessing',3],['stars_align',3],['mist_of_avernus',3],['vhoul_martyr',3],['fight_through_the_pain',3],['combat_training',3],['thunderhide_pack',2],['poised_to_strike',2]),items:defaultItems});
 root.ARTIFACT_DECKS=presets;
 })(typeof window!=='undefined'?window:globalThis);

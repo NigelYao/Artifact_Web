@@ -2,7 +2,7 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
 const ctx={window:{},console};vm.createContext(ctx);for(const file of ['data.js','engine.js','effects.js','hero-skills.js','decks.js'])vm.runInContext(fs.readFileSync('dist/'+file,'utf8'),ctx);
 ctx.window.ArtifactHeroSkills=ctx.ArtifactHeroSkills;
-vm.runInContext(`const C=Object.fromEntries(window.ARTIFACT_CARDS.map(c=>[c.key,c])),game=new window.ArtifactEngine.Game(window.ARTIFACT_CARDS),ui={busy:false};game.newGame(window.ARTIFACT_DECKS[0],window.ARTIFACT_DECKS[1],42);const esc=v=>String(v??'').replace(/&/g,'&amp;').replace(/"/g,'&quot;');`,ctx);
+vm.runInContext(`const C=Object.fromEntries(window.ARTIFACT_CARDS.map(c=>[c.key,c])),game=new window.ArtifactEngine.Game(window.ARTIFACT_CARDS),ui={busy:false};game.newGame(window.ARTIFACT_DECKS[0],window.ARTIFACT_DECKS[1],42);const esc=v=>String(v??'').replace(/&/g,'&amp;').replace(/"/g,'&quot;'),T=(z,e)=>z,L=v=>v,pick=(o,b)=>o?.[b]??'',cardName=c=>pick(c,'name'),cardText=c=>pick(c,'text'),ABNAME=a=>pick(a,'name'),ABDESC=a=>pick(a,'description');`,ctx);
 const app=fs.readFileSync('dist/app.js','utf8');vm.runInContext(app.slice(app.indexOf('function heroSkills('),app.indexOf('function heroSkillDetails(')),ctx);
 function run(code){return vm.runInContext(code,ctx);}
 run(`game.s.turn=0;game.s.phase='action';game.s.lane=0;var luna=game.spawn('luna',0,0,8),sniper=game.spawn('sniper',0,0,9);`);

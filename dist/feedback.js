@@ -12,7 +12,7 @@ for(const method of ['play','activate']){const original=G[method];G[method]=func
  const result=original.call(this,p,id,...args),cast=this.s.events.find(e=>e.type===(method==='play'?'card':'ability'));
  if(!cast)return result;
  cast.owner=p;cast.targets=targets;cast.source=method==='activate'?before.get(id):null;
- cast.label=method==='activate'?(this.card(k).abilities?.[0]?.name||this.card(k).name):this.card(k).name;
+ cast.label=method==='activate'?((cast.source&&this.card(cast.source.k)?.abilities?.find(a=>(a.key||cast.source.k)===k)?.name)||this.card(k)?.abilities?.[0]?.name||this.card(k)?.name||k):this.card(k).name;
  cast.outcomes=[];
  for(const u of this.s.units){const old=before.get(u.uid),now=snapshot(this,u),changes=[];
   if(!old||!old.alive&&u.alive)changes.push('进入战场');

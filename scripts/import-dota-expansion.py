@@ -10,9 +10,10 @@ import urllib.request
 
 ROOT = Path(__file__).resolve().parents[1]
 CDN = 'https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/'
-HEROES = {'pangolier': 120, 'dark_willow': 119}
+HEROES = {'pangolier': 120, 'dark_willow': 119, 'monkey_king': 114}
 ICONS = ['pangolier_shield_crash', 'pangolier_lucky_shot', 'pangolier_gyroshell',
-         'dark_willow_bramble_maze', 'dark_willow_shadow_realm', 'dark_willow_bedlam', 'dark_willow_terrorize']
+         'dark_willow_bramble_maze', 'dark_willow_shadow_realm', 'dark_willow_bedlam', 'dark_willow_terrorize',
+         'monkey_king_boundless_strike', 'monkey_king_tree_dance', 'monkey_king_wukongs_command']
 
 def download(entry):
     remote, local = entry

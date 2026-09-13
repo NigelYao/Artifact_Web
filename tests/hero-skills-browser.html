@@ -1,6 +1,6 @@
 <!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><base href="../dist/"><title>英雄本体技能验证</title>
 <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="battle-scene.css"><link rel="stylesheet" href="board-layout.css"><link rel="stylesheet" href="mobile-landscape.css"><link rel="stylesheet" href="responsive-battle.css"><link rel="stylesheet" href="touch-cards.css"><link rel="stylesheet" href="hero-skills.css?v=20260909-heroes2"></head><body><div id="app"></div>
-<script src="data.js"></script><script src="engine.js?v=20260909-heroes2"></script><script src="effects.js?v=20260909-heroes2"></script><script src="hero-skills.js?v=20260909-heroes2"></script><script src="feedback.js"></script><script src="decks.js"></script><script src="action-audio.js"></script><script src="audio.js"></script>
+<script src="data.js"></script><script src="engine.js?v=20260912-mk1"></script><script src="effects.js?v=20260912-mk1"></script><script src="hero-skills.js?v=20260912-mk1"></script><script src="feedback.js"></script><script src="decks.js"></script><script src="action-audio.js"></script><script src="audio.js"></script>
 <script>
 if(location.port!=='8788')throw Error('Only dedicated test origin 8788');
 const fixture=new ArtifactEngine.Game(ARTIFACT_CARDS);fixture.newGame(ARTIFACT_DECKS[0],ARTIFACT_DECKS[1],1234);
@@ -12,7 +12,7 @@ const mode=new URLSearchParams(location.search).get('case');if(mode==='cooldown'
 if(mode==='passive-live'){fixture.move(fixture.all(0,0).find(u=>u.k==='luna'),1,0);fixture.move(fixture.all(1,0).find(u=>u.k==='axe'),1,0);fixture.s.players[1].hand=[];}
 localStorage.setItem('artifact.match',JSON.stringify(fixture.s));localStorage.setItem('artifact.settings',JSON.stringify({muted:true,speed:1}));
 </script>
-<script src="scene.js"></script><script src="board.js"></script><script src="app.js?v=20260909-heroes2"></script><script src="board-input.js"></script><script src="responsive-battle.js"></script><script src="touch-cards.js"></script>
+<script src="scene.js"></script><script src="board.js"></script><script src="app.js?v=20260912-mk1"></script><script src="board-input.js"></script><script src="responsive-battle.js"></script><script src="touch-cards.js"></script>
 <script>document.querySelector('[data-action="resume"]').click();
 if(mode==='passive-live'){const output=document.createElement('output');output.id='passive-fixture-result';output.style='position:fixed;right:12px;top:50px;z-index:90;background:#101923;color:white;padding:6px;font-size:12px';output.textContent='点击让过，等待对方让过与滑动至中路';document.body.appendChild(output);new MutationObserver(()=>{if(document.querySelector('.passive-skill-float')?.textContent.includes('月光')){output.textContent='PASS 月光自动触发来源与目标可见';output.dataset.result='pass';}}).observe(document.getElementById('app'),{childList:true,subtree:true});}
 </script></body></html>
