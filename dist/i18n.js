@@ -141,6 +141,11 @@ const rules = [
   [/^此后召唤的猴子猴孙攻击永久 \+(\d+)（当前 \+(\d+)）$/, m => `Monkey Soldiers summoned later gain +${m[1]} attack permanently (now +${m[2]})`],
   [/^棒击蓄势需要 3 点能量（当前 (\d+) 点）$/, m => `Primed Strike needs 3 energy (currently ${m[1]})`],
   [/^棒击蓄势需要 3 点能量$/, () => 'Primed Strike needs 3 energy'],
+  [/^(\S[^；：，、→]*?)下方埋设了感应地雷$/, m => `A Proximity Mine is planted beneath ${seg(m[1])}`],
+  [/^感应地雷引爆$/, () => 'Proximity Mine detonates'],
+  [/^(\S[^；：，、→]*?)被活性电击缴械$/, m => `${seg(m[1])} is disarmed by Reactive Tazer`],
+  [/^该单位已埋设感应地雷$/, () => 'That unit already carries a Proximity Mine'],
+  [/^找不到感应地雷$/, () => 'No such Proximity Mine'],
 ];
 function seg(s) {
   if (!s || typeof s !== 'string') return s;
@@ -196,6 +201,11 @@ const backRules = [
   [/^Monkey Soldiers summoned later gain \+(\d+) attack permanently \(now \+(\d+)\)$/, m => `此后召唤的猴子猴孙攻击永久 +${m[1]}（当前 +${m[2]}）`],
   [/^Primed Strike needs 3 energy \(currently (\d+)\)$/, m => `棒击蓄势需要 3 点能量（当前 ${m[1]} 点）`],
   [/^Primed Strike needs 3 energy$/, () => '棒击蓄势需要 3 点能量'],
+  [/^A Proximity Mine is planted beneath (\S[^;：，、→]*?)$/, m => `${segZh(m[1])}下方埋设了感应地雷`],
+  [/^Proximity Mine detonates$/, () => '感应地雷引爆'],
+  [/^(\S[^;：，、→]*?) is disarmed by Reactive Tazer$/, m => `${segZh(m[1])}被活性电击缴械`],
+  [/^That unit already carries a Proximity Mine$/, () => '该单位已埋设感应地雷'],
+  [/^No such Proximity Mine$/, () => '找不到感应地雷'],
 ];
 function segZh(s) {
   if (!s || typeof s !== 'string') return s;

@@ -56,6 +56,21 @@ def expansion_cards():
         token=True, art=ART+'monkey_king_wukongs_command.png',
         text=soldier_text,
         textEn='Summoned Monkey Soldier. It never attacks buildings; each attack is counted and after attacking twice it vanishes immediately, without bounty or death triggers.')
+    blast = '选择一个单位，造成等同于其当前生命值一半（向上取整）的透甲伤害；炸弹人受到同等数值的伤害，但生命最低维持1点。'
+    add('techies', '炸弹人', 'Techies', 'Hero', 'Red', attack=2, health=8,
+        signature='proximity_mines', aliases='炸弹 工程师 地精 techies', text=blast,
+        textEn='Choose a unit: deal piercing damage equal to half its current health (rounded up). Techies takes the same amount of damage but always keeps at least 1 health.',
+        abilities=[dict(key='techies', name='爆破起飞', en='Blast Off', text=blast,
+                        textEn='Deal piercing damage to a unit equal to half its current health (rounded up); Techies takes the same amount but keeps at least 1 health.', cooldown=2)])
+    add('proximity_mines', '感应地雷', 'Proximity Mines', 'Spell', 'Red', mana=4,
+        signatureOf='techies',
+        art=ART+'techies_proximity_mines.png',
+        text='在本路一名友方单位下方埋设感应地雷，敌方不可见；每个单位至多埋设一颗。该单位被敌方攻击，或被敌方卡牌、技能选中时引爆：对邻近的敌方单位各造成8点伤害。友方施法不会引爆，拥有者可主动点击引爆；活性电击命中该单位时同样引爆。',
+        textEn='Plant a Proximity Mine beneath an allied unit in this lane, hidden from the enemy (one mine per unit). It detonates when that unit is attacked or targeted by an enemy card or ability, dealing 8 damage to each adjacent enemy unit. Friendly spells never trigger it; its owner may click to detonate, and Reactive Tazer detonates it if it strikes that unit.')
+    add('reactive_tazer', '活性电击', 'Reactive Tazer', 'Spell', 'Red', mana=2,
+        art=ART+'techies_reactive_tazer.png',
+        text='随机缴械本路一个友方单位，并随机缴械至多两个敌方单位，持续一回合。若被缴械的友方单位携有感应地雷，则引爆该地雷。',
+        textEn='Disarm a random allied unit and up to two random enemy units in this lane for one round. If the disarmed ally carries a Proximity Mine, it detonates.')
     return cards
 
 if __name__ == '__main__':

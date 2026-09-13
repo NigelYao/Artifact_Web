@@ -8,14 +8,14 @@ const NM=c=>T(c.name,c.en||''),EN=c=>c.en||c.name;
 const G=Game.prototype;
 const previousTargets=G.targets;
 G.targets=function(k,p,source=null){
- if(!source){if(k==='pangolier_lucky_shot')return [{kind:'unit',side:'enemy'}];if(k==='dark_willow_bramble_maze')return [];if(k==='monkey_king_command')return [];if(k==='tree_dance')return [{kind:'unit',side:'ally',hero:true},{kind:'position',cross:false,free:true}];if(k==='pangolier_gyroshell')return [{kind:'position',cross:false,free:true}];if(k==='dark_willow_terrorize')return [{kind:'position',cross:false,free:true,occupied:true}];}
- if(source){if(['tinker','cheating_death','monkey_king'].includes(k))return [{kind:'unit',side:'any'}];if(k==='winter_wyvern')return [{kind:'position',cross:false}];}
+ if(!source){if(k==='pangolier_lucky_shot')return [{kind:'unit',side:'enemy'}];if(k==='dark_willow_bramble_maze')return [];if(k==='monkey_king_command')return [];if(k==='tree_dance')return [{kind:'unit',side:'ally',hero:true},{kind:'position',cross:false,free:true}];if(k==='pangolier_gyroshell')return [{kind:'position',cross:false,free:true}];if(k==='dark_willow_terrorize')return [{kind:'position',cross:false,free:true,occupied:true}];if(k==='proximity_mines')return [{kind:'unit',side:'ally'}];if(k==='reactive_tazer')return [];}
+ if(source){if(['tinker','cheating_death','monkey_king','techies'].includes(k))return [{kind:'unit',side:'any'}];if(k==='winter_wyvern')return [{kind:'position',cross:false}];}
  if(!source){if(k==='shop_deed')return [];if(k==='gust')return [{kind:'unit',side:'enemy',hero:true}];if(['arm_the_rebellion','routed'].includes(k))return [];if(k==='astral_imprisonment')return [{kind:'unit',side:'any'}];}
  return previousTargets.call(this,k,p,source);
 };
 G.removeImp=function(id){for(let l=0;l<3;l++)for(let p=0;p<2;p++){const a=this.imps(p,l),i=a.findIndex(v=>v.uid===id);if(i>=0){const [c]=a.splice(i,1);this.emit('destroy',T(this.card(c.k).name+'被摧毁',EN(this.card(c.k))+' is destroyed'));return;}}};
 G.chooseCombat=function(a,b){if(!a||!b||a.owner===b.owner||a.lane!==b.lane)throw Error(T('战斗目标须为同路敌方单位','Combat target must be an enemy in the same lane'));a.target=b.uid;a.arrow=b.pos-a.pos;};
-G.takeControl=function(u,p){const l=u.lane;u.owner=p;const occupied=this.all(p,l).filter(v=>v!==u);if(occupied.some(v=>v.pos===u.pos)){let pos=0;while(occupied.some(v=>v.pos===pos))pos++;u.pos=pos;}u.target=null;u.arrow=0;this.emit('control',T(this.card(u.k).name+'改变阵营',EN(this.card(u.k))+' changes allegiance'),{unit:u.uid});};
+G.takeControl=function(u,p){const l=u.lane;u.owner=p;this.s.mines=(this.s.mines||[]).filter(m=>m.unit!==u.uid);const occupied=this.all(p,l).filter(v=>v!==u);if(occupied.some(v=>v.pos===u.pos)){let pos=0;while(occupied.some(v=>v.pos===pos))pos++;u.pos=pos;}u.target=null;u.arrow=0;this.emit('control',T(this.card(u.k).name+'改变阵营',EN(this.card(u.k))+' changes allegiance'),{unit:u.uid});};
 // Persisted, seeded path: damage and displacement use exactly the curve displayed by the client.
 G.rollThunder=function(u,destination){
  if(!this.canMove(u))throw Error(T('缠绕或翻牌期间无法滚动','Cannot roll while rooted or flipped'));
@@ -51,6 +51,10 @@ G.resolve=function(k,p,t,h){
  case 'dark_willow_terrorize':{const pos=t[0].pos,flower=this.at(p,l,pos);(this.s.jex||=[]).push({uid:this.id(),owner:p,lane:l,pos,enhanced:flower?.k==='dark_willow_bramble',createdBy:h.uid});this.emit('jex-summon',T('杰克斯等待下一张技能牌','Jex awaits the next allied spell'),{owner:p,lane:l,pos,enhanced:flower?.k==='dark_willow_bramble'});break;}
  case 'monkey_king_command':{for(const pos of this.positionTargets(p,l,{free:true}))this.spawn('monkey_soldier',p,l,pos);break;}
  case 'tree_dance':{const from=a.pos;this.move(a,l,t[1].pos);this.spawn('monkey_soldier',p,l,from);break;}
+ case 'proximity_mines':{if(this.mineOn(a))throw Error(T('该单位已埋设感应地雷','That unit already carries a Proximity Mine'));(this.s.mines||=[]).push({uid:this.id(),owner:p,unit:a.uid,lane:a.lane,pos:a.pos});this.emit('mine-summon',T(this.card(a.k).name+'下方埋设了感应地雷','A Proximity Mine is planted beneath '+EN(this.card(a.k))),{owner:p,lane:a.lane,pos:a.pos,unit:a.uid,secret:p});break;}
+ case 'reactive_tazer':{const ally=this.pick(allies());if(ally){this.buff(ally,{disarm:1},'round');this.emit('buff',T(this.card(ally.k).name+'被活性电击缴械',EN(this.card(ally.k))+' is disarmed by Reactive Tazer'),{unit:ally.uid,owner:p});}
+  for(const e of this.shuffle(enemies()).slice(0,2)){this.buff(e,{disarm:1},'round');this.emit('buff',T(this.card(e.k).name+'被活性电击缴械',EN(this.card(e.k))+' is disarmed by Reactive Tazer'),{unit:e.uid,owner:p});}
+  const m=ally&&this.mineOn(ally);if(m&&m.owner===p)this.detonate(m,'tazer');break;}
  case 'and_one_for_me':{const i=this.pick(Object.values(a.items));if(!i)throw Error(T('目标英雄没有装备','Target hero has no equipment'));pl.hand.push({uid:this.id(),k:i.k,lock:0});break;}
  case 'act_of_defiance':buff(a,{silence:1},'round');break;
  case 'allseeing_ones_favor':buff(a,{auraRegen:2});break;
@@ -179,6 +183,7 @@ G.resolve=function(k,p,t,h){
  default:throw Error(T('尚未实现的卡牌效果：','Card effect not implemented: ')+k);
  }
 };
+G.detonateMine=function(p,uid){if(this.s.phase!=='action'||this.s.turn!==p)throw Error(T('尚未轮到你行动','Not your turn to act'));const m=(this.s.mines||[]).find(m=>m.uid===Number(uid)&&m.owner===p);if(!m)throw Error(T('找不到感应地雷','No such Proximity Mine'));this.s.events=[];this.detonate(m,'manual');this.s.passes=0;this.s.turn=1-p;this.sweep();return this.s;};
 G.taunt=function(u){for(const e of this.neighbors(u,true)){e.target=u.uid;e.arrow=u.pos-e.pos;}};
 G.abilities=function(u){const a=[];const c=this.card(u.k);for(const ab of c?.abilities||[])a.push({k:ab.key||u.k,...ab,remaining:u.cooldowns?.[ab.key||u.k]||u.cooldown||0});for(const it of Object.values(u.items||{})){const c=this.card(it.k);if(c.abilities?.length)a.push({k:it.k,...c.abilities[0],remaining:u.cooldowns?.[it.k]||0});}return a;};
 // Read-only availability for both hero icons and equipment controls.
@@ -210,6 +215,7 @@ G.activate=function(p,uid,k,t=[]){const backup=clone(this.s);try{
  switch(k){
  case 'pangolier':{let shield=0;for(const v of this.neighbors(u,true))if(this.damage(v,2,false,u.uid)>0)shield+=v.hero?2:1;if(shield)this.buff(u,{shield},'round');this.emit('shield-crash',T('甲盾冲击 · 护盾 '+shield,'Shield Crash · Shield '+shield),{unit:u.uid,owner:p,lane:l,shield});break;}
  case 'monkey_king':{u.charges-=3;this.damage(a,4,false,u.uid);this.s.players[p].monkeyBonus=(this.s.players[p].monkeyBonus||0)+1;this.emit('buff',T('此后召唤的猴子猴孙攻击永久 +1（当前 +'+this.s.players[p].monkeyBonus+'）','Monkey Soldiers summoned later gain +1 attack permanently (now +'+this.s.players[p].monkeyBonus+')'),{unit:u.uid});break;}
+ case 'techies':{const d=Math.ceil(this.stats(a).hp/2);this.damage(a,d,true,u.uid);const n=Math.min(d,this.stats(u).hp-1);if(n>0){u.damage+=n;this.emit('damage',T(this.card(u.k).name+'受到 '+n+' 点伤害',EN(this.card(u.k))+' takes '+n+' damage'),{unit:u.uid,amount:n,source:u.uid});}break;}
  case 'dark_willow':this.buff(u,{shadowRealm:1,shadowBonus:1},'death');break;
  case 'abaddon':this.heal(u,999);this.buff(u,{immune:1},'round');break;
  case 'beastmaster':this.spawn('loyal_beast',p,l);break;
@@ -253,6 +259,7 @@ G.activate=function(p,uid,k,t=[]){const backup=clone(this.s);try{
  case 'wingfall_hammer':{const n=Math.floor(this.stats(u).attack/2);this.neighbors(u,false,true).forEach(v=>this.buff(v,{regen:n},'round'));break;}
  default:throw Error(T('尚未实现的主动技能：','Active ability not implemented: ')+k);
  }
+ const aspec=this.targets(k,p,u);t.forEach((v,i)=>{if(aspec[i]?.kind==='unit')this.mineTrigger(this.get(v),'spell',p)});
  if(imp)u.cooldown=ability.cooldown;else u.cooldowns[k]=k==='lion'?Math.max(1,ability.cooldown-(u.quicken||0)):ability.cooldown;
  this.s.passes=0;this.s.turn=1-p;this.sweep();return this.s;
  }catch(e){this.s=backup;throw e;}};

@@ -103,6 +103,7 @@ window.ArtifactExpansionFX=function(events,layer,game){
    const slot=document.querySelector(`.lane[data-lane="${e.lane}"] .slot[data-owner="${e.owner}"][data-slot="${e.pos}"]`);
    pulse(e.target?document.querySelector(`[data-unit="${e.target}"]`):slot,e.enhanced?'terror-ring':'jex-ring');
   }
+  if(e.type==='mine')pulse(unit||document.querySelector(`.lane[data-lane="${e.lane}"] .slot[data-owner="${e.owner}"][data-slot="${e.pos}"]`),'mine-ring');
   if(e.type!=='rolling'||!unit||unit.closest('[inert]'))continue;
   const lane=unit.closest('.lane'),own=lane.querySelector(`.unit-row.${e.owner?'enemy':'ally'}`),enemy=lane.querySelector(`.unit-row.${e.owner?'ally':'enemy'}`),slots=[...own.querySelectorAll('.slot')];
   if(!slots.length)continue;const first=center(slots[0]),gap=slots[1]?center(slots[1]).x-first.x:slots[0].getBoundingClientRect().width+8;

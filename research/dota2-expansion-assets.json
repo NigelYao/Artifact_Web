@@ -4,12 +4,14 @@
   "heroPages": [
     "https://www.dota2.com/hero/pangolier?l=schinese",
     "https://www.dota2.com/hero/darkwillow?l=schinese",
-    "https://www.dota2.com/hero/monkeyking?l=schinese"
+    "https://www.dota2.com/hero/monkeyking?l=schinese",
+    "https://www.dota2.com/hero/techies?l=schinese"
   ],
   "dataFeeds": [
     "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=120",
     "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=119",
-    "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=114"
+    "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=114",
+    "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=105"
   ],
   "assets": [
     {
@@ -29,6 +31,12 @@
       "file": "dist/assets/dota2/monkey_king.png",
       "sha256": "9097827d1e6f68bdbfca2b2c898bf1e51d3f64ae3874b7458b360ff54435b7d3",
       "bytes": 832572
+    },
+    {
+      "url": "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/techies.png",
+      "file": "dist/assets/dota2/techies.png",
+      "sha256": "bd0ffb6f83f8e61275180691457439bbf396bd4b23273703da73bc121494df91",
+      "bytes": 1623762
     },
     {
       "url": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/pangolier_shield_crash.png",
@@ -89,6 +97,24 @@
       "file": "dist/assets/dota2/monkey_king_wukongs_command.png",
       "sha256": "5c397f8f630982966b322f3b305a18b5c3703f3d0b46d1f918a04d1a0133024d",
       "bytes": 39353
+    },
+    {
+      "url": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/techies_blast_off.png",
+      "file": "dist/assets/dota2/techies_blast_off.png",
+      "sha256": "eae3fc70eace0cad4fdedf096e2b24d47fb1bc4c4e2ef63aed61af7d9a924b49",
+      "bytes": 33265
+    },
+    {
+      "url": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/techies_reactive_tazer.png",
+      "file": "dist/assets/dota2/techies_reactive_tazer.png",
+      "sha256": "6f16be987ef2a8d2f01a67bb50b863bbf6e577b7b5c62244757c9c103a8df432",
+      "bytes": 28707
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/b/bc/Proximity_Mines_icon.png",
+      "file": "dist/assets/dota2/techies_proximity_mines.png",
+      "sha256": "4ef9a4d3cb366d2207e7f28b87b0a01f4b972a1e1f9abcb331ba5cf6bc3a2056",
+      "bytes": 30544
     }
   ]
 }

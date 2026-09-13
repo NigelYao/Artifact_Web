@@ -10,17 +10,28 @@ import urllib.request
 
 ROOT = Path(__file__).resolve().parents[1]
 CDN = 'https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/'
-HEROES = {'pangolier': 120, 'dark_willow': 119, 'monkey_king': 114}
+HEROES = {'pangolier': 120, 'dark_willow': 119, 'monkey_king': 114, 'techies': 105}
 ICONS = ['pangolier_shield_crash', 'pangolier_lucky_shot', 'pangolier_gyroshell',
          'dark_willow_bramble_maze', 'dark_willow_shadow_realm', 'dark_willow_bedlam', 'dark_willow_terrorize',
-         'monkey_king_boundless_strike', 'monkey_king_tree_dance', 'monkey_king_wukongs_command']
+         'monkey_king_boundless_strike', 'monkey_king_tree_dance', 'monkey_king_wukongs_command',
+         'techies_blast_off', 'techies_reactive_tazer']
+# Icons that are not published on the dota_react CDN (full URL -> local file).
+EXTRA = [('https://static.wikia.nocookie.net/dota2_gamepedia/images/b/bc/Proximity_Mines_icon.png',
+          'techies_proximity_mines.png')]
 
 def download(entry):
     remote, local = entry
     path = ROOT / 'dist/assets/dota2' / local
     path.parent.mkdir(parents=True, exist_ok=True)
     url = remote if remote.startswith('https://') else CDN + remote
-    data = urllib.request.urlopen(url, timeout=60).read()
+    req = urllib.request.Request(url, headers={'User-Agent': 'artifact-threefold-asset-import/1.0'})
+    data = urllib.request.urlopen(req, timeout=60).read()
+    if data.startswith(b'RIFF') and data[8:12] == b'WEBP':
+        import io
+        from PIL import Image
+        buf = io.BytesIO()
+        Image.open(io.BytesIO(data)).save(buf, 'PNG')
+        data = buf.getvalue()
     if not data.startswith(b'\x89PNG'):
         raise ValueError(f'Expected PNG from {remote}')
     path.write_bytes(data)
@@ -30,6 +41,7 @@ def download(entry):
 if __name__ == '__main__':
     entries = [(f'https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/{k}.png', f'{k}.png') for k in HEROES]
     entries += [(f'abilities/{k}.png', f'{k}.png') for k in ICONS]
+    entries += EXTRA
     with concurrent.futures.ThreadPoolExecutor(max_workers=5) as pool:
         assets = list(pool.map(download, entries))
     manifest = {'retrieved': '2026-09-11', 'copyright': 'Valve Corporation',

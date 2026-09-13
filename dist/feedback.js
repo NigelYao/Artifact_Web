@@ -9,6 +9,7 @@ for(const method of ['play','activate']){const original=G[method];G[method]=func
  const before=new Map(this.s.units.map(u=>[u.uid,snapshot(this,u)]));
  const spec=k?this.targets(k,p,method==='activate'?this.get(id):null):[];
  const targets=raw.map((v,i)=>{const kind=spec[i]?.kind;if(kind==='lane')return {kind,lane:v,name:lanes[v]};if(kind==='position')return {kind,lane:v.lane,name:lanes[v.lane]+'召唤位'};const unit=before.get(v);if(unit)return {kind:'unit',...unit};return {kind:'improvement',uid:v,name:'战线强化'};});
+ if(k==='proximity_mines')targets.length=0; // hidden deployment: never leak the mined unit
  const result=original.call(this,p,id,...args),cast=this.s.events.find(e=>e.type===(method==='play'?'card':'ability'));
  if(!cast)return result;
  cast.owner=p;cast.targets=targets;cast.source=method==='activate'?before.get(id):null;

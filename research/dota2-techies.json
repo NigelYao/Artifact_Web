@@ -1,0 +1,2277 @@
+{
+ "result": {
+  "data": {
+   "heroes": [
+    {
+     "id": 105,
+     "name": "npc_dota_hero_techies",
+     "order_id": 108,
+     "name_loc": "工程师",
+     "bio_loc": "在矿工湾流传很广的冒险故事里，背负最多骂名的莫过于爆破工程师。然后，矿工湾就在人世间消失了。还有起重港。还有猎手镇。事实上，如果稍微研究一下爆破工程师的历史，不难发现工程师只要出现在哪个城镇，这个城镇不久就会不复存在。\r\n\t\t\t\t<br><br>就跟工程师周围所有注定的灾难一样，矿工湾的消失是从一个发明开始的。爆破奇才斯奎、斯布林和斯布恩三人负责为地下矿井设计安全的引爆方式，他们发明了最为古怪的东西：一个按钮，摁下就能使远处的装置点燃引线。\r\n\t\t\t\t<br><br>由于他们急于测试自己的发明，三人用火盐炸药装了一桶又一桶，狭小的工坊里每个角落都堆满了刚研发的遥控炸弹。他们胡乱从炸弹堆里扯出一桶，埋到一个离得很远的地方。接着他们躲进了附近的壕沟，蜷缩着瑟瑟发抖。斯布林按下了引爆的按钮。然而过了一会儿，什么也没发生。他非常困惑，站了起来，反复地摁下按钮，终于，地上炸出了一个洞。斯奎和斯布林顿时欣喜若狂，可正当他们转身时，工坊方向传来了巨大的能量声波，他们直接被震倒在地。\r\n\t\t\t\t<br><br>出人意料的爆炸让他们耳鸣不已，也非常迷茫。他们走进灰暗的烟雾中，眼前只见工坊已经变成了冒烟的废墟。木材和石头一直在大块大块地掉落，前方的地洞越来越大，慢慢变成了一座深坑。整个矿工湾开始震颤，惊慌失措的居民四处奔逃，而城镇徐徐地滑入了地下矿井。\r\n\t\t\t\t<br><br>他们就坐在悬崖上，看着故乡沉没，三人张开嘴开始傻笑，也不在乎原来嘲笑他们的邻居是否注意到了他们。他们想知道的只有一件事情：这么强力的爆炸他们究竟是如何引发的？",
+     "hype_loc": "对工程师而言，战斗就是搞恶作剧。嘻嘻哈哈地在战场上<b>抛出粘性炸弹</b>，他们<b>隐形的爆炸地雷、让敌人束手束脚的电击还有英勇无畏的爆破攻击</b>都足以让大多数敌人丢掉性命。或至少大发雷霆。往往两者兼有。",
+     "npe_desc_loc": "利用隐形的地雷和爆炸性的攻击给敌人惊喜",
+     "facets": [],
+     "str_base": 19,
+     "str_gain": 2.6,
+     "agi_base": 16,
+     "agi_gain": 1.8,
+     "int_base": 25,
+     "int_gain": 2.7,
+     "primary_attr": 3,
+     "complexity": 2,
+     "attack_capability": 2,
+     "role_levels": [
+      0,
+      0,
+      3,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "damage_min": 20,
+     "damage_max": 22,
+     "attack_rate": 1.7,
+     "attack_range": 600,
+     "projectile_speed": 900,
+     "armor": 4.666667,
+     "magic_resistance": 25,
+     "movement_speed": 310,
+     "turn_rate": 0.6,
+     "sight_range_day": 1800,
+     "sight_range_night": 800,
+     "max_health": 538,
+     "health_regen": 2.9,
+     "max_mana": 375,
+     "mana_regen": 1.75,
+     "abilities": [
+      {
+       "id": 879,
+       "name": "techies_sticky_bomb",
+       "name_loc": "粘性炸弹",
+       "desc_loc": "向目标区域抛出一个粘性炸弹。如果炸弹落在一个敌方英雄身旁，炸弹会粘上去，减缓其移动速度。数秒后炸弹会爆炸，对爆炸区域内造成伤害，并再次施加减速，持续%secondary_slow_duration%秒。",
+       "lore_loc": "这样革命性的才华本应与他人分享。",
+       "notes_loc": [],
+       "shard_loc": "",
+       "scepter_loc": "",
+       "facets_loc": [
+        "",
+        "",
+        ""
+       ],
+       "type": 0,
+       "behavior": "48",
+       "target_team": 0,
+       "target_type": 0,
+       "flags": 0,
+       "damage": 2,
+       "immunity": 4,
+       "dispellable": 2,
+       "max_level": 4,
+       "cast_ranges": [
+        1000
+       ],
+       "cast_points": [
+        0.1
+       ],
+       "channel_times": [
+        0
+       ],
+       "cooldowns": [
+        16,
+        13,
+        10,
+        7
+       ],
+       "durations": [
+        0
+       ],
+       "damages": [
+        0,
+        0,
+        0,
+        0
+       ],
+       "mana_costs": [
+        100,
+        115,
+        130,
+        145
+       ],
+       "gold_costs": [],
+       "health_costs": [],
+       "special_values": [
+        {
+         "name": "duration",
+         "values_float": [
+          1.2
+         ],
+         "is_percentage": false,
+         "heading_loc": "",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "countdown",
+         "values_float": [
+          2
+         ],
+         "is_percentage": false,
+         "heading_loc": "爆炸延迟：",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "radius",
+         "values_float": [
+          300
+         ],
+         "is_percentage": false,
+         "heading_loc": "粘附作用范围：",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "damage",
+         "values_float": [
+          95,
+          170,
+          245,
+          320
+         ],
+         "is_percentage": false,
+         "heading_loc": "伤害：",
+         "bonuses": [
+          {
+           "name": "special_bonus_unique_techies_2",
+           "value": 160,
+           "operation": 0
+          }
+         ],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "slow",
+         "values_float": [
+          25,
+          35,
+          45,
+          55
+         ],
+         "is_percentage": true,
+         "heading_loc": "移动速度减缓：",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "secondary_slow",
+         "values_float": [
+          15,
+          25,
+          35,
+          45
+         ],
+         "is_percentage": true,
+         "heading_loc": "二次减速：",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "secondary_slow_duration",
+         "values_float": [
+          3
+         ],
+         "is_percentage": false,
+         "heading_loc": "",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "explosion_radius",
+         "values_float": [
+          350
+         ],
+         "is_percentage": false,
+         "heading_loc": "爆炸范围：",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "speed",
+         "values_float": [
+          500
+         ],
+         "is_percentage": false,
+         "heading_loc": "",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "acceleration",
+         "values_float": [
+          2000
+         ],
+         "is_percentage": false,
+         "heading_loc": "",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "pre_chase_time",
+         "values_float": [
+          0.1
+         ],
+         "is_percentage": false,
+         "heading_loc": "",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "max_chase_time",
+         "values_float": [
+          4
+         ],
+         "is_percentage": false,
+         "heading_loc": "",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "AbilityCastRange",
+         "values_float": [
+          1000
+         ],
+         "is_percentage": false,
+         "heading_loc": "",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "AbilityCastPoint",
+         "values_float": [
+          0.1
+         ],
+         "is_percentage": false,
+         "heading_loc": "",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "AbilityManaCost",
+         "values_float": [
+          100,
+          115,
+          130,
+          145
+         ],
+         "is_percentage": false,
+         "heading_loc": "",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "AbilityCooldown",
+         "values_float": [
+          16,
+          13,
+          10,
+          7
+         ],
+         "is_percentage": false,
+         "heading_loc": "",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        }
+       ],
+       "is_item": false,
+       "ability_has_scepter": false,
+       "ability_has_shard": false,
+       "ability_is_granted_by_scepter": false,
+       "ability_is_granted_by_shard": false,
+       "ability_is_innate": false,
+       "item_cost": 0,
+       "item_initial_charges": 0,
+       "item_neutral_tier": 4294967295,
+       "item_stock_max": 0,
+       "item_stock_time": 0,
+       "item_quality": 0
+      },
+      {
+       "id": 886,
+       "name": "techies_reactive_tazer",
+       "name_loc": "活性电击",
+       "desc_loc": "工程师对友军目标放出电荷，使他们短时间内获得移动速度加成。攻击目标的敌人会受到伤害被暂时<font color='#afb912'>缴械</font>，并且受到弱驱散效果。<br><br>效果结束时，或者用子技能提前引爆后电荷将会爆炸，使范围内所有敌人<font color='#afb912'>缴械</font>并受到伤害。",
+       "lore_loc": "想要双手稳稳地握住炸弹更需要大量个人空间。",
+       "notes_loc": [],
+       "shard_loc": "",
+       "scepter_loc": "",
+       "facets_loc": [
+        "",
+        "",
+        ""
+       ],
+       "type": 0,
+       "behavior": "8",
+       "target_team": 1,
+       "target_type": 1,
+       "flags": 0,
+       "damage": 2,
+       "immunity": 4,
+       "dispellable": 2,
+       "max_level": 4,
+       "cast_ranges": [
+        600
+       ],
+       "cast_points": [
+        0.1
+       ],
+       "channel_times": [
+        0
+       ],
+       "cooldowns": [
+        26,
+        22,
+        18,
+        14
+       ],
+       "durations": [
+        0
+       ],
+       "damages": [
+        0,
+        0,
+        0,
+        0
+       ],
+       "mana_costs": [
+        60
+       ],
+       "gold_costs": [],
+       "health_costs": [],
+       "special_values": [
+        {
+         "name": "duration",
+         "values_float": [
+          6
+         ],
+         "is_percentage": false,
+         "heading_loc": "加成持续时间：",
+         "bonuses": [
+          {
+           "name": "special_bonus_unique_techies_tazer_duration",
+           "value": 25,
+           "operation": 3
+          }
+         ],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "disarm_duration",
+         "values_float": [
+          2.25,
+          2.5,
+          2.75,
+          3
+         ],
+         "is_percentage": false,
+         "heading_loc": "<font color='#afb912'>缴械</font>持续时间：",
+         "bonuses": [
+          {
+           "name": "special_bonus_unique_techies_tazer_duration",
+           "value": 25,
+           "operation": 3
+          }
+         ],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "bonus_ms",
+         "values_float": [
+          18,
+          22,
+          26,
+          30
+         ],
+         "is_percentage": true,
+         "heading_loc": "移动速度加成：",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "explosion_radius",
+         "values_float": [
+          400
+         ],
+         "is_percentage": false,
+         "heading_loc": "爆炸范围：",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "damage",
+         "values_float": [
+          60,
+          110,
+          160,
+          210
+         ],
+         "is_percentage": false,
+         "heading_loc": "伤害：",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "AbilityCastRange",
+         "values_float": [
+          600
+         ],
+         "is_percentage": false,
+         "heading_loc": "",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "AbilityCastPoint",
+         "values_float": [
+          0.1
+         ],
+         "is_percentage": false,
+         "heading_loc": "",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "AbilityManaCost",
+         "values_float": [
+          60
+         ],
+         "is_percentage": false,
+         "heading_loc": "",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "AbilityCooldown",
+         "values_float": [
+          26,
+          22,
+          18,
+          14
+         ],
+         "is_percentage": false,
+         "heading_loc": "",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        }
+       ],
+       "is_item": false,
+       "ability_has_scepter": false,
+       "ability_has_shard": false,
+       "ability_is_granted_by_scepter": false,
+       "ability_is_granted_by_shard": false,
+       "ability_is_innate": false,
+       "item_cost": 0,
+       "item_initial_charges": 0,
+       "item_neutral_tier": 4294967295,
+       "item_stock_max": 0,
+       "item_stock_time": 0,
+       "item_quality": 0
+      },
+      {
+       "id": 5601,
+       "name": "techies_suicide",
+       "name_loc": "爆破起飞！",
+       "desc_loc": "工程师冲到敌人中间，在相遇时引爆炸药，造成大量范围伤害，并<font color='#2dd5e4'>眩晕</font>敌人。引爆时会对工程师造成当前生命值一定百分比的非致死伤害。",
+       "lore_loc": "我们是要去哪？",
+       "notes_loc": [
+        "工程师在此次爆炸中受到的自身伤害为纯粹伤害，而且不会致死。",
+        "此技能将摧毁树木。"
+       ],
+       "shard_loc": "",
+       "scepter_loc": "",
+       "facets_loc": [
+        "",
+        "提升爆破起飞！伤害和对自身伤害。",
+        ""
+       ],
+       "type": 0,
+       "behavior": "67633200",
+       "target_team": 2,
+       "target_type": 0,
+       "flags": 0,
+       "damage": 2,
+       "immunity": 4,
+       "dispellable": 2,
+       "max_level": 4,
+       "cast_ranges": [
+        1000
+       ],
+       "cast_points": [
+        1
+       ],
+       "channel_times": [
+        0
+       ],
+       "cooldowns": [
+        40,
+        35,
+        30,
+        25
+       ],
+       "durations": [
+        0
+       ],
+       "damages": [
+        0,
+        0,
+        0,
+        0
+       ],
+       "mana_costs": [
+        100,
+        125,
+        150,
+        175
+       ],
+       "gold_costs": [],
+       "health_costs": [],
+       "special_values": [
+        {
+         "name": "radius",
+         "values_float": [
+          400
+         ],
+         "is_percentage": false,
+         "heading_loc": "爆炸范围：",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "damage",
+         "values_float": [
+          200,
+          300,
+          400,
+          500
+         ],
+         "is_percentage": false,
+         "heading_loc": "全额伤害：",
+         "bonuses": [
+          {
+           "name": "special_bonus_unique_techies",
+           "value": 175,
+           "operation": 0
+          }
+         ],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "stun_duration",
+         "values_float": [
+          0.8,
+          1,
+          1.2,
+          1.4
+         ],
+         "is_percentage": false,
+         "heading_loc": "<font color='#2dd5e4'>眩晕</font>时间：",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "hp_cost",
+         "values_float": [
+          20
+         ],
+         "is_percentage": true,
+         "heading_loc": "对自身的当前生命值伤害：",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "duration",
+         "values_float": [
+          0.75
+         ],
+         "is_percentage": false,
+         "heading_loc": "",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "AbilityCastRange",
+         "values_float": [
+          1000
+         ],
+         "is_percentage": false,
+         "heading_loc": "",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "AbilityCastPoint",
+         "values_float": [
+          1
+         ],
+         "is_percentage": false,
+         "heading_loc": "",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "AbilityManaCost",
+         "values_float": [
+          100,
+          125,
+          150,
+          175
+         ],
+         "is_percentage": false,
+         "heading_loc": "",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "AbilityCooldown",
+         "values_float": [
+          40,
+          35,
+          30,
+          25
+         ],
+         "is_percentage": false,
+         "heading_loc": "",
+         "bonuses": [
+          {
+           "name": "special_bonus_unique_techies_5",
+           "value": 15,
+           "operation": 2
+          }
+         ],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        }
+       ],
+       "is_item": false,
+       "ability_has_scepter": false,
+       "ability_has_shard": false,
+       "ability_is_granted_by_scepter": false,
+       "ability_is_granted_by_shard": false,
+       "ability_is_innate": false,
+       "item_cost": 0,
+       "item_initial_charges": 0,
+       "item_neutral_tier": 4294967295,
+       "item_stock_max": 0,
+       "item_stock_time": 0,
+       "item_quality": 0
+      },
+      {
+       "id": 1778,
+       "name": "techies_mutually_assured_destruction",
+       "name_loc": "同归于尽",
+       "desc_loc": "工程师获得相当于最大魔法值一定百分比的魔法恢复。<br><br>工程师阵亡时，他们会留下一个木桶，在%explosion_delay%秒后爆炸，对范围内敌人造成伤害。伤害数值是根据工程师的最大魔法值。",
+       "lore_loc": "",
+       "notes_loc": [],
+       "shard_loc": "同归于尽变为主动技能。提升最大魔法值的伤害系数。工程师放置同归于尽木桶后，可以使用子技能手动引爆。同一时间主动技能只能放下一个同归于尽木桶。",
+       "scepter_loc": "",
+       "facets_loc": [
+        "",
+        "",
+        ""
+       ],
+       "type": 0,
+       "behavior": "1688858450198531",
+       "target_team": 0,
+       "target_type": 0,
+       "flags": 0,
+       "damage": 2,
+       "immunity": 4,
+       "dispellable": 0,
+       "max_level": 1,
+       "cast_ranges": [
+        0
+       ],
+       "cast_points": [
+        1
+       ],
+       "channel_times": [
+        0
+       ],
+       "cooldowns": [
+        0
+       ],
+       "durations": [
+        0
+       ],
+       "damages": [
+        0,
+        0,
+        0,
+        0
+       ],
+       "mana_costs": [
+        0
+       ],
+       "gold_costs": [],
+       "health_costs": [],
+       "special_values": [
+        {
+         "name": "bonus_mana_as_mana_regen",
+         "values_float": [
+          0.1
+         ],
+         "is_percentage": true,
+         "heading_loc": "魔法值转为恢复：",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "radius",
+         "values_float": [
+          400
+         ],
+         "is_percentage": false,
+         "heading_loc": "范围：",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "base_damage",
+         "values_float": [
+          50
+         ],
+         "is_percentage": false,
+         "heading_loc": "基础伤害：",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "max_mana_pct_as_damage",
+         "values_float": [
+          30
+         ],
+         "is_percentage": true,
+         "heading_loc": "最大魔法值伤害：",
+         "bonuses": [],
+         "values_shard": [
+          10
+         ],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "current_mana_regen",
+         "values_float": [
+          0
+         ],
+         "is_percentage": false,
+         "heading_loc": "当前魔法恢复：",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "current_damage",
+         "values_float": [
+          0
+         ],
+         "is_percentage": false,
+         "heading_loc": "当前伤害：",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "explosion_delay",
+         "values_float": [
+          1.5
+         ],
+         "is_percentage": false,
+         "heading_loc": "",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "AbilityCastRange",
+         "values_float": [
+          0
+         ],
+         "is_percentage": false,
+         "heading_loc": "",
+         "bonuses": [],
+         "values_shard": [
+          450
+         ],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "AbilityCastPoint",
+         "values_float": [
+          1
+         ],
+         "is_percentage": false,
+         "heading_loc": "",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "AbilityCooldown",
+         "values_float": [
+          0
+         ],
+         "is_percentage": false,
+         "heading_loc": "",
+         "bonuses": [],
+         "values_shard": [
+          30
+         ],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        }
+       ],
+       "is_item": false,
+       "ability_has_scepter": false,
+       "ability_has_shard": true,
+       "ability_is_granted_by_scepter": false,
+       "ability_is_granted_by_shard": false,
+       "ability_is_innate": true,
+       "item_cost": 0,
+       "item_initial_charges": 0,
+       "item_neutral_tier": 4294967295,
+       "item_stock_max": 0,
+       "item_stock_time": 0,
+       "item_quality": 0
+      },
+      {
+       "id": 5644,
+       "name": "techies_minefield_sign",
+       "name_loc": "雷区标识",
+       "desc_loc": "在指定地点放置警示牌，使作用范围内的感应地雷为无敌状态，并且造成的伤害增加%bonus_mine_damage_pct%%%。同一时间只能存在一个标识。持续%lifetime%秒。<br><br>敌方英雄进入标识的%trigger_radius%范围内时标识附近整个%aura_radius%范围变成一片雷区，持续%minefield_duration%秒。敌方单位在区域内移动都会受到伤害。雷区持续时间结束后标识会被摧毁。",
+       "lore_loc": "别四处乱跑！",
+       "notes_loc": [],
+       "shard_loc": "",
+       "scepter_loc": "",
+       "facets_loc": [
+        "",
+        "",
+        ""
+       ],
+       "type": 0,
+       "behavior": "8589934705",
+       "target_team": 0,
+       "target_type": 0,
+       "flags": 0,
+       "damage": 0,
+       "immunity": 0,
+       "dispellable": 0,
+       "max_level": 1,
+       "cast_ranges": [
+        10
+       ],
+       "cast_points": [
+        1.25
+       ],
+       "channel_times": [
+        0
+       ],
+       "cooldowns": [
+        60
+       ],
+       "durations": [
+        0
+       ],
+       "damages": [
+        0,
+        0,
+        0,
+        0
+       ],
+       "mana_costs": [
+        0
+       ],
+       "gold_costs": [],
+       "health_costs": [],
+       "special_values": [
+        {
+         "name": "aura_radius",
+         "values_float": [
+          1000
+         ],
+         "is_percentage": false,
+         "heading_loc": "作用范围：",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "lifetime",
+         "values_float": [
+          240
+         ],
+         "is_percentage": false,
+         "heading_loc": "标识持续时间：",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "minefield_duration",
+         "values_float": [
+          10
+         ],
+         "is_percentage": false,
+         "heading_loc": "",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "trigger_radius",
+         "values_float": [
+          200
+         ],
+         "is_percentage": false,
+         "heading_loc": "",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "scepter_move_damage",
+         "values_float": [
+          300
+         ],
+         "is_percentage": false,
+         "heading_loc": "伤害：",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "scepter_move_amt",
+         "values_float": [
+          200
+         ],
+         "is_percentage": false,
+         "heading_loc": "移动距离触发：",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "bonus_mine_damage_pct",
+         "values_float": [
+          15
+         ],
+         "is_percentage": false,
+         "heading_loc": "",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "AbilityCastRange",
+         "values_float": [
+          10
+         ],
+         "is_percentage": false,
+         "heading_loc": "",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "AbilityCastPoint",
+         "values_float": [
+          1.25
+         ],
+         "is_percentage": false,
+         "heading_loc": "",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "AbilityCooldown",
+         "values_float": [
+          60
+         ],
+         "is_percentage": false,
+         "heading_loc": "",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        }
+       ],
+       "is_item": false,
+       "ability_has_scepter": false,
+       "ability_has_shard": false,
+       "ability_is_granted_by_scepter": true,
+       "ability_is_granted_by_shard": false,
+       "ability_is_innate": false,
+       "item_cost": 0,
+       "item_initial_charges": 0,
+       "item_neutral_tier": 4294967295,
+       "item_stock_max": 0,
+       "item_stock_time": 0,
+       "item_quality": 0
+      },
+      {
+       "id": 5599,
+       "name": "techies_land_mines",
+       "name_loc": "感应地雷",
+       "desc_loc": "埋布<font color='#d7ccc7'>隐形</font>的地雷，不会被真实视域检测到，但是有敌方单位在地雷的%radius%生效范围内会显形。敌人在生效范围内停留超过%proximity_threshold%秒会使地雷爆炸，并且魔法抗性会被暂时降低。爆炸对%min_distance%范围内目标造成全额伤害，对边缘造成的伤害减少至%outer_damage%%%。对建筑物造成%building_damage_pct%%%伤害。",
+       "lore_loc": "起重港的噩梦！",
+       "notes_loc": [
+        "感应地雷的%placement_radius%范围内不能再放置地雷。",
+        "感应地雷不会阻止中立生物产生。",
+        "地雷持续时间没有上限，除非爆炸或被摧毁。",
+        "隐形单位也能触发地雷。",
+        "敌方英雄将地雷摧毁可以获得30金钱。"
+       ],
+       "shard_loc": "",
+       "scepter_loc": "",
+       "facets_loc": [
+        "",
+        "",
+        ""
+       ],
+       "type": 1,
+       "behavior": "48",
+       "target_team": 0,
+       "target_type": 0,
+       "flags": 0,
+       "damage": 2,
+       "immunity": 4,
+       "dispellable": 2,
+       "max_level": 3,
+       "cast_ranges": [
+        450
+       ],
+       "cast_points": [
+        0
+       ],
+       "channel_times": [
+        0
+       ],
+       "cooldowns": [
+        0
+       ],
+       "durations": [
+        0
+       ],
+       "damages": [
+        0,
+        0,
+        0,
+        0
+       ],
+       "mana_costs": [
+        110,
+        140,
+        170
+       ],
+       "gold_costs": [],
+       "health_costs": [],
+       "special_values": [
+        {
+         "name": "radius",
+         "values_float": [
+          500
+         ],
+         "is_percentage": false,
+         "heading_loc": "爆炸范围：",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "proximity_threshold",
+         "values_float": [
+          1
+         ],
+         "is_percentage": false,
+         "heading_loc": "",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "damage",
+         "values_float": [
+          400,
+          550,
+          700
+         ],
+         "is_percentage": false,
+         "heading_loc": "伤害：",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "building_damage_pct",
+         "values_float": [
+          30
+         ],
+         "is_percentage": true,
+         "heading_loc": "对建筑伤害：",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "activation_delay",
+         "values_float": [
+          1
+         ],
+         "is_percentage": false,
+         "heading_loc": "启动延迟：",
+         "bonuses": [
+          {
+           "name": "special_bonus_unique_techies_4",
+           "value": 0.8,
+           "operation": 2
+          }
+         ],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "cast_range_scepter_bonus",
+         "values_float": [
+          0
+         ],
+         "is_percentage": false,
+         "heading_loc": "",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [
+          300
+         ],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "outer_damage",
+         "values_float": [
+          50
+         ],
+         "is_percentage": false,
+         "heading_loc": "",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "min_distance",
+         "values_float": [
+          150
+         ],
+         "is_percentage": false,
+         "heading_loc": "",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "placement_radius",
+         "values_float": [
+          350
+         ],
+         "is_percentage": false,
+         "heading_loc": "",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "mres_reduction",
+         "values_float": [
+          15,
+          20,
+          25
+         ],
+         "is_percentage": true,
+         "heading_loc": "魔法抗性降低：",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "burn_duration",
+         "values_float": [
+          4
+         ],
+         "is_percentage": false,
+         "heading_loc": "负面效果持续时间：",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "AbilityCastRange",
+         "values_float": [
+          450
+         ],
+         "is_percentage": false,
+         "heading_loc": "",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "AbilityCharges",
+         "values_float": [
+          3
+         ],
+         "is_percentage": false,
+         "heading_loc": "",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "AbilityChargeRestoreTime",
+         "values_float": [
+          15
+         ],
+         "is_percentage": false,
+         "heading_loc": "",
+         "bonuses": [
+          {
+           "name": "special_bonus_unique_techies_3",
+           "value": 2,
+           "operation": 2
+          }
+         ],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        },
+        {
+         "name": "AbilityManaCost",
+         "values_float": [
+          110,
+          140,
+          170
+         ],
+         "is_percentage": false,
+         "heading_loc": "",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        }
+       ],
+       "is_item": false,
+       "ability_has_scepter": false,
+       "ability_has_shard": false,
+       "ability_is_granted_by_scepter": false,
+       "ability_is_granted_by_shard": false,
+       "ability_is_innate": false,
+       "item_cost": 0,
+       "item_initial_charges": 0,
+       "item_neutral_tier": 4294967295,
+       "item_stock_max": 0,
+       "item_stock_time": 0,
+       "item_quality": 0
+      }
+     ],
+     "talents": [
+      {
+       "id": 6138,
+       "name": "special_bonus_magic_resistance_15",
+       "name_loc": "+{s:value}% 魔法抗性",
+       "desc_loc": "",
+       "lore_loc": "",
+       "notes_loc": [],
+       "shard_loc": "",
+       "scepter_loc": "",
+       "facets_loc": [
+        "",
+        "",
+        ""
+       ],
+       "type": 2,
+       "behavior": "2",
+       "target_team": 0,
+       "target_type": 0,
+       "flags": 0,
+       "damage": 0,
+       "immunity": 0,
+       "dispellable": 0,
+       "max_level": 4,
+       "cast_ranges": [
+        0
+       ],
+       "cast_points": [
+        0
+       ],
+       "channel_times": [
+        0
+       ],
+       "cooldowns": [
+        0
+       ],
+       "durations": [
+        0
+       ],
+       "damages": [
+        0,
+        0,
+        0,
+        0
+       ],
+       "mana_costs": [
+        0
+       ],
+       "gold_costs": [],
+       "health_costs": [],
+       "special_values": [
+        {
+         "name": "value",
+         "values_float": [
+          15
+         ],
+         "is_percentage": false,
+         "heading_loc": "",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        }
+       ],
+       "is_item": false,
+       "ability_has_scepter": false,
+       "ability_has_shard": false,
+       "ability_is_granted_by_scepter": false,
+       "ability_is_granted_by_shard": false,
+       "ability_is_innate": false,
+       "item_cost": 0,
+       "item_initial_charges": 0,
+       "item_neutral_tier": 4294967295,
+       "item_stock_max": 0,
+       "item_stock_time": 0,
+       "item_quality": 0
+      },
+      {
+       "id": 6997,
+       "name": "special_bonus_unique_techies_3",
+       "name_loc": "-{s:bonus_AbilityChargeRestoreTime}秒 感应地雷充能",
+       "desc_loc": "",
+       "lore_loc": "",
+       "notes_loc": [],
+       "shard_loc": "",
+       "scepter_loc": "",
+       "facets_loc": [
+        "",
+        "",
+        ""
+       ],
+       "type": 2,
+       "behavior": "2",
+       "target_team": 0,
+       "target_type": 0,
+       "flags": 0,
+       "damage": 0,
+       "immunity": 0,
+       "dispellable": 0,
+       "max_level": 4,
+       "cast_ranges": [
+        0
+       ],
+       "cast_points": [
+        0
+       ],
+       "channel_times": [
+        0
+       ],
+       "cooldowns": [
+        0
+       ],
+       "durations": [
+        0
+       ],
+       "damages": [
+        0,
+        0,
+        0,
+        0
+       ],
+       "mana_costs": [
+        0
+       ],
+       "gold_costs": [],
+       "health_costs": [],
+       "special_values": [],
+       "is_item": false,
+       "ability_has_scepter": false,
+       "ability_has_shard": false,
+       "ability_is_granted_by_scepter": false,
+       "ability_is_granted_by_shard": false,
+       "ability_is_innate": false,
+       "item_cost": 0,
+       "item_initial_charges": 0,
+       "item_neutral_tier": 4294967295,
+       "item_stock_max": 0,
+       "item_stock_time": 0,
+       "item_quality": 0
+      },
+      {
+       "id": 6282,
+       "name": "special_bonus_unique_techies",
+       "name_loc": "+{s:bonus_damage} 爆破起飞！伤害",
+       "desc_loc": "",
+       "lore_loc": "",
+       "notes_loc": [],
+       "shard_loc": "",
+       "scepter_loc": "",
+       "facets_loc": [
+        "",
+        "",
+        ""
+       ],
+       "type": 2,
+       "behavior": "2",
+       "target_team": 0,
+       "target_type": 0,
+       "flags": 0,
+       "damage": 0,
+       "immunity": 0,
+       "dispellable": 0,
+       "max_level": 4,
+       "cast_ranges": [
+        0
+       ],
+       "cast_points": [
+        0
+       ],
+       "channel_times": [
+        0
+       ],
+       "cooldowns": [
+        0
+       ],
+       "durations": [
+        0
+       ],
+       "damages": [
+        0,
+        0,
+        0,
+        0
+       ],
+       "mana_costs": [
+        0
+       ],
+       "gold_costs": [],
+       "health_costs": [],
+       "special_values": [],
+       "is_item": false,
+       "ability_has_scepter": false,
+       "ability_has_shard": false,
+       "ability_is_granted_by_scepter": false,
+       "ability_is_granted_by_shard": false,
+       "ability_is_innate": false,
+       "item_cost": 0,
+       "item_initial_charges": 0,
+       "item_neutral_tier": 4294967295,
+       "item_stock_max": 0,
+       "item_stock_time": 0,
+       "item_quality": 0
+      },
+      {
+       "id": 1841,
+       "name": "special_bonus_unique_techies_tazer_duration",
+       "name_loc": "+{s:bonus_duration}% 活性电击加成/缴械时间",
+       "desc_loc": "",
+       "lore_loc": "",
+       "notes_loc": [],
+       "shard_loc": "",
+       "scepter_loc": "",
+       "facets_loc": [
+        "",
+        "",
+        ""
+       ],
+       "type": 2,
+       "behavior": "2",
+       "target_team": 0,
+       "target_type": 0,
+       "flags": 0,
+       "damage": 0,
+       "immunity": 0,
+       "dispellable": 0,
+       "max_level": 4,
+       "cast_ranges": [
+        0
+       ],
+       "cast_points": [
+        0
+       ],
+       "channel_times": [
+        0
+       ],
+       "cooldowns": [
+        0
+       ],
+       "durations": [
+        0
+       ],
+       "damages": [
+        0,
+        0,
+        0,
+        0
+       ],
+       "mana_costs": [
+        0
+       ],
+       "gold_costs": [],
+       "health_costs": [],
+       "special_values": [],
+       "is_item": false,
+       "ability_has_scepter": false,
+       "ability_has_shard": false,
+       "ability_is_granted_by_scepter": false,
+       "ability_is_granted_by_shard": false,
+       "ability_is_innate": false,
+       "item_cost": 0,
+       "item_initial_charges": 0,
+       "item_neutral_tier": 4294967295,
+       "item_stock_max": 0,
+       "item_stock_time": 0,
+       "item_quality": 0
+      },
+      {
+       "id": 6552,
+       "name": "special_bonus_unique_techies_2",
+       "name_loc": "+{s:bonus_damage} 粘性炸弹伤害",
+       "desc_loc": "",
+       "lore_loc": "",
+       "notes_loc": [],
+       "shard_loc": "",
+       "scepter_loc": "",
+       "facets_loc": [
+        "",
+        "",
+        ""
+       ],
+       "type": 2,
+       "behavior": "2",
+       "target_team": 0,
+       "target_type": 0,
+       "flags": 0,
+       "damage": 0,
+       "immunity": 0,
+       "dispellable": 0,
+       "max_level": 4,
+       "cast_ranges": [
+        0
+       ],
+       "cast_points": [
+        0
+       ],
+       "channel_times": [
+        0
+       ],
+       "cooldowns": [
+        0
+       ],
+       "durations": [
+        0
+       ],
+       "damages": [
+        0,
+        0,
+        0,
+        0
+       ],
+       "mana_costs": [
+        0
+       ],
+       "gold_costs": [],
+       "health_costs": [],
+       "special_values": [],
+       "is_item": false,
+       "ability_has_scepter": false,
+       "ability_has_shard": false,
+       "ability_is_granted_by_scepter": false,
+       "ability_is_granted_by_shard": false,
+       "ability_is_innate": false,
+       "item_cost": 0,
+       "item_initial_charges": 0,
+       "item_neutral_tier": 4294967295,
+       "item_stock_max": 0,
+       "item_stock_time": 0,
+       "item_quality": 0
+      },
+      {
+       "id": 412,
+       "name": "special_bonus_unique_techies_5",
+       "name_loc": "-{s:bonus_AbilityCooldown}秒 爆破起飞！冷却",
+       "desc_loc": "",
+       "lore_loc": "",
+       "notes_loc": [],
+       "shard_loc": "",
+       "scepter_loc": "",
+       "facets_loc": [
+        "",
+        "",
+        ""
+       ],
+       "type": 2,
+       "behavior": "2",
+       "target_team": 0,
+       "target_type": 0,
+       "flags": 0,
+       "damage": 0,
+       "immunity": 0,
+       "dispellable": 0,
+       "max_level": 4,
+       "cast_ranges": [
+        0
+       ],
+       "cast_points": [
+        0
+       ],
+       "channel_times": [
+        0
+       ],
+       "cooldowns": [
+        0
+       ],
+       "durations": [
+        0
+       ],
+       "damages": [
+        0,
+        0,
+        0,
+        0
+       ],
+       "mana_costs": [
+        0
+       ],
+       "gold_costs": [],
+       "health_costs": [],
+       "special_values": [],
+       "is_item": false,
+       "ability_has_scepter": false,
+       "ability_has_shard": false,
+       "ability_is_granted_by_scepter": false,
+       "ability_is_granted_by_shard": false,
+       "ability_is_innate": false,
+       "item_cost": 0,
+       "item_initial_charges": 0,
+       "item_neutral_tier": 4294967295,
+       "item_stock_max": 0,
+       "item_stock_time": 0,
+       "item_quality": 0
+      },
+      {
+       "id": 1724,
+       "name": "special_bonus_attack_damage_253",
+       "name_loc": "+{s:value} 攻击力",
+       "desc_loc": "",
+       "lore_loc": "",
+       "notes_loc": [],
+       "shard_loc": "",
+       "scepter_loc": "",
+       "facets_loc": [
+        "",
+        "",
+        ""
+       ],
+       "type": 2,
+       "behavior": "2",
+       "target_team": 0,
+       "target_type": 0,
+       "flags": 0,
+       "damage": 0,
+       "immunity": 0,
+       "dispellable": 0,
+       "max_level": 4,
+       "cast_ranges": [
+        0
+       ],
+       "cast_points": [
+        0
+       ],
+       "channel_times": [
+        0
+       ],
+       "cooldowns": [
+        0
+       ],
+       "durations": [
+        0
+       ],
+       "damages": [
+        0,
+        0,
+        0,
+        0
+       ],
+       "mana_costs": [
+        0
+       ],
+       "gold_costs": [],
+       "health_costs": [],
+       "special_values": [
+        {
+         "name": "value",
+         "values_float": [
+          253
+         ],
+         "is_percentage": false,
+         "heading_loc": "",
+         "bonuses": [],
+         "values_shard": [],
+         "values_scepter": [],
+         "facet_bonus": {
+          "name": "",
+          "values": [],
+          "operation": 0
+         },
+         "required_facet": ""
+        }
+       ],
+       "is_item": false,
+       "ability_has_scepter": false,
+       "ability_has_shard": false,
+       "ability_is_granted_by_scepter": false,
+       "ability_is_granted_by_shard": false,
+       "ability_is_innate": false,
+       "item_cost": 0,
+       "item_initial_charges": 0,
+       "item_neutral_tier": 4294967295,
+       "item_stock_max": 0,
+       "item_stock_time": 0,
+       "item_quality": 0
+      },
+      {
+       "id": 6998,
+       "name": "special_bonus_unique_techies_4",
+       "name_loc": "-{s:bonus_activation_delay}秒 感应地雷启动延迟",
+       "desc_loc": "",
+       "lore_loc": "",
+       "notes_loc": [],
+       "shard_loc": "",
+       "scepter_loc": "",
+       "facets_loc": [
+        "",
+        "",
+        ""
+       ],
+       "type": 2,
+       "behavior": "2",
+       "target_team": 0,
+       "target_type": 0,
+       "flags": 0,
+       "damage": 0,
+       "immunity": 0,
+       "dispellable": 0,
+       "max_level": 4,
+       "cast_ranges": [
+        0
+       ],
+       "cast_points": [
+        0
+       ],
+       "channel_times": [
+        0
+       ],
+       "cooldowns": [
+        0
+       ],
+       "durations": [
+        0
+       ],
+       "damages": [
+        0,
+        0,
+        0,
+        0
+       ],
+       "mana_costs": [
+        0
+       ],
+       "gold_costs": [],
+       "health_costs": [],
+       "special_values": [],
+       "is_item": false,
+       "ability_has_scepter": false,
+       "ability_has_shard": false,
+       "ability_is_granted_by_scepter": false,
+       "ability_is_granted_by_shard": false,
+       "ability_is_innate": false,
+       "item_cost": 0,
+       "item_initial_charges": 0,
+       "item_neutral_tier": 4294967295,
+       "item_stock_max": 0,
+       "item_stock_time": 0,
+       "item_quality": 0
+      }
+     ],
+     "facet_abilities": []
+    }
+   ]
+  },
+  "status": 1
+ }
+}

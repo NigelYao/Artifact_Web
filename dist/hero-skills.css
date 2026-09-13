@@ -30,6 +30,11 @@
 .jex-marker img{width:30px;height:30px;border:1px solid #b582da;border-radius:50%;box-shadow:0 0 14px #b582da88}
 .jex-marker b{font-size:10px}.jex-marker small{font-size:8px;white-space:nowrap;background:#171024dd;padding:2px 4px}
 .jex-marker.enhanced img{border-color:#f6aee6;box-shadow:0 0 18px #f293d5}
+.mine-marker{position:absolute;z-index:9;bottom:-6px;right:-7px;display:flex;align-items:center;flex-direction:column;cursor:pointer;color:#ffb066;text-shadow:0 1px 3px #000}
+.mine-marker img{width:26px;height:26px;border:1px solid #e8843c;border-radius:50%;box-shadow:0 0 12px #e8843c88;transition:transform .15s}
+.mine-marker:hover img{transform:scale(1.15);box-shadow:0 0 18px #ff9c4a}
+.mine-marker b{font-size:9px;background:#1c1008dd;padding:1px 4px;border-radius:3px}
+.mine-ring{border-color:#ff9c4a;box-shadow:0 0 40px #ff6a26}
 .shield-jump-ghost{position:fixed!important;z-index:35;pointer-events:none!important}
 .rolling-ball{position:fixed;width:76px;height:76px;border-radius:50%;background-position:center;background-size:cover;border:3px solid #ecce99;box-shadow:inset 0 0 15px #170e09,0 0 26px #e4a245;z-index:35;pointer-events:none}
 .rolling-trajectory{position:fixed;inset:0;width:100%;height:100%;z-index:32;pointer-events:none}.rolling-trajectory polyline{fill:none;stroke:#ffca77;stroke-width:3;stroke-dasharray:5 6;opacity:.6}

@@ -1,1137 +1,1211 @@
 {
-  "cards": {
-    "zombie": {
-      "effect": "cards-zombie"
-    },
-    "travelers_cloak": {
-      "effect": "equipment-accessory",
-      "shared": true,
-      "label": "饰品装备"
-    },
-    "leather_armor": {
-      "effect": "equipment-armor",
-      "shared": true,
-      "label": "护甲装备"
-    },
-    "short_sword": {
-      "effect": "equipment-weapon",
-      "shared": true,
-      "label": "武器装备"
-    },
-    "healing_salve": {
-      "effect": "cards-healing_salve"
-    },
-    "town_portal_scroll": {
-      "effect": "cards-town_portal_scroll"
-    },
-    "fighting_instinct": {
-      "effect": "cards-fighting_instinct"
-    },
-    "no_accident": {
-      "effect": "cards-no_accident"
-    },
-    "battlefield_control": {
-      "effect": "cards-battlefield_control"
-    },
-    "sow_venom": {
-      "effect": "cards-sow_venom",
-      "voice": "voice-sow_venom"
-    },
-    "divided_we_stand": {
-      "effect": "cards-divided_we_stand",
-      "voice": "voice-divided_we_stand"
-    },
-    "eclipse": {
-      "effect": "cards-eclipse",
-      "voice": "voice-eclipse"
-    },
-    "winters_curse": {
-      "effect": "cards-winters_curse",
-      "voice": "voice-winters_curse"
-    },
-    "mystic_flare": {
-      "effect": "cards-mystic_flare",
-      "voice": "voice-mystic_flare"
-    },
-    "keenfolk_golem": {
-      "effect": "cards-keenfolk_golem"
-    },
-    "incarnation_of_selemene": {
-      "effect": "cards-incarnation_of_selemene"
-    },
-    "savage_wolf": {
-      "voice": "voice-savage_wolf"
-    },
-    "barracks": {
-      "voice": "voice-barracks"
-    },
-    "ignite": {
-      "voice": "voice-ignite"
-    },
-    "nether_ward": {
-      "voice": "voice-nether_ward"
-    },
-    "assault_ladders": {
-      "voice": "voice-assault_ladders"
-    },
-    "rumusque_blessing": {
-      "effect": "cards-rumusque_blessing"
-    },
-    "verdant_refuge": {
-      "voice": "voice-verdant_refuge"
-    },
-    "assassins_veil": {
-      "effect": "equipment-accessory",
-      "shared": true,
-      "label": "饰品装备"
-    },
-    "phase_boots": {
-      "effect": "equipment-accessory",
-      "shared": true,
-      "label": "饰品装备"
-    },
-    "stonehall_cloak": {
-      "effect": "equipment-accessory",
-      "shared": true,
-      "label": "饰品装备"
-    },
-    "blink_dagger": {
-      "effect": "equipment-weapon",
-      "shared": true,
-      "label": "武器装备"
-    },
-    "revtel_signet_ring": {
-      "effect": "equipment-accessory",
-      "shared": true,
-      "label": "饰品装备"
-    },
-    "barbed_mail": {
-      "effect": "equipment-armor",
-      "shared": true,
-      "label": "护甲装备"
-    },
-    "demagicking_maul": {
-      "effect": "equipment-weapon",
-      "shared": true,
-      "label": "武器装备"
-    },
-    "blade_of_the_vigil": {
-      "effect": "equipment-weapon",
-      "shared": true,
-      "label": "武器装备"
-    },
-    "fur_lined_mantle": {
-      "effect": "equipment-accessory",
-      "shared": true,
-      "label": "饰品装备"
-    },
-    "chainmail": {
-      "effect": "equipment-armor",
-      "shared": true,
-      "label": "护甲装备"
-    },
-    "broadsword": {
-      "effect": "equipment-weapon",
-      "shared": true,
-      "label": "武器装备"
-    },
-    "rumusque_vestments": {
-      "effect": "equipment-armor",
-      "shared": true,
-      "label": "护甲装备"
-    },
-    "keenfolk_musket": {
-      "effect": "equipment-weapon",
-      "shared": true,
-      "label": "武器装备"
-    },
-    "ring_of_tarrasque": {
-      "effect": "equipment-accessory",
-      "shared": true,
-      "label": "饰品装备"
-    },
-    "bracers_of_sacrifice": {
-      "effect": "equipment-armor",
-      "shared": true,
-      "label": "护甲装备"
-    },
-    "red_mist_maul": {
-      "effect": "equipment-weapon",
-      "shared": true,
-      "label": "武器装备"
-    },
-    "helm_of_the_dominator": {
-      "effect": "equipment-armor",
-      "shared": true,
-      "label": "护甲装备"
-    },
-    "vesture_of_the_tyrant": {
-      "effect": "equipment-armor",
-      "shared": true,
-      "label": "护甲装备"
-    },
-    "wingfall_hammer": {
-      "effect": "equipment-weapon",
-      "shared": true,
-      "label": "武器装备"
-    },
-    "ristul_emblem": {
-      "effect": "equipment-accessory",
-      "shared": true,
-      "label": "饰品装备"
-    },
-    "cloak_of_endless_carnage": {
-      "effect": "equipment-accessory",
-      "shared": true,
-      "label": "饰品装备"
-    },
-    "seraphim_shield": {
-      "effect": "equipment-armor",
-      "shared": true,
-      "label": "护甲装备"
-    },
-    "poaching_knife": {
-      "effect": "equipment-weapon",
-      "shared": true,
-      "label": "武器装备"
-    },
-    "book_of_the_dead": {
-      "effect": "equipment-accessory",
-      "shared": true,
-      "label": "饰品装备"
-    },
-    "heros_cape": {
-      "effect": "equipment-accessory",
-      "shared": true,
-      "label": "饰品装备"
-    },
-    "platemail": {
-      "effect": "equipment-armor",
-      "shared": true,
-      "label": "护甲装备"
-    },
-    "claymore": {
-      "effect": "equipment-weapon",
-      "shared": true,
-      "label": "武器装备"
-    },
-    "claszureme_hourglass": {
-      "effect": "equipment-accessory",
-      "shared": true,
-      "label": "饰品装备"
-    },
-    "shield_of_basilius": {
-      "effect": "equipment-armor",
-      "shared": true,
-      "label": "护甲装备"
-    },
-    "shield_of_aquila": {
-      "effect": "equipment-armor",
-      "shared": true,
-      "label": "护甲装备"
-    },
-    "shivas_guard": {
-      "effect": "equipment-armor",
-      "shared": true,
-      "label": "护甲装备"
-    },
-    "stonehall_pike": {
-      "effect": "equipment-weapon",
-      "shared": true,
-      "label": "武器装备"
-    },
-    "stonehall_plate": {
-      "effect": "equipment-armor",
-      "shared": true,
-      "label": "护甲装备"
-    },
-    "jasper_daggers": {
-      "effect": "equipment-weapon",
-      "shared": true,
-      "label": "武器装备"
-    },
-    "keenfolk_plate": {
-      "effect": "equipment-armor",
-      "shared": true,
-      "label": "护甲装备"
-    },
-    "horn_of_the_alpha": {
-      "effect": "equipment-accessory",
-      "shared": true,
-      "label": "饰品装备"
-    },
-    "nyctashas_guard": {
-      "effect": "equipment-armor",
-      "shared": true,
-      "label": "护甲装备"
-    },
-    "apotheosis_blade": {
-      "effect": "equipment-weapon",
-      "shared": true,
-      "label": "武器装备"
-    },
-    "corrosive_mist": {
-      "effect": "cards-corrosive_mist"
-    },
-    "routed": {
-      "effect": "cards-routed"
-    },
-    "astral_imprisonment": {
-      "effect": "cards-astral_imprisonment",
-      "voice": "voice-astral_imprisonment"
-    },
-    "grazing_shot": {
-      "effect": "cards-grazing_shot"
-    },
-    "assassinate": {
-      "effect": "cards-assassinate",
-      "voice": "voice-assassinate"
-    },
-    "hip_fire": {
-      "effect": "cards-hip_fire"
-    },
-    "heartstopper_aura": {
-      "effect": "cards-heartstopper_aura",
-      "voice": "voice-heartstopper_aura"
-    },
-    "mana_drain": {
-      "effect": "cards-mana_drain",
-      "voice": "voice-mana_drain"
-    },
-    "frostbite": {
-      "effect": "cards-frostbite",
-      "voice": "voice-frostbite"
-    },
-    "thundergods_wrath": {
-      "voice": "voice-thundergods_wrath"
-    },
-    "empower": {
-      "effect": "cards-empower",
-      "voice": "voice-empower"
-    },
-    "ion_shell": {
-      "effect": "cards-ion_shell",
-      "voice": "voice-ion_shell"
-    },
-    "enrage": {
-      "effect": "cards-enrage",
-      "voice": "voice-enrage"
-    },
-    "aphotic_shield": {
-      "effect": "cards-aphotic_shield",
-      "voice": "voice-aphotic_shield"
-    },
-    "berserkers_call": {
-      "effect": "cards-berserkers_call",
-      "voice": "voice-berserkers_call"
-    },
-    "blood_rage": {
-      "effect": "cards-blood_rage",
-      "voice": "voice-blood_rage"
-    },
-    "kraken_shell": {
-      "effect": "cards-kraken_shell",
-      "voice": "voice-kraken_shell"
-    },
-    "march_of_the_machines": {
-      "voice": "voice-march_of_the_machines"
-    },
-    "double_edge": {
-      "voice": "voice-double_edge"
-    },
-    "primal_roar": {
-      "effect": "cards-primal_roar",
-      "voice": "voice-primal_roar"
-    },
-    "viper_strike": {
-      "effect": "cards-viper_strike",
-      "voice": "voice-viper_strike"
-    },
-    "whirling_death": {
-      "effect": "cards-whirling_death",
-      "voice": "voice-whirling_death"
-    },
-    "lost_in_time": {
-      "effect": "cards-lost_in_time"
-    },
-    "bellow": {
-      "effect": "cards-bellow"
-    },
-    "smash_their_defenses": {
-      "effect": "cards-smash_their_defenses"
-    },
-    "coup_de_grace": {
-      "effect": "cards-coup_de_grace"
-    },
-    "strafing_run": {
-      "effect": "cards-strafing_run"
-    },
-    "annihilation": {
-      "effect": "cards-annihilation"
-    },
-    "curse_of_atrophy": {
-      "effect": "cards-curse_of_atrophy"
-    },
-    "chain_frost": {
-      "effect": "cards-chain_frost",
-      "voice": "voice-chain_frost"
-    },
-    "diabolic_revelation": {
-      "effect": "cards-diabolic_revelation"
-    },
-    "payday": {
-      "effect": "cards-payday"
-    },
-    "echo_slam": {
-      "effect": "cards-echo_slam",
-      "voice": "voice-echo_slam"
-    },
-    "prey_on_the_weak": {
-      "effect": "cards-prey_on_the_weak",
-      "voice": "voice-prey_on_the_weak"
-    },
-    "enough_magic": {
-      "effect": "cards-enough_magic"
-    },
-    "gank": {
-      "effect": "cards-gank"
-    },
-    "gods_strength": {
-      "effect": "cards-gods_strength",
-      "voice": "voice-gods_strength"
-    },
-    "murder_plot": {
-      "effect": "cards-murder_plot"
-    },
-    "call_the_reserves": {
-      "effect": "cards-call_the_reserves"
-    },
-    "divine_intervention": {
-      "effect": "cards-divine_intervention"
-    },
-    "gust": {
-      "effect": "cards-gust",
-      "voice": "voice-gust"
-    },
-    "hand_of_god": {
-      "effect": "cards-hand_of_god",
-      "voice": "voice-hand_of_god"
-    },
-    "duel": {
-      "effect": "cards-duel",
-      "voice": "voice-duel"
-    },
-    "pick_a_fight": {
-      "effect": "cards-pick_a_fight"
-    },
-    "clear_the_deck": {
-      "effect": "cards-clear_the_deck"
-    },
-    "defensive_bloom": {
-      "effect": "cards-defensive_bloom"
-    },
-    "allseeing_ones_favor": {
-      "effect": "cards-allseeing_ones_favor",
-      "voice": "voice-allseeing_ones_favor"
-    },
-    "sucker_punch": {
-      "effect": "cards-sucker_punch"
-    },
-    "bolt_of_damocles": {
-      "effect": "cards-bolt_of_damocles"
-    },
-    "pick_off": {
-      "effect": "cards-pick_off"
-    },
-    "dimensional_portal": {
-      "effect": "cards-dimensional_portal"
-    },
-    "buying_time": {
-      "effect": "cards-buying_time"
-    },
-    "friendly_fire": {
-      "effect": "cards-friendly_fire"
-    },
-    "juke": {
-      "effect": "cards-juke"
-    },
-    "rend_armor": {
-      "effect": "cards-rend_armor"
-    },
-    "arcane_assault": {
-      "effect": "cards-arcane_assault"
-    },
-    "remote_detonation": {
-      "effect": "cards-remote_detonation"
-    },
-    "fog_of_war": {
-      "effect": "cards-fog_of_war"
-    },
-    "divine_purpose": {
-      "effect": "cards-divine_purpose"
-    },
-    "intimidation": {
-      "effect": "cards-intimidation"
-    },
-    "caught_unprepared": {
-      "effect": "cards-caught_unprepared"
-    },
-    "relentless_pursuit": {
-      "effect": "cards-relentless_pursuit"
-    },
-    "the_cover_of_night": {
-      "effect": "cards-the_cover_of_night"
-    },
-    "slay": {
-      "effect": "cards-slay"
-    },
-    "cunning_plan": {
-      "effect": "cards-cunning_plan"
-    },
-    "thunderstorm": {
-      "effect": "cards-thunderstorm"
-    },
-    "forward_charge": {
-      "effect": "cards-forward_charge"
-    },
-    "track": {
-      "effect": "cards-track",
-      "voice": "voice-track"
-    },
-    "ventriloquy": {
-      "effect": "cards-ventriloquy"
-    },
-    "viscous_nasal_goo": {
-      "effect": "cards-viscous_nasal_goo"
-    },
-    "act_of_defiance": {
-      "effect": "cards-act_of_defiance",
-      "voice": "voice-act_of_defiance"
-    },
-    "at_any_cost": {
-      "effect": "cards-at_any_cost"
-    },
-    "time_of_triumph": {
-      "effect": "cards-time_of_triumph"
-    },
-    "ball_lightning": {
-      "effect": "cards-ball_lightning",
-      "voice": "voice-ball_lightning"
-    },
-    "pangolier_lucky_shot": {
-      "voice": "voice-pangolier_lucky_shot",
-      "effect": "cards-pangolier_lucky_shot"
-    },
-    "pangolier_gyroshell": {
-      "voice": "voice-pangolier_gyroshell",
-      "effect": "cards-pangolier_gyroshell"
-    },
-    "dark_willow_bramble_maze": {
-      "voice": "voice-dark_willow_bramble_maze",
-      "effect": "cards-dark_willow_bramble_maze"
-    },
-    "dark_willow_terrorize": {
-      "voice": "voice-dark_willow_terrorize",
-      "effect": "cards-dark_willow_terrorize"
-    },
-    "monkey_king_command": {
-      "voice": "voice-monkey_king_command",
-      "effect": "cards-monkey_king_command"
-    },
-    "tree_dance": {
-      "voice": "voice-ability-monkey_king_spring",
-      "effect": "abilities-monkey_king_spring"
-    }
+ "abilities": {
+  "abaddon": {
+   "effect": "abilities-abaddon",
+   "voice": "voice-ability-abaddon"
   },
-  "abilities": {
-    "meepo": {
-      "voice": "voice-ability-meepo"
-    },
-    "winter_wyvern": {
-      "effect": "abilities-winter_wyvern",
-      "voice": "voice-ability-winter_wyvern"
-    },
-    "abaddon": {
-      "effect": "abilities-abaddon",
-      "voice": "voice-ability-abaddon"
-    },
-    "chen": {
-      "effect": "abilities-chen",
-      "voice": "voice-ability-chen"
-    },
-    "tidehunter": {
-      "effect": "abilities-tidehunter",
-      "voice": "voice-ability-tidehunter"
-    },
-    "tinker": {
-      "effect": "abilities-tinker",
-      "voice": "voice-ability-tinker"
-    },
-    "beastmaster": {
-      "effect": "abilities-beastmaster",
-      "voice": "voice-ability-beastmaster"
-    },
-    "earthshaker": {
-      "effect": "abilities-earthshaker",
-      "voice": "voice-ability-earthshaker"
-    },
-    "lich": {
-      "effect": "abilities-lich",
-      "voice": "voice-ability-lich"
-    },
-    "omniknight": {
-      "effect": "abilities-omniknight",
-      "voice": "voice-ability-omniknight"
-    },
-    "pugna": {
-      "effect": "abilities-pugna",
-      "voice": "voice-ability-pugna"
-    },
-    "sniper": {
-      "effect": "abilities-sniper",
-      "voice": "voice-ability-sniper"
-    },
-    "lion": {
-      "effect": "abilities-lion",
-      "voice": "voice-ability-lion"
-    },
-    "skywrath_mage": {
-      "effect": "abilities-skywrath_mage",
-      "voice": "voice-ability-skywrath_mage"
-    },
-    "dark_seer": {
-      "effect": "abilities-dark_seer",
-      "voice": "voice-ability-dark_seer"
-    },
-    "ravenhook": {
-      "effect": "abilities-ravenhook"
-    },
-    "ravenous_mass": {
-      "effect": "abilities-ravenous_mass"
-    },
-    "aghanims_sanctum": {
-      "effect": "abilities-aghanims_sanctum"
-    },
-    "cheating_death": {
-      "effect": "abilities-cheating_death"
-    },
-    "keenfolk_turret": {
-      "effect": "abilities-keenfolk_turret"
-    },
-    "steam_cannon": {
-      "effect": "abilities-steam_cannon"
-    },
-    "blink_dagger": {
-      "effect": "abilities-blink_dagger"
-    },
-    "demagicking_maul": {
-      "effect": "abilities-demagicking_maul"
-    },
-    "bracers_of_sacrifice": {
-      "effect": "abilities-bracers_of_sacrifice"
-    },
-    "helm_of_the_dominator": {
-      "effect": "abilities-helm_of_the_dominator"
-    },
-    "wingfall_hammer": {
-      "effect": "abilities-wingfall_hammer"
-    },
-    "book_of_the_dead": {
-      "effect": "abilities-book_of_the_dead"
-    },
-    "shivas_guard": {
-      "effect": "abilities-shivas_guard"
-    },
-    "horn_of_the_alpha": {
-      "effect": "abilities-horn_of_the_alpha"
-    },
-    "nyctashas_guard": {
-      "effect": "abilities-nyctashas_guard"
-    },
-    "apotheosis_blade": {
-      "effect": "abilities-apotheosis_blade"
-    },
-    "pangolier": {
-      "voice": "voice-ability-pangolier",
-      "effect": "abilities-pangolier"
-    },
-    "dark_willow": {
-      "voice": "voice-ability-dark_willow",
-      "effect": "abilities-dark_willow"
-    },
-    "monkey_king": {
-      "voice": "voice-ability-monkey_king",
-      "effect": "abilities-monkey_king"
-    }
+  "aghanims_sanctum": {
+   "effect": "abilities-aghanims_sanctum"
   },
-  "samples": {
-    "equipment-weapon": "action/equipment-weapon.wav",
-    "equipment-armor": "action/equipment-armor.wav",
-    "equipment-accessory": "action/equipment-accessory.wav",
-    "event-hero-death": "action/event-hero-death.wav",
-    "event-hero-return": "action/event-hero-return.wav",
-    "event-tower-hit": "action/event-tower-hit.wav",
-    "event-tower-fall-radiant": "action/event-tower-fall-radiant.wav",
-    "event-tower-fall-dire": "action/event-tower-fall-dire.wav",
-    "cards-zombie": "action/cards-zombie.wav",
-    "cards-healing_salve": "action/cards-healing_salve.wav",
-    "cards-town_portal_scroll": "action/cards-town_portal_scroll.wav",
-    "cards-fighting_instinct": "action/cards-fighting_instinct.wav",
-    "cards-no_accident": "action/cards-no_accident.wav",
-    "cards-battlefield_control": "action/cards-battlefield_control.wav",
-    "cards-sow_venom": "action/cards-sow_venom.wav",
-    "voice-sow_venom": "action/voice-sow_venom.mp3",
-    "voice-ability-meepo": "action/voice-ability-meepo.mp3",
-    "cards-divided_we_stand": "action/cards-divided_we_stand.wav",
-    "voice-divided_we_stand": "action/voice-divided_we_stand.mp3",
-    "cards-eclipse": "action/cards-eclipse.wav",
-    "voice-eclipse": "action/voice-eclipse.mp3",
-    "abilities-winter_wyvern": "action/abilities-winter_wyvern.wav",
-    "voice-ability-winter_wyvern": "action/voice-ability-winter_wyvern.mp3",
-    "cards-winters_curse": "action/cards-winters_curse.wav",
-    "voice-winters_curse": "action/voice-winters_curse.mp3",
-    "abilities-abaddon": "action/abilities-abaddon.wav",
-    "voice-ability-abaddon": "action/voice-ability-abaddon.mp3",
-    "abilities-chen": "action/abilities-chen.wav",
-    "voice-ability-chen": "action/voice-ability-chen.mp3",
-    "abilities-tidehunter": "action/abilities-tidehunter.wav",
-    "voice-ability-tidehunter": "action/voice-ability-tidehunter.mp3",
-    "abilities-tinker": "action/abilities-tinker.wav",
-    "voice-ability-tinker": "action/voice-ability-tinker.mp3",
-    "abilities-beastmaster": "action/abilities-beastmaster.wav",
-    "voice-ability-beastmaster": "action/voice-ability-beastmaster.mp3",
-    "abilities-earthshaker": "action/abilities-earthshaker.wav",
-    "voice-ability-earthshaker": "action/voice-ability-earthshaker.mp3",
-    "abilities-lich": "action/abilities-lich.wav",
-    "voice-ability-lich": "action/voice-ability-lich.mp3",
-    "abilities-omniknight": "action/abilities-omniknight.wav",
-    "voice-ability-omniknight": "action/voice-ability-omniknight.mp3",
-    "abilities-pugna": "action/abilities-pugna.wav",
-    "voice-ability-pugna": "action/voice-ability-pugna.mp3",
-    "abilities-sniper": "action/abilities-sniper.wav",
-    "voice-ability-sniper": "action/voice-ability-sniper.mp3",
-    "abilities-lion": "action/abilities-lion.wav",
-    "voice-ability-lion": "action/voice-ability-lion.mp3",
-    "abilities-skywrath_mage": "action/abilities-skywrath_mage.wav",
-    "voice-ability-skywrath_mage": "action/voice-ability-skywrath_mage.mp3",
-    "cards-mystic_flare": "action/cards-mystic_flare.wav",
-    "voice-mystic_flare": "action/voice-mystic_flare.mp3",
-    "abilities-dark_seer": "action/abilities-dark_seer.wav",
-    "voice-ability-dark_seer": "action/voice-ability-dark_seer.mp3",
-    "cards-keenfolk_golem": "action/cards-keenfolk_golem.wav",
-    "cards-incarnation_of_selemene": "action/cards-incarnation_of_selemene.wav",
-    "voice-savage_wolf": "action/voice-savage_wolf.mp3",
-    "abilities-ravenhook": "action/abilities-ravenhook.wav",
-    "abilities-ravenous_mass": "action/abilities-ravenous_mass.wav",
-    "voice-barracks": "action/voice-barracks.mp3",
-    "voice-ignite": "action/voice-ignite.mp3",
-    "voice-nether_ward": "action/voice-nether_ward.mp3",
-    "abilities-aghanims_sanctum": "action/abilities-aghanims_sanctum.wav",
-    "voice-assault_ladders": "action/voice-assault_ladders.mp3",
-    "abilities-cheating_death": "action/abilities-cheating_death.wav",
-    "abilities-keenfolk_turret": "action/abilities-keenfolk_turret.wav",
-    "abilities-steam_cannon": "action/abilities-steam_cannon.wav",
-    "cards-rumusque_blessing": "action/cards-rumusque_blessing.wav",
-    "voice-verdant_refuge": "action/voice-verdant_refuge.mp3",
-    "abilities-blink_dagger": "action/abilities-blink_dagger.wav",
-    "abilities-demagicking_maul": "action/abilities-demagicking_maul.wav",
-    "abilities-bracers_of_sacrifice": "action/abilities-bracers_of_sacrifice.wav",
-    "abilities-helm_of_the_dominator": "action/abilities-helm_of_the_dominator.wav",
-    "abilities-wingfall_hammer": "action/abilities-wingfall_hammer.wav",
-    "abilities-book_of_the_dead": "action/abilities-book_of_the_dead.wav",
-    "abilities-shivas_guard": "action/abilities-shivas_guard.wav",
-    "abilities-horn_of_the_alpha": "action/abilities-horn_of_the_alpha.wav",
-    "abilities-nyctashas_guard": "action/abilities-nyctashas_guard.wav",
-    "abilities-apotheosis_blade": "action/abilities-apotheosis_blade.wav",
-    "cards-corrosive_mist": "action/cards-corrosive_mist.wav",
-    "cards-routed": "action/cards-routed.wav",
-    "cards-astral_imprisonment": "action/cards-astral_imprisonment.wav",
-    "voice-astral_imprisonment": "action/voice-astral_imprisonment.mp3",
-    "cards-grazing_shot": "action/cards-grazing_shot.wav",
-    "cards-assassinate": "action/cards-assassinate.wav",
-    "voice-assassinate": "action/voice-assassinate.mp3",
-    "cards-hip_fire": "action/cards-hip_fire.wav",
-    "cards-heartstopper_aura": "action/cards-heartstopper_aura.wav",
-    "voice-heartstopper_aura": "action/voice-heartstopper_aura.mp3",
-    "cards-mana_drain": "action/cards-mana_drain.wav",
-    "voice-mana_drain": "action/voice-mana_drain.mp3",
-    "cards-frostbite": "action/cards-frostbite.wav",
-    "voice-frostbite": "action/voice-frostbite.mp3",
-    "voice-thundergods_wrath": "action/voice-thundergods_wrath.mp3",
-    "cards-empower": "action/cards-empower.wav",
-    "voice-empower": "action/voice-empower.mp3",
-    "cards-ion_shell": "action/cards-ion_shell.wav",
-    "voice-ion_shell": "action/voice-ion_shell.mp3",
-    "cards-enrage": "action/cards-enrage.wav",
-    "voice-enrage": "action/voice-enrage.mp3",
-    "cards-aphotic_shield": "action/cards-aphotic_shield.wav",
-    "voice-aphotic_shield": "action/voice-aphotic_shield.mp3",
-    "cards-berserkers_call": "action/cards-berserkers_call.wav",
-    "voice-berserkers_call": "action/voice-berserkers_call.mp3",
-    "cards-blood_rage": "action/cards-blood_rage.wav",
-    "voice-blood_rage": "action/voice-blood_rage.mp3",
-    "cards-kraken_shell": "action/cards-kraken_shell.wav",
-    "voice-kraken_shell": "action/voice-kraken_shell.mp3",
-    "voice-march_of_the_machines": "action/voice-march_of_the_machines.mp3",
-    "voice-double_edge": "action/voice-double_edge.mp3",
-    "cards-primal_roar": "action/cards-primal_roar.wav",
-    "voice-primal_roar": "action/voice-primal_roar.mp3",
-    "cards-viper_strike": "action/cards-viper_strike.wav",
-    "voice-viper_strike": "action/voice-viper_strike.mp3",
-    "cards-whirling_death": "action/cards-whirling_death.wav",
-    "voice-whirling_death": "action/voice-whirling_death.mp3",
-    "cards-lost_in_time": "action/cards-lost_in_time.wav",
-    "cards-bellow": "action/cards-bellow.wav",
-    "cards-smash_their_defenses": "action/cards-smash_their_defenses.wav",
-    "cards-coup_de_grace": "action/cards-coup_de_grace.wav",
-    "cards-strafing_run": "action/cards-strafing_run.wav",
-    "cards-annihilation": "action/cards-annihilation.wav",
-    "cards-curse_of_atrophy": "action/cards-curse_of_atrophy.wav",
-    "cards-chain_frost": "action/cards-chain_frost.wav",
-    "voice-chain_frost": "action/voice-chain_frost.mp3",
-    "cards-diabolic_revelation": "action/cards-diabolic_revelation.wav",
-    "cards-payday": "action/cards-payday.wav",
-    "cards-echo_slam": "action/cards-echo_slam.wav",
-    "voice-echo_slam": "action/voice-echo_slam.mp3",
-    "cards-prey_on_the_weak": "action/cards-prey_on_the_weak.wav",
-    "voice-prey_on_the_weak": "action/voice-prey_on_the_weak.mp3",
-    "cards-enough_magic": "action/cards-enough_magic.wav",
-    "cards-gank": "action/cards-gank.wav",
-    "cards-gods_strength": "action/cards-gods_strength.wav",
-    "voice-gods_strength": "action/voice-gods_strength.mp3",
-    "cards-murder_plot": "action/cards-murder_plot.wav",
-    "cards-call_the_reserves": "action/cards-call_the_reserves.wav",
-    "cards-divine_intervention": "action/cards-divine_intervention.wav",
-    "cards-gust": "action/cards-gust.wav",
-    "voice-gust": "action/voice-gust.mp3",
-    "cards-hand_of_god": "action/cards-hand_of_god.wav",
-    "voice-hand_of_god": "action/voice-hand_of_god.mp3",
-    "cards-duel": "action/cards-duel.wav",
-    "voice-duel": "action/voice-duel.mp3",
-    "cards-pick_a_fight": "action/cards-pick_a_fight.wav",
-    "cards-clear_the_deck": "action/cards-clear_the_deck.wav",
-    "cards-defensive_bloom": "action/cards-defensive_bloom.wav",
-    "cards-allseeing_ones_favor": "action/cards-allseeing_ones_favor.wav",
-    "voice-allseeing_ones_favor": "action/voice-allseeing_ones_favor.mp3",
-    "cards-sucker_punch": "action/cards-sucker_punch.wav",
-    "cards-bolt_of_damocles": "action/cards-bolt_of_damocles.wav",
-    "cards-pick_off": "action/cards-pick_off.wav",
-    "cards-dimensional_portal": "action/cards-dimensional_portal.wav",
-    "cards-buying_time": "action/cards-buying_time.wav",
-    "cards-friendly_fire": "action/cards-friendly_fire.wav",
-    "cards-juke": "action/cards-juke.wav",
-    "cards-rend_armor": "action/cards-rend_armor.wav",
-    "cards-arcane_assault": "action/cards-arcane_assault.wav",
-    "cards-remote_detonation": "action/cards-remote_detonation.wav",
-    "cards-fog_of_war": "action/cards-fog_of_war.wav",
-    "cards-divine_purpose": "action/cards-divine_purpose.wav",
-    "cards-intimidation": "action/cards-intimidation.wav",
-    "cards-caught_unprepared": "action/cards-caught_unprepared.wav",
-    "cards-relentless_pursuit": "action/cards-relentless_pursuit.wav",
-    "cards-the_cover_of_night": "action/cards-the_cover_of_night.wav",
-    "cards-slay": "action/cards-slay.wav",
-    "cards-cunning_plan": "action/cards-cunning_plan.wav",
-    "cards-thunderstorm": "action/cards-thunderstorm.wav",
-    "cards-forward_charge": "action/cards-forward_charge.wav",
-    "cards-track": "action/cards-track.wav",
-    "voice-track": "action/voice-track.mp3",
-    "cards-ventriloquy": "action/cards-ventriloquy.wav",
-    "cards-viscous_nasal_goo": "action/cards-viscous_nasal_goo.wav",
-    "cards-act_of_defiance": "action/cards-act_of_defiance.wav",
-    "voice-act_of_defiance": "action/voice-act_of_defiance.mp3",
-    "cards-at_any_cost": "action/cards-at_any_cost.wav",
-    "cards-time_of_triumph": "action/cards-time_of_triumph.wav",
-    "cards-ball_lightning": "action/cards-ball_lightning.wav",
-    "voice-ball_lightning": "action/voice-ball_lightning.mp3",
-    "voice-ability-pangolier": "action/voice-ability-pangolier.mp3",
-    "abilities-pangolier": "action/abilities-pangolier.mp3",
-    "voice-pangolier_lucky_shot": "action/voice-pangolier_lucky_shot.mp3",
-    "cards-pangolier_lucky_shot": "action/cards-pangolier_lucky_shot.mp3",
-    "voice-pangolier_gyroshell": "action/voice-pangolier_gyroshell.mp3",
-    "cards-pangolier_gyroshell": "action/cards-pangolier_gyroshell.mp3",
-    "voice-hero-pangolier": "action/voice-hero-pangolier.mp3",
-    "voice-ability-dark_willow": "action/voice-ability-dark_willow.mp3",
-    "abilities-dark_willow": "action/abilities-dark_willow.mp3",
-    "voice-dark_willow_bramble_maze": "action/voice-dark_willow_bramble_maze.mp3",
-    "cards-dark_willow_bramble_maze": "action/cards-dark_willow_bramble_maze.mp3",
-    "voice-dark_willow_terrorize": "action/voice-dark_willow_terrorize.mp3",
-    "cards-dark_willow_terrorize": "action/cards-dark_willow_terrorize.mp3",
-    "voice-hero-dark_willow": "action/voice-hero-dark_willow.mp3",
-    "voice-ability-monkey_king": "action/voice-ability-monkey_king.mp3",
-    "abilities-monkey_king": "action/abilities-monkey_king.mp3",
-    "voice-ability-monkey_king_spring": "action/voice-ability-monkey_king_spring.mp3",
-    "abilities-monkey_king_spring": "action/abilities-monkey_king_spring.mp3",
-    "voice-monkey_king_command": "action/voice-monkey_king_command.mp3",
-    "cards-monkey_king_command": "action/cards-monkey_king_command.mp3",
-    "voice-hero-monkey_king": "action/voice-hero-monkey_king.mp3"
+  "apotheosis_blade": {
+   "effect": "abilities-apotheosis_blade"
   },
-  "sources": {
-    "equipment-weapon": "effects/set_00/items/weapon_mid_01.wav",
-    "equipment-armor": "effects/set_00/items/armor_generic.wav",
-    "equipment-accessory": "effects/set_00/items/accessory_mid_01.wav",
-    "event-hero-death": "cards/hero_death_impact_01.wav",
-    "event-hero-return": "cards/hero_death_to_fountain_01.wav",
-    "event-tower-hit": "structures/damage_impact_01.wav",
-    "event-tower-fall-radiant": "structures/radiant_tower_destruction_final.wav",
-    "event-tower-fall-dire": "structures/dire_tower_destruction_final.wav",
-    "cards-zombie": "effects/set_01/creeps/zombie_deploy.wav",
-    "cards-healing_salve": "effects/set_00/items/healing_salve.wav",
-    "cards-town_portal_scroll": "effects/set_00/items/town_portal.wav",
-    "cards-fighting_instinct": "effects/set_01/spells/fighting_instinct.wav",
-    "cards-no_accident": "effects/set_01/spells/no_accident_impact.wav",
-    "cards-battlefield_control": "effects/set_01/spells/battlefield_control.wav",
-    "cards-sow_venom": "effects/set_01/spells/sow_venom_cast_01.wav",
-    "voice-sow_venom": "responses/set_01/venomancer/venomancer_sow_venom.mp3",
-    "voice-ability-meepo": "responses/set_01/meepo/meepo_use_ability_01.mp3",
-    "cards-divided_we_stand": "effects/set_01/spells/divided_we_stand.wav",
-    "voice-divided_we_stand": "responses/set_01/meepo/meepo_divided_we_stand.mp3",
-    "cards-eclipse": "effects/set_01/spells/eclipse.wav",
-    "voice-eclipse": "responses/set_01/luna/luna_eclipse_intro.mp3",
-    "abilities-winter_wyvern": "effects/set_01/abilities/arctic_burn.wav",
-    "voice-ability-winter_wyvern": "responses/set_01/winter_wyvern/winter_wyvern_use_ability_01.mp3",
-    "cards-winters_curse": "effects/set_01/spells/winters_curse_cast.wav",
-    "voice-winters_curse": "responses/set_01/winter_wyvern/winter_wyvern_winters_curse.mp3",
-    "abilities-abaddon": "effects/set_01/abilities/borrowed_time.wav",
-    "voice-ability-abaddon": "responses/set_01/abaddon/abaddon_use_ability_01.mp3",
-    "abilities-chen": "effects/set_01/abilities/holy_persuasion_cast.wav",
-    "voice-ability-chen": "responses/set_01/chen/chen_use_ability_01.mp3",
-    "abilities-tidehunter": "effects/set_01/abilities/ravage.wav",
-    "voice-ability-tidehunter": "responses/set_01/tidehunter/tidehunter_use_ability_01.mp3",
-    "abilities-tinker": "effects/set_01/abilities/tinker_laser.wav",
-    "voice-ability-tinker": "responses/set_01/tinker/tinker_use_ability_01.mp3",
-    "abilities-beastmaster": "effects/set_01/abilities/call_of_the_wild.wav",
-    "voice-ability-beastmaster": "responses/set_01/beastmaster/beastmaster_use_ability_01.mp3",
-    "abilities-earthshaker": "effects/set_01/abilities/fissure.wav",
-    "voice-ability-earthshaker": "responses/set_01/earthshaker/earthshaker_use_ability_01.mp3",
-    "abilities-lich": "effects/set_01/abilities/dark_ritual.wav",
-    "voice-ability-lich": "responses/set_01/lich/lich_use_ability_01.mp3",
-    "abilities-omniknight": "effects/set_01/abilities/purification_cast.wav",
-    "voice-ability-omniknight": "responses/set_01/omniknight/omniknight_use_ability_01.mp3",
-    "abilities-pugna": "effects/set_01/abilities/nether_blast.wav",
-    "voice-ability-pugna": "responses/set_01/pugna/pugna_use_ability_01.mp3",
-    "abilities-sniper": "effects/set_01/abilities/musket_shot.wav",
-    "voice-ability-sniper": "responses/set_01/sniper/sniper_use_ability_01.mp3",
-    "abilities-lion": "effects/set_01/abilities/finger_of_death.wav",
-    "voice-ability-lion": "responses/set_01/lion/lion_use_ability_01.mp3",
-    "abilities-skywrath_mage": "effects/set_01/abilities/concussive_shot_blast.wav",
-    "voice-ability-skywrath_mage": "responses/set_01/skywrath_mage/skywrath_mage_use_ability_01.mp3",
-    "cards-mystic_flare": "effects/set_01/spells/mystic_flare_cast.wav",
-    "voice-mystic_flare": "responses/set_01/skywrath_mage/skywrath_mage_mystic_flare.mp3",
-    "abilities-dark_seer": "effects/set_01/abilities/surge.wav",
-    "voice-ability-dark_seer": "responses/set_01/dark_seer/dark_seer_use_ability_01.mp3",
-    "cards-keenfolk_golem": "effects/set_01/creeps/keenfolk_golem_deploy.wav",
-    "cards-incarnation_of_selemene": "effects/set_01/creeps/incarnation_of_selemene_deploy.wav",
-    "voice-savage_wolf": "responses/set_01/lycan/lycan_savage_wolf.mp3",
-    "abilities-ravenhook": "effects/set_01/abilities/ravenhook_active.wav",
-    "abilities-ravenous_mass": "effects/set_01/abilities/ravenous_mass.wav",
-    "voice-barracks": "responses/set_01/prellex/prellex_barracks_intro.mp3",
-    "voice-ignite": "responses/set_01/ogre_magi/ogre_magi_ignite.mp3",
-    "voice-nether_ward": "responses/set_01/pugna/pugna_nether_ward.mp3",
-    "abilities-aghanims_sanctum": "effects/set_01/strategies/aghanim_sanctum.wav",
-    "voice-assault_ladders": "responses/set_01/sorla_khan/sorla_khan_assault_ladders_intro.mp3",
-    "abilities-cheating_death": "effects/set_01/strategies/cheating_death.wav",
-    "abilities-keenfolk_turret": "effects/set_01/strategies/keenfolk_turret.wav",
-    "abilities-steam_cannon": "effects/set_01/strategies/steam_cannon_fire.wav",
-    "cards-rumusque_blessing": "effects/set_01/spells/rumesque_blessing.wav",
-    "voice-verdant_refuge": "responses/set_01/enchantress/enchantress_verdant_refuge.mp3",
-    "abilities-blink_dagger": "effects/set_01/items/blink_dagger.wav",
-    "abilities-demagicking_maul": "effects/set_01/items/demagicking_maul.wav",
-    "abilities-bracers_of_sacrifice": "effects/set_01/items/bracers_of_sacrifice.wav",
-    "abilities-helm_of_the_dominator": "effects/set_01/items/helm_of_the_dominator.wav",
-    "abilities-wingfall_hammer": "effects/set_01/items/wingfall_hammer.wav",
-    "abilities-book_of_the_dead": "effects/set_01/creeps/book_of_the_dead_trigger.wav",
-    "abilities-shivas_guard": "effects/set_01/items/shivas_guard.wav",
-    "abilities-horn_of_the_alpha": "effects/set_01/items/horn_of_the_alpha.wav",
-    "abilities-nyctashas_guard": "effects/set_01/items/nyctashas_guard.wav",
-    "abilities-apotheosis_blade": "effects/set_01/items/apotheosis_blade.wav",
-    "cards-corrosive_mist": "effects/set_01/spells/corrosive_mist.wav",
-    "cards-routed": "effects/set_01/spells/routed.wav",
-    "cards-astral_imprisonment": "effects/set_01/spells/astral_imprisonment.wav",
-    "voice-astral_imprisonment": "responses/set_01/outworld_devourer/outworld_devourer_astral_imprisonment.mp3",
-    "cards-grazing_shot": "effects/set_01/spells/grazing_shot.wav",
-    "cards-assassinate": "effects/set_01/spells/assassinate.wav",
-    "voice-assassinate": "responses/set_01/sniper/sniper_assassinate.mp3",
-    "cards-hip_fire": "effects/set_01/spells/hip_fire.wav",
-    "cards-heartstopper_aura": "effects/set_01/spells/heartstopper_aura_cast.wav",
-    "voice-heartstopper_aura": "responses/set_01/necrophos/necrophos_heartstopper_aura.mp3",
-    "cards-mana_drain": "effects/set_01/spells/mana_drain.wav",
-    "voice-mana_drain": "responses/set_01/lion/lion_mana_drain_intro.mp3",
-    "cards-frostbite": "effects/set_01/spells/frostbite.wav",
-    "voice-frostbite": "responses/set_01/crystal_maiden/crystal_maiden_frostbite_intro.mp3",
-    "voice-thundergods_wrath": "responses/set_01/zeus/zeus_thundergods_wrath_intro.mp3",
-    "cards-empower": "effects/set_01/spells/empower.wav",
-    "voice-empower": "responses/set_01/magnus/magnus_empower_intro.mp3",
-    "cards-ion_shell": "effects/set_01/spells/ion_shell.wav",
-    "voice-ion_shell": "responses/set_01/dark_seer/dark_seer_ion_shell_intro.mp3",
-    "cards-enrage": "effects/set_01/spells/enrage.wav",
-    "voice-enrage": "responses/set_01/ursa/ursa_enrage.mp3",
-    "cards-aphotic_shield": "effects/set_01/spells/aphotic_shield.wav",
-    "voice-aphotic_shield": "responses/set_01/abaddon/abaddon_aphotic_shield_intro.mp3",
-    "cards-berserkers_call": "effects/set_01/spells/berserkers_call.wav",
-    "voice-berserkers_call": "responses/set_01/axe/axe_berserkers_call.mp3",
-    "cards-blood_rage": "effects/set_01/spells/blood_rage.wav",
-    "voice-blood_rage": "responses/set_01/bloodseeker/bloodseeker_blood_rage.mp3",
-    "cards-kraken_shell": "effects/set_01/spells/kraken.wav",
-    "voice-kraken_shell": "responses/set_01/tidehunter/tidehunter_kraken_shell_intro.mp3",
-    "voice-march_of_the_machines": "responses/set_01/tinker/tinker_march_of_the_machines.mp3",
-    "voice-double_edge": "responses/set_01/centaur_warrunner/centaur_warrunner_double_edge.mp3",
-    "cards-primal_roar": "effects/set_01/spells/primal_roar.wav",
-    "voice-primal_roar": "responses/set_01/beastmaster/beastmaster_primal_roar.mp3",
-    "cards-viper_strike": "effects/set_01/spells/viper_strike.wav",
-    "voice-viper_strike": "responses/set_01/viper/viper_viper_strike.mp3",
-    "cards-whirling_death": "effects/set_01/spells/whirling_death.wav",
-    "voice-whirling_death": "responses/set_01/timbersaw/timbersaw_whirling_death.mp3",
-    "cards-lost_in_time": "effects/set_01/spells/lost_in_time.wav",
-    "cards-bellow": "effects/set_01/spells/bellow_cast.wav",
-    "cards-smash_their_defenses": "effects/set_01/spells/smash_their_defenses.wav",
-    "cards-coup_de_grace": "effects/set_01/spells/coupdegrace.wav",
-    "cards-strafing_run": "effects/set_01/spells/straifing_run.wav",
-    "cards-annihilation": "effects/set_01/spells/annihlate.wav",
-    "cards-curse_of_atrophy": "effects/set_01/spells/curse_of_atrophy.wav",
-    "cards-chain_frost": "effects/set_01/spells/chain_frost_cast.wav",
-    "voice-chain_frost": "responses/set_01/lich/lich_chain_frost.mp3",
-    "cards-diabolic_revelation": "effects/set_01/spells/diabolic_revelation.wav",
-    "cards-payday": "effects/set_01/spells/payday.wav",
-    "cards-echo_slam": "effects/set_01/spells/echo_slam.wav",
-    "voice-echo_slam": "responses/set_01/earthshaker/earthshaker_echo_slam.mp3",
-    "cards-prey_on_the_weak": "effects/set_01/spells/prey_on_the_weak.wav",
-    "voice-prey_on_the_weak": "responses/set_01/kanna/kanna_prey_on_the_weak_intro.mp3",
-    "cards-enough_magic": "effects/set_01/spells/enough_magic.wav",
-    "cards-gank": "effects/set_01/spells/gank_intro.wav",
-    "cards-gods_strength": "effects/set_01/spells/gods_strength.wav",
-    "voice-gods_strength": "responses/set_01/sven/sven_gods_strength.mp3",
-    "cards-murder_plot": "effects/set_01/spells/murder_plot.wav",
-    "cards-call_the_reserves": "effects/set_01/spells/call_the_reserves.wav",
-    "cards-divine_intervention": "effects/set_01/spells/divine_intervention.wav",
-    "cards-gust": "effects/set_01/spells/gust.wav",
-    "voice-gust": "responses/set_01/drow_ranger/drow_ranger_gust.mp3",
-    "cards-hand_of_god": "effects/set_01/spells/hand_of_god.wav",
-    "voice-hand_of_god": "responses/set_01/chen/chen_hand_of_god.mp3",
-    "cards-duel": "effects/set_01/spells/duel_intro.wav",
-    "voice-duel": "responses/set_01/legion_commander/legion_commander_duel_intro.mp3",
-    "cards-pick_a_fight": "effects/set_01/spells/pick_a_fight.wav",
-    "cards-clear_the_deck": "effects/set_01/spells/clear_the_deck.wav",
-    "cards-defensive_bloom": "effects/set_01/spells/defensive_bloom.wav",
-    "cards-allseeing_ones_favor": "effects/set_01/spells/all_seeing_ones_favor.wav",
-    "voice-allseeing_ones_favor": "responses/set_01/omniknight/omniknight_allseeing_ones_favor.mp3",
-    "cards-sucker_punch": "effects/set_01/spells/sucker_punch.wav",
-    "cards-bolt_of_damocles": "effects/set_01/spells/bolt_of_damocles_card.wav",
-    "cards-pick_off": "effects/set_01/spells/pick_off.wav",
-    "cards-dimensional_portal": "effects/set_01/spells/dimensional_portal_blast.wav",
-    "cards-buying_time": "effects/set_01/spells/buying_time.wav",
-    "cards-friendly_fire": "effects/set_01/spells/friendly_fire.wav",
-    "cards-juke": "effects/set_01/spells/juke.wav",
-    "cards-rend_armor": "effects/set_01/spells/rend_armor.wav",
-    "cards-arcane_assault": "effects/set_01/spells/arcane_assault.wav",
-    "cards-remote_detonation": "effects/set_01/spells/remote_detonition_cast.wav",
-    "cards-fog_of_war": "effects/set_01/spells/fog_of_war.wav",
-    "cards-divine_purpose": "effects/set_01/spells/divine_purpose.wav",
-    "cards-intimidation": "effects/set_01/spells/intimidation.wav",
-    "cards-caught_unprepared": "effects/set_01/spells/caught_unprepared.wav",
-    "cards-relentless_pursuit": "effects/set_01/spells/relentless_pursuit.wav",
-    "cards-the_cover_of_night": "effects/set_01/spells/the_cover_of_night.wav",
-    "cards-slay": "effects/set_01/spells/slay.wav",
-    "cards-cunning_plan": "effects/set_01/spells/cunning_plan.wav",
-    "cards-thunderstorm": "effects/set_01/spells/thunderstorm.wav",
-    "cards-forward_charge": "effects/set_01/spells/forward_charge.wav",
-    "cards-track": "effects/set_01/spells/track.wav",
-    "voice-track": "responses/set_01/bounty_hunter/bounty_hunter_track.mp3",
-    "cards-ventriloquy": "effects/set_01/spells/ventriloquy.wav",
-    "cards-viscous_nasal_goo": "effects/set_01/spells/viscous_nasal_goo.wav",
-    "cards-act_of_defiance": "effects/set_01/spells/act_of_defiance.wav",
-    "voice-act_of_defiance": "responses/set_01/rix/rix_act_of_defiance_intro.mp3",
-    "cards-at_any_cost": "effects/set_01/spells/at_any_cost.wav",
-    "cards-time_of_triumph": "effects/set_01/spells/time_of_triumph.wav",
-    "cards-ball_lightning": "effects/set_01/spells/ball_lightning.wav",
-    "voice-ball_lightning": "responses/set_01/storm_spirit/storm_spirit_ball_lightning.mp3",
-    "voice-ability-pangolier": "https://static.wikia.nocookie.net/dota2_gamepedia/images/5/57/Vo_pangolin_pangolin_ability2_03.mp3/revision/latest?cb=20200524130823",
-    "abilities-pangolier": "https://static.wikia.nocookie.net/dota2_gamepedia/images/3/36/Shield_Crash_with_buff.mp3/revision/latest?cb=20171106120157",
-    "voice-pangolier_lucky_shot": "https://static.wikia.nocookie.net/dota2_gamepedia/images/e/ef/Vo_pangolin_pangolin_ability3_01.mp3/revision/latest?cb=20200524130831",
-    "cards-pangolier_lucky_shot": "https://static.wikia.nocookie.net/dota2_gamepedia/images/8/8d/Crit3.mp3/revision/latest?cb=20171104031814",
-    "voice-pangolier_gyroshell": "https://static.wikia.nocookie.net/dota2_gamepedia/images/9/91/Vo_pangolin_pangolin_ability4_10.mp3/revision/latest?cb=20200524130847",
-    "cards-pangolier_gyroshell": "https://static.wikia.nocookie.net/dota2_gamepedia/images/f/f7/Rolling_Thunder_cast.mp3/revision/latest?cb=20171104032001",
-    "voice-hero-pangolier": "https://static.wikia.nocookie.net/dota2_gamepedia/images/e/e7/Vo_pangolin_pangolin_spawn_03.mp3/revision/latest?cb=20200524132428",
-    "voice-ability-dark_willow": "https://static.wikia.nocookie.net/dota2_gamepedia/images/3/31/Vo_dark_willow_sylph_ability2_01.mp3/revision/latest?cb=20201010201539",
-    "abilities-dark_willow": "https://static.wikia.nocookie.net/dota2_gamepedia/images/5/51/Shadow_Realm.mp3/revision/latest?cb=20190530174715",
-    "voice-dark_willow_bramble_maze": "https://static.wikia.nocookie.net/dota2_gamepedia/images/4/4c/Vo_dark_willow_sylph_ability1_01.mp3/revision/latest?cb=20201010205147",
-    "cards-dark_willow_bramble_maze": "https://static.wikia.nocookie.net/dota2_gamepedia/images/1/12/Bramble_Maze_cast.mp3/revision/latest?cb=20171105022149",
-    "voice-dark_willow_terrorize": "https://static.wikia.nocookie.net/dota2_gamepedia/images/5/54/Vo_dark_willow_sylph_ability4_11.mp3/revision/latest?cb=20201010201656",
-    "cards-dark_willow_terrorize": "https://static.wikia.nocookie.net/dota2_gamepedia/images/1/1e/Terrorize_cast.mp3/revision/latest?cb=20171105022409",
-    "voice-hero-dark_willow": "https://static.wikia.nocookie.net/dota2_gamepedia/images/3/37/Vo_dark_willow_sylph_spawn_03.mp3/revision/latest?cb=20201010205006",
-    "voice-ability-monkey_king": "https://static.wikia.nocookie.net/dota2_gamepedia/images/b/b5/Vo_monkey_king_monkey_ability2_01.mp3/revision/latest?cb=20201017114533",
-    "abilities-monkey_king": "https://static.wikia.nocookie.net/dota2_gamepedia/images/d/d5/Boundless_Strike_cast_1.mp3/revision/latest?cb=20161216023914",
-    "voice-ability-monkey_king_spring": "https://static.wikia.nocookie.net/dota2_gamepedia/images/0/0a/Vo_monkey_king_monkey_ability1_03.mp3/revision/latest?cb=20201017114514",
-    "abilities-monkey_king_spring": "https://static.wikia.nocookie.net/dota2_gamepedia/images/5/51/Tree_Dance_cast_1.mp3/revision/latest?cb=20161216024104",
-    "voice-monkey_king_command": "https://static.wikia.nocookie.net/dota2_gamepedia/images/a/a1/Vo_monkey_king_monkey_ability5_05.mp3/revision/latest?cb=20201017114610",
-    "cards-monkey_king_command": "https://static.wikia.nocookie.net/dota2_gamepedia/images/8/8c/Wukong%27s_Command_cast.mp3/revision/latest?cb=20161216023848",
-    "voice-hero-monkey_king": "https://static.wikia.nocookie.net/dota2_gamepedia/images/4/49/Vo_monkey_king_monkey_spawn_01.mp3/revision/latest?cb=20201017125601"
+  "beastmaster": {
+   "effect": "abilities-beastmaster",
+   "voice": "voice-ability-beastmaster"
   },
-  "unmatchedAbilities": [
-    "jmuy_the_wise",
-    "sister_of_the_veil",
-    "rebel_decoy",
-    "mercenary_exiles",
-    "emissary_of_the_quorum",
-    "assassins_apprentice",
-    "satyr_magician",
-    "unsupervised_artillery",
-    "revtel_investments",
-    "escape_route",
-    "messenger_rookery",
-    "assassins_veil",
-    "phase_boots",
-    "rumusque_vestments",
-    "keenfolk_musket"
-  ],
-  "unmatchedSpells": [
-    "and_one_for_me",
-    "rolling_storm",
-    "lodestone_demolition",
-    "thundergods_wrath",
-    "double_edge",
-    "arcane_censure",
-    "defensive_stance",
-    "defend_the_weak",
-    "combat_training",
-    "self_sabotage",
-    "raze",
-    "foresight",
-    "arm_the_rebellion",
-    "poised_to_strike",
-    "dirty_deeds",
-    "spot_weakness",
-    "iron_branch_protection",
-    "heroic_resolve",
-    "wrath_of_gold",
-    "stars_align",
-    "better_late_than_never",
-    "rising_anger",
-    "lightning_strike",
-    "restoration_effort",
-    "coordinated_assault",
-    "new_orders",
-    "avernus_blessing",
-    "fight_through_the_pain",
-    "soul_of_spring",
-    "cleansing_rite",
-    "tresdins_standards",
-    "compel",
-    "tower_barrage",
-    "steal_strength",
-    "collateral_damage",
-    "spring_the_trap",
-    "crippling_blow",
-    "whispers_of_madness"
-  ],
-  "heroes": {
-    "pangolier": {
-      "voice": "voice-hero-pangolier"
-    },
-    "dark_willow": {
-      "voice": "voice-hero-dark_willow"
-    },
-    "monkey_king": {
-      "voice": "voice-hero-monkey_king"
-    }
+  "blink_dagger": {
+   "effect": "abilities-blink_dagger"
+  },
+  "book_of_the_dead": {
+   "effect": "abilities-book_of_the_dead"
+  },
+  "bracers_of_sacrifice": {
+   "effect": "abilities-bracers_of_sacrifice"
+  },
+  "cheating_death": {
+   "effect": "abilities-cheating_death"
+  },
+  "chen": {
+   "effect": "abilities-chen",
+   "voice": "voice-ability-chen"
+  },
+  "dark_seer": {
+   "effect": "abilities-dark_seer",
+   "voice": "voice-ability-dark_seer"
+  },
+  "dark_willow": {
+   "effect": "abilities-dark_willow",
+   "voice": "voice-ability-dark_willow"
+  },
+  "demagicking_maul": {
+   "effect": "abilities-demagicking_maul"
+  },
+  "earthshaker": {
+   "effect": "abilities-earthshaker",
+   "voice": "voice-ability-earthshaker"
+  },
+  "helm_of_the_dominator": {
+   "effect": "abilities-helm_of_the_dominator"
+  },
+  "horn_of_the_alpha": {
+   "effect": "abilities-horn_of_the_alpha"
+  },
+  "keenfolk_turret": {
+   "effect": "abilities-keenfolk_turret"
+  },
+  "lich": {
+   "effect": "abilities-lich",
+   "voice": "voice-ability-lich"
+  },
+  "lion": {
+   "effect": "abilities-lion",
+   "voice": "voice-ability-lion"
+  },
+  "meepo": {
+   "voice": "voice-ability-meepo"
+  },
+  "monkey_king": {
+   "effect": "abilities-monkey_king",
+   "voice": "voice-ability-monkey_king"
+  },
+  "nyctashas_guard": {
+   "effect": "abilities-nyctashas_guard"
+  },
+  "omniknight": {
+   "effect": "abilities-omniknight",
+   "voice": "voice-ability-omniknight"
+  },
+  "pangolier": {
+   "effect": "abilities-pangolier",
+   "voice": "voice-ability-pangolier"
+  },
+  "pugna": {
+   "effect": "abilities-pugna",
+   "voice": "voice-ability-pugna"
+  },
+  "ravenhook": {
+   "effect": "abilities-ravenhook"
+  },
+  "ravenous_mass": {
+   "effect": "abilities-ravenous_mass"
+  },
+  "shivas_guard": {
+   "effect": "abilities-shivas_guard"
+  },
+  "skywrath_mage": {
+   "effect": "abilities-skywrath_mage",
+   "voice": "voice-ability-skywrath_mage"
+  },
+  "sniper": {
+   "effect": "abilities-sniper",
+   "voice": "voice-ability-sniper"
+  },
+  "steam_cannon": {
+   "effect": "abilities-steam_cannon"
+  },
+  "tidehunter": {
+   "effect": "abilities-tidehunter",
+   "voice": "voice-ability-tidehunter"
+  },
+  "tinker": {
+   "effect": "abilities-tinker",
+   "voice": "voice-ability-tinker"
+  },
+  "wingfall_hammer": {
+   "effect": "abilities-wingfall_hammer"
+  },
+  "winter_wyvern": {
+   "effect": "abilities-winter_wyvern",
+   "voice": "voice-ability-winter_wyvern"
   }
+ },
+ "cards": {
+  "act_of_defiance": {
+   "effect": "cards-act_of_defiance",
+   "voice": "voice-act_of_defiance"
+  },
+  "allseeing_ones_favor": {
+   "effect": "cards-allseeing_ones_favor",
+   "voice": "voice-allseeing_ones_favor"
+  },
+  "annihilation": {
+   "effect": "cards-annihilation"
+  },
+  "aphotic_shield": {
+   "effect": "cards-aphotic_shield",
+   "voice": "voice-aphotic_shield"
+  },
+  "apotheosis_blade": {
+   "effect": "equipment-weapon",
+   "label": "武器装备",
+   "shared": true
+  },
+  "arcane_assault": {
+   "effect": "cards-arcane_assault"
+  },
+  "assassinate": {
+   "effect": "cards-assassinate",
+   "voice": "voice-assassinate"
+  },
+  "assassins_veil": {
+   "effect": "equipment-accessory",
+   "label": "饰品装备",
+   "shared": true
+  },
+  "assault_ladders": {
+   "voice": "voice-assault_ladders"
+  },
+  "astral_imprisonment": {
+   "effect": "cards-astral_imprisonment",
+   "voice": "voice-astral_imprisonment"
+  },
+  "at_any_cost": {
+   "effect": "cards-at_any_cost"
+  },
+  "ball_lightning": {
+   "effect": "cards-ball_lightning",
+   "voice": "voice-ball_lightning"
+  },
+  "barbed_mail": {
+   "effect": "equipment-armor",
+   "label": "护甲装备",
+   "shared": true
+  },
+  "barracks": {
+   "voice": "voice-barracks"
+  },
+  "battlefield_control": {
+   "effect": "cards-battlefield_control"
+  },
+  "bellow": {
+   "effect": "cards-bellow"
+  },
+  "berserkers_call": {
+   "effect": "cards-berserkers_call",
+   "voice": "voice-berserkers_call"
+  },
+  "blade_of_the_vigil": {
+   "effect": "equipment-weapon",
+   "label": "武器装备",
+   "shared": true
+  },
+  "blink_dagger": {
+   "effect": "equipment-weapon",
+   "label": "武器装备",
+   "shared": true
+  },
+  "blood_rage": {
+   "effect": "cards-blood_rage",
+   "voice": "voice-blood_rage"
+  },
+  "bolt_of_damocles": {
+   "effect": "cards-bolt_of_damocles"
+  },
+  "book_of_the_dead": {
+   "effect": "equipment-accessory",
+   "label": "饰品装备",
+   "shared": true
+  },
+  "bracers_of_sacrifice": {
+   "effect": "equipment-armor",
+   "label": "护甲装备",
+   "shared": true
+  },
+  "broadsword": {
+   "effect": "equipment-weapon",
+   "label": "武器装备",
+   "shared": true
+  },
+  "buying_time": {
+   "effect": "cards-buying_time"
+  },
+  "call_the_reserves": {
+   "effect": "cards-call_the_reserves"
+  },
+  "caught_unprepared": {
+   "effect": "cards-caught_unprepared"
+  },
+  "chain_frost": {
+   "effect": "cards-chain_frost",
+   "voice": "voice-chain_frost"
+  },
+  "chainmail": {
+   "effect": "equipment-armor",
+   "label": "护甲装备",
+   "shared": true
+  },
+  "claszureme_hourglass": {
+   "effect": "equipment-accessory",
+   "label": "饰品装备",
+   "shared": true
+  },
+  "claymore": {
+   "effect": "equipment-weapon",
+   "label": "武器装备",
+   "shared": true
+  },
+  "clear_the_deck": {
+   "effect": "cards-clear_the_deck"
+  },
+  "cloak_of_endless_carnage": {
+   "effect": "equipment-accessory",
+   "label": "饰品装备",
+   "shared": true
+  },
+  "corrosive_mist": {
+   "effect": "cards-corrosive_mist"
+  },
+  "coup_de_grace": {
+   "effect": "cards-coup_de_grace"
+  },
+  "cunning_plan": {
+   "effect": "cards-cunning_plan"
+  },
+  "curse_of_atrophy": {
+   "effect": "cards-curse_of_atrophy"
+  },
+  "dark_willow_bramble_maze": {
+   "effect": "cards-dark_willow_bramble_maze",
+   "voice": "voice-dark_willow_bramble_maze"
+  },
+  "dark_willow_terrorize": {
+   "effect": "cards-dark_willow_terrorize",
+   "voice": "voice-dark_willow_terrorize"
+  },
+  "defensive_bloom": {
+   "effect": "cards-defensive_bloom"
+  },
+  "demagicking_maul": {
+   "effect": "equipment-weapon",
+   "label": "武器装备",
+   "shared": true
+  },
+  "diabolic_revelation": {
+   "effect": "cards-diabolic_revelation"
+  },
+  "dimensional_portal": {
+   "effect": "cards-dimensional_portal"
+  },
+  "divided_we_stand": {
+   "effect": "cards-divided_we_stand",
+   "voice": "voice-divided_we_stand"
+  },
+  "divine_intervention": {
+   "effect": "cards-divine_intervention"
+  },
+  "divine_purpose": {
+   "effect": "cards-divine_purpose"
+  },
+  "double_edge": {
+   "voice": "voice-double_edge"
+  },
+  "duel": {
+   "effect": "cards-duel",
+   "voice": "voice-duel"
+  },
+  "echo_slam": {
+   "effect": "cards-echo_slam",
+   "voice": "voice-echo_slam"
+  },
+  "eclipse": {
+   "effect": "cards-eclipse",
+   "voice": "voice-eclipse"
+  },
+  "empower": {
+   "effect": "cards-empower",
+   "voice": "voice-empower"
+  },
+  "enough_magic": {
+   "effect": "cards-enough_magic"
+  },
+  "enrage": {
+   "effect": "cards-enrage",
+   "voice": "voice-enrage"
+  },
+  "fighting_instinct": {
+   "effect": "cards-fighting_instinct"
+  },
+  "fog_of_war": {
+   "effect": "cards-fog_of_war"
+  },
+  "forward_charge": {
+   "effect": "cards-forward_charge"
+  },
+  "friendly_fire": {
+   "effect": "cards-friendly_fire"
+  },
+  "frostbite": {
+   "effect": "cards-frostbite",
+   "voice": "voice-frostbite"
+  },
+  "fur_lined_mantle": {
+   "effect": "equipment-accessory",
+   "label": "饰品装备",
+   "shared": true
+  },
+  "gank": {
+   "effect": "cards-gank"
+  },
+  "gods_strength": {
+   "effect": "cards-gods_strength",
+   "voice": "voice-gods_strength"
+  },
+  "grazing_shot": {
+   "effect": "cards-grazing_shot"
+  },
+  "gust": {
+   "effect": "cards-gust",
+   "voice": "voice-gust"
+  },
+  "hand_of_god": {
+   "effect": "cards-hand_of_god",
+   "voice": "voice-hand_of_god"
+  },
+  "healing_salve": {
+   "effect": "cards-healing_salve"
+  },
+  "heartstopper_aura": {
+   "effect": "cards-heartstopper_aura",
+   "voice": "voice-heartstopper_aura"
+  },
+  "helm_of_the_dominator": {
+   "effect": "equipment-armor",
+   "label": "护甲装备",
+   "shared": true
+  },
+  "heros_cape": {
+   "effect": "equipment-accessory",
+   "label": "饰品装备",
+   "shared": true
+  },
+  "hip_fire": {
+   "effect": "cards-hip_fire"
+  },
+  "horn_of_the_alpha": {
+   "effect": "equipment-accessory",
+   "label": "饰品装备",
+   "shared": true
+  },
+  "ignite": {
+   "voice": "voice-ignite"
+  },
+  "incarnation_of_selemene": {
+   "effect": "cards-incarnation_of_selemene"
+  },
+  "intimidation": {
+   "effect": "cards-intimidation"
+  },
+  "ion_shell": {
+   "effect": "cards-ion_shell",
+   "voice": "voice-ion_shell"
+  },
+  "jasper_daggers": {
+   "effect": "equipment-weapon",
+   "label": "武器装备",
+   "shared": true
+  },
+  "juke": {
+   "effect": "cards-juke"
+  },
+  "keenfolk_golem": {
+   "effect": "cards-keenfolk_golem"
+  },
+  "keenfolk_musket": {
+   "effect": "equipment-weapon",
+   "label": "武器装备",
+   "shared": true
+  },
+  "keenfolk_plate": {
+   "effect": "equipment-armor",
+   "label": "护甲装备",
+   "shared": true
+  },
+  "kraken_shell": {
+   "effect": "cards-kraken_shell",
+   "voice": "voice-kraken_shell"
+  },
+  "leather_armor": {
+   "effect": "equipment-armor",
+   "label": "护甲装备",
+   "shared": true
+  },
+  "lost_in_time": {
+   "effect": "cards-lost_in_time"
+  },
+  "mana_drain": {
+   "effect": "cards-mana_drain",
+   "voice": "voice-mana_drain"
+  },
+  "march_of_the_machines": {
+   "voice": "voice-march_of_the_machines"
+  },
+  "monkey_king_command": {
+   "effect": "cards-monkey_king_command",
+   "voice": "voice-monkey_king_command"
+  },
+  "murder_plot": {
+   "effect": "cards-murder_plot"
+  },
+  "mystic_flare": {
+   "effect": "cards-mystic_flare",
+   "voice": "voice-mystic_flare"
+  },
+  "nether_ward": {
+   "voice": "voice-nether_ward"
+  },
+  "no_accident": {
+   "effect": "cards-no_accident"
+  },
+  "nyctashas_guard": {
+   "effect": "equipment-armor",
+   "label": "护甲装备",
+   "shared": true
+  },
+  "pangolier_gyroshell": {
+   "effect": "cards-pangolier_gyroshell",
+   "voice": "voice-pangolier_gyroshell"
+  },
+  "pangolier_lucky_shot": {
+   "effect": "cards-pangolier_lucky_shot",
+   "voice": "voice-pangolier_lucky_shot"
+  },
+  "payday": {
+   "effect": "cards-payday"
+  },
+  "phase_boots": {
+   "effect": "equipment-accessory",
+   "label": "饰品装备",
+   "shared": true
+  },
+  "pick_a_fight": {
+   "effect": "cards-pick_a_fight"
+  },
+  "pick_off": {
+   "effect": "cards-pick_off"
+  },
+  "platemail": {
+   "effect": "equipment-armor",
+   "label": "护甲装备",
+   "shared": true
+  },
+  "poaching_knife": {
+   "effect": "equipment-weapon",
+   "label": "武器装备",
+   "shared": true
+  },
+  "prey_on_the_weak": {
+   "effect": "cards-prey_on_the_weak",
+   "voice": "voice-prey_on_the_weak"
+  },
+  "primal_roar": {
+   "effect": "cards-primal_roar",
+   "voice": "voice-primal_roar"
+  },
+  "red_mist_maul": {
+   "effect": "equipment-weapon",
+   "label": "武器装备",
+   "shared": true
+  },
+  "relentless_pursuit": {
+   "effect": "cards-relentless_pursuit"
+  },
+  "remote_detonation": {
+   "effect": "cards-remote_detonation"
+  },
+  "rend_armor": {
+   "effect": "cards-rend_armor"
+  },
+  "revtel_signet_ring": {
+   "effect": "equipment-accessory",
+   "label": "饰品装备",
+   "shared": true
+  },
+  "ring_of_tarrasque": {
+   "effect": "equipment-accessory",
+   "label": "饰品装备",
+   "shared": true
+  },
+  "ristul_emblem": {
+   "effect": "equipment-accessory",
+   "label": "饰品装备",
+   "shared": true
+  },
+  "routed": {
+   "effect": "cards-routed"
+  },
+  "rumusque_blessing": {
+   "effect": "cards-rumusque_blessing"
+  },
+  "rumusque_vestments": {
+   "effect": "equipment-armor",
+   "label": "护甲装备",
+   "shared": true
+  },
+  "savage_wolf": {
+   "voice": "voice-savage_wolf"
+  },
+  "seraphim_shield": {
+   "effect": "equipment-armor",
+   "label": "护甲装备",
+   "shared": true
+  },
+  "shield_of_aquila": {
+   "effect": "equipment-armor",
+   "label": "护甲装备",
+   "shared": true
+  },
+  "shield_of_basilius": {
+   "effect": "equipment-armor",
+   "label": "护甲装备",
+   "shared": true
+  },
+  "shivas_guard": {
+   "effect": "equipment-armor",
+   "label": "护甲装备",
+   "shared": true
+  },
+  "short_sword": {
+   "effect": "equipment-weapon",
+   "label": "武器装备",
+   "shared": true
+  },
+  "slay": {
+   "effect": "cards-slay"
+  },
+  "smash_their_defenses": {
+   "effect": "cards-smash_their_defenses"
+  },
+  "sow_venom": {
+   "effect": "cards-sow_venom",
+   "voice": "voice-sow_venom"
+  },
+  "stonehall_cloak": {
+   "effect": "equipment-accessory",
+   "label": "饰品装备",
+   "shared": true
+  },
+  "stonehall_pike": {
+   "effect": "equipment-weapon",
+   "label": "武器装备",
+   "shared": true
+  },
+  "stonehall_plate": {
+   "effect": "equipment-armor",
+   "label": "护甲装备",
+   "shared": true
+  },
+  "strafing_run": {
+   "effect": "cards-strafing_run"
+  },
+  "sucker_punch": {
+   "effect": "cards-sucker_punch"
+  },
+  "the_cover_of_night": {
+   "effect": "cards-the_cover_of_night"
+  },
+  "thundergods_wrath": {
+   "voice": "voice-thundergods_wrath"
+  },
+  "thunderstorm": {
+   "effect": "cards-thunderstorm"
+  },
+  "time_of_triumph": {
+   "effect": "cards-time_of_triumph"
+  },
+  "town_portal_scroll": {
+   "effect": "cards-town_portal_scroll"
+  },
+  "track": {
+   "effect": "cards-track",
+   "voice": "voice-track"
+  },
+  "travelers_cloak": {
+   "effect": "equipment-accessory",
+   "label": "饰品装备",
+   "shared": true
+  },
+  "tree_dance": {
+   "effect": "abilities-monkey_king_spring",
+   "voice": "voice-ability-monkey_king_spring"
+  },
+  "ventriloquy": {
+   "effect": "cards-ventriloquy"
+  },
+  "verdant_refuge": {
+   "voice": "voice-verdant_refuge"
+  },
+  "vesture_of_the_tyrant": {
+   "effect": "equipment-armor",
+   "label": "护甲装备",
+   "shared": true
+  },
+  "viper_strike": {
+   "effect": "cards-viper_strike",
+   "voice": "voice-viper_strike"
+  },
+  "viscous_nasal_goo": {
+   "effect": "cards-viscous_nasal_goo"
+  },
+  "whirling_death": {
+   "effect": "cards-whirling_death",
+   "voice": "voice-whirling_death"
+  },
+  "wingfall_hammer": {
+   "effect": "equipment-weapon",
+   "label": "武器装备",
+   "shared": true
+  },
+  "winters_curse": {
+   "effect": "cards-winters_curse",
+   "voice": "voice-winters_curse"
+  },
+  "zombie": {
+   "effect": "cards-zombie"
+  }
+ },
+ "files": {
+  "abilities-techies_blast_off": {
+   "bytes": 28002,
+   "local": "action/techies_blast_off_1.mp3",
+   "note": "dota2 wiki / gamepedia CDN; compressed to web mp3",
+   "sha256": "e458929a9bf5ce167582027751691445f18ab233b5eb0e3eae891a54a757fdb8",
+   "title": "File:Techies Blast Off! 1.mp3",
+   "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/7/74/Techies_Blast_Off%21_1.mp3/revision/latest?cb=20191216024800"
+  },
+  "cards-techies_proximity_mines": {
+   "bytes": 23404,
+   "local": "action/techies_proximity_mines_1.mp3",
+   "note": "dota2 wiki / gamepedia CDN; compressed to web mp3",
+   "sha256": "38f9691bdc710a794dceb392f0cd24dc973d91db18ecb23fb87b3640125ddb2e",
+   "title": "File:Techies Proximity Mines 1.mp3",
+   "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/6/67/Techies_Proximity_Mines_1.mp3/revision/latest?cb=20191216024807"
+  },
+  "cards-techies_reactive_tazer": {
+   "bytes": 435721,
+   "local": "action/techies_reactive_tazer.mp3",
+   "note": "dota2 wiki / gamepedia CDN; compressed to web mp3",
+   "sha256": "1517ed6dd02a394f37afa803020fbb4d7ef262bd5de90b05e8445e65c7effee0",
+   "title": "File:Techies Reactive Tazer.mp3",
+   "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/e/eb/Techies_Reactive_Tazer.mp3/revision/latest?cb=20220412212708"
+  },
+  "mine": {
+   "bytes": 62274,
+   "local": "action/techies_pinpoint_detonate.mp3",
+   "note": "dota2 wiki / gamepedia CDN; compressed to web mp3",
+   "sha256": "dbbb34260c92f7c74cd4ecc43194c3bf05024c39ef02341b0edc78652fb9d9ba",
+   "title": "File:Techies Pinpoint Detonate.mp3",
+   "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/e/ed/Techies_Pinpoint_Detonate.mp3/revision/latest?cb=20191216024806"
+  },
+  "voice-ability-techies_blast_off": {
+   "bytes": 18034,
+   "local": "action/vo_techies_tech_cast_01.mp3",
+   "note": "dota2 wiki / gamepedia CDN; compressed to web mp3",
+   "sha256": "d3961ba9b0fd83a4d5fa4877801c6c8640616408e6bd73245c2cacdbf6e9a2c7",
+   "title": "File:Vo techies tech cast 01.mp3",
+   "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/b/b6/Vo_techies_tech_cast_01.mp3/revision/latest?cb=20201020202846"
+  },
+  "voice-cards-techies_proximity_mines": {
+   "bytes": 37685,
+   "local": "action/vo_techies_tech_remotemines_01.mp3",
+   "note": "dota2 wiki / gamepedia CDN; compressed to web mp3",
+   "sha256": "0ac6de0567eb1cf3957b0f2cdc983b44788d4e13ec7e198049095535fb6ac2d5",
+   "title": "File:Vo techies tech remotemines 01.mp3",
+   "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/6/6e/Vo_techies_tech_remotemines_01.mp3/revision/latest?cb=20201020204627"
+  },
+  "voice-cards-techies_reactive_tazer": {
+   "bytes": 34334,
+   "local": "action/vo_techies_tech_cast_02.mp3",
+   "note": "dota2 wiki / gamepedia CDN; compressed to web mp3",
+   "sha256": "ee16097b6eaf3e102d6c5c8b6648d8311347b416870d30d3e805c53b00aeb885",
+   "title": "File:Vo techies tech cast 02.mp3",
+   "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/4/47/Vo_techies_tech_cast_02.mp3/revision/latest?cb=20201020202849"
+  },
+  "voice-hero-techies": {
+   "bytes": 18871,
+   "local": "action/vo_techies_tech_spawn_01.mp3",
+   "note": "dota2 wiki / gamepedia CDN; compressed to web mp3",
+   "sha256": "f6df49ffdbd075ec17e67600b5005e707c21d2065f2c49a991654e5181facd0a",
+   "title": "File:Vo techies tech spawn 01.mp3",
+   "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/3/32/Vo_techies_tech_spawn_01.mp3/revision/latest?cb=20201020205120"
+  },
+  "voice-mine": {
+   "bytes": 28072,
+   "local": "action/vo_techies_tech_mineblowsup_01.mp3",
+   "note": "dota2 wiki / gamepedia CDN; compressed to web mp3",
+   "sha256": "0b6c19c24b7c7afb96d795804027eba6e5bf7e893b52f055a02acf86d828a330",
+   "title": "File:Vo techies tech mineblowsup 01.mp3",
+   "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/5/51/Vo_techies_tech_mineblowsup_01.mp3/revision/latest?cb=20201020203933"
+  }
+ },
+ "heroes": {
+  "dark_willow": {
+   "voice": "voice-hero-dark_willow"
+  },
+  "monkey_king": {
+   "voice": "voice-hero-monkey_king"
+  },
+  "pangolier": {
+   "voice": "voice-hero-pangolier"
+  }
+ },
+ "samples": {
+  "abilities-abaddon": "action/abilities-abaddon.wav",
+  "abilities-aghanims_sanctum": "action/abilities-aghanims_sanctum.wav",
+  "abilities-apotheosis_blade": "action/abilities-apotheosis_blade.wav",
+  "abilities-beastmaster": "action/abilities-beastmaster.wav",
+  "abilities-blink_dagger": "action/abilities-blink_dagger.wav",
+  "abilities-book_of_the_dead": "action/abilities-book_of_the_dead.wav",
+  "abilities-bracers_of_sacrifice": "action/abilities-bracers_of_sacrifice.wav",
+  "abilities-cheating_death": "action/abilities-cheating_death.wav",
+  "abilities-chen": "action/abilities-chen.wav",
+  "abilities-dark_seer": "action/abilities-dark_seer.wav",
+  "abilities-dark_willow": "action/abilities-dark_willow.mp3",
+  "abilities-demagicking_maul": "action/abilities-demagicking_maul.wav",
+  "abilities-earthshaker": "action/abilities-earthshaker.wav",
+  "abilities-helm_of_the_dominator": "action/abilities-helm_of_the_dominator.wav",
+  "abilities-horn_of_the_alpha": "action/abilities-horn_of_the_alpha.wav",
+  "abilities-keenfolk_turret": "action/abilities-keenfolk_turret.wav",
+  "abilities-lich": "action/abilities-lich.wav",
+  "abilities-lion": "action/abilities-lion.wav",
+  "abilities-monkey_king": "action/abilities-monkey_king.mp3",
+  "abilities-monkey_king_spring": "action/abilities-monkey_king_spring.mp3",
+  "abilities-nyctashas_guard": "action/abilities-nyctashas_guard.wav",
+  "abilities-omniknight": "action/abilities-omniknight.wav",
+  "abilities-pangolier": "action/abilities-pangolier.mp3",
+  "abilities-pugna": "action/abilities-pugna.wav",
+  "abilities-ravenhook": "action/abilities-ravenhook.wav",
+  "abilities-ravenous_mass": "action/abilities-ravenous_mass.wav",
+  "abilities-shivas_guard": "action/abilities-shivas_guard.wav",
+  "abilities-skywrath_mage": "action/abilities-skywrath_mage.wav",
+  "abilities-sniper": "action/abilities-sniper.wav",
+  "abilities-steam_cannon": "action/abilities-steam_cannon.wav",
+  "abilities-tidehunter": "action/abilities-tidehunter.wav",
+  "abilities-tinker": "action/abilities-tinker.wav",
+  "abilities-wingfall_hammer": "action/abilities-wingfall_hammer.wav",
+  "abilities-winter_wyvern": "action/abilities-winter_wyvern.wav",
+  "cards-act_of_defiance": "action/cards-act_of_defiance.wav",
+  "cards-allseeing_ones_favor": "action/cards-allseeing_ones_favor.wav",
+  "cards-annihilation": "action/cards-annihilation.wav",
+  "cards-aphotic_shield": "action/cards-aphotic_shield.wav",
+  "cards-arcane_assault": "action/cards-arcane_assault.wav",
+  "cards-assassinate": "action/cards-assassinate.wav",
+  "cards-astral_imprisonment": "action/cards-astral_imprisonment.wav",
+  "cards-at_any_cost": "action/cards-at_any_cost.wav",
+  "cards-ball_lightning": "action/cards-ball_lightning.wav",
+  "cards-battlefield_control": "action/cards-battlefield_control.wav",
+  "cards-bellow": "action/cards-bellow.wav",
+  "cards-berserkers_call": "action/cards-berserkers_call.wav",
+  "cards-blood_rage": "action/cards-blood_rage.wav",
+  "cards-bolt_of_damocles": "action/cards-bolt_of_damocles.wav",
+  "cards-buying_time": "action/cards-buying_time.wav",
+  "cards-call_the_reserves": "action/cards-call_the_reserves.wav",
+  "cards-caught_unprepared": "action/cards-caught_unprepared.wav",
+  "cards-chain_frost": "action/cards-chain_frost.wav",
+  "cards-clear_the_deck": "action/cards-clear_the_deck.wav",
+  "cards-corrosive_mist": "action/cards-corrosive_mist.wav",
+  "cards-coup_de_grace": "action/cards-coup_de_grace.wav",
+  "cards-cunning_plan": "action/cards-cunning_plan.wav",
+  "cards-curse_of_atrophy": "action/cards-curse_of_atrophy.wav",
+  "cards-dark_willow_bramble_maze": "action/cards-dark_willow_bramble_maze.mp3",
+  "cards-dark_willow_terrorize": "action/cards-dark_willow_terrorize.mp3",
+  "cards-defensive_bloom": "action/cards-defensive_bloom.wav",
+  "cards-diabolic_revelation": "action/cards-diabolic_revelation.wav",
+  "cards-dimensional_portal": "action/cards-dimensional_portal.wav",
+  "cards-divided_we_stand": "action/cards-divided_we_stand.wav",
+  "cards-divine_intervention": "action/cards-divine_intervention.wav",
+  "cards-divine_purpose": "action/cards-divine_purpose.wav",
+  "cards-duel": "action/cards-duel.wav",
+  "cards-echo_slam": "action/cards-echo_slam.wav",
+  "cards-eclipse": "action/cards-eclipse.wav",
+  "cards-empower": "action/cards-empower.wav",
+  "cards-enough_magic": "action/cards-enough_magic.wav",
+  "cards-enrage": "action/cards-enrage.wav",
+  "cards-fighting_instinct": "action/cards-fighting_instinct.wav",
+  "cards-fog_of_war": "action/cards-fog_of_war.wav",
+  "cards-forward_charge": "action/cards-forward_charge.wav",
+  "cards-friendly_fire": "action/cards-friendly_fire.wav",
+  "cards-frostbite": "action/cards-frostbite.wav",
+  "cards-gank": "action/cards-gank.wav",
+  "cards-gods_strength": "action/cards-gods_strength.wav",
+  "cards-grazing_shot": "action/cards-grazing_shot.wav",
+  "cards-gust": "action/cards-gust.wav",
+  "cards-hand_of_god": "action/cards-hand_of_god.wav",
+  "cards-healing_salve": "action/cards-healing_salve.wav",
+  "cards-heartstopper_aura": "action/cards-heartstopper_aura.wav",
+  "cards-hip_fire": "action/cards-hip_fire.wav",
+  "cards-incarnation_of_selemene": "action/cards-incarnation_of_selemene.wav",
+  "cards-intimidation": "action/cards-intimidation.wav",
+  "cards-ion_shell": "action/cards-ion_shell.wav",
+  "cards-juke": "action/cards-juke.wav",
+  "cards-keenfolk_golem": "action/cards-keenfolk_golem.wav",
+  "cards-kraken_shell": "action/cards-kraken_shell.wav",
+  "cards-lost_in_time": "action/cards-lost_in_time.wav",
+  "cards-mana_drain": "action/cards-mana_drain.wav",
+  "cards-monkey_king_command": "action/cards-monkey_king_command.mp3",
+  "cards-murder_plot": "action/cards-murder_plot.wav",
+  "cards-mystic_flare": "action/cards-mystic_flare.wav",
+  "cards-no_accident": "action/cards-no_accident.wav",
+  "cards-pangolier_gyroshell": "action/cards-pangolier_gyroshell.mp3",
+  "cards-pangolier_lucky_shot": "action/cards-pangolier_lucky_shot.mp3",
+  "cards-payday": "action/cards-payday.wav",
+  "cards-pick_a_fight": "action/cards-pick_a_fight.wav",
+  "cards-pick_off": "action/cards-pick_off.wav",
+  "cards-prey_on_the_weak": "action/cards-prey_on_the_weak.wav",
+  "cards-primal_roar": "action/cards-primal_roar.wav",
+  "cards-relentless_pursuit": "action/cards-relentless_pursuit.wav",
+  "cards-remote_detonation": "action/cards-remote_detonation.wav",
+  "cards-rend_armor": "action/cards-rend_armor.wav",
+  "cards-routed": "action/cards-routed.wav",
+  "cards-rumusque_blessing": "action/cards-rumusque_blessing.wav",
+  "cards-slay": "action/cards-slay.wav",
+  "cards-smash_their_defenses": "action/cards-smash_their_defenses.wav",
+  "cards-sow_venom": "action/cards-sow_venom.wav",
+  "cards-strafing_run": "action/cards-strafing_run.wav",
+  "cards-sucker_punch": "action/cards-sucker_punch.wav",
+  "cards-the_cover_of_night": "action/cards-the_cover_of_night.wav",
+  "cards-thunderstorm": "action/cards-thunderstorm.wav",
+  "cards-time_of_triumph": "action/cards-time_of_triumph.wav",
+  "cards-town_portal_scroll": "action/cards-town_portal_scroll.wav",
+  "cards-track": "action/cards-track.wav",
+  "cards-ventriloquy": "action/cards-ventriloquy.wav",
+  "cards-viper_strike": "action/cards-viper_strike.wav",
+  "cards-viscous_nasal_goo": "action/cards-viscous_nasal_goo.wav",
+  "cards-whirling_death": "action/cards-whirling_death.wav",
+  "cards-winters_curse": "action/cards-winters_curse.wav",
+  "cards-zombie": "action/cards-zombie.wav",
+  "equipment-accessory": "action/equipment-accessory.wav",
+  "equipment-armor": "action/equipment-armor.wav",
+  "equipment-weapon": "action/equipment-weapon.wav",
+  "event-hero-death": "action/event-hero-death.wav",
+  "event-hero-return": "action/event-hero-return.wav",
+  "event-tower-fall-dire": "action/event-tower-fall-dire.wav",
+  "event-tower-fall-radiant": "action/event-tower-fall-radiant.wav",
+  "event-tower-hit": "action/event-tower-hit.wav",
+  "voice-ability-abaddon": "action/voice-ability-abaddon.mp3",
+  "voice-ability-beastmaster": "action/voice-ability-beastmaster.mp3",
+  "voice-ability-chen": "action/voice-ability-chen.mp3",
+  "voice-ability-dark_seer": "action/voice-ability-dark_seer.mp3",
+  "voice-ability-dark_willow": "action/voice-ability-dark_willow.mp3",
+  "voice-ability-earthshaker": "action/voice-ability-earthshaker.mp3",
+  "voice-ability-lich": "action/voice-ability-lich.mp3",
+  "voice-ability-lion": "action/voice-ability-lion.mp3",
+  "voice-ability-meepo": "action/voice-ability-meepo.mp3",
+  "voice-ability-monkey_king": "action/voice-ability-monkey_king.mp3",
+  "voice-ability-monkey_king_spring": "action/voice-ability-monkey_king_spring.mp3",
+  "voice-ability-omniknight": "action/voice-ability-omniknight.mp3",
+  "voice-ability-pangolier": "action/voice-ability-pangolier.mp3",
+  "voice-ability-pugna": "action/voice-ability-pugna.mp3",
+  "voice-ability-skywrath_mage": "action/voice-ability-skywrath_mage.mp3",
+  "voice-ability-sniper": "action/voice-ability-sniper.mp3",
+  "voice-ability-tidehunter": "action/voice-ability-tidehunter.mp3",
+  "voice-ability-tinker": "action/voice-ability-tinker.mp3",
+  "voice-ability-winter_wyvern": "action/voice-ability-winter_wyvern.mp3",
+  "voice-act_of_defiance": "action/voice-act_of_defiance.mp3",
+  "voice-allseeing_ones_favor": "action/voice-allseeing_ones_favor.mp3",
+  "voice-aphotic_shield": "action/voice-aphotic_shield.mp3",
+  "voice-assassinate": "action/voice-assassinate.mp3",
+  "voice-assault_ladders": "action/voice-assault_ladders.mp3",
+  "voice-astral_imprisonment": "action/voice-astral_imprisonment.mp3",
+  "voice-ball_lightning": "action/voice-ball_lightning.mp3",
+  "voice-barracks": "action/voice-barracks.mp3",
+  "voice-berserkers_call": "action/voice-berserkers_call.mp3",
+  "voice-blood_rage": "action/voice-blood_rage.mp3",
+  "voice-chain_frost": "action/voice-chain_frost.mp3",
+  "voice-dark_willow_bramble_maze": "action/voice-dark_willow_bramble_maze.mp3",
+  "voice-dark_willow_terrorize": "action/voice-dark_willow_terrorize.mp3",
+  "voice-divided_we_stand": "action/voice-divided_we_stand.mp3",
+  "voice-double_edge": "action/voice-double_edge.mp3",
+  "voice-duel": "action/voice-duel.mp3",
+  "voice-echo_slam": "action/voice-echo_slam.mp3",
+  "voice-eclipse": "action/voice-eclipse.mp3",
+  "voice-empower": "action/voice-empower.mp3",
+  "voice-enrage": "action/voice-enrage.mp3",
+  "voice-frostbite": "action/voice-frostbite.mp3",
+  "voice-gods_strength": "action/voice-gods_strength.mp3",
+  "voice-gust": "action/voice-gust.mp3",
+  "voice-hand_of_god": "action/voice-hand_of_god.mp3",
+  "voice-heartstopper_aura": "action/voice-heartstopper_aura.mp3",
+  "voice-hero-dark_willow": "action/voice-hero-dark_willow.mp3",
+  "voice-hero-monkey_king": "action/voice-hero-monkey_king.mp3",
+  "voice-hero-pangolier": "action/voice-hero-pangolier.mp3",
+  "voice-ignite": "action/voice-ignite.mp3",
+  "voice-ion_shell": "action/voice-ion_shell.mp3",
+  "voice-kraken_shell": "action/voice-kraken_shell.mp3",
+  "voice-mana_drain": "action/voice-mana_drain.mp3",
+  "voice-march_of_the_machines": "action/voice-march_of_the_machines.mp3",
+  "voice-monkey_king_command": "action/voice-monkey_king_command.mp3",
+  "voice-mystic_flare": "action/voice-mystic_flare.mp3",
+  "voice-nether_ward": "action/voice-nether_ward.mp3",
+  "voice-pangolier_gyroshell": "action/voice-pangolier_gyroshell.mp3",
+  "voice-pangolier_lucky_shot": "action/voice-pangolier_lucky_shot.mp3",
+  "voice-prey_on_the_weak": "action/voice-prey_on_the_weak.mp3",
+  "voice-primal_roar": "action/voice-primal_roar.mp3",
+  "voice-savage_wolf": "action/voice-savage_wolf.mp3",
+  "voice-sow_venom": "action/voice-sow_venom.mp3",
+  "voice-thundergods_wrath": "action/voice-thundergods_wrath.mp3",
+  "voice-track": "action/voice-track.mp3",
+  "voice-verdant_refuge": "action/voice-verdant_refuge.mp3",
+  "voice-viper_strike": "action/voice-viper_strike.mp3",
+  "voice-whirling_death": "action/voice-whirling_death.mp3",
+  "voice-winters_curse": "action/voice-winters_curse.mp3"
+ },
+ "sources": {
+  "abilities-abaddon": "effects/set_01/abilities/borrowed_time.wav",
+  "abilities-aghanims_sanctum": "effects/set_01/strategies/aghanim_sanctum.wav",
+  "abilities-apotheosis_blade": "effects/set_01/items/apotheosis_blade.wav",
+  "abilities-beastmaster": "effects/set_01/abilities/call_of_the_wild.wav",
+  "abilities-blink_dagger": "effects/set_01/items/blink_dagger.wav",
+  "abilities-book_of_the_dead": "effects/set_01/creeps/book_of_the_dead_trigger.wav",
+  "abilities-bracers_of_sacrifice": "effects/set_01/items/bracers_of_sacrifice.wav",
+  "abilities-cheating_death": "effects/set_01/strategies/cheating_death.wav",
+  "abilities-chen": "effects/set_01/abilities/holy_persuasion_cast.wav",
+  "abilities-dark_seer": "effects/set_01/abilities/surge.wav",
+  "abilities-dark_willow": "https://static.wikia.nocookie.net/dota2_gamepedia/images/5/51/Shadow_Realm.mp3/revision/latest?cb=20190530174715",
+  "abilities-demagicking_maul": "effects/set_01/items/demagicking_maul.wav",
+  "abilities-earthshaker": "effects/set_01/abilities/fissure.wav",
+  "abilities-helm_of_the_dominator": "effects/set_01/items/helm_of_the_dominator.wav",
+  "abilities-horn_of_the_alpha": "effects/set_01/items/horn_of_the_alpha.wav",
+  "abilities-keenfolk_turret": "effects/set_01/strategies/keenfolk_turret.wav",
+  "abilities-lich": "effects/set_01/abilities/dark_ritual.wav",
+  "abilities-lion": "effects/set_01/abilities/finger_of_death.wav",
+  "abilities-monkey_king": "https://static.wikia.nocookie.net/dota2_gamepedia/images/d/d5/Boundless_Strike_cast_1.mp3/revision/latest?cb=20161216023914",
+  "abilities-monkey_king_spring": "https://static.wikia.nocookie.net/dota2_gamepedia/images/5/51/Tree_Dance_cast_1.mp3/revision/latest?cb=20161216024104",
+  "abilities-nyctashas_guard": "effects/set_01/items/nyctashas_guard.wav",
+  "abilities-omniknight": "effects/set_01/abilities/purification_cast.wav",
+  "abilities-pangolier": "https://static.wikia.nocookie.net/dota2_gamepedia/images/3/36/Shield_Crash_with_buff.mp3/revision/latest?cb=20171106120157",
+  "abilities-pugna": "effects/set_01/abilities/nether_blast.wav",
+  "abilities-ravenhook": "effects/set_01/abilities/ravenhook_active.wav",
+  "abilities-ravenous_mass": "effects/set_01/abilities/ravenous_mass.wav",
+  "abilities-shivas_guard": "effects/set_01/items/shivas_guard.wav",
+  "abilities-skywrath_mage": "effects/set_01/abilities/concussive_shot_blast.wav",
+  "abilities-sniper": "effects/set_01/abilities/musket_shot.wav",
+  "abilities-steam_cannon": "effects/set_01/strategies/steam_cannon_fire.wav",
+  "abilities-tidehunter": "effects/set_01/abilities/ravage.wav",
+  "abilities-tinker": "effects/set_01/abilities/tinker_laser.wav",
+  "abilities-wingfall_hammer": "effects/set_01/items/wingfall_hammer.wav",
+  "abilities-winter_wyvern": "effects/set_01/abilities/arctic_burn.wav",
+  "cards-act_of_defiance": "effects/set_01/spells/act_of_defiance.wav",
+  "cards-allseeing_ones_favor": "effects/set_01/spells/all_seeing_ones_favor.wav",
+  "cards-annihilation": "effects/set_01/spells/annihlate.wav",
+  "cards-aphotic_shield": "effects/set_01/spells/aphotic_shield.wav",
+  "cards-arcane_assault": "effects/set_01/spells/arcane_assault.wav",
+  "cards-assassinate": "effects/set_01/spells/assassinate.wav",
+  "cards-astral_imprisonment": "effects/set_01/spells/astral_imprisonment.wav",
+  "cards-at_any_cost": "effects/set_01/spells/at_any_cost.wav",
+  "cards-ball_lightning": "effects/set_01/spells/ball_lightning.wav",
+  "cards-battlefield_control": "effects/set_01/spells/battlefield_control.wav",
+  "cards-bellow": "effects/set_01/spells/bellow_cast.wav",
+  "cards-berserkers_call": "effects/set_01/spells/berserkers_call.wav",
+  "cards-blood_rage": "effects/set_01/spells/blood_rage.wav",
+  "cards-bolt_of_damocles": "effects/set_01/spells/bolt_of_damocles_card.wav",
+  "cards-buying_time": "effects/set_01/spells/buying_time.wav",
+  "cards-call_the_reserves": "effects/set_01/spells/call_the_reserves.wav",
+  "cards-caught_unprepared": "effects/set_01/spells/caught_unprepared.wav",
+  "cards-chain_frost": "effects/set_01/spells/chain_frost_cast.wav",
+  "cards-clear_the_deck": "effects/set_01/spells/clear_the_deck.wav",
+  "cards-corrosive_mist": "effects/set_01/spells/corrosive_mist.wav",
+  "cards-coup_de_grace": "effects/set_01/spells/coupdegrace.wav",
+  "cards-cunning_plan": "effects/set_01/spells/cunning_plan.wav",
+  "cards-curse_of_atrophy": "effects/set_01/spells/curse_of_atrophy.wav",
+  "cards-dark_willow_bramble_maze": "https://static.wikia.nocookie.net/dota2_gamepedia/images/1/12/Bramble_Maze_cast.mp3/revision/latest?cb=20171105022149",
+  "cards-dark_willow_terrorize": "https://static.wikia.nocookie.net/dota2_gamepedia/images/1/1e/Terrorize_cast.mp3/revision/latest?cb=20171105022409",
+  "cards-defensive_bloom": "effects/set_01/spells/defensive_bloom.wav",
+  "cards-diabolic_revelation": "effects/set_01/spells/diabolic_revelation.wav",
+  "cards-dimensional_portal": "effects/set_01/spells/dimensional_portal_blast.wav",
+  "cards-divided_we_stand": "effects/set_01/spells/divided_we_stand.wav",
+  "cards-divine_intervention": "effects/set_01/spells/divine_intervention.wav",
+  "cards-divine_purpose": "effects/set_01/spells/divine_purpose.wav",
+  "cards-duel": "effects/set_01/spells/duel_intro.wav",
+  "cards-echo_slam": "effects/set_01/spells/echo_slam.wav",
+  "cards-eclipse": "effects/set_01/spells/eclipse.wav",
+  "cards-empower": "effects/set_01/spells/empower.wav",
+  "cards-enough_magic": "effects/set_01/spells/enough_magic.wav",
+  "cards-enrage": "effects/set_01/spells/enrage.wav",
+  "cards-fighting_instinct": "effects/set_01/spells/fighting_instinct.wav",
+  "cards-fog_of_war": "effects/set_01/spells/fog_of_war.wav",
+  "cards-forward_charge": "effects/set_01/spells/forward_charge.wav",
+  "cards-friendly_fire": "effects/set_01/spells/friendly_fire.wav",
+  "cards-frostbite": "effects/set_01/spells/frostbite.wav",
+  "cards-gank": "effects/set_01/spells/gank_intro.wav",
+  "cards-gods_strength": "effects/set_01/spells/gods_strength.wav",
+  "cards-grazing_shot": "effects/set_01/spells/grazing_shot.wav",
+  "cards-gust": "effects/set_01/spells/gust.wav",
+  "cards-hand_of_god": "effects/set_01/spells/hand_of_god.wav",
+  "cards-healing_salve": "effects/set_00/items/healing_salve.wav",
+  "cards-heartstopper_aura": "effects/set_01/spells/heartstopper_aura_cast.wav",
+  "cards-hip_fire": "effects/set_01/spells/hip_fire.wav",
+  "cards-incarnation_of_selemene": "effects/set_01/creeps/incarnation_of_selemene_deploy.wav",
+  "cards-intimidation": "effects/set_01/spells/intimidation.wav",
+  "cards-ion_shell": "effects/set_01/spells/ion_shell.wav",
+  "cards-juke": "effects/set_01/spells/juke.wav",
+  "cards-keenfolk_golem": "effects/set_01/creeps/keenfolk_golem_deploy.wav",
+  "cards-kraken_shell": "effects/set_01/spells/kraken.wav",
+  "cards-lost_in_time": "effects/set_01/spells/lost_in_time.wav",
+  "cards-mana_drain": "effects/set_01/spells/mana_drain.wav",
+  "cards-monkey_king_command": "https://static.wikia.nocookie.net/dota2_gamepedia/images/8/8c/Wukong%27s_Command_cast.mp3/revision/latest?cb=20161216023848",
+  "cards-murder_plot": "effects/set_01/spells/murder_plot.wav",
+  "cards-mystic_flare": "effects/set_01/spells/mystic_flare_cast.wav",
+  "cards-no_accident": "effects/set_01/spells/no_accident_impact.wav",
+  "cards-pangolier_gyroshell": "https://static.wikia.nocookie.net/dota2_gamepedia/images/f/f7/Rolling_Thunder_cast.mp3/revision/latest?cb=20171104032001",
+  "cards-pangolier_lucky_shot": "https://static.wikia.nocookie.net/dota2_gamepedia/images/8/8d/Crit3.mp3/revision/latest?cb=20171104031814",
+  "cards-payday": "effects/set_01/spells/payday.wav",
+  "cards-pick_a_fight": "effects/set_01/spells/pick_a_fight.wav",
+  "cards-pick_off": "effects/set_01/spells/pick_off.wav",
+  "cards-prey_on_the_weak": "effects/set_01/spells/prey_on_the_weak.wav",
+  "cards-primal_roar": "effects/set_01/spells/primal_roar.wav",
+  "cards-relentless_pursuit": "effects/set_01/spells/relentless_pursuit.wav",
+  "cards-remote_detonation": "effects/set_01/spells/remote_detonition_cast.wav",
+  "cards-rend_armor": "effects/set_01/spells/rend_armor.wav",
+  "cards-routed": "effects/set_01/spells/routed.wav",
+  "cards-rumusque_blessing": "effects/set_01/spells/rumesque_blessing.wav",
+  "cards-slay": "effects/set_01/spells/slay.wav",
+  "cards-smash_their_defenses": "effects/set_01/spells/smash_their_defenses.wav",
+  "cards-sow_venom": "effects/set_01/spells/sow_venom_cast_01.wav",
+  "cards-strafing_run": "effects/set_01/spells/straifing_run.wav",
+  "cards-sucker_punch": "effects/set_01/spells/sucker_punch.wav",
+  "cards-the_cover_of_night": "effects/set_01/spells/the_cover_of_night.wav",
+  "cards-thunderstorm": "effects/set_01/spells/thunderstorm.wav",
+  "cards-time_of_triumph": "effects/set_01/spells/time_of_triumph.wav",
+  "cards-town_portal_scroll": "effects/set_00/items/town_portal.wav",
+  "cards-track": "effects/set_01/spells/track.wav",
+  "cards-ventriloquy": "effects/set_01/spells/ventriloquy.wav",
+  "cards-viper_strike": "effects/set_01/spells/viper_strike.wav",
+  "cards-viscous_nasal_goo": "effects/set_01/spells/viscous_nasal_goo.wav",
+  "cards-whirling_death": "effects/set_01/spells/whirling_death.wav",
+  "cards-winters_curse": "effects/set_01/spells/winters_curse_cast.wav",
+  "cards-zombie": "effects/set_01/creeps/zombie_deploy.wav",
+  "equipment-accessory": "effects/set_00/items/accessory_mid_01.wav",
+  "equipment-armor": "effects/set_00/items/armor_generic.wav",
+  "equipment-weapon": "effects/set_00/items/weapon_mid_01.wav",
+  "event-hero-death": "cards/hero_death_impact_01.wav",
+  "event-hero-return": "cards/hero_death_to_fountain_01.wav",
+  "event-tower-fall-dire": "structures/dire_tower_destruction_final.wav",
+  "event-tower-fall-radiant": "structures/radiant_tower_destruction_final.wav",
+  "event-tower-hit": "structures/damage_impact_01.wav",
+  "voice-ability-abaddon": "responses/set_01/abaddon/abaddon_use_ability_01.mp3",
+  "voice-ability-beastmaster": "responses/set_01/beastmaster/beastmaster_use_ability_01.mp3",
+  "voice-ability-chen": "responses/set_01/chen/chen_use_ability_01.mp3",
+  "voice-ability-dark_seer": "responses/set_01/dark_seer/dark_seer_use_ability_01.mp3",
+  "voice-ability-dark_willow": "https://static.wikia.nocookie.net/dota2_gamepedia/images/3/31/Vo_dark_willow_sylph_ability2_01.mp3/revision/latest?cb=20201010201539",
+  "voice-ability-earthshaker": "responses/set_01/earthshaker/earthshaker_use_ability_01.mp3",
+  "voice-ability-lich": "responses/set_01/lich/lich_use_ability_01.mp3",
+  "voice-ability-lion": "responses/set_01/lion/lion_use_ability_01.mp3",
+  "voice-ability-meepo": "responses/set_01/meepo/meepo_use_ability_01.mp3",
+  "voice-ability-monkey_king": "https://static.wikia.nocookie.net/dota2_gamepedia/images/b/b5/Vo_monkey_king_monkey_ability2_01.mp3/revision/latest?cb=20201017114533",
+  "voice-ability-monkey_king_spring": "https://static.wikia.nocookie.net/dota2_gamepedia/images/0/0a/Vo_monkey_king_monkey_ability1_03.mp3/revision/latest?cb=20201017114514",
+  "voice-ability-omniknight": "responses/set_01/omniknight/omniknight_use_ability_01.mp3",
+  "voice-ability-pangolier": "https://static.wikia.nocookie.net/dota2_gamepedia/images/5/57/Vo_pangolin_pangolin_ability2_03.mp3/revision/latest?cb=20200524130823",
+  "voice-ability-pugna": "responses/set_01/pugna/pugna_use_ability_01.mp3",
+  "voice-ability-skywrath_mage": "responses/set_01/skywrath_mage/skywrath_mage_use_ability_01.mp3",
+  "voice-ability-sniper": "responses/set_01/sniper/sniper_use_ability_01.mp3",
+  "voice-ability-tidehunter": "responses/set_01/tidehunter/tidehunter_use_ability_01.mp3",
+  "voice-ability-tinker": "responses/set_01/tinker/tinker_use_ability_01.mp3",
+  "voice-ability-winter_wyvern": "responses/set_01/winter_wyvern/winter_wyvern_use_ability_01.mp3",
+  "voice-act_of_defiance": "responses/set_01/rix/rix_act_of_defiance_intro.mp3",
+  "voice-allseeing_ones_favor": "responses/set_01/omniknight/omniknight_allseeing_ones_favor.mp3",
+  "voice-aphotic_shield": "responses/set_01/abaddon/abaddon_aphotic_shield_intro.mp3",
+  "voice-assassinate": "responses/set_01/sniper/sniper_assassinate.mp3",
+  "voice-assault_ladders": "responses/set_01/sorla_khan/sorla_khan_assault_ladders_intro.mp3",
+  "voice-astral_imprisonment": "responses/set_01/outworld_devourer/outworld_devourer_astral_imprisonment.mp3",
+  "voice-ball_lightning": "responses/set_01/storm_spirit/storm_spirit_ball_lightning.mp3",
+  "voice-barracks": "responses/set_01/prellex/prellex_barracks_intro.mp3",
+  "voice-berserkers_call": "responses/set_01/axe/axe_berserkers_call.mp3",
+  "voice-blood_rage": "responses/set_01/bloodseeker/bloodseeker_blood_rage.mp3",
+  "voice-chain_frost": "responses/set_01/lich/lich_chain_frost.mp3",
+  "voice-dark_willow_bramble_maze": "https://static.wikia.nocookie.net/dota2_gamepedia/images/4/4c/Vo_dark_willow_sylph_ability1_01.mp3/revision/latest?cb=20201010205147",
+  "voice-dark_willow_terrorize": "https://static.wikia.nocookie.net/dota2_gamepedia/images/5/54/Vo_dark_willow_sylph_ability4_11.mp3/revision/latest?cb=20201010201656",
+  "voice-divided_we_stand": "responses/set_01/meepo/meepo_divided_we_stand.mp3",
+  "voice-double_edge": "responses/set_01/centaur_warrunner/centaur_warrunner_double_edge.mp3",
+  "voice-duel": "responses/set_01/legion_commander/legion_commander_duel_intro.mp3",
+  "voice-echo_slam": "responses/set_01/earthshaker/earthshaker_echo_slam.mp3",
+  "voice-eclipse": "responses/set_01/luna/luna_eclipse_intro.mp3",
+  "voice-empower": "responses/set_01/magnus/magnus_empower_intro.mp3",
+  "voice-enrage": "responses/set_01/ursa/ursa_enrage.mp3",
+  "voice-frostbite": "responses/set_01/crystal_maiden/crystal_maiden_frostbite_intro.mp3",
+  "voice-gods_strength": "responses/set_01/sven/sven_gods_strength.mp3",
+  "voice-gust": "responses/set_01/drow_ranger/drow_ranger_gust.mp3",
+  "voice-hand_of_god": "responses/set_01/chen/chen_hand_of_god.mp3",
+  "voice-heartstopper_aura": "responses/set_01/necrophos/necrophos_heartstopper_aura.mp3",
+  "voice-hero-dark_willow": "https://static.wikia.nocookie.net/dota2_gamepedia/images/3/37/Vo_dark_willow_sylph_spawn_03.mp3/revision/latest?cb=20201010205006",
+  "voice-hero-monkey_king": "https://static.wikia.nocookie.net/dota2_gamepedia/images/4/49/Vo_monkey_king_monkey_spawn_01.mp3/revision/latest?cb=20201017125601",
+  "voice-hero-pangolier": "https://static.wikia.nocookie.net/dota2_gamepedia/images/e/e7/Vo_pangolin_pangolin_spawn_03.mp3/revision/latest?cb=20200524132428",
+  "voice-ignite": "responses/set_01/ogre_magi/ogre_magi_ignite.mp3",
+  "voice-ion_shell": "responses/set_01/dark_seer/dark_seer_ion_shell_intro.mp3",
+  "voice-kraken_shell": "responses/set_01/tidehunter/tidehunter_kraken_shell_intro.mp3",
+  "voice-mana_drain": "responses/set_01/lion/lion_mana_drain_intro.mp3",
+  "voice-march_of_the_machines": "responses/set_01/tinker/tinker_march_of_the_machines.mp3",
+  "voice-monkey_king_command": "https://static.wikia.nocookie.net/dota2_gamepedia/images/a/a1/Vo_monkey_king_monkey_ability5_05.mp3/revision/latest?cb=20201017114610",
+  "voice-mystic_flare": "responses/set_01/skywrath_mage/skywrath_mage_mystic_flare.mp3",
+  "voice-nether_ward": "responses/set_01/pugna/pugna_nether_ward.mp3",
+  "voice-pangolier_gyroshell": "https://static.wikia.nocookie.net/dota2_gamepedia/images/9/91/Vo_pangolin_pangolin_ability4_10.mp3/revision/latest?cb=20200524130847",
+  "voice-pangolier_lucky_shot": "https://static.wikia.nocookie.net/dota2_gamepedia/images/e/ef/Vo_pangolin_pangolin_ability3_01.mp3/revision/latest?cb=20200524130831",
+  "voice-prey_on_the_weak": "responses/set_01/kanna/kanna_prey_on_the_weak_intro.mp3",
+  "voice-primal_roar": "responses/set_01/beastmaster/beastmaster_primal_roar.mp3",
+  "voice-savage_wolf": "responses/set_01/lycan/lycan_savage_wolf.mp3",
+  "voice-sow_venom": "responses/set_01/venomancer/venomancer_sow_venom.mp3",
+  "voice-thundergods_wrath": "responses/set_01/zeus/zeus_thundergods_wrath_intro.mp3",
+  "voice-track": "responses/set_01/bounty_hunter/bounty_hunter_track.mp3",
+  "voice-verdant_refuge": "responses/set_01/enchantress/enchantress_verdant_refuge.mp3",
+  "voice-viper_strike": "responses/set_01/viper/viper_viper_strike.mp3",
+  "voice-whirling_death": "responses/set_01/timbersaw/timbersaw_whirling_death.mp3",
+  "voice-winters_curse": "responses/set_01/winter_wyvern/winter_wyvern_winters_curse.mp3"
+ },
+ "unmatchedAbilities": [
+  "jmuy_the_wise",
+  "sister_of_the_veil",
+  "rebel_decoy",
+  "mercenary_exiles",
+  "emissary_of_the_quorum",
+  "assassins_apprentice",
+  "satyr_magician",
+  "unsupervised_artillery",
+  "revtel_investments",
+  "escape_route",
+  "messenger_rookery",
+  "assassins_veil",
+  "phase_boots",
+  "rumusque_vestments",
+  "keenfolk_musket"
+ ],
+ "unmatchedSpells": [
+  "and_one_for_me",
+  "rolling_storm",
+  "lodestone_demolition",
+  "thundergods_wrath",
+  "double_edge",
+  "arcane_censure",
+  "defensive_stance",
+  "defend_the_weak",
+  "combat_training",
+  "self_sabotage",
+  "raze",
+  "foresight",
+  "arm_the_rebellion",
+  "poised_to_strike",
+  "dirty_deeds",
+  "spot_weakness",
+  "iron_branch_protection",
+  "heroic_resolve",
+  "wrath_of_gold",
+  "stars_align",
+  "better_late_than_never",
+  "rising_anger",
+  "lightning_strike",
+  "restoration_effort",
+  "coordinated_assault",
+  "new_orders",
+  "avernus_blessing",
+  "fight_through_the_pain",
+  "soul_of_spring",
+  "cleansing_rite",
+  "tresdins_standards",
+  "compel",
+  "tower_barrage",
+  "steal_strength",
+  "collateral_damage",
+  "spring_the_trap",
+  "crippling_blow",
+  "whispers_of_madness"
+ ]
 }
