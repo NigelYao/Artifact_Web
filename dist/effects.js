@@ -5,8 +5,8 @@ const {Game,clone}=root.ArtifactEngine;
 const G=Game.prototype;
 const previousTargets=G.targets;
 G.targets=function(k,p,source=null){
- if(!source){if(k==='pangolier_lucky_shot')return [{kind:'unit',side:'enemy'}];if(k==='dark_willow_bramble_maze')return [];if(k==='pangolier_gyroshell')return [{kind:'position',cross:false,free:true}];if(k==='dark_willow_terrorize')return [{kind:'position',cross:false,free:true,occupied:true}];}
- if(source){if(['tinker','cheating_death'].includes(k))return [{kind:'unit',side:'any'}];if(k==='winter_wyvern')return [{kind:'position',cross:false}];}
+ if(!source){if(k==='pangolier_lucky_shot')return [{kind:'unit',side:'enemy'}];if(k==='dark_willow_bramble_maze')return [];if(k==='monkey_king_command')return [];if(k==='pangolier_gyroshell')return [{kind:'position',cross:false,free:true}];if(k==='dark_willow_terrorize')return [{kind:'position',cross:false,free:true,occupied:true}];}
+ if(source){if(['tinker','cheating_death','monkey_king'].includes(k))return [{kind:'unit',side:'any'}];if(k==='monkey_king_spring')return [{kind:'position',cross:false,free:true}];if(k==='winter_wyvern')return [{kind:'position',cross:false}];}
  if(!source){if(k==='shop_deed')return [];if(k==='gust')return [{kind:'unit',side:'enemy',hero:true}];if(['arm_the_rebellion','routed'].includes(k))return [];if(k==='astral_imprisonment')return [{kind:'unit',side:'any'}];}
  return previousTargets.call(this,k,p,source);
 };
@@ -46,6 +46,7 @@ G.resolve=function(k,p,t,h){
  case 'pangolier_gyroshell':{const u=this.named(p,'pangolier',l).find(v=>this.canMove(v));if(!u)throw Error('本路需要可行动且未被缠绕的石鳞剑士');this.rollThunder(u,t[0]);break;}
  case 'dark_willow_bramble_maze':{const max=Math.max(0,...units().map(u=>u.pos),...(this.s.jex||[]).filter(j=>j.lane===l).map(j=>j.pos));for(let pos=0;pos<=max;pos++)if(!this.at(p,l,pos)){const flower=this.spawn('dark_willow_bramble',p,l,pos);flower.expiresRound=this.s.round;}break;}
  case 'dark_willow_terrorize':{const pos=t[0].pos,flower=this.at(p,l,pos);(this.s.jex||=[]).push({uid:this.id(),owner:p,lane:l,pos,enhanced:flower?.k==='dark_willow_bramble',createdBy:h.uid});this.emit('jex-summon','杰克斯等待下一张技能牌',{owner:p,lane:l,pos,enhanced:flower?.k==='dark_willow_bramble'});break;}
+ case 'monkey_king_command':{for(const pos of this.positionTargets(p,l,{free:true}))this.spawn('monkey_soldier',p,l,pos);break;}
  case 'and_one_for_me':{const i=this.pick(Object.values(a.items));if(!i)throw Error('目标英雄没有装备');pl.hand.push({uid:this.id(),k:i.k,lock:0});break;}
  case 'act_of_defiance':buff(a,{silence:1},'round');break;
  case 'allseeing_ones_favor':buff(a,{auraRegen:2});break;
@@ -175,7 +176,7 @@ G.resolve=function(k,p,t,h){
  }
 };
 G.taunt=function(u){for(const e of this.neighbors(u,true)){e.target=u.uid;e.arrow=u.pos-e.pos;}};
-G.abilities=function(u){const a=[];const c=this.card(u.k);if(c.abilities?.length)a.push({k:u.k,...c.abilities[0],remaining:u.cooldowns?.[u.k]||u.cooldown||0});for(const it of Object.values(u.items||{})){const c=this.card(it.k);if(c.abilities?.length)a.push({k:it.k,...c.abilities[0],remaining:u.cooldowns?.[it.k]||0});}return a;};
+G.abilities=function(u){const a=[];const c=this.card(u.k);for(const ab of c?.abilities||[])a.push({k:ab.key||u.k,...ab,remaining:u.cooldowns?.[ab.key||u.k]||u.cooldown||0});for(const it of Object.values(u.items||{})){const c=this.card(it.k);if(c.abilities?.length)a.push({k:it.k,...c.abilities[0],remaining:u.cooldowns?.[it.k]||0});}return a;};
 // Read-only availability for both hero icons and equipment controls.
 G.canActivate=function(p,uid,k){
  if(!this.s||this.s.phase!=='action'||this.s.turn!==p)return '尚未轮到你行动';
@@ -184,12 +185,13 @@ G.canActivate=function(p,uid,k){
  if(u.hero!==undefined&&(u.owner!==p||u.lane!==l||!this.enabled(u)))return '该单位当前无法使用技能';
  const a=this.abilities(u).find(a=>a.k===k);if(!a)return '这是自动生效的被动技能';
  if(a.remaining>0)return '冷却剩余 '+a.remaining+' 回合';
- if(['blink_dagger','winter_wyvern','meepo','phase_boots'].includes(k)&&!this.canMove(u))return '缠绕期间无法移动';
+ if(['blink_dagger','winter_wyvern','meepo','phase_boots','monkey_king_spring'].includes(k)&&!this.canMove(u))return '缠绕期间无法移动';
  if(k==='dark_willow'&&this.flag(u,'shadowRealm'))return '已经处于暗影之境';
+ if(k==='monkey_king'&&(u.charges||0)<3)return '棒击蓄势需要 3 点能量（当前 '+(u.charges||0)+' 点）';
  if(['pugna','demagicking_maul'].includes(k)&&!this.imps(1-p,l).length)return '敌方没有强化';
  if(k==='demagicking_maul'&&this.target(u))return '英雄被阻挡，无法使用';
  if(k==='meepo'&&!this.all(p).some(v=>v.k==='meepo'&&v.lane!==l))return '其他战线没有友方米波';
- if(!this.candidateTargets(k,p,u).some(t=>{try{this.validateTargets(this.card(k),p,t,u);return !(k==='dark_seer'&&t[1]===l)&&!(k==='blink_dagger'&&t[0]===l);}catch{return false;}}))return '没有可选择的有效目标';
+ if(!this.candidateTargets(k,p,u).some(t=>{try{this.validateTargets({key:k},p,t,u);return !(k==='dark_seer'&&t[1]===l)&&!(k==='blink_dagger'&&t[0]===l);}catch{return false;}}))return '没有可选择的有效目标';
  return '';
 };
 G.activate=function(p,uid,k,t=[]){const backup=clone(this.s);try{
@@ -198,10 +200,14 @@ G.activate=function(p,uid,k,t=[]){const backup=clone(this.s);try{
  if(!imp&&(u.owner!==p||u.lane!==l||!this.enabled(u)))throw Error('该单位当前无法使用技能');
  const ability=this.abilities(u).find(a=>a.k===k);if(!ability||ability.remaining>0)throw Error('技能尚在冷却');
  if(k==='dark_willow'&&this.flag(u,'shadowRealm'))throw Error('已经处于暗影之境');
- this.validateTargets(this.card(k),p,t,u);const a=this.get(t[0]),b=this.get(t[1]),it=Object.values(u.items||{}).find(i=>i.k===k);
- this.emit('ability',this.card(u.k).name+' · '+ability.name,{unit:uid,card:k});
+ if(k==='monkey_king'&&(u.charges||0)<3)throw Error('棒击蓄势需要 3 点能量');
+ if(k==='monkey_king_spring'&&!this.canMove(u))throw Error('缠绕或翻牌期间无法移动');
+ this.validateTargets({key:k},p,t,u);const a=this.get(t[0]),b=this.get(t[1]),it=Object.values(u.items||{}).find(i=>i.k===k);
+ this.emit('ability',this.card(u.k).name+' · '+ability.name,{unit:uid,card:this.card(k)?k:u.k,skill:k});
  switch(k){
  case 'pangolier':{let shield=0;for(const v of this.neighbors(u,true))if(this.damage(v,2,false,u.uid)>0)shield+=v.hero?2:1;if(shield)this.buff(u,{shield},'round');this.emit('shield-crash','甲盾冲击 · 护盾 '+shield,{unit:u.uid,owner:p,lane:l,shield});break;}
+ case 'monkey_king':{u.charges-=3;this.damage(a,4,false,u.uid);this.s.players[p].monkeyBonus=(this.s.players[p].monkeyBonus||0)+1;this.emit('buff','此后召唤的猴子猴孙攻击永久 +1（当前 +'+this.s.players[p].monkeyBonus+'）',{unit:u.uid});break;}
+ case 'monkey_king_spring':{const from=u.pos;this.move(u,t[0].lane,t[0].pos);this.spawn('monkey_soldier',p,l,from);break;}
  case 'dark_willow':this.buff(u,{shadowRealm:1,shadowBonus:1},'death');break;
  case 'abaddon':this.heal(u,999);this.buff(u,{immune:1},'round');break;
  case 'beastmaster':this.spawn('loyal_beast',p,l);break;

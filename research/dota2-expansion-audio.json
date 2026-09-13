@@ -1,0 +1,238 @@
+{
+  "retrieved": "2026-09-12",
+  "copyright": "Valve Corporation",
+  "source": "Dota 2 Wiki (dota2.fandom.com), hosted on static.wikia.nocookie.net",
+  "files": [
+    {
+      "section": "abilities",
+      "key": "pangolier",
+      "slot": "voice",
+      "ident": "voice-ability-pangolier",
+      "title": "vo_pangolin_pangolin_ability2_03.mp3",
+      "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/5/57/Vo_pangolin_pangolin_ability2_03.mp3/revision/latest?cb=20200524130823",
+      "file": "dist/assets/sfx/action/voice-ability-pangolier.mp3",
+      "sha256": "b45421eddd6575b1e2acd9f34982a7c7533e8ac35c0d5f6f6c3f696207f3a266",
+      "bytes": 14697
+    },
+    {
+      "section": "abilities",
+      "key": "pangolier",
+      "slot": "effect",
+      "ident": "abilities-pangolier",
+      "title": "Shield Crash with buff.mp3",
+      "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/3/36/Shield_Crash_with_buff.mp3/revision/latest?cb=20171106120157",
+      "file": "dist/assets/sfx/action/abilities-pangolier.mp3",
+      "sha256": "b685628885f09cbb461cee8ef2133b92e05bbfc9f5e1054487ea27cebfc6280d",
+      "bytes": 32226
+    },
+    {
+      "section": "cards",
+      "key": "pangolier_lucky_shot",
+      "slot": "voice",
+      "ident": "voice-pangolier_lucky_shot",
+      "title": "vo_pangolin_pangolin_ability3_01.mp3",
+      "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/e/ef/Vo_pangolin_pangolin_ability3_01.mp3/revision/latest?cb=20200524130831",
+      "file": "dist/assets/sfx/action/voice-pangolier_lucky_shot.mp3",
+      "sha256": "e19a058bed7a3f4959ec075dae352c826765168ad7d905eb415daead77f6e94c",
+      "bytes": 26400
+    },
+    {
+      "section": "cards",
+      "key": "pangolier_lucky_shot",
+      "slot": "effect",
+      "ident": "cards-pangolier_lucky_shot",
+      "title": "Crit3.mp3",
+      "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/8/8d/Crit3.mp3/revision/latest?cb=20171104031814",
+      "file": "dist/assets/sfx/action/cards-pangolier_lucky_shot.mp3",
+      "sha256": "3cc16e98743ada0d3453277b76cac1feb73be29dcd2c3cfb7360b8c69f69996b",
+      "bytes": 83753
+    },
+    {
+      "section": "cards",
+      "key": "pangolier_gyroshell",
+      "slot": "voice",
+      "ident": "voice-pangolier_gyroshell",
+      "title": "vo_pangolin_pangolin_ability4_10.mp3",
+      "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/9/91/Vo_pangolin_pangolin_ability4_10.mp3/revision/latest?cb=20200524130847",
+      "file": "dist/assets/sfx/action/voice-pangolier_gyroshell.mp3",
+      "sha256": "7a948ff7a5a6564ae4639037a528819842551d1c6f3b259330a9b4a52ffcda82",
+      "bytes": 24310
+    },
+    {
+      "section": "cards",
+      "key": "pangolier_gyroshell",
+      "slot": "effect",
+      "ident": "cards-pangolier_gyroshell",
+      "title": "Rolling Thunder cast.mp3",
+      "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/f/f7/Rolling_Thunder_cast.mp3/revision/latest?cb=20171104032001",
+      "file": "dist/assets/sfx/action/cards-pangolier_gyroshell.mp3",
+      "sha256": "2ef3398fc7af774393343cdb8c389c2daecea5f6bda57b566f6a81a7ae05ffcf",
+      "bytes": 89605
+    },
+    {
+      "section": "heroes",
+      "key": "pangolier",
+      "slot": "voice",
+      "ident": "voice-hero-pangolier",
+      "title": "vo_pangolin_pangolin_spawn_03.mp3",
+      "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/e/e7/Vo_pangolin_pangolin_spawn_03.mp3/revision/latest?cb=20200524132428",
+      "file": "dist/assets/sfx/action/voice-hero-pangolier.mp3",
+      "sha256": "b6a682c830d2e2fe2fdf30a9d4fbfaecdd5b8fb0bd6551e6c7e7347bb5c57ac5",
+      "bytes": 36847
+    },
+    {
+      "section": "abilities",
+      "key": "dark_willow",
+      "slot": "voice",
+      "ident": "voice-ability-dark_willow",
+      "title": "vo_dark_willow_sylph_ability2_01.mp3",
+      "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/3/31/Vo_dark_willow_sylph_ability2_01.mp3/revision/latest?cb=20201010201539",
+      "file": "dist/assets/sfx/action/voice-ability-dark_willow.mp3",
+      "sha256": "7cede4e49a57bf7194f5ed12adc83b5d60f409fde1192a3317f52487163b449b",
+      "bytes": 23053
+    },
+    {
+      "section": "abilities",
+      "key": "dark_willow",
+      "slot": "effect",
+      "ident": "abilities-dark_willow",
+      "title": "Shadow Realm.mp3",
+      "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/5/51/Shadow_Realm.mp3/revision/latest?cb=20190530174715",
+      "file": "dist/assets/sfx/action/abilities-dark_willow.mp3",
+      "sha256": "14d461fd43d4e208cbbb991344290b2800ce7dbba1fef51a01c9a0888634c19a",
+      "bytes": 95293
+    },
+    {
+      "section": "cards",
+      "key": "dark_willow_bramble_maze",
+      "slot": "voice",
+      "ident": "voice-dark_willow_bramble_maze",
+      "title": "vo_dark_willow_sylph_ability1_01.mp3",
+      "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/4/4c/Vo_dark_willow_sylph_ability1_01.mp3/revision/latest?cb=20201010205147",
+      "file": "dist/assets/sfx/action/voice-dark_willow_bramble_maze.mp3",
+      "sha256": "6bccb15eb6a59c547929e7e805094c5f8319dd67e5543be3bc2f7c269db85657",
+      "bytes": 17201
+    },
+    {
+      "section": "cards",
+      "key": "dark_willow_bramble_maze",
+      "slot": "effect",
+      "ident": "cards-dark_willow_bramble_maze",
+      "title": "Bramble Maze cast.mp3",
+      "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/1/12/Bramble_Maze_cast.mp3/revision/latest?cb=20171105022149",
+      "file": "dist/assets/sfx/action/cards-dark_willow_bramble_maze.mp3",
+      "sha256": "eed2b55ef9b6992fa1a5bbea4aec2139242c974f20a273a64c9919edef7069ea",
+      "bytes": 110503
+    },
+    {
+      "section": "cards",
+      "key": "dark_willow_terrorize",
+      "slot": "voice",
+      "ident": "voice-dark_willow_terrorize",
+      "title": "vo_dark_willow_sylph_ability4_11.mp3",
+      "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/5/54/Vo_dark_willow_sylph_ability4_11.mp3/revision/latest?cb=20201010201656",
+      "file": "dist/assets/sfx/action/voice-dark_willow_terrorize.mp3",
+      "sha256": "15803b665ddd58ecc05d3cb213a507024d7064f8f9ffd60a0b3d7e777b99ec09",
+      "bytes": 28487
+    },
+    {
+      "section": "cards",
+      "key": "dark_willow_terrorize",
+      "slot": "effect",
+      "ident": "cards-dark_willow_terrorize",
+      "title": "Terrorize cast.mp3",
+      "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/1/1e/Terrorize_cast.mp3/revision/latest?cb=20171105022409",
+      "file": "dist/assets/sfx/action/cards-dark_willow_terrorize.mp3",
+      "sha256": "e0dec3c4be32d58c88d35851b778b6c5a4f6e868769eb3a5ccc555989876de97",
+      "bytes": 84589
+    },
+    {
+      "section": "heroes",
+      "key": "dark_willow",
+      "slot": "voice",
+      "ident": "voice-hero-dark_willow",
+      "title": "vo_dark_willow_sylph_spawn_03.mp3",
+      "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/3/37/Vo_dark_willow_sylph_spawn_03.mp3/revision/latest?cb=20201010205006",
+      "file": "dist/assets/sfx/action/voice-hero-dark_willow.mp3",
+      "sha256": "86ae5835a59601fc16968a242a5d02c654c12252564d061549fad8520a0e6021",
+      "bytes": 27231
+    },
+    {
+      "section": "abilities",
+      "key": "monkey_king",
+      "slot": "voice",
+      "ident": "voice-ability-monkey_king",
+      "title": "vo_monkey_king_monkey_ability2_01.mp3",
+      "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/b/b5/Vo_monkey_king_monkey_ability2_01.mp3/revision/latest?cb=20201017114533",
+      "file": "dist/assets/sfx/action/voice-ability-monkey_king.mp3",
+      "sha256": "166a84fe3a4e7277a2729a9a0b839c2981246c57fe8900b73f992ad9566f8a64",
+      "bytes": 31831
+    },
+    {
+      "section": "abilities",
+      "key": "monkey_king",
+      "slot": "effect",
+      "ident": "abilities-monkey_king",
+      "title": "Boundless Strike cast 1.mp3",
+      "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/d/d5/Boundless_Strike_cast_1.mp3/revision/latest?cb=20161216023914",
+      "file": "dist/assets/sfx/action/abilities-monkey_king.mp3",
+      "sha256": "615b9b882552149361b48c7b3b5261753865c1e46c0b0b6ed9aeaba232882a60",
+      "bytes": 81536
+    },
+    {
+      "section": "abilities",
+      "key": "monkey_king_spring",
+      "slot": "voice",
+      "ident": "voice-ability-monkey_king_spring",
+      "title": "vo_monkey_king_monkey_ability1_03.mp3",
+      "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/0/0a/Vo_monkey_king_monkey_ability1_03.mp3/revision/latest?cb=20201017114514",
+      "file": "dist/assets/sfx/action/voice-ability-monkey_king_spring.mp3",
+      "sha256": "592546a722b5fc5cea0ea95aa2097ee86564eb785562cdf516d5c7ff9f5bfd84",
+      "bytes": 20547
+    },
+    {
+      "section": "abilities",
+      "key": "monkey_king_spring",
+      "slot": "effect",
+      "ident": "abilities-monkey_king_spring",
+      "title": "Tree Dance cast 1.mp3",
+      "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/5/51/Tree_Dance_cast_1.mp3/revision/latest?cb=20161216024104",
+      "file": "dist/assets/sfx/action/abilities-monkey_king_spring.mp3",
+      "sha256": "50be6f09358fcef7081821e6a78b466c1bc7b83f09d7ddf066f564bdc30ac307",
+      "bytes": 52864
+    },
+    {
+      "section": "cards",
+      "key": "monkey_king_command",
+      "slot": "voice",
+      "ident": "voice-monkey_king_command",
+      "title": "vo_monkey_king_monkey_ability5_05.mp3",
+      "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/a/a1/Vo_monkey_king_monkey_ability5_05.mp3/revision/latest?cb=20201017114610",
+      "file": "dist/assets/sfx/action/voice-monkey_king_command.mp3",
+      "sha256": "5255f7af073607a6ebdef7b1c082d0fab2f2ae504cb307286aae8a1443a88472",
+      "bytes": 61925
+    },
+    {
+      "section": "cards",
+      "key": "monkey_king_command",
+      "slot": "effect",
+      "ident": "cards-monkey_king_command",
+      "title": "Wukong's Command cast.mp3",
+      "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/8/8c/Wukong%27s_Command_cast.mp3/revision/latest?cb=20161216023848",
+      "file": "dist/assets/sfx/action/cards-monkey_king_command.mp3",
+      "sha256": "1ac427531bb64a93e0a7ec1bb9066f88c20aaf4417e4eef0ff642ff0c99307d4",
+      "bytes": 48544
+    },
+    {
+      "section": "heroes",
+      "key": "monkey_king",
+      "slot": "voice",
+      "ident": "voice-hero-monkey_king",
+      "title": "vo_monkey_king_monkey_spawn_01.mp3",
+      "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/4/49/Vo_monkey_king_monkey_spawn_01.mp3/revision/latest?cb=20201017125601",
+      "file": "dist/assets/sfx/action/voice-hero-monkey_king.mp3",
+      "sha256": "883841bb1a89d6f9ce916b3bcc73d678e4f53586cfbc72c29f9232cd9c9e64e0",
+      "bytes": 29740
+    }
+  ]
+}

@@ -13,6 +13,7 @@ fixture.s.lanes[0].mana=[50,50];fixture.s.players[1].hand=[];
 fixture.s.players[0].hand=['pangolier_lucky_shot','pangolier_gyroshell','dark_willow_bramble_maze','dark_willow_terrorize','defensive_stance','grazing_shot'].map(k=>({uid:fixture.id(),k,lock:0}));
 const mode=new URLSearchParams(location.search).get('case');
 if(mode==='states'){fixture.buff(enemy,{flipped:1},'round');fixture.buff(pango,{shield:4},'round');fixture.buff(willow,{shadowRealm:1,shadowBonus:3},'death');fixture.spawn('dark_willow_bramble',0,0,1);fixture.s.jex=[{uid:fixture.id(),owner:0,lane:0,pos:1,enhanced:true,createdBy:0}];}
+if(mode==='monkey'){fixture.s.units=[];const mk=fixture.spawn('monkey_king',0,0,0);fixture.spawn('axe',0,0,3);mk.charges=2;fixture.spawn('monkey_soldier',0,0,1);fixture.spawn('dark_willow',1,0,1);fixture.spawn('melee_creep',1,0,0);fixture.spawn('melee_creep',1,0,2);for(let p=0;p<2;p++)fixture.s.players[p].heroes=fixture.all(p).filter(u=>u.hero).map(u=>u.k);fixture.s.players[0].hand=['monkey_king_command','monkey_king_command','grazing_shot'].map(k=>({uid:fixture.id(),k,lock:0}));for(const u of fixture.all())u.cooldowns={};}
 fixture.s.events=[];localStorage.setItem('artifact.match',JSON.stringify(fixture.s));localStorage.setItem('artifact.settings',JSON.stringify({muted:true,speed:1}));
 ArtifactEngine.Game.prototype.bestAction=()=>null;
 </script>

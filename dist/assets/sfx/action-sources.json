@@ -517,6 +517,26 @@
     "ball_lightning": {
       "effect": "cards-ball_lightning",
       "voice": "voice-ball_lightning"
+    },
+    "pangolier_lucky_shot": {
+      "voice": "voice-pangolier_lucky_shot",
+      "effect": "cards-pangolier_lucky_shot"
+    },
+    "pangolier_gyroshell": {
+      "voice": "voice-pangolier_gyroshell",
+      "effect": "cards-pangolier_gyroshell"
+    },
+    "dark_willow_bramble_maze": {
+      "voice": "voice-dark_willow_bramble_maze",
+      "effect": "cards-dark_willow_bramble_maze"
+    },
+    "dark_willow_terrorize": {
+      "voice": "voice-dark_willow_terrorize",
+      "effect": "cards-dark_willow_terrorize"
+    },
+    "monkey_king_command": {
+      "voice": "voice-monkey_king_command",
+      "effect": "cards-monkey_king_command"
     }
   },
   "abilities": {
@@ -626,6 +646,22 @@
     },
     "apotheosis_blade": {
       "effect": "abilities-apotheosis_blade"
+    },
+    "pangolier": {
+      "voice": "voice-ability-pangolier",
+      "effect": "abilities-pangolier"
+    },
+    "dark_willow": {
+      "voice": "voice-ability-dark_willow",
+      "effect": "abilities-dark_willow"
+    },
+    "monkey_king": {
+      "voice": "voice-ability-monkey_king",
+      "effect": "abilities-monkey_king"
+    },
+    "monkey_king_spring": {
+      "voice": "voice-ability-monkey_king_spring",
+      "effect": "abilities-monkey_king_spring"
     }
   },
   "samples": {
@@ -806,7 +842,28 @@
     "cards-at_any_cost": "action/cards-at_any_cost.wav",
     "cards-time_of_triumph": "action/cards-time_of_triumph.wav",
     "cards-ball_lightning": "action/cards-ball_lightning.wav",
-    "voice-ball_lightning": "action/voice-ball_lightning.mp3"
+    "voice-ball_lightning": "action/voice-ball_lightning.mp3",
+    "voice-ability-pangolier": "action/voice-ability-pangolier.mp3",
+    "abilities-pangolier": "action/abilities-pangolier.mp3",
+    "voice-pangolier_lucky_shot": "action/voice-pangolier_lucky_shot.mp3",
+    "cards-pangolier_lucky_shot": "action/cards-pangolier_lucky_shot.mp3",
+    "voice-pangolier_gyroshell": "action/voice-pangolier_gyroshell.mp3",
+    "cards-pangolier_gyroshell": "action/cards-pangolier_gyroshell.mp3",
+    "voice-hero-pangolier": "action/voice-hero-pangolier.mp3",
+    "voice-ability-dark_willow": "action/voice-ability-dark_willow.mp3",
+    "abilities-dark_willow": "action/abilities-dark_willow.mp3",
+    "voice-dark_willow_bramble_maze": "action/voice-dark_willow_bramble_maze.mp3",
+    "cards-dark_willow_bramble_maze": "action/cards-dark_willow_bramble_maze.mp3",
+    "voice-dark_willow_terrorize": "action/voice-dark_willow_terrorize.mp3",
+    "cards-dark_willow_terrorize": "action/cards-dark_willow_terrorize.mp3",
+    "voice-hero-dark_willow": "action/voice-hero-dark_willow.mp3",
+    "voice-ability-monkey_king": "action/voice-ability-monkey_king.mp3",
+    "abilities-monkey_king": "action/abilities-monkey_king.mp3",
+    "voice-ability-monkey_king_spring": "action/voice-ability-monkey_king_spring.mp3",
+    "abilities-monkey_king_spring": "action/abilities-monkey_king_spring.mp3",
+    "voice-monkey_king_command": "action/voice-monkey_king_command.mp3",
+    "cards-monkey_king_command": "action/cards-monkey_king_command.mp3",
+    "voice-hero-monkey_king": "action/voice-hero-monkey_king.mp3"
   },
   "sources": {
     "equipment-weapon": "effects/set_00/items/weapon_mid_01.wav",
@@ -986,7 +1043,28 @@
     "cards-at_any_cost": "effects/set_01/spells/at_any_cost.wav",
     "cards-time_of_triumph": "effects/set_01/spells/time_of_triumph.wav",
     "cards-ball_lightning": "effects/set_01/spells/ball_lightning.wav",
-    "voice-ball_lightning": "responses/set_01/storm_spirit/storm_spirit_ball_lightning.mp3"
+    "voice-ball_lightning": "responses/set_01/storm_spirit/storm_spirit_ball_lightning.mp3",
+    "voice-ability-pangolier": "https://static.wikia.nocookie.net/dota2_gamepedia/images/5/57/Vo_pangolin_pangolin_ability2_03.mp3/revision/latest?cb=20200524130823",
+    "abilities-pangolier": "https://static.wikia.nocookie.net/dota2_gamepedia/images/3/36/Shield_Crash_with_buff.mp3/revision/latest?cb=20171106120157",
+    "voice-pangolier_lucky_shot": "https://static.wikia.nocookie.net/dota2_gamepedia/images/e/ef/Vo_pangolin_pangolin_ability3_01.mp3/revision/latest?cb=20200524130831",
+    "cards-pangolier_lucky_shot": "https://static.wikia.nocookie.net/dota2_gamepedia/images/8/8d/Crit3.mp3/revision/latest?cb=20171104031814",
+    "voice-pangolier_gyroshell": "https://static.wikia.nocookie.net/dota2_gamepedia/images/9/91/Vo_pangolin_pangolin_ability4_10.mp3/revision/latest?cb=20200524130847",
+    "cards-pangolier_gyroshell": "https://static.wikia.nocookie.net/dota2_gamepedia/images/f/f7/Rolling_Thunder_cast.mp3/revision/latest?cb=20171104032001",
+    "voice-hero-pangolier": "https://static.wikia.nocookie.net/dota2_gamepedia/images/e/e7/Vo_pangolin_pangolin_spawn_03.mp3/revision/latest?cb=20200524132428",
+    "voice-ability-dark_willow": "https://static.wikia.nocookie.net/dota2_gamepedia/images/3/31/Vo_dark_willow_sylph_ability2_01.mp3/revision/latest?cb=20201010201539",
+    "abilities-dark_willow": "https://static.wikia.nocookie.net/dota2_gamepedia/images/5/51/Shadow_Realm.mp3/revision/latest?cb=20190530174715",
+    "voice-dark_willow_bramble_maze": "https://static.wikia.nocookie.net/dota2_gamepedia/images/4/4c/Vo_dark_willow_sylph_ability1_01.mp3/revision/latest?cb=20201010205147",
+    "cards-dark_willow_bramble_maze": "https://static.wikia.nocookie.net/dota2_gamepedia/images/1/12/Bramble_Maze_cast.mp3/revision/latest?cb=20171105022149",
+    "voice-dark_willow_terrorize": "https://static.wikia.nocookie.net/dota2_gamepedia/images/5/54/Vo_dark_willow_sylph_ability4_11.mp3/revision/latest?cb=20201010201656",
+    "cards-dark_willow_terrorize": "https://static.wikia.nocookie.net/dota2_gamepedia/images/1/1e/Terrorize_cast.mp3/revision/latest?cb=20171105022409",
+    "voice-hero-dark_willow": "https://static.wikia.nocookie.net/dota2_gamepedia/images/3/37/Vo_dark_willow_sylph_spawn_03.mp3/revision/latest?cb=20201010205006",
+    "voice-ability-monkey_king": "https://static.wikia.nocookie.net/dota2_gamepedia/images/b/b5/Vo_monkey_king_monkey_ability2_01.mp3/revision/latest?cb=20201017114533",
+    "abilities-monkey_king": "https://static.wikia.nocookie.net/dota2_gamepedia/images/d/d5/Boundless_Strike_cast_1.mp3/revision/latest?cb=20161216023914",
+    "voice-ability-monkey_king_spring": "https://static.wikia.nocookie.net/dota2_gamepedia/images/0/0a/Vo_monkey_king_monkey_ability1_03.mp3/revision/latest?cb=20201017114514",
+    "abilities-monkey_king_spring": "https://static.wikia.nocookie.net/dota2_gamepedia/images/5/51/Tree_Dance_cast_1.mp3/revision/latest?cb=20161216024104",
+    "voice-monkey_king_command": "https://static.wikia.nocookie.net/dota2_gamepedia/images/a/a1/Vo_monkey_king_monkey_ability5_05.mp3/revision/latest?cb=20201017114610",
+    "cards-monkey_king_command": "https://static.wikia.nocookie.net/dota2_gamepedia/images/8/8c/Wukong%27s_Command_cast.mp3/revision/latest?cb=20161216023848",
+    "voice-hero-monkey_king": "https://static.wikia.nocookie.net/dota2_gamepedia/images/4/49/Vo_monkey_king_monkey_spawn_01.mp3/revision/latest?cb=20201017125601"
   },
   "unmatchedAbilities": [
     "jmuy_the_wise",
@@ -1044,5 +1122,16 @@
     "spring_the_trap",
     "crippling_blow",
     "whispers_of_madness"
-  ]
+  ],
+  "heroes": {
+    "pangolier": {
+      "voice": "voice-hero-pangolier"
+    },
+    "dark_willow": {
+      "voice": "voice-hero-dark_willow"
+    },
+    "monkey_king": {
+      "voice": "voice-hero-monkey_king"
+    }
+  }
 }
