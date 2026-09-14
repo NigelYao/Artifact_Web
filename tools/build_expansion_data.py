@@ -65,8 +65,8 @@ def expansion_cards():
     add('proximity_mines', '感应地雷', 'Proximity Mines', 'Spell', 'Red', mana=4,
         signatureOf='techies',
         art=ART+'techies_proximity_mines.png',
-        text='在本路一名友方单位下方埋设感应地雷，敌方不可见；每个单位至多埋设一颗。该单位被敌方攻击，或被敌方卡牌、技能选中时引爆：对邻近的敌方单位各造成8点伤害。友方施法不会引爆，拥有者可主动点击引爆；活性电击命中该单位时同样引爆。',
-        textEn='Plant a Proximity Mine beneath an allied unit in this lane, hidden from the enemy (one mine per unit). It detonates when that unit is attacked or targeted by an enemy card or ability, dealing 8 damage to each adjacent enemy unit. Friendly spells never trigger it; its owner may click to detonate, and Reactive Tazer detonates it if it strikes that unit.')
+        text='在本路一名友方单位下方埋设感应地雷，敌方不可见；每个单位至多埋设一颗。该单位被敌方卡牌或技能选中、该单位死亡，或被活性电击命中时自动引爆：对邻近的敌方单位各造成8点伤害。友方施法和普通攻击命中不会直接引爆，不能手动引爆。',
+        textEn='Plant a Proximity Mine beneath an allied unit in this lane, hidden from the enemy (one mine per unit). It automatically detonates when that unit is targeted by an enemy card or ability, dies, or is struck by Reactive Tazer, dealing 8 damage to each adjacent enemy unit. Friendly spells and ordinary attack hits do not directly trigger it, and it cannot be detonated manually.')
     add('reactive_tazer', '活性电击', 'Reactive Tazer', 'Spell', 'Red', mana=2,
         art=ART+'techies_reactive_tazer.png',
         text='随机缴械本路一个友方单位，并随机缴械至多两个敌方单位，持续一回合。若被缴械的友方单位携有感应地雷，则引爆该地雷。',

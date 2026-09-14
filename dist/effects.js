@@ -183,7 +183,6 @@ G.resolve=function(k,p,t,h){
  default:throw Error(T('尚未实现的卡牌效果：','Card effect not implemented: ')+k);
  }
 };
-G.detonateMine=function(p,uid){if(this.s.phase!=='action'||this.s.turn!==p)throw Error(T('尚未轮到你行动','Not your turn to act'));const m=(this.s.mines||[]).find(m=>m.uid===Number(uid)&&m.owner===p);if(!m)throw Error(T('找不到感应地雷','No such Proximity Mine'));this.s.events=[];this.detonate(m,'manual');this.s.passes=0;this.s.turn=1-p;this.sweep();return this.s;};
 G.taunt=function(u){for(const e of this.neighbors(u,true)){e.target=u.uid;e.arrow=u.pos-e.pos;}};
 G.abilities=function(u){const a=[];const c=this.card(u.k);for(const ab of c?.abilities||[])a.push({k:ab.key||u.k,...ab,remaining:u.cooldowns?.[ab.key||u.k]||u.cooldown||0});for(const it of Object.values(u.items||{})){const c=this.card(it.k);if(c.abilities?.length)a.push({k:it.k,...c.abilities[0],remaining:u.cooldowns?.[it.k]||0});}return a;};
 // Read-only availability for both hero icons and equipment controls.
