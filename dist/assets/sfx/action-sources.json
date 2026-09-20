@@ -665,6 +665,14 @@
   }
  },
  "files": {
+  "abilities-snapfire": {
+   "bytes": 142105,
+   "local": "action/snapfire_lil_shredder_1.mp3",
+   "note": "dota2 wiki / gamepedia CDN; compressed to web mp3",
+   "sha256": "7f95eb126bd704692631098db1b0703881423f3bc98228e0bc36427017363a9a",
+   "title": "File:Snapfire Lil' Shredder 1.mp3",
+   "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/2/20/Snapfire_Lil%27_Shredder_1.mp3/revision/latest?cb=20191215162230"
+  },
   "abilities-techies_blast_off": {
    "bytes": 28002,
    "local": "action/techies_blast_off_1.mp3",
@@ -672,6 +680,22 @@
    "sha256": "e458929a9bf5ce167582027751691445f18ab233b5eb0e3eae891a54a757fdb8",
    "title": "File:Techies Blast Off! 1.mp3",
    "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/7/74/Techies_Blast_Off%21_1.mp3/revision/latest?cb=20191216024800"
+  },
+  "cards-mortimer_kisses": {
+   "bytes": 60185,
+   "local": "action/snapfire_mortimer_kisses_1.mp3",
+   "note": "dota2 wiki / gamepedia CDN; compressed to web mp3",
+   "sha256": "636c32d9f8c56d6931550a10de11d8758c7ce0e45d3ffd796d3939b01f7a7489",
+   "title": "File:Snapfire Mortimer Kisses 1.mp3",
+   "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/e/ea/Snapfire_Mortimer_Kisses_1.mp3/revision/latest?cb=20191215162234"
+  },
+  "cards-snapfire_cookie": {
+   "bytes": 41377,
+   "local": "action/snapfire_firesnap_cookie_1.mp3",
+   "note": "dota2 wiki / gamepedia CDN; compressed to web mp3",
+   "sha256": "260a5433e34582350026be10ee2387653163832eb7e4bbbc25bf63c56315fa02",
+   "title": "File:Snapfire Firesnap Cookie 1.mp3",
+   "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/d/d3/Snapfire_Firesnap_Cookie_1.mp3/revision/latest?cb=20191215162224"
   },
   "cards-techies_proximity_mines": {
    "bytes": 23404,
@@ -697,6 +721,14 @@
    "title": "File:Techies Pinpoint Detonate.mp3",
    "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/e/ed/Techies_Pinpoint_Detonate.mp3/revision/latest?cb=20191216024806"
   },
+  "voice-ability-snapfire": {
+   "bytes": 33079,
+   "local": "action/vo_snapfire_snapfire_ability4_01.mp3",
+   "note": "dota2 wiki / gamepedia CDN; compressed to web mp3",
+   "sha256": "674dda5ed3eef63d6a7956adb911119759854e9e868ee078cc760af87422b306",
+   "title": "File:Vo snapfire snapfire ability4 01.mp3",
+   "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/4/40/Vo_snapfire_snapfire_ability4_01.mp3/revision/latest?cb=20191202222135"
+  },
   "voice-ability-techies_blast_off": {
    "bytes": 18034,
    "local": "action/vo_techies_tech_cast_01.mp3",
@@ -704,6 +736,22 @@
    "sha256": "d3961ba9b0fd83a4d5fa4877801c6c8640616408e6bd73245c2cacdbf6e9a2c7",
    "title": "File:Vo techies tech cast 01.mp3",
    "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/b/b6/Vo_techies_tech_cast_01.mp3/revision/latest?cb=20201020202846"
+  },
+  "voice-cards-mortimer_kisses": {
+   "bytes": 48438,
+   "local": "action/vo_snapfire_snapfire_ability2_01.mp3",
+   "note": "dota2 wiki / gamepedia CDN; compressed to web mp3",
+   "sha256": "cea7a03a42363e41581a7f8485b962e1dbf360400dfb07734c7e450e271497db",
+   "title": "File:Vo snapfire snapfire ability2 01.mp3",
+   "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/d/d5/Vo_snapfire_snapfire_ability2_01.mp3/revision/latest?cb=20191202221954"
+  },
+  "voice-cards-snapfire_cookie": {
+   "bytes": 23861,
+   "local": "action/vo_snapfire_snapfire_ability1_01.mp3",
+   "note": "dota2 wiki / gamepedia CDN; compressed to web mp3",
+   "sha256": "6bfad35b334a96ee38d369143ba1312ae091f9aa30fec2ff27e28f90ccd0275c",
+   "title": "File:Vo snapfire snapfire ability1 01.mp3",
+   "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/6/68/Vo_snapfire_snapfire_ability1_01.mp3/revision/latest?cb=20191202224734"
   },
   "voice-cards-techies_proximity_mines": {
    "bytes": 37685,
@@ -720,6 +768,14 @@
    "sha256": "ee16097b6eaf3e102d6c5c8b6648d8311347b416870d30d3e805c53b00aeb885",
    "title": "File:Vo techies tech cast 02.mp3",
    "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/4/47/Vo_techies_tech_cast_02.mp3/revision/latest?cb=20201020202849"
+  },
+  "voice-hero-snapfire": {
+   "bytes": 20404,
+   "local": "action/vo_snapfire_snapfire_spawn_01.mp3",
+   "note": "dota2 wiki / gamepedia CDN; compressed to web mp3",
+   "sha256": "8dd73ea9272c14ab531935f8e878dfcafc24445f508afd00980743cf0ee332e3",
+   "title": "File:Vo snapfire snapfire spawn 01.mp3",
+   "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/e/e2/Vo_snapfire_snapfire_spawn_01.mp3/revision/latest?cb=20191202224545"
   },
   "voice-hero-techies": {
    "bytes": 18871,

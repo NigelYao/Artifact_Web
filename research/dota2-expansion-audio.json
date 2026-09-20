@@ -283,5 +283,44 @@
     "bytes": 28072
    }
   ]
+ },
+ "snapfire": {
+  "imported": [
+   {
+    "ident": "voice-hero-snapfire",
+    "local": "action/vo_snapfire_snapfire_spawn_01.mp3",
+    "bytes": 20404
+   },
+   {
+    "ident": "voice-ability-snapfire",
+    "local": "action/vo_snapfire_snapfire_ability4_01.mp3",
+    "bytes": 33079
+   },
+   {
+    "ident": "abilities-snapfire",
+    "local": "action/snapfire_lil_shredder_1.mp3",
+    "bytes": 142105
+   },
+   {
+    "ident": "voice-cards-snapfire_cookie",
+    "local": "action/vo_snapfire_snapfire_ability1_01.mp3",
+    "bytes": 23861
+   },
+   {
+    "ident": "cards-snapfire_cookie",
+    "local": "action/snapfire_firesnap_cookie_1.mp3",
+    "bytes": 41377
+   },
+   {
+    "ident": "voice-cards-mortimer_kisses",
+    "local": "action/vo_snapfire_snapfire_ability2_01.mp3",
+    "bytes": 48438
+   },
+   {
+    "ident": "cards-mortimer_kisses",
+    "local": "action/snapfire_mortimer_kisses_1.mp3",
+    "bytes": 60185
+   }
+  ]
  }
 }

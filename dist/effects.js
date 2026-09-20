@@ -8,8 +8,8 @@ const NM=c=>T(c.name,c.en||''),EN=c=>c.en||c.name;
 const G=Game.prototype;
 const previousTargets=G.targets;
 G.targets=function(k,p,source=null){
- if(!source){if(k==='pangolier_lucky_shot')return [{kind:'unit',side:'enemy'}];if(k==='dark_willow_bramble_maze')return [];if(k==='monkey_king_command')return [];if(k==='tree_dance')return [{kind:'unit',side:'ally',hero:true},{kind:'position',cross:false,free:true}];if(k==='pangolier_gyroshell')return [{kind:'position',cross:false,free:true}];if(k==='dark_willow_terrorize')return [{kind:'position',cross:false,free:true,occupied:true}];if(k==='proximity_mines')return [{kind:'unit',side:'ally'}];if(k==='reactive_tazer')return [];}
- if(source){if(['tinker','cheating_death','monkey_king','techies'].includes(k))return [{kind:'unit',side:'any'}];if(k==='winter_wyvern')return [{kind:'position',cross:false}];}
+ if(!source){if(k==='pangolier_lucky_shot')return [{kind:'unit',side:'enemy'}];if(k==='dark_willow_bramble_maze')return [];if(k==='monkey_king_command')return [];if(k==='tree_dance')return [{kind:'unit',side:'ally',hero:true},{kind:'position',cross:false,free:true}];if(k==='pangolier_gyroshell')return [{kind:'position',cross:false,free:true}];if(k==='dark_willow_terrorize')return [{kind:'position',cross:false,free:true,occupied:true}];if(k==='proximity_mines')return [{kind:'unit',side:'ally'}];if(k==='reactive_tazer')return [];if(k==='snapfire_cookie')return [{kind:'unit',side:'ally'}];if(k==='mortimer_kisses')return [{kind:'lane'}];}
+ if(source){if(['tinker','cheating_death','monkey_king','techies'].includes(k))return [{kind:'unit',side:'any'}];if(k==='winter_wyvern')return [{kind:'position',cross:false}];if(k==='snapfire')return [];}
  if(!source){if(k==='shop_deed')return [];if(k==='gust')return [{kind:'unit',side:'enemy',hero:true}];if(['arm_the_rebellion','routed'].includes(k))return [];if(k==='astral_imprisonment')return [{kind:'unit',side:'any'}];}
  return previousTargets.call(this,k,p,source);
 };
@@ -55,6 +55,25 @@ G.resolve=function(k,p,t,h){
  case 'reactive_tazer':{const ally=this.pick(allies());if(ally){this.buff(ally,{disarm:1},'round');this.emit('buff',T(this.card(ally.k).name+'被活性电击缴械',EN(this.card(ally.k))+' is disarmed by Reactive Tazer'),{unit:ally.uid,owner:p});}
   for(const e of this.shuffle(enemies()).slice(0,2)){this.buff(e,{disarm:1},'round');this.emit('buff',T(this.card(e.k).name+'被活性电击缴械',EN(this.card(e.k))+' is disarmed by Reactive Tazer'),{unit:e.uid,owner:p});}
   const m=ally&&this.mineOn(ally);if(m&&m.owner===p)this.detonate(m,'tazer');break;}
+ case 'snapfire_cookie':{
+  // Feed a cookie: chip the ally, hop it forward, stun what it now faces, mark it.
+  this.damage(a,2,true);
+  const dest=a.pos+1;
+  if(!this.at(p,l,dest)&&this.canMove(a)){const from=a.pos;a.pos=dest;a.target=null;this.resetArrow(a);this.emit('displace',T(this.card(a.k).name+'向前猛冲一格',EN(this.card(a.k))+' hops one slot forward'),{unit:a.uid,fromPos:from,toPos:dest,lane:l});}
+  const facing=this.target(a);
+  if(facing&&this.selectable(facing)){this.buff(facing,{stun:1},'round');this.emit('buff',T(this.card(facing.k).name+'被饼干撞击晕眩',EN(this.card(facing.k))+' is stunned by the cookie'),{unit:facing.uid,owner:p});}
+  this.buff(a,{cookie:1},'round');this.emit('cookie',T(this.card(a.k).name+'获得饼干标记',EN(this.card(a.k))+' gains a Cookie marker'),{unit:a.uid,owner:p,lane:l,pos:a.pos});
+  break;}
+ case 'mortimer_kisses':{
+  const tl=t[0];
+  if(!Number.isInteger(tl)||Math.abs(tl-l)!==1)throw Error(T('只能吐向相邻的另一条分路','Can only spit into an adjacent lane'));
+  for(let i=0;i<2;i++){const tgt=this.pick(this.all(null,tl).filter(u=>this.selectable(u)));if(!tgt)break;
+   for(const v of [tgt,...this.neighbors(tgt,false,true)])this.damage(v,4,false,null);
+   this.sweep();}
+  const marked=this.all(p,l).filter(v=>this.flag(v,'cookie'));
+  const carrier=this.pick(marked.filter(v=>this.canMove(v)));
+  if(carrier){const spots=this.positionTargets(p,tl,{free:true});const dest=this.pick(spots);if(dest!==null&&dest!==undefined){carrier.mods=carrier.mods.filter(m=>!m.cookie);this.move(carrier,tl,dest);this.emit('cookie-toss',T(this.card(carrier.k).name+'被饼干吐向'+(['上路','中路','下路'][tl]),EN(this.card(carrier.k))+' is tossed by cookie to '+(['Top Lane','Middle Lane','Bottom Lane'][tl])),{unit:carrier.uid,fromLane:l,toLane:tl,pos:dest});}}
+  break;}
  case 'and_one_for_me':{const i=this.pick(Object.values(a.items));if(!i)throw Error(T('目标英雄没有装备','Target hero has no equipment'));pl.hand.push({uid:this.id(),k:i.k,lock:0});break;}
  case 'act_of_defiance':buff(a,{silence:1},'round');break;
  case 'allseeing_ones_favor':buff(a,{auraRegen:2});break;
@@ -215,6 +234,16 @@ G.activate=function(p,uid,k,t=[]){const backup=clone(this.s);try{
  case 'pangolier':{let shield=0;for(const v of this.neighbors(u,true))if(this.damage(v,2,false,u.uid)>0)shield+=v.hero?2:1;if(shield)this.buff(u,{shield},'round');this.emit('shield-crash',T('甲盾冲击 · 护盾 '+shield,'Shield Crash · Shield '+shield),{unit:u.uid,owner:p,lane:l,shield});break;}
  case 'monkey_king':{u.charges-=3;this.damage(a,4,false,u.uid);this.s.players[p].monkeyBonus=(this.s.players[p].monkeyBonus||0)+1;this.emit('buff',T('此后召唤的猴子猴孙攻击永久 +1（当前 +'+this.s.players[p].monkeyBonus+'）','Monkey Soldiers summoned later gain +1 attack permanently (now +'+this.s.players[p].monkeyBonus+')'),{unit:u.uid});break;}
  case 'techies':{const d=Math.ceil(this.stats(u).hp/2);this.damage(a,d,true,u.uid);const n=Math.min(d,this.stats(u).hp-1);if(n>0){u.damage+=n;this.emit('damage',T(this.card(u.k).name+'受到 '+n+' 点伤害',EN(this.card(u.k))+' takes '+n+' damage'),{unit:u.uid,amount:n,source:u.uid});}break;}
+ case 'snapfire':{
+  // Lil' Shredder: 3 rapid piercing hits; upgraded after round 5 to hit up to 3 opposing neighbors.
+  const upgraded=this.s.round>=5;
+  const facing=this.target(u);
+  let foes=facing?[facing,...this.neighbors(facing)]:[];
+  if(!upgraded)foes=facing?[facing]:[];
+  foes=foes.filter(v=>this.selectable(v)).slice(0,3);
+  if(!foes.length)throw Error(T('正对方向没有可攻击的敌人','No enemy to shred straight ahead'));
+  for(const v of foes)for(let i=0;i<3;i++){if(!v.alive)break;this.damage(v,1,true,u.uid);}
+  this.sweep();break;}
  case 'dark_willow':this.buff(u,{shadowRealm:1,shadowBonus:1},'death');break;
  case 'abaddon':this.heal(u,999);this.buff(u,{immune:1},'round');break;
  case 'beastmaster':this.spawn('loyal_beast',p,l);break;
