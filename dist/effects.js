@@ -8,8 +8,8 @@ const NM=c=>T(c.name,c.en||''),EN=c=>c.en||c.name;
 const G=Game.prototype;
 const previousTargets=G.targets;
 G.targets=function(k,p,source=null){
- if(!source){if(k==='pangolier_lucky_shot')return [{kind:'unit',side:'enemy'}];if(k==='dark_willow_bramble_maze')return [];if(k==='monkey_king_command')return [];if(k==='tree_dance')return [{kind:'unit',side:'ally',hero:true},{kind:'position',cross:false,free:true}];if(k==='pangolier_gyroshell')return [{kind:'position',cross:false,free:true}];if(k==='dark_willow_terrorize')return [{kind:'position',cross:false,free:true,occupied:true}];if(k==='proximity_mines')return [{kind:'unit',side:'ally'}];if(k==='reactive_tazer')return [];if(k==='snapfire_cookie')return [{kind:'unit',side:'ally'}];if(k==='mortimer_kisses')return [{kind:'lane',adjacent:true}];}
- if(source){if(['tinker','cheating_death','monkey_king','techies'].includes(k))return [{kind:'unit',side:'any'}];if(k==='winter_wyvern')return [{kind:'position',cross:false}];if(k==='snapfire')return [];}
+ if(!source){if(k==='pangolier_lucky_shot')return [{kind:'unit',side:'enemy'}];if(k==='dark_willow_bramble_maze')return [];if(k==='monkey_king_command')return [];if(k==='tree_dance')return [{kind:'unit',side:'ally',hero:true},{kind:'position',cross:false,free:true}];if(k==='pangolier_gyroshell')return [{kind:'position',cross:false,free:true}];if(k==='dark_willow_terrorize')return [{kind:'position',cross:false,free:true,occupied:true}];if(k==='proximity_mines')return [{kind:'unit',side:'ally'}];if(k==='reactive_tazer')return [];if(k==='snapfire_cookie')return [{kind:'unit',side:'ally'}];if(k==='mortimer_kisses')return [{kind:'lane',adjacent:true}];if(k==='frog_toss'||k==='amphibian_rhapsody')return [];}
+ if(source){if(['tinker','cheating_death','monkey_king','techies'].includes(k))return [{kind:'unit',side:'any'}];if(k==='winter_wyvern')return [{kind:'position',cross:false}];if(k==='snapfire'||k==='largo')return [];}
  if(!source){if(k==='shop_deed')return [];if(k==='gust')return [{kind:'unit',side:'enemy',hero:true}];if(['arm_the_rebellion','routed'].includes(k))return [];if(k==='astral_imprisonment')return [{kind:'unit',side:'any'}];}
  return previousTargets.call(this,k,p,source);
 };
@@ -89,6 +89,31 @@ G.resolve=function(k,p,t,h){
   const marked=this.all(p,l).filter(v=>this.flag(v,'cookie'));
   const carrier=this.pick(marked.filter(v=>this.canMove(v)));
   if(carrier){const spots=this.positionTargets(p,tl,{free:true});const dest=this.pick(spots);if(dest!==null&&dest!==undefined){carrier.mods=carrier.mods.filter(m=>!m.cookie);this.move(carrier,tl,dest);this.emit('cookie-toss',T(this.card(carrier.k).name+'被饼干吐向'+(['上路','中路','下路'][tl]),EN(this.card(carrier.k))+' is tossed by cookie to '+(['Top Lane','Middle Lane','Bottom Lane'][tl])),{unit:carrier.uid,owner:p,fromLane:l,toLane:tl,pos:dest});}}
+  break;}
+ case 'frog_toss':{
+  // Frogstomp: the frog ricochets between enemy units in this lane, 1 damage per bounce.
+  // Base 2 bounces; each stored Frog Energy adds one bounce and the stockpile is spent (cap 5).
+  const frog=this.s.units.find(v=>v.k==='largo'&&v.owner===p);
+  const energy=Math.min(5,frog?.frog||0),hits=[];
+  let pool=enemies().filter(v=>this.selectable(v)).sort((a,b)=>a.pos-b.pos);
+  if(!pool.length)throw Error(T('本路没有可供青蛙弹跳的敌方单位','No enemy units in this lane for the frog to bounce between'));
+  if(frog)frog.frog=0;
+  for(let i=0;i<2+energy;i++){
+   const live=pool.filter(v=>v.alive&&this.selectable(v));
+   pool=live.length?live:enemies().filter(v=>this.selectable(v)).sort((a,b)=>a.pos-b.pos);
+   if(!pool.length)break;
+   const v=pool[i%pool.length];
+   this.damage(v,1,false,frog?.uid||null);hits.push(v.uid);this.sweep();
+  }
+  this.emit('frog-bounce',T('蛙力千钧 · 弹跳 '+hits.length+' 次','Frogstomp · '+hits.length+' bounces'),{owner:p,lane:l,hits});
+  break;}
+ case 'amphibian_rhapsody':{
+  // Harmonic Duet: for the rest of the round every non-item card the owner plays
+  // resonates (see the afterCard hook), and enemy deaths bank Frog Energy (sweep hook).
+  const frog=this.s.units.find(v=>v.k==='largo'&&v.owner===p);
+  this.s.harmony={owner:p,round:this.s.round};
+  if(frog&&frog.alive&&frog.lane===l)this.buff(frog,{harmony:1},'round');
+  this.emit('harmony',T('琴瑟和鸣 · 本回合打出的其他技能卡牌触发共鸣','Harmonic Duet · other cards played this round resonate'),{owner:p,lane:l,unit:frog?.uid});
   break;}
  case 'and_one_for_me':{const i=this.pick(Object.values(a.items));if(!i)throw Error(T('目标英雄没有装备','Target hero has no equipment'));pl.hand.push({uid:this.id(),k:i.k,lock:0});break;}
  case 'act_of_defiance':buff(a,{silence:1},'round');break;
@@ -262,6 +287,23 @@ G.activate=function(p,uid,k,t=[]){const backup=clone(this.s);try{
   this.emit('shredder',T('快速攻击连续射击 '+foes.length+' 个目标',"Lil' Shredder fires at "+foes.length+' target'+(foes.length>1?'s':'')),{unit:u.uid,owner:p,lane:l,targets:foes.map(v=>v.uid),hits:3,upgraded});
   for(const v of foes)for(let i=0;i<3;i++){if(!v.alive)break;this.damage(v,1,true,u.uid);}
   this.sweep();break;}
+ case 'largo':{
+  // Catchy Lick: strong-dispel every allied unit in the lane (including feared flips,
+  // which ordinary purges keep), heal Largo 1 per unit cleansed, drag allies toward
+  // the empty slots beside him, and bank +1 Frog Energy (cap 5) for Frogstomp.
+  const NEGATIVE=m=>m.root||m.stun||m.silence||m.disarm||m.poison||m.unprepared||m.flipped||m.attack<0||m.armor<0;
+  const cleansed=[];
+  for(const v of this.all(p,l)){const before=v.mods.length;v.mods=v.mods.filter(m=>!NEGATIVE(m));if(v.mods.length<before)cleansed.push(v.uid);}
+  const pulls=[];
+  for(const v of this.all(p,l).filter(x=>x!==u).sort((a,b)=>Math.abs(a.pos-u.pos)-Math.abs(b.pos-u.pos))){
+   const step=Math.sign(u.pos-v.pos);
+   if(step&&this.canMove(v)){const from=v.pos;while(Math.abs(v.pos-u.pos)>1&&!this.at(p,l,v.pos+step))v.pos+=step;
+    if(v.pos!==from){this.resetArrow(v);pulls.push({unit:v.uid,fromPos:from,toPos:v.pos});}}
+  }
+  if(cleansed.length)this.heal(u,cleansed.length);
+  u.frog=Math.min(5,(u.frog||0)+1);
+  this.emit('lick',T('动人之舐 · 净化 '+cleansed.length+' 个单位 · 青蛙能量 '+u.frog,'Catchy Lick · cleansed '+cleansed.length+' unit(s) · Frog Energy '+u.frog),{unit:u.uid,owner:p,lane:l,cleansed,pulls,energy:u.frog});
+  break;}
  case 'dark_willow':this.buff(u,{shadowRealm:1,shadowBonus:1},'death');break;
  case 'abaddon':this.heal(u,999);this.buff(u,{immune:1},'round');break;
  case 'beastmaster':this.spawn('loyal_beast',p,l);break;
@@ -328,6 +370,33 @@ G.bestAction=function(p){if(this.s.phase!=='action'||this.s.turn!==p)return null
 G.aiStep=function(p=1){const a=this.bestAction(p);if(!a)this.pass(p);else if(a.kind==='play')this.play(p,a.id,a.t);else this.activate(p,a.id,a.k,a.t);return a;};
 G.aiShop=function(p=1){let n=0;while(n++<12){const pl=this.s.players[p],s=pl.shop;const opts=['deck','secret','consumable'].filter(slot=>s[slot]&&!(slot==='secret'&&s.secretBought)&&!(slot==='consumable'&&s.consumed)).map(slot=>({slot,c:this.card(s[slot]),price:slot==='secret'&&pl.freeShop?0:this.card(s[slot]).gold})).filter(v=>v.price<=pl.gold);const useful=opts.filter(o=>o.c.itemType!=='Consumable'||o.c.key==='healing_salve');if(!useful.length)break;useful.sort((a,b)=>b.c.gold-a.c.gold);try{this.buy(p,useful[0].slot);}catch{break;}}};
 G.aiDeploy=function(p=1){for(const u of this.ready(p)){const scores=[0,1,2].map(l=>{const own=this.all(p,l),enemy=this.all(1-p,l);let score=enemy.reduce((n,v)=>n+this.stats(v).attack,0)-own.reduce((n,v)=>n+this.stats(v).attack,0);if(!own.some(v=>v.hero&&this.card(v.k).color===this.card(u.k).color))score+=4;score+=(40-this.s.lanes[l].towers[p].hp)*.1;return {l,score};}).sort((a,b)=>b.score-a.score);this.deploy(u.uid,scores[0].l);}};
+// Largo's Harmonic Duet: while active this round, each non-item card the owner plays
+// resonates — allies in the lane heal 1, enemies take 1 damage, allies gain +1 attack
+// this round; a card aimed at Largo himself doubles to 2 heal / 2 damage.
+const prevAfterCard=G.afterCard;
+G.afterCard=function(p,c,handId,t){
+ prevAfterCard.call(this,p,c,handId,t);
+ const hz=this.s.harmony;
+ if(!hz||hz.owner!==p||hz.round!==this.s.round||c.key==='amphibian_rhapsody'||c.type==='Item')return;
+ const l=this.s.lane,onLargo=(t||[]).some(v=>{const u=this.get(v);return u&&u.owner===p&&u.k==='largo';});
+ const heal=onLargo?2:1,dmg=onLargo?2:1;
+ for(const v of this.all(p,l))this.heal(v,heal);
+ for(const v of this.all(1-p,l))this.damage(v,dmg,false,null);
+ for(const v of this.all(p,l))this.buff(v,{attack:1},'round');
+ this.emit('harmony-echo',T('琴瑟和鸣共鸣：友方回复 '+heal+'、本回合攻击 +1，敌方受到 '+dmg+' 点伤害','Harmonic Duet echoes: allies heal '+heal+' and gain +1 attack this round, enemies take '+dmg+' damage'),{owner:p,lane:l,card:c.key,onLargo});
+};
+// While the duet plays, enemy deaths are harvested into Frog Energy (creep +1, hero +2, cap 5).
+const prevSweep=G.sweep;
+G.sweep=function(){
+ const hz=this.s&&this.s.harmony,watched=hz&&hz.round===this.s.round?this.all(1-hz.owner):null;
+ prevSweep.call(this);
+ if(!watched)return;
+ let gain=0;for(const u of watched)if(!u.alive)gain+=u.hero?2:1;
+ const frog=gain&&this.s.units.find(v=>v.k==='largo'&&v.owner===hz.owner);
+ if(!frog)return;
+ frog.frog=Math.min(5,(frog.frog||0)+gain);
+ this.emit('frog-energy',T('琴瑟和鸣收割 · 青蛙能量 +'+gain,'Harmonic harvest · Frog Energy +'+gain),{owner:hz.owner,lane:this.s.lane,amount:gain,total:frog.frog});
+};
 // Current Classic changes, plus aura properties that were absent from older data archives.
 const baseStats=G.itemStats;G.itemStats=function(k){if(k==='shield_of_aquila')return {armor:2};if(k==='assassins_veil')return {health:4};return baseStats.call(this,k);};
 const oldStats=G.stats;G.stats=function(u){const r=oldStats.call(this,u);if(u.alive)for(const v of this.neighbors(u))if(this.equipment(v,'shield_of_aquila'))r.armor+=3;return r;};
