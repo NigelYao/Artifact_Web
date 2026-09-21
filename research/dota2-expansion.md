@@ -1,17 +1,20 @@
-# Dota 2 custom expansion — 2026-09-11
+# Dota 2 custom expansion — updated 2026-09-21
 
-This adds **石鳞剑士 / Pangolier** and **邪影芳灵 / Dark Willow** to Threefold. They are official Dota 2 heroes, absent from the bundled 303-card Artifact Classic catalog. These seven new entries are explicitly marked `expansion: "dota2"`; their rules and balance are custom, not Valve's Artifact or Dota 2 rules.
+This expansion adds **Pangolier, Dark Willow, Monkey King, Techies, and Snapfire** to Threefold. These five official Dota 2 heroes are absent from the bundled 303-entry Artifact Classic catalog. All 17 entries are explicitly marked `expansion: "dota2"`; their rules and balance are custom, not Valve's Artifact or Dota 2 rules.
 
 ## Official sources and assets
 
 - [Pangolier — Dota 2](https://www.dota2.com/hero/pangolier?l=schinese)
 - [Dark Willow — Dota 2](https://www.dota2.com/hero/darkwillow?l=schinese)
+- [Monkey King — Dota 2](https://www.dota2.com/hero/monkeyking?l=schinese)
+- [Techies — Dota 2](https://www.dota2.com/hero/techies?l=schinese)
+- [Snapfire — Dota 2](https://www.dota2.com/hero/snapfire?l=schinese)
 - Official Chinese data feeds: hero IDs **120** and **119**, preserved in `dota2-pangolier.json` and `dota2-dark_willow.json`.
 - Nine local Valve assets: two full hero render PNGs and seven ability icons. Original URLs and SHA-256 hashes are recorded in `dota2-expansion-assets.json`.
 - Hero render paths were verified from the official Dota React site's `VIDEO_URL + heroes/renders/{hero}.png` poster references. Icons use Valve's Dota React ability image directory.
 - Names match the official Chinese feed: 甲盾冲击, 幸运一击, 地雷滚滚, 荆棘迷宫, 暗影之境, 恐吓. The waiting Jex marker uses the official 作祟 / Bedlam icon. Artwork © Valve Corporation.
 
-## Initial balance
+## Original Pangolier and Dark Willow balance
 
 | Entry | Role | Color | Stats / mana |
 | --- | --- | --- | --- |
@@ -39,7 +42,7 @@ Hero starting cooldowns follow the existing engine convention. **荆棘与剑舞
 
 ## Maintenance and verification
 
-- Edit `tools/build_expansion_data.py` for this extension's metadata. `python tools/build_data.py` includes it when regenerating Classic data. `python tools/build_expansion_data.py` updates only the seven extension records.
+- Edit `tools/build_expansion_data.py` for this extension's metadata. `python tools/build_data.py` includes it when regenerating Classic data. `python tools/build_expansion_data.py` updates all 17 extension records.
 - `python scripts/import-dota-expansion.py` reimports the nine official assets and refreshes their source/hash manifest.
 - `npm run test:expansion`: damage, shield forecast, random branches, expiry, movement rollback, shadow bonus, delayed Jex, save/projection, flip/tower damage, seeded rolling and source validation.
 - `npm test`: multiplayer, touch, deck sharing, matchmaking, placement and expansion regressions.
@@ -57,7 +60,7 @@ Release packaging uses `20260911-dota2-expansion1`; activation retains the persi
 - Browser checks exercised real Shield Crash activation, flower creation, placing enhanced Jex on an occupied flower, triggering fear with the next spell, and Rolling Thunder's recorded curve and displacement animation. Gallery nickname search, official art loading, persistent status presentation and the new preset selector were inspected. The regular page reported no browser errors.
 - Browser/server catalogs are identical; all nine local art hashes match the provenance manifest. Local `/health` responds successfully after reloading the server. Test-origin service was stopped after verification.
 
-- Both the archive and deck builder offer All / Classic / Dota 2 expansion filters, composable with type, color and text search. The expansion contains two heroes, four spells and one token.
+- Both the archive and deck builder offer All / Classic / Dota 2 expansion filters, composable with type, color and text search. The expansion contains five heroes, ten spells and two tokens.
 - Chinese glyphs prefer local KaiTi (STKaiti / Kaiti SC / Kaiti TC alternatives); Latin typography is unchanged. Browsers without those fonts retain the existing fallback fonts.
 
 ## Monkey King — rules resolved from the second brief

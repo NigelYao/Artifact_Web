@@ -8312,8 +8312,8 @@
     "attack": 3,
     "armor": 0,
     "health": 7,
-    "text": "快速射击：对正对的1个敌方单位快速攻击3次，每次造成1点透甲伤害（享受护甲穿透等加成）。第5回合起升级：改为对正对的至多3个相邻敌方单位各快速攻击3次。",
-    "textEn": "Lil' Shredder: rapidly strike the opposing unit 3 times, each hit dealing 1 piercing damage (benefiting from armor penetration). From round 5 it upgrades to hit up to 3 opposing neighbors.",
+    "text": "快速射击：对正对的1个敌方单位快速攻击3次，每次造成1点透甲伤害（无视护甲）。第5回合起升级：改为对正对的至多3个相邻敌方单位各快速攻击3次。",
+    "textEn": "Lil' Shredder: rapidly strike the opposing unit 3 times, each hit dealing 1 piercing damage that ignores armor. From round 5 it upgrades to hit up to 3 opposing neighbors.",
     "rarity": "Rare",
     "itemType": null,
     "signature": "snapfire_cookie",
@@ -8326,8 +8326,8 @@
         "key": "snapfire",
         "name": "快速攻击",
         "en": "Lil' Shredder",
-        "text": "快速射击：对正对的1个敌方单位快速攻击3次，每次造成1点透甲伤害（享受护甲穿透等加成）。第5回合起升级：改为对正对的至多3个相邻敌方单位各快速攻击3次。",
-        "textEn": "Rapidly attack the opposing unit 3 times for 1 piercing damage each; benefits from armor penetration. Upgrades after round 5 to hit up to 3 opposing neighbors.",
+        "text": "快速射击：对正对的1个敌方单位快速攻击3次，每次造成1点透甲伤害（无视护甲）。第5回合起升级：改为对正对的至多3个相邻敌方单位各快速攻击3次。",
+        "textEn": "Rapidly attack the opposing unit 3 times for 1 piercing damage each, ignoring armor. From round 5 it hits up to 3 opposing neighbors.",
         "cooldown": 2
       }
     ],

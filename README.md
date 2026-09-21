@@ -10,7 +10,7 @@ Artifact Threefold is an unofficial browser recreation of Valve's Artifact Class
 
 ## Features
 
-- 303 Classic cards and derived units, plus a custom Dota 2 expansion: 2 heroes, 4 spells, and 1 token (50 heroes total)
+- 303 Classic cards and derived units, plus 17 custom Dota 2 expansion entries: 5 heroes, 10 spells, and 2 tokens (53 heroes total)
 - Three independent lanes, towers, ancients, initiative, deployment, combat, and shopping
 - Five starter decks, custom deck building, deck validation, and JSON import/export
 - Local single-player matches with a computer opponent and browser-based saves
@@ -66,7 +66,16 @@ python start.py --host 127.0.0.1 --port 8080 --no-browser
 
 ## Custom Dota 2 expansion
 
-Choose **荆棘与剑舞** in the deck selector to play Pangolier (石鳞剑士) and Dark Willow (邪影芳灵). They use official Valve hero art, ability icons, and localized names, with custom Threefold mechanics. These are not Artifact Classic cards. Signature spells are included automatically; Rolling Thunder and Terrorize can be added through the deck builder.
+Five Dota 2 heroes are available through ready-to-play decks and the deck builder. They use official Valve names, hero art, ability icons, voice lines, and effects with custom Threefold mechanics; they are not Artifact Classic cards.
+
+| Hero | Ready-to-play deck | Core mechanics |
+| --- | --- | --- |
+| Pangolier (石鳞剑士) and Dark Willow (邪影芳灵) | **荆棘与剑舞** | Shield Crash, Rolling Thunder, Bramble Maze, Shadow Realm, and delayed Terrorize |
+| Monkey King (齐天大圣) | **猴王临世** | Attack energy, Primed Strike, and temporary Monkey Soldiers |
+| Techies (炸弹人) | **爆破专家** | Blast Off, hidden automatic Proximity Mines, and Reactive Tazer |
+| Snapfire (电炎绝手) | **电炎绝手** | Firesnap Cookie movement/control, three-hit Lil' Shredder, and cross-lane Mortimer Kisses |
+
+The home lobby defaults to the newest **Granny Knows Best** expansion deck. Signature spells are added automatically, and additional expansion spells can be selected in the deck builder. Snapfire's effects include dedicated Cookie, rapid-fire, lava, marker, audio, and reduced-motion presentation; Mortimer Kisses only offers adjacent lanes where damage or a Cookie toss can actually resolve.
 
 See [the expansion rules and source credits](research/dota2-expansion.md) for damage, shield, root, Shadow Realm, delayed Jex, and face-down rules. Run `npm run test:expansion` for focused engine coverage.
 

@@ -72,14 +72,14 @@ def expansion_cards():
         text='随机缴械本路一个友方单位，并随机缴械至多两个敌方单位，持续一回合。若被缴械的友方单位携有感应地雷，则引爆该地雷。',
         textEn='Disarm a random allied unit and up to two random enemy units in this lane for one round. If the disarmed ally carries a Proximity Mine, it detonates.')
     cookie = '对本路一名友方单位喂食饼干：对其造成2点透甲伤害，使其向前猛冲一格，并晕眩其正对的敌方单位至本回合结束。被喂食的单位获得饼干标记，持续到回合结束。'
-    shredder = '快速射击：对正对的1个敌方单位快速攻击3次，每次造成1点透甲伤害（享受护甲穿透等加成）。第5回合起升级：改为对正对的至多3个相邻敌方单位各快速攻击3次。'
+    shredder = '快速射击：对正对的1个敌方单位快速攻击3次，每次造成1点透甲伤害（无视护甲）。第5回合起升级：改为对正对的至多3个相邻敌方单位各快速攻击3次。'
     kisses = '莫蒂默喷吐熔岩：只能吐向相邻的另一条分路，吐两次，每次随机选择该路一个目标，对其及其友方近邻造成4点伤害。若本分路有携带饼干标记的单位，则随机将其中一个吐向该路随机位置。需要本路一名可行动的红色英雄。'
     add('snapfire', '电炎绝手', 'Snapfire', 'Hero', 'Red', attack=3, health=7,
         signature='snapfire_cookie', aliases='老太婆 老奶奶 饼干 火婆 snapfire',
         text=shredder,
-        textEn='Lil\' Shredder: rapidly strike the opposing unit 3 times, each hit dealing 1 piercing damage (benefiting from armor penetration). From round 5 it upgrades to hit up to 3 opposing neighbors.',
+        textEn='Lil\' Shredder: rapidly strike the opposing unit 3 times, each hit dealing 1 piercing damage that ignores armor. From round 5 it upgrades to hit up to 3 opposing neighbors.',
         abilities=[dict(key='snapfire', name='快速攻击', en="Lil' Shredder", text=shredder,
-                        textEn='Rapidly attack the opposing unit 3 times for 1 piercing damage each; benefits from armor penetration. Upgrades after round 5 to hit up to 3 opposing neighbors.', cooldown=2)])
+                        textEn='Rapidly attack the opposing unit 3 times for 1 piercing damage each, ignoring armor. From round 5 it hits up to 3 opposing neighbors.', cooldown=2)])
     add('snapfire_cookie', '炎灼饼干', 'Firesnap Cookie', 'Spell', 'Red', mana=2,
         signatureOf='snapfire',
         art=ART+'snapfire_firesnap_cookie.png',

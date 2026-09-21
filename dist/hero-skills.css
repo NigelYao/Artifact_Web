@@ -42,6 +42,8 @@
 .rolling-trajectory{position:fixed;inset:0;width:100%;height:100%;z-index:32;pointer-events:none}.rolling-trajectory polyline{fill:none;stroke:#ffca77;stroke-width:3;stroke-dasharray:5 6;opacity:.6}
 .expansion-ring{position:fixed;z-index:36;pointer-events:none;width:40px;height:40px;border:3px solid #bc8eee;border-radius:50%;animation:expansion-ring .9s ease-out forwards}
 .shield-crash-ring{border-color:#7be9e1;box-shadow:0 0 32px #4cb5b1}.roll-hit-ring{border-color:#ffd079}.terror-ring{border-color:#f4abdd;box-shadow:0 0 28px #b34cc2}
+.cookie-ring{border-color:#ffd36b;box-shadow:0 0 30px #e69b37}.shredder-ring{border-color:#ffc26e;box-shadow:0 0 28px #ef6c2f}.lava-ring{border-color:#ff6d3c;box-shadow:0 0 38px #ff3d18;background:#ff8b3133}
+.snapfire-projectile{position:fixed;z-index:39;width:34px;height:34px;border-radius:50%;pointer-events:none;background-position:center;background-size:cover;box-shadow:0 0 18px #ffb24c,0 0 5px #fff7c8;will-change:transform,opacity}.lava-projectile{width:42px;height:42px;border:2px solid #ffcc6b;box-shadow:0 0 24px #ff481e,0 0 8px #ffe8a3}.cookie-toss-projectile{width:38px;height:38px}.shredder-tracer{position:fixed;z-index:38;height:3px;pointer-events:none;transform-origin:left center;background:linear-gradient(90deg,#fff4bc,#ff9e42 55%,#ff5028);box-shadow:0 0 9px #ff8a36,0 0 3px #fff;will-change:scale,opacity}
 @keyframes expansion-ring{from{transform:translate(-50%,-50%) scale(.3);opacity:1}to{transform:translate(-50%,-50%) scale(4);opacity:0}}
 @keyframes expansion-flip{from{transform:rotateY(0deg)}to{transform:rotateY(180deg)}}
-@media(prefers-reduced-motion:reduce){.flipped-card{animation:none}.expansion-ring{animation-duration:.1s}}
+@media(prefers-reduced-motion:reduce){.flipped-card{animation:none}.expansion-ring{animation-duration:.1s}.snapfire-projectile,.shredder-tracer{display:none}}

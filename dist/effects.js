@@ -8,10 +8,25 @@ const NM=c=>T(c.name,c.en||''),EN=c=>c.en||c.name;
 const G=Game.prototype;
 const previousTargets=G.targets;
 G.targets=function(k,p,source=null){
- if(!source){if(k==='pangolier_lucky_shot')return [{kind:'unit',side:'enemy'}];if(k==='dark_willow_bramble_maze')return [];if(k==='monkey_king_command')return [];if(k==='tree_dance')return [{kind:'unit',side:'ally',hero:true},{kind:'position',cross:false,free:true}];if(k==='pangolier_gyroshell')return [{kind:'position',cross:false,free:true}];if(k==='dark_willow_terrorize')return [{kind:'position',cross:false,free:true,occupied:true}];if(k==='proximity_mines')return [{kind:'unit',side:'ally'}];if(k==='reactive_tazer')return [];if(k==='snapfire_cookie')return [{kind:'unit',side:'ally'}];if(k==='mortimer_kisses')return [{kind:'lane'}];}
+ if(!source){if(k==='pangolier_lucky_shot')return [{kind:'unit',side:'enemy'}];if(k==='dark_willow_bramble_maze')return [];if(k==='monkey_king_command')return [];if(k==='tree_dance')return [{kind:'unit',side:'ally',hero:true},{kind:'position',cross:false,free:true}];if(k==='pangolier_gyroshell')return [{kind:'position',cross:false,free:true}];if(k==='dark_willow_terrorize')return [{kind:'position',cross:false,free:true,occupied:true}];if(k==='proximity_mines')return [{kind:'unit',side:'ally'}];if(k==='reactive_tazer')return [];if(k==='snapfire_cookie')return [{kind:'unit',side:'ally'}];if(k==='mortimer_kisses')return [{kind:'lane',adjacent:true}];}
  if(source){if(['tinker','cheating_death','monkey_king','techies'].includes(k))return [{kind:'unit',side:'any'}];if(k==='winter_wyvern')return [{kind:'position',cross:false}];if(k==='snapfire')return [];}
  if(!source){if(k==='shop_deed')return [];if(k==='gust')return [{kind:'unit',side:'enemy',hero:true}];if(['arm_the_rebellion','routed'].includes(k))return [];if(k==='astral_imprisonment')return [{kind:'unit',side:'any'}];}
  return previousTargets.call(this,k,p,source);
+};
+// Cross-lane pickers and the AI share the same legality check. Mortimer Kisses
+// must choose an adjacent lane where at least one part of the spell can resolve.
+G.validLaneTarget=function(k,p,l){
+ if(!Number.isInteger(l)||l<0||l>2)return false;
+ if(k!=='mortimer_kisses')return true;
+ const from=this.s.lane;if(Math.abs(l-from)!==1)return false;
+ if(this.all(null,l).some(u=>this.selectable(u)))return true;
+ const carrier=this.all(p,from).some(u=>this.flag(u,'cookie')&&this.canMove(u));
+ return carrier&&this.positionTargets(p,l,{free:true}).length>0;
+};
+const previousValidateTargets=G.validateTargets;
+G.validateTargets=function(c,p,t,source=null){
+ previousValidateTargets.call(this,c,p,t,source);
+ if(c.key==='mortimer_kisses'&&!this.validLaneTarget(c.key,p,t[0]))throw Error(T('请选择有有效目标或饼干落点的相邻分路','Choose an adjacent lane with a valid target or Cookie landing slot'));
 };
 G.removeImp=function(id){for(let l=0;l<3;l++)for(let p=0;p<2;p++){const a=this.imps(p,l),i=a.findIndex(v=>v.uid===id);if(i>=0){const [c]=a.splice(i,1);this.emit('destroy',T(this.card(c.k).name+'被摧毁',EN(this.card(c.k))+' is destroyed'));return;}}};
 G.chooseCombat=function(a,b){if(!a||!b||a.owner===b.owner||a.lane!==b.lane)throw Error(T('战斗目标须为同路敌方单位','Combat target must be an enemy in the same lane'));a.target=b.uid;a.arrow=b.pos-a.pos;};
@@ -62,17 +77,18 @@ G.resolve=function(k,p,t,h){
   if(!this.at(p,l,dest)&&this.canMove(a)){const from=a.pos;a.pos=dest;a.target=null;this.resetArrow(a);this.emit('displace',T(this.card(a.k).name+'向前猛冲一格',EN(this.card(a.k))+' hops one slot forward'),{unit:a.uid,fromPos:from,toPos:dest,lane:l});}
   const facing=this.target(a);
   if(facing&&this.selectable(facing)){this.buff(facing,{stun:1},'round');this.emit('buff',T(this.card(facing.k).name+'被饼干撞击晕眩',EN(this.card(facing.k))+' is stunned by the cookie'),{unit:facing.uid,owner:p});}
-  this.buff(a,{cookie:1},'round');this.emit('cookie',T(this.card(a.k).name+'获得饼干标记',EN(this.card(a.k))+' gains a Cookie marker'),{unit:a.uid,owner:p,lane:l,pos:a.pos});
+  this.buff(a,{cookie:1},'round');this.emit('cookie',T(this.card(a.k).name+'获得饼干标记',EN(this.card(a.k))+' gains a Cookie marker'),{unit:a.uid,owner:p,lane:l,pos:a.pos,fromPos:dest===a.pos?dest-1:a.pos,toPos:a.pos,target:facing?.uid||null});
   break;}
  case 'mortimer_kisses':{
   const tl=t[0];
   if(!Number.isInteger(tl)||Math.abs(tl-l)!==1)throw Error(T('只能吐向相邻的另一条分路','Can only spit into an adjacent lane'));
   for(let i=0;i<2;i++){const tgt=this.pick(this.all(null,tl).filter(u=>this.selectable(u)));if(!tgt)break;
-   for(const v of [tgt,...this.neighbors(tgt,false,true)])this.damage(v,4,false,null);
+   const splash=[tgt,...this.neighbors(tgt,false,true)];this.emit('mortimer-spit',T('莫蒂默向目标分路喷吐熔岩','Mortimer spits lava into the target lane'),{unit:tgt.uid,owner:p,fromLane:l,toLane:tl,shot:i,affected:splash.map(v=>v.uid)});
+   for(const v of splash)this.damage(v,4,false,null);
    this.sweep();}
   const marked=this.all(p,l).filter(v=>this.flag(v,'cookie'));
   const carrier=this.pick(marked.filter(v=>this.canMove(v)));
-  if(carrier){const spots=this.positionTargets(p,tl,{free:true});const dest=this.pick(spots);if(dest!==null&&dest!==undefined){carrier.mods=carrier.mods.filter(m=>!m.cookie);this.move(carrier,tl,dest);this.emit('cookie-toss',T(this.card(carrier.k).name+'被饼干吐向'+(['上路','中路','下路'][tl]),EN(this.card(carrier.k))+' is tossed by cookie to '+(['Top Lane','Middle Lane','Bottom Lane'][tl])),{unit:carrier.uid,fromLane:l,toLane:tl,pos:dest});}}
+  if(carrier){const spots=this.positionTargets(p,tl,{free:true});const dest=this.pick(spots);if(dest!==null&&dest!==undefined){carrier.mods=carrier.mods.filter(m=>!m.cookie);this.move(carrier,tl,dest);this.emit('cookie-toss',T(this.card(carrier.k).name+'被饼干吐向'+(['上路','中路','下路'][tl]),EN(this.card(carrier.k))+' is tossed by cookie to '+(['Top Lane','Middle Lane','Bottom Lane'][tl])),{unit:carrier.uid,owner:p,fromLane:l,toLane:tl,pos:dest});}}
   break;}
  case 'and_one_for_me':{const i=this.pick(Object.values(a.items));if(!i)throw Error(T('目标英雄没有装备','Target hero has no equipment'));pl.hand.push({uid:this.id(),k:i.k,lock:0});break;}
  case 'act_of_defiance':buff(a,{silence:1},'round');break;
@@ -215,6 +231,7 @@ G.canActivate=function(p,uid,k){
  if(['blink_dagger','winter_wyvern','meepo','phase_boots'].includes(k)&&!this.canMove(u))return T('缠绕期间无法移动','Cannot move while rooted');
  if(k==='dark_willow'&&this.flag(u,'shadowRealm'))return T('已经处于暗影之境','Already in Shadow Realm');
  if(k==='monkey_king'&&(u.charges||0)<3)return T('棒击蓄势需要 3 点能量（当前 '+(u.charges||0)+' 点）','Primed Strike needs 3 energy (currently '+(u.charges||0)+')');
+ if(k==='snapfire'&&!this.selectable(this.target(u)))return T('正对方向没有可攻击的敌人','No enemy to shred straight ahead');
  if(['pugna','demagicking_maul'].includes(k)&&!this.imps(1-p,l).length)return T('敌方没有强化','The enemy has no improvements');
  if(k==='demagicking_maul'&&this.target(u))return T('英雄被阻挡，无法使用','Hero is blocked and cannot use it');
  if(k==='meepo'&&!this.all(p).some(v=>v.k==='meepo'&&v.lane!==l))return T('其他战线没有友方米波','No allied Meepo in another lane');
@@ -242,6 +259,7 @@ G.activate=function(p,uid,k,t=[]){const backup=clone(this.s);try{
   if(!upgraded)foes=facing?[facing]:[];
   foes=foes.filter(v=>this.selectable(v)).slice(0,3);
   if(!foes.length)throw Error(T('正对方向没有可攻击的敌人','No enemy to shred straight ahead'));
+  this.emit('shredder',T('快速攻击连续射击 '+foes.length+' 个目标',"Lil' Shredder fires at "+foes.length+' target'+(foes.length>1?'s':'')),{unit:u.uid,owner:p,lane:l,targets:foes.map(v=>v.uid),hits:3,upgraded});
   for(const v of foes)for(let i=0;i<3;i++){if(!v.alive)break;this.damage(v,1,true,u.uid);}
   this.sweep();break;}
  case 'dark_willow':this.buff(u,{shadowRealm:1,shadowBonus:1},'death');break;
@@ -293,7 +311,7 @@ G.activate=function(p,uid,k,t=[]){const backup=clone(this.s);try{
  }catch(e){this.s=backup;throw e;}};
 // Heuristic AI uses the same public action API and validation as the player.
 G.candidateTargets=function(k,p,source=null){const spec=this.targets(k,p,source),choices=[];for(const s of spec){let a=[];
- if(s.kind==='lane')a=[0,1,2];
+ if(s.kind==='lane')a=[0,1,2].filter(l=>this.validLaneTarget(k,p,l,source));
  else if(s.kind==='position'){for(const l of s.cross?[0,1,2]:[this.s.lane])for(const pos of this.positionTargets(p,l,s,source))a.push({lane:l,pos});}
  else if(s.kind==='improvement'){for(let l=0;l<3;l++)if(s.cross||l===this.s.lane)for(let q=0;q<2;q++)if(!s.enemy||q!==p)a.push(...this.imps(q,l).map(i=>i.uid));}
  else a=this.all(null,s.cross?null:this.s.lane).filter(u=>this.selectable(u)&&(s.side!=='ally'||u.owner===p)&&(s.side!=='enemy'||u.owner!==p)&&(!s.hero||u.hero)&&(!s.creep||!u.hero)&&(!s.color||this.card(u.k).color===s.color)&&(!s.other||u.uid!==source?.uid)).map(u=>u.uid);
