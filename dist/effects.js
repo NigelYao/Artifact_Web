@@ -113,7 +113,7 @@ G.resolve=function(k,p,t,h){
   const frog=this.s.units.find(v=>v.k==='largo'&&v.owner===p);
   this.s.harmony={owner:p,round:this.s.round};
   if(frog&&frog.alive&&frog.lane===l)this.buff(frog,{harmony:1},'round');
-  this.emit('harmony',T('琴瑟和鸣 · 本回合打出的其他技能卡牌触发共鸣','Harmonic Duet · other cards played this round resonate'),{owner:p,lane:l,unit:frog?.uid});
+  this.emit('harmony',T('两栖狂想曲 · 本回合打出的其他技能卡牌触发共鸣','Harmonic Duet · other cards played this round resonate'),{owner:p,lane:l,unit:frog?.uid});
   break;}
  case 'and_one_for_me':{const i=this.pick(Object.values(a.items));if(!i)throw Error(T('目标英雄没有装备','Target hero has no equipment'));pl.hand.push({uid:this.id(),k:i.k,lock:0});break;}
  case 'act_of_defiance':buff(a,{silence:1},'round');break;
@@ -383,7 +383,7 @@ G.afterCard=function(p,c,handId,t){
  for(const v of this.all(p,l))this.heal(v,heal);
  for(const v of this.all(1-p,l))this.damage(v,dmg,false,null);
  for(const v of this.all(p,l))this.buff(v,{attack:1},'round');
- this.emit('harmony-echo',T('琴瑟和鸣共鸣：友方回复 '+heal+'、本回合攻击 +1，敌方受到 '+dmg+' 点伤害','Harmonic Duet echoes: allies heal '+heal+' and gain +1 attack this round, enemies take '+dmg+' damage'),{owner:p,lane:l,card:c.key,onLargo});
+ this.emit('harmony-echo',T('两栖狂想曲共鸣：友方回复 '+heal+'、本回合攻击 +1，敌方受到 '+dmg+' 点伤害','Harmonic Duet echoes: allies heal '+heal+' and gain +1 attack this round, enemies take '+dmg+' damage'),{owner:p,lane:l,card:c.key,onLargo});
 };
 // While the duet plays, enemy deaths are harvested into Frog Energy (creep +1, hero +2, cap 5).
 const prevSweep=G.sweep;
@@ -395,7 +395,7 @@ G.sweep=function(){
  const frog=gain&&this.s.units.find(v=>v.k==='largo'&&v.owner===hz.owner);
  if(!frog)return;
  frog.frog=Math.min(5,(frog.frog||0)+gain);
- this.emit('frog-energy',T('琴瑟和鸣收割 · 青蛙能量 +'+gain,'Harmonic harvest · Frog Energy +'+gain),{owner:hz.owner,lane:this.s.lane,amount:gain,total:frog.frog});
+ this.emit('frog-energy',T('两栖狂想曲收割 · 青蛙能量 +'+gain,'Harmonic harvest · Frog Energy +'+gain),{owner:hz.owner,lane:this.s.lane,amount:gain,total:frog.frog});
 };
 // Current Classic changes, plus aura properties that were absent from older data archives.
 const baseStats=G.itemStats;G.itemStats=function(k){if(k==='shield_of_aquila')return {armor:2};if(k==='assassins_veil')return {health:4};return baseStats.call(this,k);};
