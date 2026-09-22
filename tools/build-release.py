@@ -5,7 +5,7 @@ import json
 import tarfile
 
 root = Path(__file__).resolve().parent.parent
-release = '20260911-dota2-expansion1'
+release = '20260922-largo1'
 output = root / 'releases'
 output.mkdir(exist_ok=True)
 files = []
