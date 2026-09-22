@@ -665,6 +665,14 @@
   }
  },
  "files": {
+  "abilities-largo": {
+   "bytes": 76196,
+   "local": "action/largo_croak_of_genius_1.mp3",
+   "note": "liquipedia commons via wayback machine; compressed to web mp3",
+   "sha256": "e0036e6af2b0a5b8d54aea0b573f6fdd619ae0af658c0fafee478080a642d449",
+   "title": "File:Largo_Croak_of_Genius_1.mp3",
+   "url": "https://web.archive.org/web/2id_/https://liquipedia.net/commons/images/e/e6/Largo_Croak_of_Genius_1.mp3"
+  },
   "abilities-snapfire": {
    "bytes": 142105,
    "local": "action/snapfire_lil_shredder_1.mp3",
@@ -680,6 +688,22 @@
    "sha256": "e458929a9bf5ce167582027751691445f18ab233b5eb0e3eae891a54a757fdb8",
    "title": "File:Techies Blast Off! 1.mp3",
    "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/7/74/Techies_Blast_Off%21_1.mp3/revision/latest?cb=20191216024800"
+  },
+  "cards-amphibian_rhapsody": {
+   "bytes": 64618,
+   "local": "action/largo_amphibian_rhapsody_3.mp3",
+   "note": "liquipedia commons via wayback machine; compressed to web mp3",
+   "sha256": "56a585a35f8fdda84a1971baf91587139e950aa11bfa916db4ac27c9eed68329",
+   "title": "File:Largo_Amphibian_Rhapsody_3.mp3",
+   "url": "https://web.archive.org/web/2id_/https://liquipedia.net/commons/images/1/1b/Largo_Amphibian_Rhapsody_3.mp3"
+  },
+  "cards-frog_toss": {
+   "bytes": 44654,
+   "local": "action/largo_frogstomp_1.mp3",
+   "note": "liquipedia commons via wayback machine; compressed to web mp3",
+   "sha256": "6bfa12f6712727ca5bd29f9fde4cd2af70e1dae2e9eed32c29dcbff0493cb2b3",
+   "title": "File:Largo_Frogstomp_1.mp3",
+   "url": "https://web.archive.org/web/2id_/https://liquipedia.net/commons/images/1/15/Largo_Frogstomp_1.mp3"
   },
   "cards-mortimer_kisses": {
    "bytes": 60185,
@@ -721,6 +745,14 @@
    "title": "File:Techies Pinpoint Detonate.mp3",
    "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/e/ed/Techies_Pinpoint_Detonate.mp3/revision/latest?cb=20191216024806"
   },
+  "voice-ability-largo": {
+   "bytes": 35160,
+   "local": "action/vo_largo_largo_tongue_02.mp3",
+   "note": "liquipedia commons via wayback machine; compressed to web mp3",
+   "sha256": "3e58ac86ecce3465ffbce65908d396b410d46be2eb359e1607c4428d80fc78dd",
+   "title": "File:Vo_largo_largo_tongue_02.mp3",
+   "url": "https://web.archive.org/web/2id_/https://liquipedia.net/commons/images/b/bc/Vo_largo_largo_tongue_02.mp3"
+  },
   "voice-ability-snapfire": {
    "bytes": 33079,
    "local": "action/vo_snapfire_snapfire_ability4_01.mp3",
@@ -736,6 +768,22 @@
    "sha256": "d3961ba9b0fd83a4d5fa4877801c6c8640616408e6bd73245c2cacdbf6e9a2c7",
    "title": "File:Vo techies tech cast 01.mp3",
    "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/b/b6/Vo_techies_tech_cast_01.mp3/revision/latest?cb=20201020202846"
+  },
+  "voice-cards-amphibian_rhapsody": {
+   "bytes": 36414,
+   "local": "action/vo_largo_largo_jam_01.mp3",
+   "note": "liquipedia commons via wayback machine; compressed to web mp3",
+   "sha256": "8a5503b00dd43c1087ca7e3c044311f3e7a222a361109b3c7021dd8c50caa837",
+   "title": "File:Vo_largo_largo_jam_01.mp3",
+   "url": "https://web.archive.org/web/2id_/https://liquipedia.net/commons/images/4/49/Vo_largo_largo_jam_01.mp3"
+  },
+  "voice-cards-frog_toss": {
+   "bytes": 35164,
+   "local": "action/vo_largo_largo_frogstomp_01.mp3",
+   "note": "liquipedia commons via wayback machine; compressed to web mp3",
+   "sha256": "6ba9331bd026e4d50abb131e2c0d97eadbca9637c0327d2eda39752b2c0621ef",
+   "title": "File:Vo_largo_largo_frogstomp_01.mp3",
+   "url": "https://web.archive.org/web/2id_/https://liquipedia.net/commons/images/c/cf/Vo_largo_largo_frogstomp_01.mp3"
   },
   "voice-cards-mortimer_kisses": {
    "bytes": 48438,
@@ -768,6 +816,14 @@
    "sha256": "ee16097b6eaf3e102d6c5c8b6648d8311347b416870d30d3e805c53b00aeb885",
    "title": "File:Vo techies tech cast 02.mp3",
    "url": "https://static.wikia.nocookie.net/dota2_gamepedia/images/4/47/Vo_techies_tech_cast_02.mp3/revision/latest?cb=20201020202849"
+  },
+  "voice-hero-largo": {
+   "bytes": 57699,
+   "local": "action/vo_largo_largo_spawn_03.mp3",
+   "note": "liquipedia commons via wayback machine; compressed to web mp3",
+   "sha256": "4be3686251863bdc8814e65028509da512d0425419c03cef71bd19154b932db2",
+   "title": "File:Vo_largo_largo_spawn_03.mp3",
+   "url": "https://web.archive.org/web/2id_/https://liquipedia.net/commons/images/e/e6/Vo_largo_largo_spawn_03.mp3"
   },
   "voice-hero-snapfire": {
    "bytes": 20404,

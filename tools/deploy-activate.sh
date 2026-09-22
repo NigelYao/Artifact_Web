@@ -7,7 +7,9 @@ ARCHIVE="/tmp/artifact-$RELEASE.tar.gz"
 DEST="$ROOT/releases/$RELEASE"
 if [ -e "$DEST" ]; then printf 'Release already exists: %s\n' "$DEST"; exit 2; fi
 sudo install -d -o ubuntu -g ubuntu "$DEST"
-tar -xzf /tmp/artifact-assets-20260909.tar.gz -C "$DEST"
+ASSETS="$ROOT/artifact-assets-20260922.tar.gz"
+[ -f "$ASSETS" ] || ASSETS=/tmp/artifact-assets-20260909.tar.gz
+tar -xzf "$ASSETS" -C "$DEST"
 tar -xzf "$ARCHIVE" -C "$DEST"
 export PATH="$ROOT/runtime/bin:$PATH"
 cd "$DEST"

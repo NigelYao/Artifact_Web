@@ -322,5 +322,44 @@
     "bytes": 60185
    }
   ]
+ },
+ "largo": {
+  "imported": [
+   {
+    "ident": "voice-hero-largo",
+    "local": "action/vo_largo_largo_spawn_03.mp3",
+    "bytes": 57699
+   },
+   {
+    "ident": "voice-ability-largo",
+    "local": "action/vo_largo_largo_tongue_02.mp3",
+    "bytes": 35160
+   },
+   {
+    "ident": "abilities-largo",
+    "local": "action/largo_croak_of_genius_1.mp3",
+    "bytes": 76196
+   },
+   {
+    "ident": "voice-cards-frog_toss",
+    "local": "action/vo_largo_largo_frogstomp_01.mp3",
+    "bytes": 35164
+   },
+   {
+    "ident": "cards-frog_toss",
+    "local": "action/largo_frogstomp_1.mp3",
+    "bytes": 44654
+   },
+   {
+    "ident": "voice-cards-amphibian_rhapsody",
+    "local": "action/vo_largo_largo_jam_01.mp3",
+    "bytes": 36414
+   },
+   {
+    "ident": "cards-amphibian_rhapsody",
+    "local": "action/largo_amphibian_rhapsody_3.mp3",
+    "bytes": 64618
+   }
+  ]
  }
 }
