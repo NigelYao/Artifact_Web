@@ -4,7 +4,9 @@
 const {Game,clone}=root.ArtifactEngine;
 const I18N=(typeof ArtifactI18n!=='undefined'&&ArtifactI18n)||(typeof require==='function'?(function(){try{return require('./i18n.js')}catch(e){return null}})():null);
 const T=I18N?I18N.T:(z,e)=>z;
-const NM=c=>T(c.name,c.en||''),EN=c=>c.en||c.name;
+const NM=c=>T(c.name,c.en||'',c.nameRu||c.ru),EN=c=>c.en||c.name;
+// Russian interpolation must not depend on the currently selected UI language.
+const RN=c=>c.nameRu||c.ru||c.en||c.name;
 const G=Game.prototype;
 const previousTargets=G.targets;
 G.targets=function(k,p,source=null){
@@ -28,9 +30,9 @@ G.validateTargets=function(c,p,t,source=null){
  previousValidateTargets.call(this,c,p,t,source);
  if(c.key==='mortimer_kisses'&&!this.validLaneTarget(c.key,p,t[0]))throw Error(T('请选择有有效目标或饼干落点的相邻分路','Choose an adjacent lane with a valid target or Cookie landing slot'));
 };
-G.removeImp=function(id){for(let l=0;l<3;l++)for(let p=0;p<2;p++){const a=this.imps(p,l),i=a.findIndex(v=>v.uid===id);if(i>=0){const [c]=a.splice(i,1);this.emit('destroy',T(this.card(c.k).name+'被摧毁',EN(this.card(c.k))+' is destroyed'));return;}}};
+G.removeImp=function(id){for(let l=0;l<3;l++)for(let p=0;p<2;p++){const a=this.imps(p,l),i=a.findIndex(v=>v.uid===id);if(i>=0){const [c]=a.splice(i,1);this.emit('destroy',T(this.card(c.k).name+'被摧毁',EN(this.card(c.k))+' is destroyed',RN(this.card(c.k))+' уничтожен'));return;}}};
 G.chooseCombat=function(a,b){if(!a||!b||a.owner===b.owner||a.lane!==b.lane)throw Error(T('战斗目标须为同路敌方单位','Combat target must be an enemy in the same lane'));a.target=b.uid;a.arrow=b.pos-a.pos;};
-G.takeControl=function(u,p){const l=u.lane;u.owner=p;this.s.mines=(this.s.mines||[]).filter(m=>m.unit!==u.uid);const occupied=this.all(p,l).filter(v=>v!==u);if(occupied.some(v=>v.pos===u.pos)){let pos=0;while(occupied.some(v=>v.pos===pos))pos++;u.pos=pos;}u.target=null;u.arrow=0;this.emit('control',T(this.card(u.k).name+'改变阵营',EN(this.card(u.k))+' changes allegiance'),{unit:u.uid});};
+G.takeControl=function(u,p){const l=u.lane;u.owner=p;this.s.mines=(this.s.mines||[]).filter(m=>m.unit!==u.uid);const occupied=this.all(p,l).filter(v=>v!==u);if(occupied.some(v=>v.pos===u.pos)){let pos=0;while(occupied.some(v=>v.pos===pos))pos++;u.pos=pos;}u.target=null;u.arrow=0;this.emit('control',T(this.card(u.k).name+'改变阵营',EN(this.card(u.k))+' changes allegiance',RN(this.card(u.k))+' меняет сторону'),{unit:u.uid});};
 // Persisted, seeded path: damage and displacement use exactly the curve displayed by the client.
 G.rollThunder=function(u,destination){
  if(!this.canMove(u))throw Error(T('缠绕或翻牌期间无法滚动','Cannot roll while rooted or flipped'));
@@ -38,14 +40,14 @@ G.rollThunder=function(u,destination){
  const points=[{x:start,y:0},{x:this.random()*(max+.5),y:1},{x:this.random()*(max+.5),y:0},{x:this.random()*(max+.5),y:1},{x:end,y:0}],path=[];
  for(let i=0;i<points.length-1;i++){const a=points[Math.max(0,i-1)],b=points[i],c=points[i+1],d=points[Math.min(points.length-1,i+2)];for(let n=0;n<24;n++){const t=n/24,t2=t*t,t3=t2*t;const coordinate=k=>.5*((2*b[k])+(-a[k]+c[k])*t+(2*a[k]-5*b[k]+4*c[k]-d[k])*t2+(-a[k]+3*b[k]-3*c[k]+d[k])*t3);path.push({pos:Math.max(0,Math.min(max,coordinate('x'))),row:Math.max(0,Math.min(1,coordinate('y')))});}}
  path.push({pos:end,row:0});
- const event=this.emit('rolling',T(this.card(u.k).name+' · 地雷滚滚',EN(this.card(u.k))+' · Rolling Thunder'),{unit:u.uid,owner:p,lane:l,start,end,columns:max+1,path,hits:[]}),counts=new Map(),touching=new Set();
+ const event=this.emit('rolling',T(this.card(u.k).name+' · 地雷滚滚',EN(this.card(u.k))+' · Rolling Thunder',RN(this.card(u.k))+' · Раскат грома'),{unit:u.uid,owner:p,lane:l,start,end,columns:max+1,path,hits:[]}),counts=new Map(),touching=new Set();
  for(const [step,point] of path.entries())for(const v of this.all(null,l)){
   if(v===u||!this.selectable(v)||this.stats(v).hp<=0)continue;
   const close=Math.hypot(v.pos-point.pos,(v.owner===p?0:1)-point.row)<.52;
   if(!close){touching.delete(v.uid);continue;}if(touching.has(v.uid)||(counts.get(v.uid)||0)>=2)continue;touching.add(v.uid);
   const damage=this.damage(v,1,false,u.uid);if(!damage)continue;counts.set(v.uid,(counts.get(v.uid)||0)+1);
   const from=v.pos,options=[from-1,from+1].filter(pos=>pos>=0&&pos<=max&&!this.at(v.owner,l,pos)&&!(v.owner===p&&pos===end));
-  if(options.length&&this.canMove(v)){v.pos=this.pick(options);this.resetArrow(v);this.emit('displace',T(this.card(v.k).name+'移动一格',EN(this.card(v.k))+' shifts one slot'),{unit:v.uid,fromPos:from,toPos:v.pos,lane:l});}
+  if(options.length&&this.canMove(v)){v.pos=this.pick(options);this.resetArrow(v);this.emit('displace',T(this.card(v.k).name+'移动一格',EN(this.card(v.k))+' shifts one slot',RN(this.card(v.k))+' сдвигается на одну ячейку'),{unit:v.uid,fromPos:from,toPos:v.pos,lane:l});}
   event.hits.push({unit:v.uid,step,fromPos:from,toPos:v.pos,amount:damage});
  }
  this.move(u,l,end);
@@ -53,7 +55,7 @@ G.rollThunder=function(u,destination){
 G.triggerJex=function(p,handId){
  const ready=(this.s.jex||[]).filter(j=>j.owner===p&&j.createdBy!==handId);
  this.s.jex=(this.s.jex||[]).filter(j=>!ready.includes(j));
- for(const j of ready){const target=this.at(1-p,j.lane,j.pos);this.emit('jex',T(j.enhanced?'杰克斯 · 恐吓':'杰克斯 · 作祟',j.enhanced?'Jex · Menace':'Jex · Hijinks'),{owner:p,lane:j.lane,pos:j.pos,enhanced:j.enhanced,target:target?.uid});if(!this.selectable(target))continue;this.damage(target,j.enhanced?3:2);this.buff(target,j.enhanced?{flipped:1}:{disarm:1},'round');}
+ for(const j of ready){const target=this.at(1-p,j.lane,j.pos);this.emit('jex',T(j.enhanced?'杰克斯 · 恐吓':'杰克斯 · 作祟',j.enhanced?'Jex · Menace':'Jex · Hijinks',j.enhanced?'Джекс · Угроза':'Джекс · Проделки'),{owner:p,lane:j.lane,pos:j.pos,enhanced:j.enhanced,target:target?.uid});if(!this.selectable(target))continue;this.damage(target,j.enhanced?3:2);this.buff(target,j.enhanced?{flipped:1}:{disarm:1},'round');}
 };
 G.resolve=function(k,p,t,h){
  const l=this.s.lane,pl=this.s.players[p],op=this.s.players[1-p],a=this.get(t[0]),b=this.get(t[1]);
@@ -66,18 +68,18 @@ G.resolve=function(k,p,t,h){
  case 'dark_willow_terrorize':{const pos=t[0].pos,flower=this.at(p,l,pos);(this.s.jex||=[]).push({uid:this.id(),owner:p,lane:l,pos,enhanced:flower?.k==='dark_willow_bramble',createdBy:h.uid});this.emit('jex-summon',T('杰克斯等待下一张技能牌','Jex awaits the next allied spell'),{owner:p,lane:l,pos,enhanced:flower?.k==='dark_willow_bramble'});break;}
  case 'monkey_king_command':{for(const pos of this.positionTargets(p,l,{free:true}))this.spawn('monkey_soldier',p,l,pos);break;}
  case 'tree_dance':{const from=a.pos;this.move(a,l,t[1].pos);this.spawn('monkey_soldier',p,l,from);break;}
- case 'proximity_mines':{if(this.mineOn(a))throw Error(T('该单位已埋设感应地雷','That unit already carries a Proximity Mine'));(this.s.mines||=[]).push({uid:this.id(),owner:p,unit:a.uid,lane:a.lane,pos:a.pos});this.emit('mine-summon',T(this.card(a.k).name+'下方埋设了感应地雷','A Proximity Mine is planted beneath '+EN(this.card(a.k))),{owner:p,lane:a.lane,pos:a.pos,unit:a.uid,secret:p});break;}
- case 'reactive_tazer':{const ally=this.pick(allies());if(ally){this.buff(ally,{disarm:1},'round');this.emit('buff',T(this.card(ally.k).name+'被活性电击缴械',EN(this.card(ally.k))+' is disarmed by Reactive Tazer'),{unit:ally.uid,owner:p});}
-  for(const e of this.shuffle(enemies()).slice(0,2)){this.buff(e,{disarm:1},'round');this.emit('buff',T(this.card(e.k).name+'被活性电击缴械',EN(this.card(e.k))+' is disarmed by Reactive Tazer'),{unit:e.uid,owner:p});}
+ case 'proximity_mines':{if(this.mineOn(a))throw Error(T('该单位已埋设感应地雷','That unit already carries a Proximity Mine'));(this.s.mines||=[]).push({uid:this.id(),owner:p,unit:a.uid,lane:a.lane,pos:a.pos});this.emit('mine-summon',T(this.card(a.k).name+'下方埋设了感应地雷','A Proximity Mine is planted beneath '+EN(this.card(a.k)),'Мина установлена под '+RN(this.card(a.k))),{owner:p,lane:a.lane,pos:a.pos,unit:a.uid,secret:p});break;}
+ case 'reactive_tazer':{const ally=this.pick(allies());if(ally){this.buff(ally,{disarm:1},'round');this.emit('buff',T(this.card(ally.k).name+'被活性电击缴械',EN(this.card(ally.k))+' is disarmed by Reactive Tazer',RN(this.card(ally.k))+' обезоружен Реактивным электрошокером'),{unit:ally.uid,owner:p});}
+  for(const e of this.shuffle(enemies()).slice(0,2)){this.buff(e,{disarm:1},'round');this.emit('buff',T(this.card(e.k).name+'被活性电击缴械',EN(this.card(e.k))+' is disarmed by Reactive Tazer',RN(this.card(e.k))+' обезоружен Реактивным электрошокером'),{unit:e.uid,owner:p});}
   const m=ally&&this.mineOn(ally);if(m&&m.owner===p)this.detonate(m,'tazer');break;}
  case 'snapfire_cookie':{
   // Feed a cookie: chip the ally, hop it forward, stun what it now faces, mark it.
   this.damage(a,2,true);
   const dest=a.pos+1;
-  if(!this.at(p,l,dest)&&this.canMove(a)){const from=a.pos;a.pos=dest;a.target=null;this.resetArrow(a);this.emit('displace',T(this.card(a.k).name+'向前猛冲一格',EN(this.card(a.k))+' hops one slot forward'),{unit:a.uid,fromPos:from,toPos:dest,lane:l});}
+  if(!this.at(p,l,dest)&&this.canMove(a)){const from=a.pos;a.pos=dest;a.target=null;this.resetArrow(a);this.emit('displace',T(this.card(a.k).name+'向前猛冲一格',EN(this.card(a.k))+' hops one slot forward',RN(this.card(a.k))+' прыгает на одну ячейку вперёд'),{unit:a.uid,fromPos:from,toPos:dest,lane:l});}
   const facing=this.target(a);
-  if(facing&&this.selectable(facing)){this.buff(facing,{stun:1},'round');this.emit('buff',T(this.card(facing.k).name+'被饼干撞击晕眩',EN(this.card(facing.k))+' is stunned by the cookie'),{unit:facing.uid,owner:p});}
-  this.buff(a,{cookie:1},'round');this.emit('cookie',T(this.card(a.k).name+'获得饼干标记',EN(this.card(a.k))+' gains a Cookie marker'),{unit:a.uid,owner:p,lane:l,pos:a.pos,fromPos:dest===a.pos?dest-1:a.pos,toPos:a.pos,target:facing?.uid||null});
+  if(facing&&this.selectable(facing)){this.buff(facing,{stun:1},'round');this.emit('buff',T(this.card(facing.k).name+'被饼干撞击晕眩',EN(this.card(facing.k))+' is stunned by the cookie',RN(this.card(facing.k))+' оглушён печеньем'),{unit:facing.uid,owner:p});}
+  this.buff(a,{cookie:1},'round');this.emit('cookie',T(this.card(a.k).name+'获得饼干标记',EN(this.card(a.k))+' gains a Cookie marker',RN(this.card(a.k))+' получает метку печенья'),{unit:a.uid,owner:p,lane:l,pos:a.pos,fromPos:dest===a.pos?dest-1:a.pos,toPos:a.pos,target:facing?.uid||null});
   break;}
  case 'mortimer_kisses':{
   const tl=t[0];
@@ -88,7 +90,7 @@ G.resolve=function(k,p,t,h){
    this.sweep();}
   const marked=this.all(p,l).filter(v=>this.flag(v,'cookie'));
   const carrier=this.pick(marked.filter(v=>this.canMove(v)));
-  if(carrier){const spots=this.positionTargets(p,tl,{free:true});const dest=this.pick(spots);if(dest!==null&&dest!==undefined){carrier.mods=carrier.mods.filter(m=>!m.cookie);this.move(carrier,tl,dest);this.emit('cookie-toss',T(this.card(carrier.k).name+'被饼干吐向'+(['上路','中路','下路'][tl]),EN(this.card(carrier.k))+' is tossed by cookie to '+(['Top Lane','Middle Lane','Bottom Lane'][tl])),{unit:carrier.uid,owner:p,fromLane:l,toLane:tl,pos:dest});}}
+  if(carrier){const spots=this.positionTargets(p,tl,{free:true});const dest=this.pick(spots);if(dest!==null&&dest!==undefined){carrier.mods=carrier.mods.filter(m=>!m.cookie);this.move(carrier,tl,dest);this.emit('cookie-toss',T(this.card(carrier.k).name+'被饼干吐向'+(['上路','中路','下路'][tl]),EN(this.card(carrier.k))+' is tossed by cookie to '+(['Top Lane','Middle Lane','Bottom Lane'][tl]),RN(this.card(carrier.k))+' брошен печеньем на линию: '+(['Верхняя','Средняя','Нижняя'][tl])),{unit:carrier.uid,owner:p,fromLane:l,toLane:tl,pos:dest});}}
   break;}
  case 'frog_toss':{
   // Frogstomp: the frog ricochets between enemy units in this lane, 1 damage per bounce.
@@ -105,7 +107,7 @@ G.resolve=function(k,p,t,h){
    const v=pool[i%pool.length];
    this.damage(v,1,false,frog?.uid||null);hits.push(v.uid);this.sweep();
   }
-  this.emit('frog-bounce',T('蛙力千钧 · 弹跳 '+hits.length+' 次','Frogstomp · '+hits.length+' bounces'),{owner:p,lane:l,hits});
+  this.emit('frog-bounce',T('蛙力千钧 · 弹跳 '+hits.length+' 次','Frogstomp · '+hits.length+' bounces','Лягушачий топот · прыжков: '+hits.length),{owner:p,lane:l,hits});
   break;}
  case 'amphibian_rhapsody':{
   // Harmonic Duet: for the rest of the round every non-item card the owner plays
@@ -252,10 +254,10 @@ G.canActivate=function(p,uid,k){
  if(!u)return T('找不到技能来源','Ability source not found');
  if(u.hero!==undefined&&(u.owner!==p||u.lane!==l||!this.enabled(u)))return T('该单位当前无法使用技能','This unit cannot use abilities right now');
  const a=this.abilities(u).find(a=>a.k===k);if(!a)return T('这是自动生效的被动技能','This passive ability triggers automatically');
- if(a.remaining>0)return T('冷却剩余 '+a.remaining+' 回合','Cooldown: '+a.remaining+' rounds remaining');
+ if(a.remaining>0)return T('冷却剩余 '+a.remaining+' 回合','Cooldown: '+a.remaining+' rounds remaining','Перезарядка: осталось '+a.remaining+' раундов');
  if(['blink_dagger','winter_wyvern','meepo','phase_boots'].includes(k)&&!this.canMove(u))return T('缠绕期间无法移动','Cannot move while rooted');
  if(k==='dark_willow'&&this.flag(u,'shadowRealm'))return T('已经处于暗影之境','Already in Shadow Realm');
- if(k==='monkey_king'&&(u.charges||0)<3)return T('棒击蓄势需要 3 点能量（当前 '+(u.charges||0)+' 点）','Primed Strike needs 3 energy (currently '+(u.charges||0)+')');
+ if(k==='monkey_king'&&(u.charges||0)<3)return T('棒击蓄势需要 3 点能量（当前 '+(u.charges||0)+' 点）','Primed Strike needs 3 energy (currently '+(u.charges||0)+')','Для Подготовленного удара нужно 3 энергии (сейчас '+(u.charges||0)+')');
  if(k==='snapfire'&&!this.selectable(this.target(u)))return T('正对方向没有可攻击的敌人','No enemy to shred straight ahead');
  if(['pugna','demagicking_maul'].includes(k)&&!this.imps(1-p,l).length)return T('敌方没有强化','The enemy has no improvements');
  if(k==='demagicking_maul'&&this.target(u))return T('英雄被阻挡，无法使用','Hero is blocked and cannot use it');
@@ -271,11 +273,11 @@ G.activate=function(p,uid,k,t=[]){const backup=clone(this.s);try{
  if(k==='dark_willow'&&this.flag(u,'shadowRealm'))throw Error(T('已经处于暗影之境','Already in Shadow Realm'));
  if(k==='monkey_king'&&(u.charges||0)<3)throw Error(T('棒击蓄势需要 3 点能量','Primed Strike needs 3 energy'));
  this.validateTargets({key:k},p,t,u);const a=this.get(t[0]),b=this.get(t[1]),it=Object.values(u.items||{}).find(i=>i.k===k);
- this.emit('ability',NM(this.card(u.k))+' · '+T(ability.name,(root.ArtifactHeroSkills?.all?.[u.k]||[]).find(a=>a.name===ability.name)?.en||''),{unit:uid,card:this.card(k)?k:u.k,skill:k});
+ this.emit('ability',NM(this.card(u.k))+' · '+T(ability.name,(root.ArtifactHeroSkills?.all?.[u.k]||[]).find(a=>a.name===ability.name)?.en||'',(root.ArtifactHeroSkills?.all?.[u.k]||[]).find(a=>a.name===ability.name)?.nameRu),{unit:uid,card:this.card(k)?k:u.k,skill:k});
  switch(k){
- case 'pangolier':{let shield=0;for(const v of this.neighbors(u,true))if(this.damage(v,2,false,u.uid)>0)shield+=v.hero?2:1;if(shield)this.buff(u,{shield},'round');this.emit('shield-crash',T('甲盾冲击 · 护盾 '+shield,'Shield Crash · Shield '+shield),{unit:u.uid,owner:p,lane:l,shield});break;}
- case 'monkey_king':{u.charges-=3;this.damage(a,4,false,u.uid);this.s.players[p].monkeyBonus=(this.s.players[p].monkeyBonus||0)+1;this.emit('buff',T('此后召唤的猴子猴孙攻击永久 +1（当前 +'+this.s.players[p].monkeyBonus+'）','Monkey Soldiers summoned later gain +1 attack permanently (now +'+this.s.players[p].monkeyBonus+')'),{unit:u.uid});break;}
- case 'techies':{const d=Math.ceil(this.stats(u).hp/2);this.damage(a,d,true,u.uid);const n=Math.min(d,this.stats(u).hp-1);if(n>0){u.damage+=n;this.emit('damage',T(this.card(u.k).name+'受到 '+n+' 点伤害',EN(this.card(u.k))+' takes '+n+' damage'),{unit:u.uid,amount:n,source:u.uid});}break;}
+ case 'pangolier':{let shield=0;for(const v of this.neighbors(u,true))if(this.damage(v,2,false,u.uid)>0)shield+=v.hero?2:1;if(shield)this.buff(u,{shield},'round');this.emit('shield-crash',T('甲盾冲击 · 护盾 '+shield,'Shield Crash · Shield '+shield,'Удар щитом · Щит '+shield),{unit:u.uid,owner:p,lane:l,shield});break;}
+ case 'monkey_king':{u.charges-=3;this.damage(a,4,false,u.uid);this.s.players[p].monkeyBonus=(this.s.players[p].monkeyBonus||0)+1;this.emit('buff',T('此后召唤的猴子猴孙攻击永久 +1（当前 +'+this.s.players[p].monkeyBonus+'）','Monkey Soldiers summoned later gain +1 attack permanently (now +'+this.s.players[p].monkeyBonus+')','Следующие солдаты-обезьяны навсегда получают +1 к атаке (теперь +'+this.s.players[p].monkeyBonus+')'),{unit:u.uid});break;}
+ case 'techies':{const d=Math.ceil(this.stats(u).hp/2);this.damage(a,d,true,u.uid);const n=Math.min(d,this.stats(u).hp-1);if(n>0){u.damage+=n;this.emit('damage',T(this.card(u.k).name+'受到 '+n+' 点伤害',EN(this.card(u.k))+' takes '+n+' damage',RN(this.card(u.k))+' получает '+n+' урона'),{unit:u.uid,amount:n,source:u.uid});}break;}
  case 'snapfire':{
   // Lil' Shredder: 3 rapid piercing hits; upgraded after round 5 to hit up to 3 opposing neighbors.
   const upgraded=this.s.round>=5;
@@ -284,7 +286,7 @@ G.activate=function(p,uid,k,t=[]){const backup=clone(this.s);try{
   if(!upgraded)foes=facing?[facing]:[];
   foes=foes.filter(v=>this.selectable(v)).slice(0,3);
   if(!foes.length)throw Error(T('正对方向没有可攻击的敌人','No enemy to shred straight ahead'));
-  this.emit('shredder',T('快速攻击连续射击 '+foes.length+' 个目标',"Lil' Shredder fires at "+foes.length+' target'+(foes.length>1?'s':'')),{unit:u.uid,owner:p,lane:l,targets:foes.map(v=>v.uid),hits:3,upgraded});
+  this.emit('shredder',T('快速攻击连续射击 '+foes.length+' 个目标',"Lil' Shredder fires at "+foes.length+' target'+(foes.length>1?'s':''),'Маленький обстрел · целей: '+foes.length),{unit:u.uid,owner:p,lane:l,targets:foes.map(v=>v.uid),hits:3,upgraded});
   for(const v of foes)for(let i=0;i<3;i++){if(!v.alive)break;this.damage(v,1,true,u.uid);}
   this.sweep();break;}
  case 'largo':{
@@ -302,7 +304,7 @@ G.activate=function(p,uid,k,t=[]){const backup=clone(this.s);try{
   }
   if(cleansed.length)this.heal(u,cleansed.length);
   u.frog=Math.min(5,(u.frog||0)+1);
-  this.emit('lick',T('动人之舐 · 净化 '+cleansed.length+' 个单位 · 青蛙能量 '+u.frog,'Catchy Lick · cleansed '+cleansed.length+' unit(s) · Frog Energy '+u.frog),{unit:u.uid,owner:p,lane:l,cleansed,pulls,energy:u.frog});
+  this.emit('lick',T('动人之舐 · 净化 '+cleansed.length+' 个单位 · 青蛙能量 '+u.frog,'Catchy Lick · cleansed '+cleansed.length+' unit(s) · Frog Energy '+u.frog,'Цепкий язык · очищено бойцов: '+cleansed.length+' · Энергия лягушки '+u.frog),{unit:u.uid,owner:p,lane:l,cleansed,pulls,energy:u.frog});
   break;}
  case 'dark_willow':this.buff(u,{shadowRealm:1,shadowBonus:1},'death');break;
  case 'abaddon':this.heal(u,999);this.buff(u,{immune:1},'round');break;
@@ -383,7 +385,7 @@ G.afterCard=function(p,c,handId,t){
  for(const v of this.all(p,l))this.heal(v,heal);
  for(const v of this.all(1-p,l))this.damage(v,dmg,false,null);
  for(const v of this.all(p,l))this.buff(v,{attack:1},'round');
- this.emit('harmony-echo',T('两栖狂想曲共鸣：友方回复 '+heal+'、本回合攻击 +1，敌方受到 '+dmg+' 点伤害','Harmonic Duet echoes: allies heal '+heal+' and gain +1 attack this round, enemies take '+dmg+' damage'),{owner:p,lane:l,card:c.key,onLargo});
+ this.emit('harmony-echo',T('两栖狂想曲共鸣：友方回复 '+heal+'、本回合攻击 +1，敌方受到 '+dmg+' 点伤害','Harmonic Duet echoes: allies heal '+heal+' and gain +1 attack this round, enemies take '+dmg+' damage','Эхо дуэта: союзники восстанавливают '+heal+' здоровья и получают +1 к атаке в этом раунде; враги получают '+dmg+' урона'),{owner:p,lane:l,card:c.key,onLargo});
 };
 // While the duet plays, enemy deaths are harvested into Frog Energy (creep +1, hero +2, cap 5).
 const prevSweep=G.sweep;
@@ -395,7 +397,7 @@ G.sweep=function(){
  const frog=gain&&this.s.units.find(v=>v.k==='largo'&&v.owner===hz.owner);
  if(!frog)return;
  frog.frog=Math.min(5,(frog.frog||0)+gain);
- this.emit('frog-energy',T('两栖狂想曲收割 · 青蛙能量 +'+gain,'Harmonic harvest · Frog Energy +'+gain),{owner:hz.owner,lane:this.s.lane,amount:gain,total:frog.frog});
+ this.emit('frog-energy',T('两栖狂想曲收割 · 青蛙能量 +'+gain,'Harmonic harvest · Frog Energy +'+gain,'Гармонический сбор · Энергия лягушки +'+gain),{owner:hz.owner,lane:this.s.lane,amount:gain,total:frog.frog});
 };
 // Current Classic changes, plus aura properties that were absent from older data archives.
 const baseStats=G.itemStats;G.itemStats=function(k){if(k==='shield_of_aquila')return {armor:2};if(k==='assassins_veil')return {health:4};return baseStats.call(this,k);};
