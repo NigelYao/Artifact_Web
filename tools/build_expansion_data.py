@@ -104,7 +104,8 @@ def expansion_cards():
         art=ART+'largo_amphibian_rhapsody.png', aliases='琴瑟和鸣 朗戈大招 和鸣 狂想曲',
         text='需要本路有可行动的红色英雄。本回合内你之后打出的每张非物品卡牌触发共鸣：本路友方回复1点生命、敌方受到1点伤害、友方本回合+1攻击；若该卡牌指向朗戈本体，回复与伤害改为2点。生效期间敌方小兵阵亡使青蛙能量+1，敌方英雄阵亡使青蛙能量+2。',
         textEn='Requires a ready Red hero in this lane. For the rest of the round, each non-item card you play resonates: allies in this lane heal 1, enemies take 1 damage, allies gain +1 attack this round; a card aimed at Largo himself doubles the heal and damage to 2. While it plays, each enemy creep death grants +1 Frog Energy and each enemy hero death +2.')
-    return cards
+    from localize_cards import localize_cards
+    return localize_cards(cards)
 
 if __name__ == '__main__':
     cards = json.loads((ROOT/'dist/cards.json').read_text(encoding='utf8'))

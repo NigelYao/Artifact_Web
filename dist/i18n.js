@@ -1,37 +1,58 @@
-/* Bilingual UI layer (zh default, en optional). No build step: load before other scripts.
+/* UI localization (zh, en, ru; browser locale with a saved-choice override). No build step: load before other scripts.
    Conventions:
-   - T('中文', 'English') registers the pair and returns the text for the active locale.
+   - T('中文', 'English', 'Русский') registers the pair and returns the text for the active locale.
      Call it at render time (inside template/render functions), not at module top level,
      so a language switch is reflected on the next render.
-   - Data objects carry parallel English fields: cards use `en` (name) and `textEn`;
-     other content uses `<field>En` (e.g. titleEn, descriptionEn, outroEn).
-   - Static markup uses data-en="English" to swap textContent, and
-     data-en-<attr>="English" to swap an attribute (data-en-aria-label, data-en-title, ...).
-   - English falls back to the Chinese source string when a translation is missing,
-     so new untranslated copy never renders blank. */
+   - Data objects carry parallel fields: cards use `en`, `nameRu`, `textEn`,
+     `textRu`; other content uses `<field>En` and `<field>Ru`.
+   - Static markup uses data-en/data-ru for text and data-en-<attr>/data-ru-<attr>
+     for attributes. Original Chinese content is retained for switching back.
+   - Missing Russian content falls back to English, then the Chinese source.
+   - Saved artifact.lang overrides browser language detection. Unsupported browser
+     locales use English; non-browser game engines retain canonical Chinese. */
 (function (root) {
 'use strict';
 const KEY = 'artifact.lang';
 const pairs = new Map();
 const reverse = new Map();
 const subs = [];
-let lang = 'zh';
+const supported = ['en', 'ru', 'zh'];
+const russian = new Map();
+const russianEnglish = new Map();
+const ruSource = new Map();
+const uiRu = root.ARTIFACT_RU_UI || (typeof require === 'function' ? (() => { try { return require('./ru-ui.js'); } catch { return {}; } })() : {});
+function detectLanguage() {
+  // No browser: preserve the engine's canonical Chinese event text.
+  if (!root.navigator || (root.process?.versions?.node && !root.document)) return 'zh';
+  const preferences = [...(root.navigator.languages || []), root.navigator.language];
+  for (const locale of preferences) {
+    const base = String(locale || '').toLowerCase().split(/[-_]/)[0];
+    if (supported.includes(base)) return base;
+  }
+  return 'en';
+}
+let lang = detectLanguage();
 try {
   const v = root.localStorage && root.localStorage.getItem(KEY);
-  if (v === 'en' || v === 'zh') lang = v;
-} catch (e) { /* private mode */ }
+  if (supported.includes(v)) lang = v;
+} catch (e) { /* Browser locale still works when storage is unavailable. */ }
 
-function T(zh, en) {
+function T(zh, en, ru) {
   if (en !== undefined && en !== null && en !== '') { pairs.set(zh, en); reverse.set(en, zh); }
-  if (lang !== 'en') return zh;
-  return pairs.get(zh) ?? zh;
+  if (ru !== undefined && ru !== null && ru !== '') { russian.set(zh, ru); if (en) russianEnglish.set(en, ru); ruSource.set(ru, zh); }
+  if (lang === 'ru') {
+    const value = en ? (russianEnglish.get(en) ?? toRu(en)) : (russian.get(zh) ?? toRu(pairs.get(zh) || zh));
+    if (value !== zh) ruSource.set(value, zh);
+    return value;
+  }
+  return lang === 'en' ? (pairs.get(zh) ?? zh) : zh;
 }
 
-/* pick(obj, 'name') -> obj.nameEn ?? (name only: obj.en) ?? obj.name in English mode. */
 function pick(obj, base) {
   if (!obj) return '';
-  if (lang !== 'en') return obj[base];
-  return obj[base + 'En'] ?? (base === 'name' ? obj.en : undefined) ?? obj[base];
+  if (lang === 'zh') return obj[base];
+  const en = obj[base + 'En'] ?? (base === 'name' ? obj.en : undefined) ?? obj[base];
+  return lang === 'ru' ? (obj[base + 'Ru'] ?? toRu(en)) : en;
 }
 
 const cardName = c => pick(c, 'name');
@@ -42,7 +63,7 @@ function applyStatic(scope) {
   if (!rootEl || !rootEl.querySelectorAll) return;
   rootEl.querySelectorAll('[data-en]').forEach(el => {
     if (el.dataset.zh === undefined) el.dataset.zh = el.textContent;
-    el.textContent = lang === 'en' ? el.dataset.en : el.dataset.zh;
+    el.textContent = lang === 'ru' ? (el.dataset.ru || toRu(el.dataset.en)) : lang === 'en' ? el.dataset.en : el.dataset.zh;
   });
   rootEl.querySelectorAll('*').forEach(el => {
     for (const { name, value } of Array.from(el.attributes || [])) {
@@ -50,9 +71,16 @@ function applyStatic(scope) {
       const attr = name.slice(8);
       const zhKey = 'zh' + attr.replace(/(^|-)([a-zA-Z])/g, (m, p, c) => c.toUpperCase());
       if (el.dataset[zhKey] === undefined) el.dataset[zhKey] = el.getAttribute(attr) || '';
-      el.setAttribute(attr, lang === 'en' ? value : el.dataset[zhKey]);
+      el.setAttribute(attr, lang === 'ru' ? (el.getAttribute('data-ru-' + attr) || toRu(value)) : lang === 'en' ? value : el.dataset[zhKey]);
     }
   });
+}
+
+function source(text) {
+  if (typeof text !== 'string') return text;
+  const exact = ruSource.get(text) ?? reverse.get(text);
+  if (exact !== undefined) return exact;
+  return text.split(/( · | → |; |；)/).map(part => ruSource.get(part) ?? reverse.get(part) ?? part).join('');
 }
 
 function onChange(fn) { subs.push(fn); }
@@ -86,6 +114,13 @@ function swapNames(s, reverseDir) {
 }
 /* Ordered zh→en rules for engine templates. Each regex must match only zh text. */
 const rules = [
+  [/^转移至(上路|中路|下路)$/, m => `Moves to ${seg(m[1])}`],
+  [/^第 (\d+) 幕$/, m => `Scene ${m[1]}`],
+  [/^第 (\d+) 回合$/, m => `Round ${m[1]}`],
+  [/^同行者抽取 (\d+) 张牌$/, m => `Companions draw ${m[1]} cards`],
+  [/^悬赏契约 \+(\d+) 旅费，幕末结算$/, m => `Bounty contract +${m[1]} supplies, paid when the scene closes`],
+  [/^(.+)装备完成$/, m => `${seg(m[1])} equipped`],
+  [/^(.+)准备在下轮闪烁至(上路|中路|下路)追杀(.+)$/, m => `${seg(m[1])} will blink to ${seg(m[2])} and hunt ${seg(m[3])}`],
   [/^第 (\d+) 回合 · (.+)开始$/, m => `Round ${m[1]} · ${seg(m[2])} begins`],
   [/^第 (\d+) 回合 · (.+)$/, m => `Round ${m[1]} · ${seg(m[2])}`],
   [/^(天辉|夜魇)打出 (.*)$/, m => `${ZH_SIDE[m[1]]} plays ${seg(m[2])}`],
@@ -152,6 +187,8 @@ function seg(s) {
   const exact = pairs.get(s);
   if (exact !== undefined) return exact;
   for (const [re, fn] of rules) { const m = s.match(re); if (m) return fn(m); }
+  if (s === '抽取新牌') return 'new cards drawn';
+  if (s === '当前战线') return 'this lane';
   if (ZH_FLAGS[s]) return ZH_FLAGS[s];
   if (ZH_STATS[s]) return ZH_STATS[s];
   if (ZH_SIDE[s]) return ZH_SIDE[s];
@@ -219,8 +256,135 @@ function segZh(s) {
   if (lane[s]) return lane[s];
   return swapNames(s, true);
 }
-function localize(text) {
+// Server logs remain language-neutral to clients: translate their stored text at render time.
+const ruTerms = {
+  'this lane':'эта линия','new cards drawn':'получены новые карты',
+  'Radiant':'Силы Света','Dire':'Силы Тьмы','Top Lane':'Верхняя линия','Middle Lane':'Средняя линия','Bottom Lane':'Нижняя линия',
+  'tower':'башня','Ancient':'Древний','Melee Creep':'Крип ближнего боя','Jex':'Джекс',
+  'Attack':'Атака','Armor':'Броня','Health':'Здоровье','Regeneration':'Регенерация','Cleave':'Рассечение','Retaliate':'Ответный урон','Siege':'Осада',
+  'Feared':'Страх','Shadow Realm':'Мир теней','Damage shield':'Щит от урона','Stunned':'Оглушение','Silenced':'Безмолвие','Disarmed':'Обезоруживание','Damage immune':'Неуязвимость к урону','Rooted':'Оцепенение','Death shield':'Щит от смерти','Poisoned':'Отравление','Immune':'Невосприимчивость',
+  'Dies':'Погибает','Enters the battlefield':'Выходит на поле боя','Returns to the Fountain':'Возвращается к фонтану','Equipment updated':'Снаряжение обновлено','Status updated':'Состояние обновлено','lane improvement':'Улучшение линии',
+  'Both objectives destroyed at once · Draw':'Обе цели уничтожены одновременно · Ничья',
+  'Shop opens · spend gold earned in combat':'Магазин открыт · потратьте заработанное в бою золото',
+  'Pays 1 gold to hold the item-deck offer':'Платит 1 золото, чтобы сохранить предложение колоды предметов',
+  'Jex awaits the next allied spell':'Джекс ждёт следующее заклинание союзника',
+  'charges its weapon':'Заряжает оружие','Primed Strike needs 3 energy':'Для подготовленного удара нужно 3 энергии',
+  'Proximity Mine detonates':'Контактная мина взрывается','That unit already carries a Proximity Mine':'На этом бойце уже установлена контактная мина','No such Proximity Mine':'Контактная мина не найдена'
+};
+function ruNames(text) {
+  const entries = Object.entries(ruTerms);
+  const add = c => { if (c && c.nameRu) { if (c.en || c.nameEn) entries.push([c.en || c.nameEn,c.nameRu]); if (c.name) entries.push([c.name,c.nameRu]); } };
+  for (const c of root.ARTIFACT_CARDS || []) add(c);
+  for (const list of Object.values(root.ArtifactHeroSkills?.all || {})) for (const a of list || []) add(a);
+  for (const d of root.ARTIFACT_DECKS || []) add(d);
+  for (const list of ['heroes','units','cards']) for (const c of root.ArtifactCampaignData?.[list] || []) add(c);
+  // One pass avoids translating fragments of a name that was already replaced.
+  entries.sort((a,b) => b[0].length - a[0].length);
+  const values = new Map(entries);
+  if (!values.size) return text;
+  const escaped = [...values.keys()].map(k => k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+  return text.replace(new RegExp(escaped.join('|'), 'g'), value => values.get(value));
+}
+const ruRules = [
+  [/^Moves to (.+)$/, m => `Переход на линию: ${toRu(m[1])}`],
+  [/^Scene (\d+)$/, m => `Сцена ${m[1]}`],
+  [/^Companions draw (\d+) cards$/, m => `Спутники: взято карт — ${m[1]}`],
+  [/^Bounty contract \+(\d+) supplies, paid when the scene closes$/, m => `Контракт: +${m[1]} припасов после сцены`],
+  [/^(.+) equipped$/, m => `Снаряжение надето: ${toRu(m[1])}`],
+  [/^(.+) will blink to (.+) and hunt (.+)$/, m => `${toRu(m[1])}: прыжок на линию ${toRu(m[2])} и охота на ${toRu(m[3])}`],
+  [/^Round (\d+) · (.+) begins$/, m => `Раунд ${m[1]} · ${toRu(m[2])}: начало`],
+  [/^Round (\d+) · (.+)$/, m => `Раунд ${m[1]} · ${toRu(m[2])}`],
+  [/^(Radiant|Dire) plays (.*)$/, m => `${toRu(m[1])} разыгрывают: ${toRu(m[2])}`],
+  [/^(Radiant|Dire) draws (\d+) cards$/, m => `${toRu(m[1])} берут карты: ${m[2]}`],
+  [/^(Radiant|Dire) buys (.*)$/, m => `${toRu(m[1])} покупают: ${toRu(m[2])}`],
+  [/^(Radiant|Dire) passes$/, m => `${toRu(m[1])} пропускают ход`],
+  [/^(Radiant|Dire) takes (\d+) damage in (.+)$/, m => `${toRu(m[1])}: ${m[2]} урона · ${toRu(m[3])}`],
+  [/^(Radiant|Dire)'s (.+) tower falls — the Ancient is exposed$/, m => `${toRu(m[1])} · ${toRu(m[2])}: башня разрушена, Древний открыт`],
+  [/^(Radiant|Dire)'s tower takes (\d+) combat damage$/, m => `${toRu(m[1])}: башня получает ${m[2]} боевого урона`],
+  [/^(Radiant|Dire)'s (.+) tower$/, m => `${toRu(m[1])} · ${toRu(m[2])}: башня`],
+  [/^(Radiant|Dire) victory$/, m => `Победа · ${toRu(m[1])}`],
+  [/^(.+) combat resolves$/, m => `${toRu(m[1])}: бой`],
+  [/^(.+) action phase$/, m => `${toRu(m[1])}: фаза действий`],
+  [/^(.+) summon slot$/, m => `${toRu(m[1])}: место призыва`],
+  [/^(.+) enters (.+ Lane)$/, m => `${toRu(m[1])} выходит на линию: ${toRu(m[2])}`],
+  [/^(.+) deploys to (.+ Lane)$/, m => `${toRu(m[1])}: размещение · ${toRu(m[2])}`],
+  [/^(.+) moves to (.+ Lane)$/, m => `${toRu(m[1])}: перемещение · ${toRu(m[2])}`],
+  [/^(.+) heals (\d+)$/, m => `${toRu(m[1])}: восстановлено здоровья — ${m[2]}`],
+  [/^(.+) takes (\d+) (combat )?damage$/, m => `${toRu(m[1])}: получено ${m[2]} ${m[3] ? 'боевого ' : ''}урона`],
+  [/^(.+) dies$/, m => `${toRu(m[1])}: гибель`],
+  [/^(.+) returns to the Fountain$/, m => `${toRu(m[1])}: возвращение к фонтану`],
+  [/^(.+) dissipates$/, m => `${toRu(m[1])}: исчезновение`],
+  [/^(.+) is destroyed$/, m => `${toRu(m[1])}: уничтожение`],
+  [/^(.+) changes allegiance$/, m => `${toRu(m[1])}: смена стороны`],
+  [/^(.+) shifts one slot$/, m => `${toRu(m[1])}: сдвиг на одну позицию`],
+  [/^(.+) · Rolling Thunder$/, m => `${toRu(m[1])} · Раскаты грома`],
+  [/^Shield Crash · Shield (\d+)$/, m => `Удар щитом · Щит ${m[1]}`],
+  [/^(.+) uses Blink Dagger: (.+) → (.+)$/, m => `${toRu(m[1])} использует Кинжал скачка: ${toRu(m[2])} → ${toRu(m[3])}`],
+  [/^Turns to (Radiant|Dire)$/, m => `Переходит на сторону: ${toRu(m[1])}`],
+  [/^(Attack|Armor|Health|Regeneration|Cleave|Retaliate|Siege) ([+-]\d+)$/, m => `${toRu(m[1])} ${m[2]}`],
+  [/^Removes (.+)$/, m => `Снято: ${toRu(m[1])}`],
+  [/^Heal \+(\d+)$/, m => `Лечение +${m[1]}`],
+  [/^Damage −(\d+)$/, m => `Урон −${m[1]}`],
+  [/^Shield (\d+)$/, m => `Щит ${m[1]}`],
+  [/^(.+) becomes (.+)$/, m => `${toRu(m[1])}: превращение в ${toRu(m[2])}`],
+  [/^(.+) cannot act for (\d+) more rounds$/, m => `${toRu(m[1])} не может действовать ещё ${m[2]} раунд(а)`],
+  [/^Round (\d+)$/, m => `Раунд ${m[1]}`],
+  [/^Energy (\d+)$/, m => `Энергия ${m[1]}`],
+  [/^(.+) finishes its attacks and vanishes$/, m => `${toRu(m[1])} завершает атаки и исчезает`],
+  [/^Monkey Soldiers summoned later gain \+(\d+) attack permanently \(now \+(\d+)\)$/, m => `Следующие обезьяны-воины навсегда получают +${m[1]} к атаке (сейчас +${m[2]})`],
+  [/^Primed Strike needs 3 energy \(currently (\d+)\)$/, m => `Для подготовленного удара нужно 3 энергии (сейчас ${m[1]})`],
+  [/^A Proximity Mine is planted beneath (.+)$/, m => `Контактная мина установлена под бойцом: ${toRu(m[1])}`],
+  [/^(.+) is disarmed by Reactive Tazer$/, m => `${toRu(m[1])}: обезоруживание реактивным разрядом`]
+];
+let campaignIndexSource;
+const campaignRu = new Map();
+function indexCampaign() {
+  const data = root.ArtifactCampaignData;
+  if (!data || data === campaignIndexSource) return;
+  campaignIndexSource = data;
+  const visit = value => {
+    if (!value || typeof value !== 'object') return;
+    for (const [key, ru] of Object.entries(value)) {
+      if (key.endsWith('Ru') && typeof ru === 'string') {
+        const base = key.slice(0, -2), zh = value[base], en = value[base + 'En'] ?? (base === 'name' ? value.en : undefined);
+        if (typeof zh === 'string') { campaignRu.set(zh, ru); russian.set(zh, ru); ruSource.set(ru, zh); }
+        if (typeof en === 'string') { campaignRu.set(en, ru); if (typeof zh === 'string') { pairs.set(zh, en); reverse.set(en, zh); } }
+      } else if (value[key] && typeof value[key] === 'object') visit(value[key]);
+    }
+  };
+  visit(data);
+}
+function toRu(text) {
   if (typeof text !== 'string' || !text) return text;
+  indexCampaign();
+  if (campaignRu.has(text)) return campaignRu.get(text);
+  if (Object.prototype.hasOwnProperty.call(uiRu, text)) return uiRu[text];
+  if (Object.prototype.hasOwnProperty.call(ruTerms, text)) return ruTerms[text];
+  if (russianEnglish.has(text)) return russianEnglish.get(text);
+  if (russian.has(text)) return russian.get(text);
+  for (const [re, fn] of ruRules) { const m = text.match(re); if (m) return fn(m); }
+  const parts = text.split(/(; |；| → | · )/);
+  if (parts.length > 1) return parts.map((part,i) => i % 2 ? part : toRu(part)).join('');
+  return ruNames(text);
+}
+
+function toEnglish(text) {
+  indexCampaign();
+  const SEP = /(；|; |：|: | → | \/ |、|, |，| · )/;
+    const exact = pairs.get(text);
+    if (exact !== undefined) return exact;
+    for (const [re, fn] of rules) { const m = text.match(re); if (m) return fn(m); }
+    const ZH_SEP = { '；': '; ', '：': ': ', ' / ': ' / ', '、': ', ', '，': ', ' };
+    return text.split(SEP).map(part => SEP.test(part) ? (ZH_SEP[part] ?? part) : seg(part)).join('');
+}
+function localize(text) {
+  indexCampaign();
+  if (typeof text !== 'string' || !text) return text;
+  text = ruSource.get(text) ?? text;
+  if (lang === 'ru') {
+    if (russian.has(text)) return russian.get(text);
+    return toRu(toEnglish(text));
+  }
   const SEP = /(；|; |：|: | → | \/ |、|, |，| · )/;
   if (lang === 'en') {
     const exact = pairs.get(text);
@@ -237,11 +401,11 @@ function localize(text) {
 
 
 function setLang(next) {
-  if (next !== 'en' && next !== 'zh') return;
+  if (!supported.includes(next)) return;
   lang = next;
   try { root.localStorage && root.localStorage.setItem(KEY, next); } catch (e) {}
   if (root.document) {
-    root.document.documentElement.lang = next === 'en' ? 'en' : 'zh-CN';
+    root.document.documentElement.lang = next === 'zh' ? 'zh-CN' : next;
     root.document.documentElement.dataset.locale = next;
     applyStatic(root.document);
   }
@@ -255,9 +419,9 @@ function mountSwitcher(host) {
     const btn = root.document.createElement('button');
     btn.type = 'button';
     btn.className = 'lang-toggle';
-    btn.setAttribute('aria-label', 'Switch language / 切换语言');
-    const paint = () => { btn.textContent = lang === 'en' ? '中 文' : 'EN'; btn.title = lang === 'en' ? '切换到中文' : 'Switch to English'; };
-    btn.addEventListener('click', () => { setLang(lang === 'en' ? 'zh' : 'en'); paint(); });
+    btn.setAttribute('aria-label', 'Язык / Language / 语言');
+    const paint = () => { btn.textContent = { en: 'EN', ru: 'RU', zh: '中文' }[lang]; btn.title = { en: 'Change language', ru: 'Сменить язык', zh: '切换语言' }[lang]; };
+    btn.addEventListener('click', () => { setLang(supported[(supported.indexOf(lang) + 1) % supported.length]); paint(); });
     paint();
     onChange(paint);
     switcher = btn;
@@ -272,9 +436,9 @@ function mountSwitcher(host) {
   return switcher;
 }
 
-root.ArtifactI18n = { T, t: T, pick, cardName, cardText, localize, lang: () => lang, setLang, onChange, mountSwitcher, applyStatic };
+root.ArtifactI18n = { source, T, t: T, pick, cardName, cardText, localize, lang: () => lang, setLang, onChange, mountSwitcher, applyStatic };
 if (root.document) {
-  root.document.documentElement.lang = lang === 'en' ? 'en' : 'zh-CN';
+  root.document.documentElement.lang = lang === 'zh' ? 'zh-CN' : lang;
   root.document.documentElement.dataset.locale = lang;
   const boot = () => { applyStatic(root.document); mountSwitcher(root.document.querySelector('.header-tools')); };
   if (root.document.readyState === 'loading') root.document.addEventListener('DOMContentLoaded', boot);
