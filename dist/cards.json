@@ -22,7 +22,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/1006.webp",
-    "artist": "Forrest Imel"
+    "artist": "Forrest Imel",
+    "nameRu": "Крип ближнего боя",
+    "textRu": ""
   },
   {
     "id": 1009,
@@ -47,7 +49,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/1009.webp",
-    "artist": "Forrest Imel"
+    "artist": "Forrest Imel",
+    "nameRu": "Зомби",
+    "textRu": ""
   },
   {
     "id": 3000,
@@ -72,7 +76,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/3000.webp",
-    "artist": "Julie Baroh"
+    "artist": "Julie Baroh",
+    "nameRu": "Плащ путешественника",
+    "textRu": "Экипированный герой получает +4 к здоровью."
   },
   {
     "id": 3001,
@@ -97,7 +103,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/3001.webp",
-    "artist": "Pauline Voss"
+    "artist": "Pauline Voss",
+    "nameRu": "Кожаная броня",
+    "textRu": "Экипированный герой получает +1 к броне."
   },
   {
     "id": 3002,
@@ -122,7 +130,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/3002.webp",
-    "artist": "Tommy Arnold"
+    "artist": "Tommy Arnold",
+    "nameRu": "Короткий меч",
+    "textRu": "Экипированный герой получает +2 к атаке."
   },
   {
     "id": 3003,
@@ -147,7 +157,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/3003.webp",
-    "artist": "Julie Baroh"
+    "artist": "Julie Baroh",
+    "nameRu": "Целебная мазь",
+    "textRu": "Восстановите юниту 6 здоровья."
   },
   {
     "id": 3004,
@@ -172,7 +184,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/3004.webp",
-    "artist": "Suzanne Helmigh"
+    "artist": "Suzanne Helmigh",
+    "nameRu": "Фляга из фонтана",
+    "textRu": "Полностью исцелите юнита."
   },
   {
     "id": 3005,
@@ -197,7 +211,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/3005.webp",
-    "artist": "Magali Villeneuve"
+    "artist": "Magali Villeneuve",
+    "nameRu": "Зелье знаний",
+    "textRu": "Возьмите карту."
   },
   {
     "id": 3006,
@@ -222,7 +238,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/3006.webp",
-    "artist": "Pauline Voss"
+    "artist": "Pauline Voss",
+    "nameRu": "Свиток телепортации",
+    "textRu": "Верните союзного героя к фонтану."
   },
   {
     "id": 4000,
@@ -247,7 +265,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/4000.webp",
-    "artist": "Wisnu Tan"
+    "artist": "Wisnu Tan",
+    "nameRu": "Фарван Мечтатель",
+    "textRu": "Вожак стаи · Соседние с Фарваном союзники получают +1 к броне."
   },
   {
     "id": 4002,
@@ -272,7 +292,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/4002.webp",
-    "artist": "Wisnu Tan"
+    "artist": "Wisnu Tan",
+    "nameRu": "Авангард хищников",
+    "textRu": "Соседние союзники получают +1 к броне."
   },
   {
     "id": 4003,
@@ -297,7 +319,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/4003.webp",
-    "artist": "Lius Lasahido"
+    "artist": "Lius Lasahido",
+    "nameRu": "Киф Смелый",
+    "textRu": ""
   },
   {
     "id": 4004,
@@ -322,7 +346,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/4004.webp",
-    "artist": "Lius Lasahido"
+    "artist": "Lius Lasahido",
+    "nameRu": "Боевой инстинкт",
+    "textRu": "Навсегда дайте красному герою +1 к атаке и +1 к броне."
   },
   {
     "id": 4005,
@@ -347,7 +373,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/4005.webp",
-    "artist": "Livia Prima"
+    "artist": "Livia Prima",
+    "nameRu": "Дебби Хитрая",
+    "textRu": "Тщательный расчёт · Дебби наносит на 2 больше урона при атаке героя или башни."
   },
   {
     "id": 4007,
@@ -372,7 +400,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/4007.webp",
-    "artist": "Livia Prima"
+    "artist": "Livia Prima",
+    "nameRu": "Не случайность",
+    "textRu": "Нанесите юниту 3 урона."
   },
   {
     "id": 4008,
@@ -400,11 +430,15 @@
         "name": "长者的智慧",
         "en": "Wisdom of the Elders",
         "text": "抽一张牌。",
-        "cooldown": 4
+        "cooldown": 4,
+        "nameRu": "Мудрость старейшин",
+        "textRu": "Возьмите карту."
       }
     ],
     "art": "assets/cards/4008.webp",
-    "artist": "Billy Christian"
+    "artist": "Billy Christian",
+    "nameRu": "Дж'Муй Мудрый",
+    "textRu": "Мудрость старейшин · Активная способность (4): возьмите карту."
   },
   {
     "id": 4010,
@@ -429,7 +463,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/4010.webp",
-    "artist": "Billy Christian"
+    "artist": "Billy Christian",
+    "nameRu": "Контроль поля боя",
+    "textRu": "Выберите юнита и назначьте ему цель в бою."
   },
   {
     "id": 10001,
@@ -454,7 +490,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10001.webp",
-    "artist": "JiHun Lee"
+    "artist": "JiHun Lee",
+    "nameRu": "Веномансер",
+    "textRu": "Ядовитая природа · В каждую фазу размещения призовите Чумной тотем на линию Веномансера."
   },
   {
     "id": 10002,
@@ -479,7 +517,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10002.webp",
-    "artist": "JiHun Lee"
+    "artist": "JiHun Lee",
+    "nameRu": "Посев яда",
+    "textRu": "Призовите два Чумных тотема."
   },
   {
     "id": 10003,
@@ -504,7 +544,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10003.webp",
-    "artist": "JiHun Lee"
+    "artist": "JiHun Lee",
+    "nameRu": "Чумной тотем",
+    "textRu": "Перед фазой действий нанесите 2 чистого урона случайному соседнему врагу."
   },
   {
     "id": 10004,
@@ -532,11 +574,15 @@
         "name": "忽悠",
         "en": "Poof",
         "text": "将米波移至友方米波的兵线，□对新的敌方近邻造成2伤害。",
-        "cooldown": 2
+        "cooldown": 2,
+        "nameRu": "Пуф",
+        "textRu": "Переместите Мипо на линию союзного Мипо. Нанесите новым соседним врагам 2 урона."
       }
     ],
     "art": "assets/cards/10004.webp",
-    "artist": "Wisnu Tan"
+    "artist": "Wisnu Tan",
+    "nameRu": "Мипо",
+    "textRu": "Пуф · Активная способность (2): переместите Мипо на линию союзного Мипо. Нанесите новым соседним врагам 2 урона.\n\nВместе падём · Мипо связан душой с другими Мипо: если он погибает, погибают и все остальные союзные Мипо на всех линиях."
   },
   {
     "id": 10005,
@@ -561,7 +607,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10005.webp",
-    "artist": "Wisnu Tan"
+    "artist": "Wisnu Tan",
+    "nameRu": "Разделяй и властвуй",
+    "textRu": "Призовите Мипо."
   },
   {
     "id": 10006,
@@ -586,7 +634,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10006.webp",
-    "artist": "Anthony Palumbo"
+    "artist": "Anthony Palumbo",
+    "nameRu": "Луна",
+    "textRu": "Лунный луч · Перед фазой действий нанесите случайному врагу 1 чистого урона и добавьте по заряду трём случайным картам «Затмение» в руке или колоде."
   },
   {
     "id": 10007,
@@ -611,7 +661,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10007.webp",
-    "artist": "Anthony Palumbo"
+    "artist": "Anthony Palumbo",
+    "nameRu": "Затмение",
+    "textRu": "За каждый заряд нанесите случайному врагу 3 чистого урона."
   },
   {
     "id": 10010,
@@ -639,11 +691,15 @@
         "name": "严寒烧灼",
         "en": "Arctic Burn",
         "text": "将寒冬飞龙移至一个空白战斗位置，并使其在本回合+4攻击。",
-        "cooldown": 2
+        "cooldown": 2,
+        "nameRu": "Арктический ожог",
+        "textRu": "Переместите Зимнюю виверну на свободную боевую позицию и дайте ей +4 к атаке до конца раунда."
       }
     ],
     "art": "assets/cards/10010.webp",
-    "artist": "Sung Choi"
+    "artist": "Sung Choi",
+    "nameRu": "Зимняя виверна",
+    "textRu": "Арктический ожог · Активная способность (2): переместите Зимнюю виверну на свободную боевую позицию и дайте ей +4 к атаке до конца раунда."
   },
   {
     "id": 10011,
@@ -668,7 +724,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10011.webp",
-    "artist": "Sung Choi"
+    "artist": "Sung Choi",
+    "nameRu": "Проклятие зимы",
+    "textRu": "Обезоружьте юнита до конца раунда. Соседние с ним союзники сражаются с ним."
   },
   {
     "id": 10014,
@@ -693,7 +751,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10014.webp",
-    "artist": "Ryan Pancoast"
+    "artist": "Ryan Pancoast",
+    "nameRu": "Ликан",
+    "textRu": "Звериный порыв · Соседние с Ликаном союзники получают +2 к атаке."
   },
   {
     "id": 10016,
@@ -721,11 +781,15 @@
         "name": "回光返照",
         "en": "Borrowed Time",
         "text": "完整治疗亚巴顿，并使其在本回合获得伤害免疫。",
-        "cooldown": 2
+        "cooldown": 2,
+        "nameRu": "Одолженное время",
+        "textRu": "Полностью исцелите Абаддона и дайте ему неуязвимость к урону до конца раунда."
       }
     ],
     "art": "assets/cards/10016.webp",
-    "artist": "Chase Stone"
+    "artist": "Chase Stone",
+    "nameRu": "Абаддон",
+    "textRu": "Одолженное время · Активная способность (2): полностью исцелите Абаддона и дайте ему неуязвимость к урону до конца раунда."
   },
   {
     "id": 10017,
@@ -753,11 +817,15 @@
         "name": "神圣劝化",
         "en": "Holy Persuasion",
         "text": "控制一名敌方小兵。",
-        "cooldown": 4
+        "cooldown": 4,
+        "nameRu": "Святое убеждение",
+        "textRu": "Получите контроль над вражеским крипом."
       }
     ],
     "art": "assets/cards/10017.webp",
-    "artist": "Clint Cearley"
+    "artist": "Clint Cearley",
+    "nameRu": "Чен",
+    "textRu": "Святое убеждение · Активная способность (4): получите контроль над вражеским крипом."
   },
   {
     "id": 10018,
@@ -782,7 +850,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10018.webp",
-    "artist": "Lake Hurwitz"
+    "artist": "Lake Hurwitz",
+    "nameRu": "Бладсикер",
+    "textRu": "Кровавая баня · Полностью исцелите Бладсикера после гибели блокирующего его юнита."
   },
   {
     "id": 10020,
@@ -807,7 +877,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10020.webp",
-    "artist": "Tyler Jacobson"
+    "artist": "Tyler Jacobson",
+    "nameRu": "Акс",
+    "textRu": ""
   },
   {
     "id": 10021,
@@ -832,7 +904,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10021.webp",
-    "artist": "Lius Lasahido"
+    "artist": "Lius Lasahido",
+    "nameRu": "Кентавр Воитель",
+    "textRu": "Возмездие · Кентавр Воитель получает +2 к ответному урону."
   },
   {
     "id": 10022,
@@ -857,7 +931,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10022.webp",
-    "artist": "JiHun Lee"
+    "artist": "JiHun Lee",
+    "nameRu": "Тимберсоу",
+    "textRu": "Реактивная броня · Тимберсоу получает +1 к броне за каждого атакующего его юнита. Атакующие Тимберсоу юниты получают −1 к броне."
   },
   {
     "id": 10023,
@@ -882,7 +958,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10023.webp",
-    "artist": "E.M. Gist"
+    "artist": "E.M. Gist",
+    "nameRu": "Охотник за головами",
+    "textRu": "Джинада · Перед фазой действий с вероятностью 50% Охотник за головами получает +4 к атаке до конца раунда."
   },
   {
     "id": 10024,
@@ -910,11 +988,15 @@
         "name": "毁灭",
         "en": "Ravage",
         "text": "在本回合晕眩潮汐猎人的敌方近邻，其他敌人也有50%几率被晕眩。",
-        "cooldown": 4
+        "cooldown": 4,
+        "nameRu": "Опустошение",
+        "textRu": "Оглушите соседних с Тайдхантером врагов до конца раунда. Каждый другой враг также оглушается до конца раунда с вероятностью 50%."
       }
     ],
     "art": "assets/cards/10024.webp",
-    "artist": "Daarken"
+    "artist": "Daarken",
+    "nameRu": "Тайдхантер",
+    "textRu": "Опустошение · Активная способность (4): оглушите соседних с Тайдхантером врагов до конца раунда. Каждый другой враг также оглушается до конца раунда с вероятностью 50%."
   },
   {
     "id": 10025,
@@ -942,11 +1024,15 @@
         "name": "激光",
         "en": "Laser",
         "text": "对一个单位造成3伤害，并在本回合使其缴械。",
-        "cooldown": 3
+        "cooldown": 3,
+        "nameRu": "Лазер",
+        "textRu": "Нанесите юниту 3 урона и обезоружьте его до конца раунда."
       }
     ],
     "art": "assets/cards/10025.webp",
-    "artist": "James Paick"
+    "artist": "James Paick",
+    "nameRu": "Тинкер",
+    "textRu": "Лазер · Активная способность (3): нанесите юниту 3 урона и обезоружьте его до конца раунда."
   },
   {
     "id": 10026,
@@ -971,7 +1057,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10026.webp",
-    "artist": "Chris Rahn"
+    "artist": "Chris Rahn",
+    "nameRu": "Рикс",
+    "textRu": "Неутомимый мятежник · Рикс обладает быстрым развёртыванием."
   },
   {
     "id": 10028,
@@ -996,7 +1084,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10028.webp",
-    "artist": "Lars Grant-West"
+    "artist": "Lars Grant-West",
+    "nameRu": "Вайпер",
+    "textRu": "Едкая кожа · Когда юнит наносит Вайперу боевой урон, он навсегда получает −1 к атаке."
   },
   {
     "id": 10029,
@@ -1024,11 +1114,15 @@
         "name": "野性呼唤",
         "en": "Call of the Wild",
         "text": "召唤一头忠诚野兽。",
-        "cooldown": 3
+        "cooldown": 3,
+        "nameRu": "Зов природы",
+        "textRu": "Призовите Верного зверя."
       }
     ],
     "art": "assets/cards/10029.webp",
-    "artist": "Clint Cearley"
+    "artist": "Clint Cearley",
+    "nameRu": "Повелитель зверей",
+    "textRu": "Зов природы · Активная способность (3): призовите Верного зверя."
   },
   {
     "id": 10030,
@@ -1053,7 +1147,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10030.webp",
-    "artist": "JiHun Lee"
+    "artist": "JiHun Lee",
+    "nameRu": "Бристлбэк",
+    "textRu": "Завсегдатай потасовок · После гибели блокирующего его героя Бристлбэк навсегда получает +2 к броне."
   },
   {
     "id": 10031,
@@ -1078,7 +1174,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10031.webp",
-    "artist": "Scott M Fischer"
+    "artist": "Scott M Fischer",
+    "nameRu": "Канна",
+    "textRu": "Вестница завоеваний · Случайные союзные крипы ближнего боя размещаются на линии Канны."
   },
   {
     "id": 10032,
@@ -1103,7 +1201,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10032.webp",
-    "artist": "Livia Prima"
+    "artist": "Livia Prima",
+    "nameRu": "Дроу-лучница",
+    "textRu": "Аура меткости · Остальные союзники на всех линиях получают +1 к атаке."
   },
   {
     "id": 10033,
@@ -1131,11 +1231,15 @@
         "name": "沟壑",
         "en": "Fissure",
         "text": "在本回合晕眩撼地者的敌方近邻。",
-        "cooldown": 4
+        "cooldown": 4,
+        "nameRu": "Разлом",
+        "textRu": "Оглушите соседних с Шейкером врагов до конца раунда."
       }
     ],
     "art": "assets/cards/10033.webp",
-    "artist": "Forrest Imel"
+    "artist": "Forrest Imel",
+    "nameRu": "Шейкер",
+    "textRu": "Разлом · Активная способность (4): оглушите соседних с Шейкером врагов до конца раунда."
   },
   {
     "id": 10036,
@@ -1160,7 +1264,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10036.webp",
-    "artist": "Randy Vargas"
+    "artist": "Randy Vargas",
+    "nameRu": "Чаровница",
+    "textRu": "Помощники природы · Чаровница и соседние с ней союзники получают +2 к регенерации."
   },
   {
     "id": 10038,
@@ -1188,11 +1294,15 @@
         "name": "献祭",
         "en": "Sacrifice",
         "text": "惩处另一个友方单位并抽一张牌。如果该友方单位的攻击为6或以上，则多抽一张牌。",
-        "cooldown": 2
+        "cooldown": 2,
+        "nameRu": "Жертвоприношение",
+        "textRu": "Уничтожьте другого союзника и возьмите карту. Если его атака была не меньше 6, возьмите ещё одну карту."
       }
     ],
     "art": "assets/cards/10038.webp",
-    "artist": "Wisnu Tan"
+    "artist": "Wisnu Tan",
+    "nameRu": "Лич",
+    "textRu": "Жертвоприношение · Активная способность (2): уничтожьте другого союзника и возьмите карту. Если его атака была не меньше 6, возьмите ещё одну карту."
   },
   {
     "id": 10043,
@@ -1217,7 +1327,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10043.webp",
-    "artist": "Randy Vargas"
+    "artist": "Randy Vargas",
+    "nameRu": "Огр-маг",
+    "textRu": "Мультикаст · После розыгрыша синего заклинания с вероятностью 25% добавьте в руку базовую копию этой карты."
   },
   {
     "id": 10044,
@@ -1245,11 +1357,15 @@
         "name": "洗礼",
         "en": "Purification",
         "text": "对一个单位进行3治疗。",
-        "cooldown": 2
+        "cooldown": 2,
+        "nameRu": "Очищение",
+        "textRu": "Восстановите юниту 3 здоровья."
       }
     ],
     "art": "assets/cards/10044.webp",
-    "artist": "Sam Carr"
+    "artist": "Sam Carr",
+    "nameRu": "Омнирыцарь",
+    "textRu": "Очищение · Активная способность (2): восстановите юниту 3 здоровья."
   },
   {
     "id": 10046,
@@ -1274,7 +1390,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10046.webp",
-    "artist": "Joseph Meehan"
+    "artist": "Joseph Meehan",
+    "nameRu": "Пожиратель из Иного мира",
+    "textRu": "Аура сущности · После розыгрыша синей карты с вероятностью 50% восстановите 2 маны."
   },
   {
     "id": 10047,
@@ -1299,7 +1417,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10047.webp",
-    "artist": "Greg Opalinski"
+    "artist": "Greg Opalinski",
+    "nameRu": "Фантомная убийца",
+    "textRu": "Искусная убийца · Фантомная убийца наносит на 4 больше урона при атаке героя."
   },
   {
     "id": 10048,
@@ -1327,11 +1447,15 @@
         "name": "幽冥爆轰",
         "en": "Nether Blast",
         "text": "惩处一个随机敌方强化。",
-        "cooldown": 3
+        "cooldown": 3,
+        "nameRu": "Взрыв из преисподней",
+        "textRu": "Уничтожьте случайное вражеское улучшение."
       }
     ],
     "art": "assets/cards/10048.webp",
-    "artist": "Randy Vargas"
+    "artist": "Randy Vargas",
+    "nameRu": "Пугна",
+    "textRu": "Взрыв из преисподней · Активная способность (3): уничтожьте случайное вражеское улучшение."
   },
   {
     "id": 10050,
@@ -1359,11 +1483,15 @@
         "name": "爆头",
         "en": "Headshot",
         "text": "对一个单位造成5伤害。",
-        "cooldown": 3
+        "cooldown": 3,
+        "nameRu": "Выстрел в голову",
+        "textRu": "Нанесите юниту 5 урона."
       }
     ],
     "art": "assets/cards/10050.webp",
-    "artist": "Forrest Imel"
+    "artist": "Forrest Imel",
+    "nameRu": "Снайпер",
+    "textRu": "Выстрел в голову · Активная способность (3): нанесите юниту 5 урона."
   },
   {
     "id": 10052,
@@ -1388,7 +1516,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10052.webp",
-    "artist": "Lius Lasahido"
+    "artist": "Lius Lasahido",
+    "nameRu": "Маззи",
+    "textRu": ""
   },
   {
     "id": 10053,
@@ -1413,7 +1543,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10053.webp",
-    "artist": "Lius Lasahido"
+    "artist": "Lius Lasahido",
+    "nameRu": "Преллекс",
+    "textRu": "Вестница верных · В каждую фазу размещения призовите Крипа ближнего боя на линию Преллекс."
   },
   {
     "id": 10054,
@@ -1438,7 +1570,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10054.webp",
-    "artist": "Yongjae Choi"
+    "artist": "Yongjae Choi",
+    "nameRu": "Свен",
+    "textRu": "Великий раскол · Свен получает рассечение, равное половине его атаки."
   },
   {
     "id": 10056,
@@ -1463,7 +1597,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10056.webp",
-    "artist": "Alix Branwyn"
+    "artist": "Alix Branwyn",
+    "nameRu": "Трент-защитник",
+    "textRu": "Железные ветви · Соседние с Трентом союзники получают +2 к броне."
   },
   {
     "id": 10058,
@@ -1488,7 +1624,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10058.webp",
-    "artist": "Tyler Jacobson"
+    "artist": "Tyler Jacobson",
+    "nameRu": "Сорла Хан",
+    "textRu": "Разжигательница войны · Сорла Хан наносит на 4 больше урона при атаке башни."
   },
   {
     "id": 10059,
@@ -1513,7 +1651,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10059.webp",
-    "artist": "Kieran Yanner"
+    "artist": "Kieran Yanner",
+    "nameRu": "Некрофос",
+    "textRu": "Садист · После гибели соседнего врага Некрофос навсегда получает +1 к здоровью."
   },
   {
     "id": 10060,
@@ -1541,11 +1681,15 @@
         "name": "死亡之指",
         "en": "Finger of Death",
         "text": "对一个单位造成8透甲伤害。加速（减少1冷却，但不会低于1）。",
-        "cooldown": 4
+        "cooldown": 4,
+        "nameRu": "Палец смерти",
+        "textRu": "Нанесите юниту 8 чистого урона. Ускорение: уменьшите перезарядку на 1, но не ниже 1."
       }
     ],
     "art": "assets/cards/10060.webp",
-    "artist": "Stepan Alekseev"
+    "artist": "Stepan Alekseev",
+    "nameRu": "Лион",
+    "textRu": "Палец смерти · Активная способность (4): нанесите юниту 8 чистого урона. Ускорение: уменьшите перезарядку на 1, но не ниже 1."
   },
   {
     "id": 10062,
@@ -1573,11 +1717,15 @@
         "name": "震荡光弹",
         "en": "Concussive Shot",
         "text": "在本回合使一名英雄及其友方近邻-2护甲。",
-        "cooldown": 2
+        "cooldown": 2,
+        "nameRu": "Оглушающий выстрел",
+        "textRu": "Герой и соседние с ним союзники получают −2 к броне до конца раунда."
       }
     ],
     "art": "assets/cards/10062.webp",
-    "artist": "Greg Opalinski"
+    "artist": "Greg Opalinski",
+    "nameRu": "Небесный маг",
+    "textRu": "Оглушающий выстрел · Активная способность (2): герой и соседние с ним союзники получают −2 к броне до конца раунда."
   },
   {
     "id": 10063,
@@ -1602,7 +1750,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10063.webp",
-    "artist": "Greg Opalinski"
+    "artist": "Greg Opalinski",
+    "nameRu": "Мистическая вспышка",
+    "textRu": "Нанесите 12 урона, поровну распределив его между юнитом и соседними с ним союзниками."
   },
   {
     "id": 10064,
@@ -1627,7 +1777,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10064.webp",
-    "artist": "Stepan Alekseev"
+    "artist": "Stepan Alekseev",
+    "nameRu": "Кристальная дева",
+    "textRu": "Аура маны · После первого союзного заклинания на каждой линии восстановите башне на этой линии 2 маны."
   },
   {
     "id": 10065,
@@ -1652,7 +1804,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10065.webp",
-    "artist": "David Palumbo"
+    "artist": "David Palumbo",
+    "nameRu": "Зевс",
+    "textRu": "После розыгрыша синего заклинания нанесите соседним с Зевсом врагам 1 чистого урона."
   },
   {
     "id": 10067,
@@ -1677,7 +1831,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10067.webp",
-    "artist": "Magali Villeneuve"
+    "artist": "Magali Villeneuve",
+    "nameRu": "Магнус",
+    "textRu": ""
   },
   {
     "id": 10068,
@@ -1705,11 +1861,15 @@
         "name": "奔腾",
         "en": "Surge",
         "text": "将另一个友方单位移至另一条兵线。",
-        "cooldown": 2
+        "cooldown": 2,
+        "nameRu": "Ускорение",
+        "textRu": "Переместите другого союзника на другую линию."
       }
     ],
     "art": "assets/cards/10068.webp",
-    "artist": "Stepan Alekseev"
+    "artist": "Stepan Alekseev",
+    "nameRu": "Тёмный провидец",
+    "textRu": "Ускорение · Активная способность (2): переместите другого союзника на другую линию."
   },
   {
     "id": 10069,
@@ -1734,7 +1894,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10069.webp",
-    "artist": "Randy Vargas"
+    "artist": "Randy Vargas",
+    "nameRu": "Командир легиона",
+    "textRu": "Момент отваги · Командир легиона получает +2 к ответному урону."
   },
   {
     "id": 10070,
@@ -1759,7 +1921,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10070.webp",
-    "artist": "Forrest Imel"
+    "artist": "Forrest Imel",
+    "nameRu": "Урса",
+    "textRu": "Яростные удары · Когда Урса наносит юниту боевой урон, тот навсегда получает −1 к броне."
   },
   {
     "id": 10076,
@@ -1784,7 +1948,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10076.webp",
-    "artist": "Mike Azevedo"
+    "artist": "Mike Azevedo",
+    "nameRu": "Смивил-оружейник",
+    "textRu": "При розыгрыше: случайный союзный герой навсегда получает +2 к атаке."
   },
   {
     "id": 10077,
@@ -1812,11 +1978,15 @@
         "name": "魅影之纱刺客",
         "en": "Sister of the Veil",
         "text": "为魅影之纱刺客选择一个战斗目标。",
-        "cooldown": 1
+        "cooldown": 1,
+        "nameRu": "Сестра Вуали",
+        "textRu": "Назначьте Сестре Вуали цель в бою."
       }
     ],
     "art": "assets/cards/10077.webp",
-    "artist": "Anthony Palumbo"
+    "artist": "Anthony Palumbo",
+    "nameRu": "Сестра Вуали",
+    "textRu": "Активная способность (1): назначьте Сестре Вуали цель в бою."
   },
   {
     "id": 10078,
@@ -1841,7 +2011,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10078.webp",
-    "artist": "James Paick"
+    "artist": "James Paick",
+    "nameRu": "Цензор поместья Тайлер",
+    "textRu": "Вражеская башня получает −1 к мане."
   },
   {
     "id": 10079,
@@ -1866,7 +2038,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10079.webp",
-    "artist": "Izzy"
+    "artist": "Izzy",
+    "nameRu": "Смивил-кузнец",
+    "textRu": "При розыгрыше: случайный союзный герой навсегда получает +1 к броне."
   },
   {
     "id": 10080,
@@ -1894,11 +2068,15 @@
         "name": "叛军诱饵",
         "en": "Rebel Decoy",
         "text": "将叛军诱饵与另一个友方单位互换位置。",
-        "cooldown": 1
+        "cooldown": 1,
+        "nameRu": "Мятежник-приманка",
+        "textRu": "Поменяйте Мятежника-приманку местами с другим союзником."
       }
     ],
     "art": "assets/cards/10080.webp",
-    "artist": "Jason Kang"
+    "artist": "Jason Kang",
+    "nameRu": "Мятежник-приманка",
+    "textRu": "Активная способность (1): поменяйте Мятежника-приманку местами с другим союзником."
   },
   {
     "id": 10082,
@@ -1923,7 +2101,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10082.webp",
-    "artist": "James Paick"
+    "artist": "James Paick",
+    "nameRu": "Кентавр-охотник",
+    "textRu": ""
   },
   {
     "id": 10083,
@@ -1948,7 +2128,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10083.webp",
-    "artist": "Daarken"
+    "artist": "Daarken",
+    "nameRu": "Боец из Куойджа",
+    "textRu": "После гибели соседнего союзника Боец из Куойджа навсегда получает +2 к атаке."
   },
   {
     "id": 10084,
@@ -1973,7 +2155,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10084.webp",
-    "artist": "Forrest Imel"
+    "artist": "Forrest Imel",
+    "nameRu": "Мятежник-подстрекатель",
+    "textRu": "После фазы боя, если Мятежник-подстрекатель нанёс крипу боевой урон в этом раунде, призовите Мятежника-подстрекателя."
   },
   {
     "id": 10085,
@@ -1998,7 +2182,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10085.webp",
-    "artist": "Daniel Romanovsky"
+    "artist": "Daniel Romanovsky",
+    "nameRu": "Тень убийцы",
+    "textRu": "Осада 5. Тень убийцы получает −2 к атаке за каждого союзника."
   },
   {
     "id": 10086,
@@ -2023,7 +2209,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10086.webp",
-    "artist": "Lius Lasahido"
+    "artist": "Lius Lasahido",
+    "nameRu": "Ученик Невермора",
+    "textRu": "Остальные союзники получают +2 к атаке и −2 к броне."
   },
   {
     "id": 10087,
@@ -2048,7 +2236,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10087.webp",
-    "artist": "Wisnu Tan"
+    "artist": "Wisnu Tan",
+    "nameRu": "Знаменосец легиона",
+    "textRu": "Соседние союзники получают +4 к атаке."
   },
   {
     "id": 10090,
@@ -2073,7 +2263,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10090.webp",
-    "artist": "Lars Grant-West"
+    "artist": "Lars Grant-West",
+    "nameRu": "Неутомимый зомби",
+    "textRu": "При розыгрыше: Неутомимый зомби получает щит от смерти."
   },
   {
     "id": 10091,
@@ -2098,7 +2290,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10091.webp",
-    "artist": "Darek Zabrocki"
+    "artist": "Darek Zabrocki",
+    "nameRu": "Ревтельский караван",
+    "textRu": "Ревтельский караван получает прибавку к атаке, равную половине вашего золота."
   },
   {
     "id": 10092,
@@ -2123,7 +2317,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10092.webp",
-    "artist": "JiHun Lee"
+    "artist": "JiHun Lee",
+    "nameRu": "Оглоди-вандал",
+    "textRu": "При розыгрыше: нанесите вражеской башне 4 урона."
   },
   {
     "id": 10093,
@@ -2148,7 +2344,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10093.webp",
-    "artist": "Lake Hurwitz"
+    "artist": "Lake Hurwitz",
+    "nameRu": "Пёс войны",
+    "textRu": ""
   },
   {
     "id": 10094,
@@ -2176,11 +2374,15 @@
         "name": "亡命佣兵",
         "en": "Mercenary Exiles",
         "text": "消耗你所有的金钱。修改亡命佣兵，使其+X攻击和+X生命，X为消耗金钱的一半。",
-        "cooldown": 2
+        "cooldown": 2,
+        "nameRu": "Наёмники-изгнанники",
+        "textRu": "Потратьте всё золото. Наёмники-изгнанники навсегда получают +X к атаке и +X к здоровью, где X — половина потраченного золота."
       }
     ],
     "art": "assets/cards/10094.webp",
-    "artist": "John Stanko"
+    "artist": "John Stanko",
+    "nameRu": "Наёмники-изгнанники",
+    "textRu": "Активная способность (2): потратьте всё золото. Наёмники-изгнанники навсегда получают +X к атаке и +X к здоровью, где X — половина потраченного золота."
   },
   {
     "id": 10095,
@@ -2205,7 +2407,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10095.webp",
-    "artist": "Wisnu Tan"
+    "artist": "Wisnu Tan",
+    "nameRu": "Голем умельцев",
+    "textRu": "При розыгрыше: сбросьте все карты из руки."
   },
   {
     "id": 10096,
@@ -2233,11 +2437,15 @@
         "name": "评议团密使",
         "en": "Emissary of the Quorum",
         "text": "修改友方单位，使其+2攻击和+2生命。",
-        "cooldown": 1
+        "cooldown": 1,
+        "nameRu": "Посланник Кворума",
+        "textRu": "Союзники навсегда получают +2 к атаке и +2 к здоровью."
       }
     ],
     "art": "assets/cards/10096.webp",
-    "artist": "Kieran Yanner"
+    "artist": "Kieran Yanner",
+    "nameRu": "Посланник Кворума",
+    "textRu": "Активная способность (1): союзники навсегда получают +2 к атаке и +2 к здоровью."
   },
   {
     "id": 10097,
@@ -2262,7 +2470,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10097.webp",
-    "artist": "Vance Kovacs"
+    "artist": "Vance Kovacs",
+    "nameRu": "Марроуфелльский громила",
+    "textRu": ""
   },
   {
     "id": 10102,
@@ -2287,7 +2497,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10102.webp",
-    "artist": "Lars Grant-West"
+    "artist": "Lars Grant-West",
+    "nameRu": "Стадо громошкуров",
+    "textRu": "Осада 6."
   },
   {
     "id": 10103,
@@ -2312,7 +2524,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10103.webp",
-    "artist": "Bayard Wu"
+    "artist": "Bayard Wu",
+    "nameRu": "Огр-трупометатель",
+    "textRu": "После гибели союзного Крипа ближнего боя нанесите вражеской башне 2 чистого урона."
   },
   {
     "id": 10104,
@@ -2337,7 +2551,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10104.webp",
-    "artist": "Stepan Alekseev"
+    "artist": "Stepan Alekseev",
+    "nameRu": "Бронзовый легионер",
+    "textRu": ""
   },
   {
     "id": 10106,
@@ -2362,7 +2578,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10106.webp",
-    "artist": "Anthony Palumbo"
+    "artist": "Anthony Palumbo",
+    "nameRu": "Воплощение Селемине",
+    "textRu": "После розыгрыша любой карты полностью восстановите ману своей башни."
   },
   {
     "id": 10107,
@@ -2387,7 +2605,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10107.webp",
-    "artist": "Jakub Kasper"
+    "artist": "Jakub Kasper",
+    "nameRu": "Вул-мученик",
+    "textRu": "При гибели: союзники навсегда получают +1 к атаке и +1 к здоровью."
   },
   {
     "id": 10108,
@@ -2412,7 +2632,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10108.webp",
-    "artist": "Vance Kovacs"
+    "artist": "Vance Kovacs",
+    "nameRu": "Вожак громошкуров",
+    "textRu": ""
   },
   {
     "id": 10111,
@@ -2437,7 +2659,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10111.webp",
-    "artist": ""
+    "artist": "",
+    "nameRu": "Сатир-дуэлянт",
+    "textRu": "После фазы боя Сатир-дуэлянт навсегда получает +2 к атаке."
   },
   {
     "id": 10112,
@@ -2462,7 +2686,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10112.webp",
-    "artist": "Ryan Pancoast"
+    "artist": "Ryan Pancoast",
+    "nameRu": "Свирепый волк",
+    "textRu": "После фазы боя Свирепый волк навсегда получает +1 к атаке и +2 к здоровью."
   },
   {
     "id": 10113,
@@ -2487,7 +2713,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10113.webp",
-    "artist": "Vance Kovacs"
+    "artist": "Vance Kovacs",
+    "nameRu": "Буйный медведемон",
+    "textRu": "После фазы боя Буйный медведемон навсегда получает +4 к атаке."
   },
   {
     "id": 10114,
@@ -2512,7 +2740,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10114.webp",
-    "artist": "Jakub Kasper"
+    "artist": "Jakub Kasper",
+    "nameRu": "Проклятый сатир",
+    "textRu": "После фазы боя призовите Зомби на сторону противника."
   },
   {
     "id": 10115,
@@ -2540,11 +2770,15 @@
         "name": "勾财黑鸦",
         "en": "Ravenhook",
         "text": "惩处阻挡勾财黑鸦的单位装备的一件随机物品。获得与该物品基础价格相等的金钱。",
-        "cooldown": 1
+        "cooldown": 1,
+        "nameRu": "Вороний Крюк",
+        "textRu": "Уничтожьте случайный предмет блокирующего Вороний Крюк юнита. Получите золото, равное базовой стоимости этого предмета."
       }
     ],
     "art": "assets/cards/10115.webp",
-    "artist": "Heonhwa Choe"
+    "artist": "Heonhwa Choe",
+    "nameRu": "Вороний Крюк",
+    "textRu": "Активная способность (1): уничтожьте случайный предмет блокирующего Вороний Крюк юнита. Получите золото, равное базовой стоимости этого предмета."
   },
   {
     "id": 10116,
@@ -2572,11 +2806,15 @@
         "name": "贪婪众生",
         "en": "Ravenous Mass",
         "text": "惩处贪婪众生的友方近邻。修改贪婪众生，使其获得那些单位的攻击和生命。",
-        "cooldown": 1
+        "cooldown": 1,
+        "nameRu": "Прожорливая масса",
+        "textRu": "Уничтожьте соседних союзников. Прожорливая масса навсегда получает их атаку и здоровье."
       }
     ],
     "art": "assets/cards/10116.webp",
-    "artist": "Mike Azevedo"
+    "artist": "Mike Azevedo",
+    "nameRu": "Прожорливая масса",
+    "textRu": "Активная способность (1): уничтожьте соседних союзников. Прожорливая масса навсегда получает их атаку и здоровье."
   },
   {
     "id": 10117,
@@ -2601,7 +2839,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10117.webp",
-    "artist": "Alix Branwyn"
+    "artist": "Alix Branwyn",
+    "nameRu": "Друид Розолесья",
+    "textRu": "Ваша башня получает +1 к мане."
   },
   {
     "id": 10118,
@@ -2626,7 +2866,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10118.webp",
-    "artist": "Vance Kovacs"
+    "artist": "Vance Kovacs",
+    "nameRu": "Медведемон-калека",
+    "textRu": "Когда Медведемон-калека наносит юниту боевой урон, тот навсегда получает −1 к атаке."
   },
   {
     "id": 10119,
@@ -2651,7 +2893,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10119.webp",
-    "artist": "John Stanko"
+    "artist": "John Stanko",
+    "nameRu": "Эгоистичный жрец",
+    "textRu": "После фазы боя полностью исцелите Эгоистичного жреца."
   },
   {
     "id": 10120,
@@ -2676,7 +2920,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10120.webp",
-    "artist": "Pauline Voss"
+    "artist": "Pauline Voss",
+    "nameRu": "Стена Розолесья",
+    "textRu": ""
   },
   {
     "id": 10127,
@@ -2701,7 +2947,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10127.webp",
-    "artist": "Lius Lasahido"
+    "artist": "Lius Lasahido",
+    "nameRu": "Огр-новобранец",
+    "textRu": ""
   },
   {
     "id": 10128,
@@ -2726,7 +2974,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10128.webp",
-    "artist": "Jason Kang"
+    "artist": "Jason Kang",
+    "nameRu": "Неопытный пехотинец",
+    "textRu": ""
   },
   {
     "id": 10129,
@@ -2754,11 +3004,15 @@
         "name": "刺客学徒",
         "en": "Assassin's Apprentice",
         "text": "为刺客学徒选择一个战斗目标。",
-        "cooldown": 1
+        "cooldown": 1,
+        "nameRu": "Ученик убийцы",
+        "textRu": "Назначьте Ученику убийцы цель в бою."
       }
     ],
     "art": "assets/cards/10129.webp",
-    "artist": "David Palumbo"
+    "artist": "David Palumbo",
+    "nameRu": "Ученик убийцы",
+    "textRu": "Активная способность (1): назначьте Ученику убийцы цель в бою."
   },
   {
     "id": 10131,
@@ -2783,7 +3037,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10131.webp",
-    "artist": "Jason Kang"
+    "artist": "Jason Kang",
+    "nameRu": "Элита Стоунхолла",
+    "textRu": "После гибели блокирующего её юнита Элита Стоунхолла навсегда получает +2 к атаке и +2 к здоровью."
   },
   {
     "id": 10132,
@@ -2808,7 +3064,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10132.webp",
-    "artist": "Anastasia Ovchinnikova"
+    "artist": "Anastasia Ovchinnikova",
+    "nameRu": "Налётчик Красного Тумана",
+    "textRu": "После фазы боя, если Налётчик Красного Тумана нанёс башне боевой урон в этом раунде, призовите Налётчика Красного Тумана."
   },
   {
     "id": 10133,
@@ -2833,7 +3091,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10133.webp",
-    "artist": "Daarken"
+    "artist": "Daarken",
+    "nameRu": "Защитник Древнего",
+    "textRu": "При розыгрыше: Защитник Древнего навсегда получает +1 к атаке, +1 к здоровью и +1 к рассечению за каждого врага."
   },
   {
     "id": 10134,
@@ -2858,7 +3118,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10134.webp",
-    "artist": "Jakub Kasper"
+    "artist": "Jakub Kasper",
+    "nameRu": "Целитель Розолесья",
+    "textRu": "При розыгрыше: восстановите своей башне 7 здоровья."
   },
   {
     "id": 10136,
@@ -2883,7 +3145,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10136.webp",
-    "artist": "Clint Cearley"
+    "artist": "Clint Cearley",
+    "nameRu": "Верный зверь",
+    "textRu": "Когда Верный зверь наносит юниту боевой урон, тот навсегда получает −1 к атаке."
   },
   {
     "id": 10137,
@@ -2911,11 +3175,15 @@
         "name": "萨特魔术师",
         "en": "Satyr Magician",
         "text": "使你的塔恢复全部魔力。",
-        "cooldown": 1
+        "cooldown": 1,
+        "nameRu": "Сатир-чародей",
+        "textRu": "Полностью восстановите ману своей башни."
       }
     ],
     "art": "assets/cards/10137.webp",
-    "artist": "Alix Branwyn"
+    "artist": "Alix Branwyn",
+    "nameRu": "Сатир-чародей",
+    "textRu": "Активная способность (1): полностью восстановите ману своей башни."
   },
   {
     "id": 10138,
@@ -2940,7 +3208,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10138.webp",
-    "artist": "Sam Carr"
+    "artist": "Sam Carr",
+    "nameRu": "Тролль-прорицатель",
+    "textRu": "Каждый раунд берите дополнительную карту."
   },
   {
     "id": 10141,
@@ -2965,7 +3235,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10141.webp",
-    "artist": "Titus Lunter"
+    "artist": "Titus Lunter",
+    "nameRu": "Неизбежное разрушение",
+    "textRu": "Все герои получают +4 к осаде."
   },
   {
     "id": 10147,
@@ -2990,7 +3262,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10147.webp",
-    "artist": "Lius Lasahido"
+    "artist": "Lius Lasahido",
+    "nameRu": "Казармы",
+    "textRu": "В каждую фазу размещения призовите Крипа ближнего боя на эту линию."
   },
   {
     "id": 10148,
@@ -3015,7 +3289,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10148.webp",
-    "artist": "Sam Carr"
+    "artist": "Sam Carr",
+    "nameRu": "Разлом времени",
+    "textRu": "Перед фазой действий добавьте случайной карте в руке противника 1 блокировку."
   },
   {
     "id": 10149,
@@ -3040,7 +3316,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10149.webp",
-    "artist": "David Palumbo"
+    "artist": "David Palumbo",
+    "nameRu": "Раскрытые тайны",
+    "textRu": "После фазы боя возьмите карту, если ваша башня получила урон в этом раунде."
   },
   {
     "id": 10150,
@@ -3065,7 +3343,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10150.webp",
-    "artist": "Alayna Danner"
+    "artist": "Alayna Danner",
+    "nameRu": "Путь хитреца",
+    "textRu": "После розыгрыша чёрной карты случайный союзник навсегда получает +1 к осаде."
   },
   {
     "id": 10151,
@@ -3090,7 +3370,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10151.webp",
-    "artist": "Alayna Danner"
+    "artist": "Alayna Danner",
+    "nameRu": "Путь мудреца",
+    "textRu": "После розыгрыша синей карты нанесите случайному врагу 1 чистого урона."
   },
   {
     "id": 10152,
@@ -3115,7 +3397,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10152.webp",
-    "artist": "Alayna Danner"
+    "artist": "Alayna Danner",
+    "nameRu": "Путь мечтателя",
+    "textRu": "После розыгрыша зелёной карты ваша башня получает +3 к регенерации до конца раунда."
   },
   {
     "id": 10153,
@@ -3140,7 +3424,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10153.webp",
-    "artist": "Alayna Danner"
+    "artist": "Alayna Danner",
+    "nameRu": "Путь храбреца",
+    "textRu": "После розыгрыша красной карты случайный союзник навсегда получает +1 к атаке."
   },
   {
     "id": 10154,
@@ -3165,7 +3451,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10154.webp",
-    "artist": "Dimitar Marinski"
+    "artist": "Dimitar Marinski",
+    "nameRu": "Поместье Тайлер",
+    "textRu": "Обе башни получают −2 к мане."
   },
   {
     "id": 10155,
@@ -3190,7 +3478,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10155.webp",
-    "artist": "Jason Kang"
+    "artist": "Jason Kang",
+    "nameRu": "Преимущество своей земли",
+    "textRu": "Перед фазой действий обезоружьте случайного врага до конца раунда."
   },
   {
     "id": 10156,
@@ -3215,7 +3505,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10156.webp",
-    "artist": "Lius Lasahido"
+    "artist": "Lius Lasahido",
+    "nameRu": "Заклятые враги",
+    "textRu": "После фазы боя снимите один заряд. Перед фазой действий, если зарядов не осталось, нанесите обеим башням 6 урона."
   },
   {
     "id": 10157,
@@ -3240,7 +3532,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10157.webp",
-    "artist": "Lius Lasahido"
+    "artist": "Lius Lasahido",
+    "nameRu": "Пожарище",
+    "textRu": "Перед фазой действий нанесите каждому врагу 2 урона."
   },
   {
     "id": 10160,
@@ -3265,7 +3559,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10160.webp",
-    "artist": "Randy Vargas"
+    "artist": "Randy Vargas",
+    "nameRu": "Воспламенение",
+    "textRu": "Перед фазой действий нанесите каждому врагу 1 чистого урона."
   },
   {
     "id": 10161,
@@ -3290,7 +3586,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10161.webp",
-    "artist": "Suzanne Helmigh"
+    "artist": "Suzanne Helmigh",
+    "nameRu": "Требушеты",
+    "textRu": "Перед фазой действий нанесите вражеской башне 2 чистого урона."
   },
   {
     "id": 10162,
@@ -3318,11 +3616,15 @@
         "name": "无人看管的火炮",
         "en": "Unsupervised Artillery",
         "text": "对敌方塔造成4透甲伤害。只能在没有未受阻挡的敌人时使用。",
-        "cooldown": 1
+        "cooldown": 1,
+        "nameRu": "Бесконтрольная артиллерия",
+        "textRu": "Нанесите вражеской башне 4 чистого урона. Можно использовать, только если все враги заблокированы."
       }
     ],
     "art": "assets/cards/10162.webp",
-    "artist": "Forrest Imel"
+    "artist": "Forrest Imel",
+    "nameRu": "Бесконтрольная артиллерия",
+    "textRu": "Активная способность (1): нанесите вражеской башне 4 чистого урона. Можно использовать, только если все враги заблокированы."
   },
   {
     "id": 10164,
@@ -3350,11 +3652,15 @@
         "name": "瑞文泰尔的资产",
         "en": "Revtel Investments",
         "text": "每有1能量，获得4金钱。惩处瑞文泰尔的资产。",
-        "cooldown": 1
+        "cooldown": 1,
+        "nameRu": "Ревтельские инвестиции",
+        "textRu": "Получите 4 золота за каждый заряд и уничтожьте Ревтельские инвестиции."
       }
     ],
     "art": "assets/cards/10164.webp",
-    "artist": "Jason Kang"
+    "artist": "Jason Kang",
+    "nameRu": "Ревтельские инвестиции",
+    "textRu": "После фазы боя добавьте один заряд.\n\nАктивная способность (1): получите 4 золота за каждый заряд и уничтожьте Ревтельские инвестиции."
   },
   {
     "id": 10165,
@@ -3379,7 +3685,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10165.webp",
-    "artist": "James Paick"
+    "artist": "James Paick",
+    "nameRu": "Золотая шахта Железного Тумана",
+    "textRu": "После фазы боя получите 3 золота."
   },
   {
     "id": 10168,
@@ -3404,7 +3712,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10168.webp",
-    "artist": "Tenaya Sims"
+    "artist": "Tenaya Sims",
+    "nameRu": "Благоволение Селемине",
+    "textRu": "Ваша башня получает +2 к мане."
   },
   {
     "id": 10169,
@@ -3429,7 +3739,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10169.webp",
-    "artist": "Joseph Meehan"
+    "artist": "Joseph Meehan",
+    "nameRu": "Туман Авернуса",
+    "textRu": "Перед фазой действий союзники навсегда получают +1 к атаке."
   },
   {
     "id": 10170,
@@ -3454,7 +3766,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10170.webp",
-    "artist": "Dimitar Marinski"
+    "artist": "Dimitar Marinski",
+    "nameRu": "Алтарь Безумной Луны",
+    "textRu": "Союзные крипы ближнего боя получают +2 к регенерации."
   },
   {
     "id": 10171,
@@ -3479,7 +3793,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10171.webp",
-    "artist": "James Paick"
+    "artist": "James Paick",
+    "nameRu": "Вопящий разум",
+    "textRu": "Вы и противник каждый раунд берёте дополнительную карту."
   },
   {
     "id": 10172,
@@ -3504,7 +3820,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10172.webp",
-    "artist": "Titus Lunter"
+    "artist": "Titus Lunter",
+    "nameRu": "Храм войны",
+    "textRu": "Все герои с экипировкой получают +2 к атаке и +1 к броне."
   },
   {
     "id": 10173,
@@ -3529,7 +3847,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10173.webp",
-    "artist": "Randy Vargas"
+    "artist": "Randy Vargas",
+    "nameRu": "Тотем преисподней",
+    "textRu": "После розыгрыша противником заклинания нанесите вражеской башне 3 урона."
   },
   {
     "id": 10174,
@@ -3554,7 +3874,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10174.webp",
-    "artist": "Daarken"
+    "artist": "Daarken",
+    "nameRu": "Кипящее масло",
+    "textRu": "Ваша башня получает +2 к ответному урону."
   },
   {
     "id": 10175,
@@ -3582,11 +3904,15 @@
         "name": "阿哈利姆圣所",
         "en": "Aghanim's Sanctum",
         "text": "使你的塔恢复全部魔力。",
-        "cooldown": 1
+        "cooldown": 1,
+        "nameRu": "Святилище Аганима",
+        "textRu": "Полностью восстановите ману своей башни."
       }
     ],
     "art": "assets/cards/10175.webp",
-    "artist": "Lake Hurwitz"
+    "artist": "Lake Hurwitz",
+    "nameRu": "Святилище Аганима",
+    "textRu": "Активная способность (1): полностью восстановите ману своей башни."
   },
   {
     "id": 10176,
@@ -3614,11 +3940,15 @@
         "name": "脱逃路线",
         "en": "Escape Route",
         "text": "将一名友方英雄召回泉水。",
-        "cooldown": 1
+        "cooldown": 1,
+        "nameRu": "Путь отступления",
+        "textRu": "Верните союзного героя к фонтану."
       }
     ],
     "art": "assets/cards/10176.webp",
-    "artist": "Bayard Wu"
+    "artist": "Bayard Wu",
+    "nameRu": "Путь отступления",
+    "textRu": "Активная способность (1): верните союзного героя к фонтану."
   },
   {
     "id": 10177,
@@ -3643,7 +3973,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10177.webp",
-    "artist": "Tyler Jacobson"
+    "artist": "Tyler Jacobson",
+    "nameRu": "Штурмовые лестницы",
+    "textRu": "Союзники наносят на 2 больше урона при атаке башни."
   },
   {
     "id": 10178,
@@ -3668,7 +4000,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10178.webp",
-    "artist": "JiHun Lee"
+    "artist": "JiHun Lee",
+    "nameRu": "Великая схватка",
+    "textRu": "Если на этой линии есть союзный красный герой, все герои получают +2 к рассечению."
   },
   {
     "id": 10179,
@@ -3693,7 +4027,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10179.webp",
-    "artist": "Lius Lasahido"
+    "artist": "Lius Lasahido",
+    "nameRu": "Стальное укрепление",
+    "textRu": "Ваша башня получает +1 к броне."
   },
   {
     "id": 10180,
@@ -3721,11 +4057,15 @@
         "name": "信使之巢",
         "en": "Messenger Rookery",
         "text": "选择一个友方单位，为其选择一个战斗目标。",
-        "cooldown": 1
+        "cooldown": 1,
+        "nameRu": "Голубятня",
+        "textRu": "Выберите союзника и назначьте ему цель в бою."
       }
     ],
     "art": "assets/cards/10180.webp",
-    "artist": "Forrest Imel"
+    "artist": "Forrest Imel",
+    "nameRu": "Голубятня",
+    "textRu": "Активная способность (1): выберите союзника и назначьте ему цель в бою."
   },
   {
     "id": 10181,
@@ -3753,11 +4093,15 @@
         "name": "逃脱死亡",
         "en": "Cheating Death",
         "text": "本回合赋予一个单位死亡护盾；本路需要绿色友方英雄。",
-        "cooldown": 1
+        "cooldown": 1,
+        "nameRu": "Обмануть смерть",
+        "textRu": "Дайте юниту щит от смерти до конца раунда. Можно использовать, только если на этой линии есть союзный зелёный герой."
       }
     ],
     "art": "assets/cards/10181.webp",
-    "artist": "Daarken"
+    "artist": "Daarken",
+    "nameRu": "Обмануть смерть",
+    "textRu": "Активная способность (1): дайте юниту щит от смерти до конца раунда. Можно использовать, только если на этой линии есть союзный зелёный герой."
   },
   {
     "id": 10182,
@@ -3782,7 +4126,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10182.webp",
-    "artist": "Daarken"
+    "artist": "Daarken",
+    "nameRu": "Клятва",
+    "textRu": "Пока эта линия активна, вы не можете разыгрывать заклинания и крипов. Если здесь есть союзный чёрный герой, союзники получают +4 к атаке."
   },
   {
     "id": 10183,
@@ -3807,7 +4153,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10183.webp",
-    "artist": "Dimitar Marinski"
+    "artist": "Dimitar Marinski",
+    "nameRu": "Арена Омекса",
+    "textRu": "После гибели героя возьмите карту."
   },
   {
     "id": 10184,
@@ -3835,11 +4183,15 @@
         "name": "基恩炮塔",
         "en": "Keenfolk Turret",
         "text": "对一个单位造成2透甲伤害。",
-        "cooldown": 1
+        "cooldown": 1,
+        "nameRu": "Турель умельцев",
+        "textRu": "Нанесите юниту 2 чистого урона."
       }
     ],
     "art": "assets/cards/10184.webp",
-    "artist": "Robbie Trevino"
+    "artist": "Robbie Trevino",
+    "nameRu": "Турель умельцев",
+    "textRu": "Активная способность (1): нанесите юниту 2 чистого урона."
   },
   {
     "id": 10185,
@@ -3867,11 +4219,15 @@
         "name": "蒸汽大炮",
         "en": "Steam Cannon",
         "text": "对任意兵线上的一个单位造成4透甲伤害。",
-        "cooldown": 1
+        "cooldown": 1,
+        "nameRu": "Паровая пушка",
+        "textRu": "Нанесите юниту на любой линии 4 чистого урона."
       }
     ],
     "art": "assets/cards/10185.webp",
-    "artist": "Lake Hurwitz"
+    "artist": "Lake Hurwitz",
+    "nameRu": "Паровая пушка",
+    "textRu": "Активная способность (1): нанесите юниту на любой линии 4 чистого урона."
   },
   {
     "id": 10187,
@@ -3896,7 +4252,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10187.webp",
-    "artist": "Stepan Alekseev"
+    "artist": "Stepan Alekseev",
+    "nameRu": "Глиф смятения",
+    "textRu": "Когда любой юнит появляется на этой линии, оглушите его до конца раунда."
   },
   {
     "id": 10192,
@@ -3921,7 +4279,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10192.webp",
-    "artist": "John Stanko"
+    "artist": "John Stanko",
+    "nameRu": "Благословение Румуска",
+    "textRu": "Выберите линию. Союзники на ней навсегда получают +3 к здоровью."
   },
   {
     "id": 10193,
@@ -3946,7 +4306,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10193.webp",
-    "artist": "Chris Rallis"
+    "artist": "Chris Rallis",
+    "nameRu": "Зелёное убежище",
+    "textRu": "Союзники получают +1 к броне."
   },
   {
     "id": 10194,
@@ -3971,7 +4333,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10194.webp",
-    "artist": "Forrest Imel"
+    "artist": "Forrest Imel",
+    "nameRu": "Сторожевая башня",
+    "textRu": "Когда на этой линии появляется вражеское улучшение, возьмите карту."
   },
   {
     "id": 10202,
@@ -3999,11 +4363,15 @@
         "name": "刺客面纱",
         "en": "Assassin's Veil",
         "text": "为装备此物品的英雄选择一个战斗目标。",
-        "cooldown": 2
+        "cooldown": 2,
+        "nameRu": "Вуаль убийцы",
+        "textRu": "Назначьте экипированному герою цель в бою."
       }
     ],
     "art": "assets/cards/10202.webp",
-    "artist": "Pauline Voss"
+    "artist": "Pauline Voss",
+    "nameRu": "Вуаль убийцы",
+    "textRu": "Экипированный герой получает +4 к здоровью.\n\nАктивная способность (2): назначьте экипированному герою цель в бою."
   },
   {
     "id": 10203,
@@ -4031,11 +4399,15 @@
         "name": "相位鞋",
         "en": "Phase Boots",
         "text": "将装备此物品的英雄与另一个友方单位互换位置。",
-        "cooldown": 2
+        "cooldown": 2,
+        "nameRu": "Фазовые ботинки",
+        "textRu": "Поменяйте экипированного героя местами с другим союзником."
       }
     ],
     "art": "assets/cards/10203.webp",
-    "artist": "Pauline Voss"
+    "artist": "Pauline Voss",
+    "nameRu": "Фазовые ботинки",
+    "textRu": "Экипированный герой получает +4 к здоровью.\n\nАктивная способность (2): поменяйте экипированного героя местами с другим союзником."
   },
   {
     "id": 10205,
@@ -4060,7 +4432,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10205.webp",
-    "artist": "Suzanne Helmigh"
+    "artist": "Suzanne Helmigh",
+    "nameRu": "Плащ Стоунхолла",
+    "textRu": "Экипированный герой получает +4 к здоровью. После фазы боя плащ навсегда даёт экипированному герою ещё +2 к здоровью."
   },
   {
     "id": 10206,
@@ -4088,11 +4462,15 @@
         "name": "闪烁匕首",
         "en": "Blink Dagger",
         "text": "将装备此物品的英雄移至另一条兵线。",
-        "cooldown": 2
+        "cooldown": 2,
+        "nameRu": "Кинжал скачка",
+        "textRu": "Переместите экипированного героя на другую линию."
       }
     ],
     "art": "assets/cards/10206.webp",
-    "artist": "Pauline Voss"
+    "artist": "Pauline Voss",
+    "nameRu": "Кинжал скачка",
+    "textRu": "Экипированный герой получает +2 к атаке.\n\nАктивная способность (2): переместите экипированного героя на другую линию."
   },
   {
     "id": 10207,
@@ -4117,7 +4495,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10207.webp",
-    "artist": "JiHun Lee"
+    "artist": "JiHun Lee",
+    "nameRu": "Ревтельский перстень",
+    "textRu": "Экипированный герой получает +4 к здоровью. Награда за его убийство уменьшается на 3."
   },
   {
     "id": 10208,
@@ -4142,7 +4522,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10208.webp",
-    "artist": "Sam Carr"
+    "artist": "Sam Carr",
+    "nameRu": "Шипастый доспех",
+    "textRu": "Экипированный герой получает +1 к броне и +2 к ответному урону."
   },
   {
     "id": 10210,
@@ -4170,11 +4552,15 @@
         "name": "祛魔之槌",
         "en": "Demagicking Maul",
         "text": "惩处一个随机敌方强化。只能在装备此物品的英雄未受阻挡时使用。",
-        "cooldown": 1
+        "cooldown": 1,
+        "nameRu": "Молот рассеивания",
+        "textRu": "Уничтожьте случайное вражеское улучшение. Можно использовать, только если экипированный герой не заблокирован."
       }
     ],
     "art": "assets/cards/10210.webp",
-    "artist": "Lake Hurwitz"
+    "artist": "Lake Hurwitz",
+    "nameRu": "Молот рассеивания",
+    "textRu": "Экипированный герой получает +2 к атаке.\n\nАктивная способность (1): уничтожьте случайное вражеское улучшение. Можно использовать, только если экипированный герой не заблокирован."
   },
   {
     "id": 10211,
@@ -4199,7 +4585,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10211.webp",
-    "artist": "Forrest Imel"
+    "artist": "Forrest Imel",
+    "nameRu": "Сфера уничтожения",
+    "textRu": "Уничтожьте улучшение."
   },
   {
     "id": 10212,
@@ -4224,7 +4612,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10212.webp",
-    "artist": "Sam Carr"
+    "artist": "Sam Carr",
+    "nameRu": "Клинок дозора",
+    "textRu": "Экипированный герой получает +2 к атаке и +4 к рассечению."
   },
   {
     "id": 10213,
@@ -4249,7 +4639,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10213.webp",
-    "artist": "Pauline Voss"
+    "artist": "Pauline Voss",
+    "nameRu": "Меховая мантия",
+    "textRu": "Экипированный герой получает +8 к здоровью."
   },
   {
     "id": 10214,
@@ -4274,7 +4666,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10214.webp",
-    "artist": "Pauline Voss"
+    "artist": "Pauline Voss",
+    "nameRu": "Кольчуга",
+    "textRu": "Экипированный герой получает +2 к броне."
   },
   {
     "id": 10215,
@@ -4299,7 +4693,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10215.webp",
-    "artist": "Tommy Arnold"
+    "artist": "Tommy Arnold",
+    "nameRu": "Палаш",
+    "textRu": "Экипированный герой получает +4 к атаке."
   },
   {
     "id": 10216,
@@ -4324,7 +4720,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10216.webp",
-    "artist": "Pauline Voss"
+    "artist": "Pauline Voss",
+    "nameRu": "Золотой билет",
+    "textRu": "Получите случайный предмет из потайной лавки."
   },
   {
     "id": 10217,
@@ -4352,11 +4750,15 @@
         "name": "鲁姆斯克法袍",
         "en": "Rumusque Vestments",
         "text": "对一个单位进行4治疗。",
-        "cooldown": 2
+        "cooldown": 2,
+        "nameRu": "Облачение Румуска",
+        "textRu": "Восстановите юниту 4 здоровья."
       }
     ],
     "art": "assets/cards/10217.webp",
-    "artist": "Sara Winters"
+    "artist": "Sara Winters",
+    "nameRu": "Облачение Румуска",
+    "textRu": "Экипированный герой получает +1 к броне.\n\nАктивная способность (2): восстановите юниту 4 здоровья."
   },
   {
     "id": 10218,
@@ -4384,11 +4786,15 @@
         "name": "基恩火枪",
         "en": "Keenfolk Musket",
         "text": "对一个单位造成2伤害。",
-        "cooldown": 2
+        "cooldown": 2,
+        "nameRu": "Мушкет умельцев",
+        "textRu": "Нанесите юниту 2 урона."
       }
     ],
     "art": "assets/cards/10218.webp",
-    "artist": "Mobo Boehme"
+    "artist": "Mobo Boehme",
+    "nameRu": "Мушкет умельцев",
+    "textRu": "Экипированный герой получает +2 к атаке.\n\nАктивная способность (2): нанесите юниту 2 урона."
   },
   {
     "id": 10220,
@@ -4413,7 +4819,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10220.webp",
-    "artist": "Daarken"
+    "artist": "Daarken",
+    "nameRu": "Кольцо Тарраска",
+    "textRu": "Экипированный герой получает +4 к здоровью и +6 к регенерации."
   },
   {
     "id": 10222,
@@ -4441,11 +4849,15 @@
         "name": "牺牲背心",
         "en": "Bracers of Sacrifice",
         "text": "对装备此物品的英雄的敌方近邻造成6伤害，并惩处装备此物品的英雄。",
-        "cooldown": 1
+        "cooldown": 1,
+        "nameRu": "Наручи жертвоприношения",
+        "textRu": "Нанесите соседним с экипированным героем врагам 6 урона и уничтожьте этого героя."
       }
     ],
     "art": "assets/cards/10222.webp",
-    "artist": "Mark Winters"
+    "artist": "Mark Winters",
+    "nameRu": "Наручи жертвоприношения",
+    "textRu": "Экипированный герой получает +2 к броне.\n\nАктивная способность (1): нанесите соседним с экипированным героем врагам 6 урона и уничтожьте этого героя."
   },
   {
     "id": 10223,
@@ -4470,7 +4882,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10223.webp",
-    "artist": "Pauline Voss"
+    "artist": "Pauline Voss",
+    "nameRu": "Молот Красного Тумана",
+    "textRu": "Экипированный герой получает +2 к атаке и +5 к осаде."
   },
   {
     "id": 10224,
@@ -4498,11 +4912,15 @@
         "name": "支配头盔",
         "en": "Helm of the Dominator",
         "text": "控制一名敌方小兵。",
-        "cooldown": 2
+        "cooldown": 2,
+        "nameRu": "Шлем подчинителя",
+        "textRu": "Получите контроль над вражеским крипом."
       }
     ],
     "art": "assets/cards/10224.webp",
-    "artist": "Chris Welch"
+    "artist": "Chris Welch",
+    "nameRu": "Шлем подчинителя",
+    "textRu": "Экипированный герой получает +3 к броне.\n\nАктивная способность (2): получите контроль над вражеским крипом."
   },
   {
     "id": 10225,
@@ -4527,7 +4945,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10225.webp",
-    "artist": "Suzanne Helmigh"
+    "artist": "Suzanne Helmigh",
+    "nameRu": "Одеяние тирана",
+    "textRu": "Экипированный герой получает +3 к броне и быстрое развёртывание. Ваша башня получает +3 к броне."
   },
   {
     "id": 10226,
@@ -4555,11 +4975,15 @@
         "name": "折翼之锤",
         "en": "Wingfall Hammer",
         "text": "在本回合装备此物品的英雄及其友方近邻+X恢复，X为其攻击的一半。",
-        "cooldown": 1
+        "cooldown": 1,
+        "nameRu": "Молот павших крыльев",
+        "textRu": "Экипированный герой и соседние союзники получают +X к регенерации до конца раунда, где X — половина атаки героя."
       }
     ],
     "art": "assets/cards/10226.webp",
-    "artist": "JiHun Lee"
+    "artist": "JiHun Lee",
+    "nameRu": "Молот павших крыльев",
+    "textRu": "Экипированный герой получает +4 к атаке.\n\nАктивная способность (1): экипированный герой и соседние союзники получают +X к регенерации до конца раунда, где X — половина атаки героя."
   },
   {
     "id": 10230,
@@ -4584,7 +5008,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10230.webp",
-    "artist": "Christine Choi"
+    "artist": "Christine Choi",
+    "nameRu": "Эмблема Ристула",
+    "textRu": "Экипированный герой получает +4 к здоровью и −2 к броне. Блокирующий его юнит получает −2 к броне."
   },
   {
     "id": 10231,
@@ -4609,7 +5035,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10231.webp",
-    "artist": "Daarken"
+    "artist": "Daarken",
+    "nameRu": "Плащ нескончаемой резни",
+    "textRu": "Экипированный герой получает +8 к здоровью. После гибели соседнего союзника возьмите карту."
   },
   {
     "id": 10232,
@@ -4634,7 +5062,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10232.webp",
-    "artist": "Magali Villeneuve"
+    "artist": "Magali Villeneuve",
+    "nameRu": "Щит серафима",
+    "textRu": "Экипированный герой получает +2 к броне. Все юниты получают −2 к атаке."
   },
   {
     "id": 10234,
@@ -4659,7 +5089,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10234.webp",
-    "artist": "Pauline Voss"
+    "artist": "Pauline Voss",
+    "nameRu": "Браконьерский нож",
+    "textRu": "Экипированный герой получает +2 к атаке. После гибели вражеского героя получите 5 золота, а после гибели вражеского крипа — 1 золота."
   },
   {
     "id": 10235,
@@ -4687,11 +5119,15 @@
         "name": "亡者之书",
         "en": "Book of the Dead",
         "text": "每有1能量，召唤一具僵尸，并移除所有能量。",
-        "cooldown": 2
+        "cooldown": 2,
+        "nameRu": "Книга мёртвых",
+        "textRu": "Призовите Зомби за каждый заряд и снимите все заряды."
       }
     ],
     "art": "assets/cards/10235.webp",
-    "artist": "Pauline Voss"
+    "artist": "Pauline Voss",
+    "nameRu": "Книга мёртвых",
+    "textRu": "Экипированный герой получает +4 к здоровью. После гибели союзного Крипа ближнего боя добавьте книге один заряд.\n\nАктивная способность (2): призовите Зомби за каждый заряд и снимите все заряды."
   },
   {
     "id": 10236,
@@ -4716,7 +5152,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10236.webp",
-    "artist": "Pauline Voss"
+    "artist": "Pauline Voss",
+    "nameRu": "Плащ героя",
+    "textRu": "Экипированный герой получает +16 к здоровью."
   },
   {
     "id": 10237,
@@ -4741,7 +5179,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10237.webp",
-    "artist": "Sam Carr"
+    "artist": "Sam Carr",
+    "nameRu": "Латный доспех",
+    "textRu": "Экипированный герой получает +4 к броне."
   },
   {
     "id": 10238,
@@ -4766,7 +5206,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10238.webp",
-    "artist": "Tommy Arnold"
+    "artist": "Tommy Arnold",
+    "nameRu": "Клеймор",
+    "textRu": "Экипированный герой получает +8 к атаке."
   },
   {
     "id": 10241,
@@ -4791,7 +5233,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10241.webp",
-    "artist": "Magali Villeneuve"
+    "artist": "Magali Villeneuve",
+    "nameRu": "Песочные часы Клазурем",
+    "textRu": "Экипированный герой получает +4 к здоровью. Каждый раз, когда противник берёт карту, добавьте ей 1 блокировку, если экипированный герой находится на любой линии."
   },
   {
     "id": 10242,
@@ -4816,7 +5260,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10242.webp",
-    "artist": "Pauline Voss"
+    "artist": "Pauline Voss",
+    "nameRu": "Щит Базилиуса",
+    "textRu": "Экипированный герой получает +2 к броне. Соседние с ним союзники получают +1 к броне."
   },
   {
     "id": 10243,
@@ -4841,7 +5287,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10243.webp",
-    "artist": "Anastasia Ovchinnikova"
+    "artist": "Anastasia Ovchinnikova",
+    "nameRu": "Щит Аквилы",
+    "textRu": "Экипированный герой получает +2 к броне. Соседние с ним союзники получают +3 к броне."
   },
   {
     "id": 10248,
@@ -4869,11 +5317,15 @@
         "name": "希瓦的守护",
         "en": "Shiva's Guard",
         "text": "修改一个单位及其友方近邻，使其-2攻击。",
-        "cooldown": 2
+        "cooldown": 2,
+        "nameRu": "Страж Шивы",
+        "textRu": "Юнит и соседние с ним союзники навсегда получают −2 к атаке."
       }
     ],
     "art": "assets/cards/10248.webp",
-    "artist": "Magali Villeneuve"
+    "artist": "Magali Villeneuve",
+    "nameRu": "Страж Шивы",
+    "textRu": "Экипированный герой получает +2 к броне.\n\nАктивная способность (2): юнит и соседние с ним союзники навсегда получают −2 к атаке."
   },
   {
     "id": 10252,
@@ -4898,7 +5350,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10252.webp",
-    "artist": "Robbie Trevino"
+    "artist": "Robbie Trevino",
+    "nameRu": "Пика Стоунхолла",
+    "textRu": "Экипированный герой получает +2 к атаке. После фазы боя пика навсегда даёт экипированному герою ещё +1 к атаке."
   },
   {
     "id": 10253,
@@ -4923,7 +5377,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10253.webp",
-    "artist": "Pauline Voss"
+    "artist": "Pauline Voss",
+    "nameRu": "Латы Стоунхолла",
+    "textRu": "Экипированный герой получает +1 к броне. После фазы боя латы навсегда дают экипированному герою ещё +1 к броне."
   },
   {
     "id": 10255,
@@ -4948,7 +5404,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10255.webp",
-    "artist": "Lius Lasahido"
+    "artist": "Lius Lasahido",
+    "nameRu": "Купчая на лавку",
+    "textRu": "Стоимость каждого предмета в вашей потайной лавке уменьшается на его базовую стоимость."
   },
   {
     "id": 10256,
@@ -4973,7 +5431,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10256.webp",
-    "artist": "Pauline Voss"
+    "artist": "Pauline Voss",
+    "nameRu": "Яшмовые кинжалы",
+    "textRu": "Экипированный герой получает +2 к атаке и пробивание брони. При экипировке: снимите с героя эффекты противника."
   },
   {
     "id": 10259,
@@ -4998,7 +5458,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10259.webp",
-    "artist": "James Paick"
+    "artist": "James Paick",
+    "nameRu": "Латы умельцев",
+    "textRu": "Экипированный герой получает +1 к броне и ещё +1 за каждого атакующего его юнита. Атакующие его юниты получают −1 к броне."
   },
   {
     "id": 10260,
@@ -5026,11 +5488,15 @@
         "name": "领袖号角",
         "en": "Horn of the Alpha",
         "text": "召唤一个雷肤兽群。",
-        "cooldown": 2
+        "cooldown": 2,
+        "nameRu": "Рог вожака",
+        "textRu": "Призовите Стадо громошкуров."
       }
     ],
     "art": "assets/cards/10260.webp",
-    "artist": "Anastasia Ovchinnikova"
+    "artist": "Anastasia Ovchinnikova",
+    "nameRu": "Рог вожака",
+    "textRu": "Экипированный герой получает +4 к здоровью.\n\nАктивная способность (2): призовите Стадо громошкуров."
   },
   {
     "id": 10262,
@@ -5058,11 +5524,15 @@
         "name": "妮塔莎的守护",
         "en": "Nyctasha's Guard",
         "text": "将装备此物品的英雄的敌方近邻移至其他随机兵线。",
-        "cooldown": 1
+        "cooldown": 1,
+        "nameRu": "Страж Никташи",
+        "textRu": "Переместите соседних с экипированным героем врагов на случайные другие линии."
       }
     ],
     "art": "assets/cards/10262.webp",
-    "artist": "Forrest Imel"
+    "artist": "Forrest Imel",
+    "nameRu": "Страж Никташи",
+    "textRu": "Экипированный герой получает +1 к броне.\n\nАктивная способность (1): переместите соседних с экипированным героем врагов на случайные другие линии."
   },
   {
     "id": 10263,
@@ -5090,11 +5560,15 @@
         "name": "封神之刃",
         "en": "Apotheosis Blade",
         "text": "惩处敌方强化。惩处阻挡装备此物品的英雄的单位所装备的所有物品。",
-        "cooldown": 1
+        "cooldown": 1,
+        "nameRu": "Клинок апофеоза",
+        "textRu": "Уничтожьте вражеские улучшения и все предметы блокирующего героя юнита."
       }
     ],
     "art": "assets/cards/10263.webp",
-    "artist": "Kieran Yanner"
+    "artist": "Kieran Yanner",
+    "nameRu": "Клинок апофеоза",
+    "textRu": "Экипированный герой получает +8 к атаке и +4 к осаде. Уничтожайте каждого юнита, которому этот герой наносит боевой урон.\n\nАктивная способность (1): уничтожьте вражеские улучшения и все предметы блокирующего героя юнита."
   },
   {
     "id": 10142,
@@ -5119,7 +5593,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10142.webp",
-    "artist": "Magali Villeneuve"
+    "artist": "Magali Villeneuve",
+    "nameRu": "Едкий туман",
+    "textRu": "Уничтожьте все экипированные предметы."
   },
   {
     "id": 10191,
@@ -5144,7 +5620,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10191.webp",
-    "artist": "Robert Simon"
+    "artist": "Robert Simon",
+    "nameRu": "Разгром",
+    "textRu": "Вражеские герои у фонтана навсегда теряют половину своей атаки и получают эффект «Ваша башня получает −1 к мане»."
   },
   {
     "id": 10196,
@@ -5169,7 +5647,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10196.webp",
-    "artist": "Randy Vargas"
+    "artist": "Randy Vargas",
+    "nameRu": "…И мне одну",
+    "textRu": "Выберите героя. Добавьте в руку базовую копию случайного экипированного им предмета."
   },
   {
     "id": 10198,
@@ -5194,7 +5674,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10198.webp",
-    "artist": "Daarken"
+    "artist": "Daarken",
+    "nameRu": "Надвигающаяся буря",
+    "textRu": "Нанесите всем башням на всех линиях 2 урона."
   },
   {
     "id": 10267,
@@ -5219,7 +5701,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10267.webp",
-    "artist": "Joseph Meehan"
+    "artist": "Joseph Meehan",
+    "nameRu": "Астральное заключение",
+    "textRu": "Оглушите юнита и дайте ему неуязвимость к урону до конца раунда."
   },
   {
     "id": 10268,
@@ -5244,7 +5728,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10268.webp",
-    "artist": "Darek Zabrocki"
+    "artist": "Darek Zabrocki",
+    "nameRu": "Магнитный подрыв",
+    "textRu": "Нанесите вражеской башне урон, равный суммарной броне врагов."
   },
   {
     "id": 10270,
@@ -5269,7 +5755,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10270.webp",
-    "artist": "Kieran Yanner"
+    "artist": "Kieran Yanner",
+    "nameRu": "Скользящий выстрел",
+    "textRu": "Нанесите юниту на любой линии 2 урона."
   },
   {
     "id": 10272,
@@ -5294,7 +5782,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10272.webp",
-    "artist": "Forrest Imel"
+    "artist": "Forrest Imel",
+    "nameRu": "Ликвидация",
+    "textRu": "Нанесите юниту на любой линии 10 чистого урона."
   },
   {
     "id": 10273,
@@ -5319,7 +5809,9 @@
     "initiative": true,
     "abilities": [],
     "art": "assets/cards/10273.webp",
-    "artist": "Daarken"
+    "artist": "Daarken",
+    "nameRu": "Стрельба от бедра",
+    "textRu": "Нанесите юниту 4 урона. Получите инициативу."
   },
   {
     "id": 10274,
@@ -5344,7 +5836,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10274.webp",
-    "artist": "Kieran Yanner"
+    "artist": "Kieran Yanner",
+    "nameRu": "Аура остановки сердца",
+    "textRu": "Чёрный герой навсегда получает эффект «Перед фазой действий нанесите соседним с этим героем врагам 2 чистого урона»."
   },
   {
     "id": 10275,
@@ -5369,7 +5863,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10275.webp",
-    "artist": "Stepan Alekseev"
+    "artist": "Stepan Alekseev",
+    "nameRu": "Похищение маны",
+    "textRu": "Вражеская башня получает −2 к мане, а ваша башня — +2 к мане до конца раунда."
   },
   {
     "id": 10277,
@@ -5394,7 +5890,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10277.webp",
-    "artist": "Stepan Alekseev"
+    "artist": "Stepan Alekseev",
+    "nameRu": "Обморожение",
+    "textRu": "Нанесите юниту 2 урона и обезоружьте его до конца раунда."
   },
   {
     "id": 10278,
@@ -5419,7 +5917,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10278.webp",
-    "artist": "David Palumbo"
+    "artist": "David Palumbo",
+    "nameRu": "Гнев громовержца",
+    "textRu": "Нанесите каждому вражескому герою на всех линиях 4 чистого урона."
   },
   {
     "id": 10280,
@@ -5444,7 +5944,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10280.webp",
-    "artist": "Magali Villeneuve"
+    "artist": "Magali Villeneuve",
+    "nameRu": "Усиление",
+    "textRu": "Юнит навсегда получает +3 к атаке и +3 к рассечению."
   },
   {
     "id": 10281,
@@ -5469,7 +5971,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10281.webp",
-    "artist": "Stepan Alekseev"
+    "artist": "Stepan Alekseev",
+    "nameRu": "Ионная оболочка",
+    "textRu": "Юнит навсегда получает +3 к ответному урону."
   },
   {
     "id": 10282,
@@ -5494,7 +5998,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10282.webp",
-    "artist": "Forrest Imel"
+    "artist": "Forrest Imel",
+    "nameRu": "Неистовство",
+    "textRu": "Красный герой получает +4 к атаке и +4 к броне до конца раунда."
   },
   {
     "id": 10287,
@@ -5519,7 +6025,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10287.webp",
-    "artist": "Chase Stone"
+    "artist": "Chase Stone",
+    "nameRu": "Афотический щит",
+    "textRu": "Снимите с юнита эффекты противника. Юнит получает +2 к броне и +2 к ответному урону до конца раунда."
   },
   {
     "id": 10288,
@@ -5544,7 +6052,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10288.webp",
-    "artist": "Tyler Jacobson"
+    "artist": "Tyler Jacobson",
+    "nameRu": "Зов берсерка",
+    "textRu": "Выберите союзного красного героя. Он сражается с соседними врагами."
   },
   {
     "id": 10289,
@@ -5569,7 +6079,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10289.webp",
-    "artist": "Lake Hurwitz"
+    "artist": "Lake Hurwitz",
+    "nameRu": "Кровавая ярость",
+    "textRu": "Наложите на юнита безмолвие и дайте ему +4 к атаке до конца раунда."
   },
   {
     "id": 10290,
@@ -5594,7 +6106,9 @@
     "initiative": true,
     "abilities": [],
     "art": "assets/cards/10290.webp",
-    "artist": "Daarken"
+    "artist": "Daarken",
+    "nameRu": "Панцирь кракена",
+    "textRu": "Красный герой навсегда получает +1 к броне. Получите инициативу."
   },
   {
     "id": 10291,
@@ -5619,7 +6133,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10291.webp",
-    "artist": "James Paick"
+    "artist": "James Paick",
+    "nameRu": "Марш машин",
+    "textRu": "Перед фазой действий, если на карте есть заряды, снимите один и нанесите вражеской башне и каждому врагу по 2 урона."
   },
   {
     "id": 10292,
@@ -5644,7 +6160,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10292.webp",
-    "artist": "Lius Lasahido"
+    "artist": "Lius Lasahido",
+    "nameRu": "Обоюдоострый удар",
+    "textRu": "Красный герой получает +8 к атаке и −8 к броне до конца раунда."
   },
   {
     "id": 10293,
@@ -5669,7 +6187,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10293.webp",
-    "artist": "Clint Cearley"
+    "artist": "Clint Cearley",
+    "nameRu": "Первобытный рёв",
+    "textRu": "Оглушите блокирующего союзного красного героя юнита до конца раунда. Переместите соседних с этим юнитом союзников на случайные другие линии."
   },
   {
     "id": 10294,
@@ -5694,7 +6214,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10294.webp",
-    "artist": "Lars Grant-West"
+    "artist": "Lars Grant-West",
+    "nameRu": "Укус Вайпера",
+    "textRu": "До своей гибели юнит получает эффект «Перед фазой действий этот юнит получает 2 чистого урона»."
   },
   {
     "id": 10295,
@@ -5719,7 +6241,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10295.webp",
-    "artist": "Alix Branwyn"
+    "artist": "Alix Branwyn",
+    "nameRu": "Магическое порицание",
+    "textRu": "Вражеская башня навсегда получает −1 к мане."
   },
   {
     "id": 10296,
@@ -5744,7 +6268,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10296.webp",
-    "artist": "JiHun Lee"
+    "artist": "JiHun Lee",
+    "nameRu": "Крутящаяся смерть",
+    "textRu": "Выберите союзного красного героя. Нанесите соседним с ним врагам 2 урона и дайте им −2 к атаке до конца раунда."
   },
   {
     "id": 10297,
@@ -5769,7 +6295,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10297.webp",
-    "artist": "Bayard Wu"
+    "artist": "Bayard Wu",
+    "nameRu": "Оборонительная стойка",
+    "textRu": "Герой получает +3 к броне до конца раунда."
   },
   {
     "id": 10298,
@@ -5794,7 +6322,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10298.webp",
-    "artist": "JiHun Lee"
+    "artist": "JiHun Lee",
+    "nameRu": "Затерянные во времени",
+    "textRu": "Добавьте трём случайным картам в руке противника по 3 блокировки."
   },
   {
     "id": 10299,
@@ -5819,7 +6349,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10299.webp",
-    "artist": "Svetlin Velinov"
+    "artist": "Svetlin Velinov",
+    "nameRu": "Защита слабых",
+    "textRu": "Юнит навсегда получает эффект «Соседние с этим юнитом союзники получают +2 к броне»."
   },
   {
     "id": 10300,
@@ -5844,7 +6376,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10300.webp",
-    "artist": "Magali Villeneuve"
+    "artist": "Magali Villeneuve",
+    "nameRu": "Боевая подготовка",
+    "textRu": "Герой навсегда получает +2 к атаке."
   },
   {
     "id": 10302,
@@ -5869,7 +6403,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10302.webp",
-    "artist": "JiHun Lee"
+    "artist": "JiHun Lee",
+    "nameRu": "Самосаботаж",
+    "textRu": "Две случайные карты в руке противника навсегда получают эффект «Нанесите случайной союзной башне на любой линии 6 урона»."
   },
   {
     "id": 10303,
@@ -5894,7 +6430,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10303.webp",
-    "artist": "Forrest Imel"
+    "artist": "Forrest Imel",
+    "nameRu": "Громкий рёв",
+    "textRu": "Переместите крипа на случайную другую линию."
   },
   {
     "id": 10305,
@@ -5919,7 +6457,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10305.webp",
-    "artist": "Mike Azevedo"
+    "artist": "Mike Azevedo",
+    "nameRu": "Сравнять с землёй",
+    "textRu": "Уничтожьте все вражеские улучшения."
   },
   {
     "id": 10306,
@@ -5944,7 +6484,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10306.webp",
-    "artist": "JiHun Lee"
+    "artist": "JiHun Lee",
+    "nameRu": "Сокрушить оборону!",
+    "textRu": "Уничтожьте улучшение. Возьмите карту."
   },
   {
     "id": 10307,
@@ -5969,7 +6511,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10307.webp",
-    "artist": "Magali Villeneuve"
+    "artist": "Magali Villeneuve",
+    "nameRu": "Предвидение",
+    "textRu": "Возьмите 2 карты."
   },
   {
     "id": 10308,
@@ -5994,7 +6538,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10308.webp",
-    "artist": "Greg Opalinski"
+    "artist": "Greg Opalinski",
+    "nameRu": "Удар милосердия",
+    "textRu": "Сбросьте случайную карту. Уничтожьте героя."
   },
   {
     "id": 10310,
@@ -6019,7 +6565,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10310.webp",
-    "artist": ""
+    "artist": "",
+    "nameRu": "Катапульта оглоди",
+    "textRu": "Перед фазой действий нанесите вражеской башне 2 чистого урона."
   },
   {
     "id": 10311,
@@ -6044,7 +6592,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10311.webp",
-    "artist": "Robert Simon"
+    "artist": "Robert Simon",
+    "nameRu": "Вооружить восстание",
+    "textRu": "Союзные крипы навсегда получают +2 к атаке и +1 к броне."
   },
   {
     "id": 10312,
@@ -6069,7 +6619,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10312.webp",
-    "artist": "Daarken"
+    "artist": "Daarken",
+    "nameRu": "Штурмовой обстрел",
+    "textRu": "Нанесите каждому вражескому крипу 2 урона."
   },
   {
     "id": 10313,
@@ -6094,7 +6646,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10313.webp",
-    "artist": "Magali Villeneuve"
+    "artist": "Magali Villeneuve",
+    "nameRu": "Готовность к удару",
+    "textRu": "Красный герой получает +4 к атаке до конца раунда."
   },
   {
     "id": 10314,
@@ -6119,7 +6673,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10314.webp",
-    "artist": "Forrest Imel"
+    "artist": "Forrest Imel",
+    "nameRu": "Грязные делишки",
+    "textRu": "Нанесите вражеской башне 2 урона за каждое её улучшение."
   },
   {
     "id": 10315,
@@ -6144,7 +6700,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10315.webp",
-    "artist": "Titus Lunter"
+    "artist": "Titus Lunter",
+    "nameRu": "Аннигиляция",
+    "textRu": "Уничтожьте всех юнитов."
   },
   {
     "id": 10316,
@@ -6169,7 +6727,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10316.webp",
-    "artist": "Lius Lasahido"
+    "artist": "Lius Lasahido",
+    "nameRu": "Найти слабость",
+    "textRu": "Герой и соседние с ним союзники получают пробивание брони до конца раунда. Возьмите карту."
   },
   {
     "id": 10317,
@@ -6194,7 +6754,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10317.webp",
-    "artist": "Magali Villeneuve"
+    "artist": "Magali Villeneuve",
+    "nameRu": "Проклятие увядания",
+    "textRu": "Вражеские герои навсегда получают −2 к атаке."
   },
   {
     "id": 10318,
@@ -6219,7 +6781,9 @@
     "initiative": true,
     "abilities": [],
     "art": "assets/cards/10318.webp",
-    "artist": "Wisnu Tan"
+    "artist": "Wisnu Tan",
+    "nameRu": "Цепной мороз",
+    "textRu": "Нанесите юниту 3 урона. Повторите 7 раз: нанесите 3 урона случайному юниту слева или справа от предыдущей цели. Получите инициативу."
   },
   {
     "id": 10319,
@@ -6244,7 +6808,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10319.webp",
-    "artist": "Jana Schirmer"
+    "artist": "Jana Schirmer",
+    "nameRu": "Дьявольское откровение",
+    "textRu": "Возьмите 2 карты. Нанесите союзникам на всех линиях 2 урона."
   },
   {
     "id": 10322,
@@ -6269,7 +6835,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10322.webp",
-    "artist": "JiHun Lee"
+    "artist": "JiHun Lee",
+    "nameRu": "День получки",
+    "textRu": "Удвойте своё золото."
   },
   {
     "id": 10323,
@@ -6294,7 +6862,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10323.webp",
-    "artist": "Forrest Imel"
+    "artist": "Forrest Imel",
+    "nameRu": "Эхо-удар",
+    "textRu": "Нанесите каждому врагу урон, равный числу врагов."
   },
   {
     "id": 10324,
@@ -6319,7 +6889,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10324.webp",
-    "artist": "Magali Villeneuve"
+    "artist": "Magali Villeneuve",
+    "nameRu": "Защита железной ветви",
+    "textRu": "Юнит на любой линии получает +3 к броне до конца своей следующей фазы боя."
   },
   {
     "id": 10325,
@@ -6344,7 +6916,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10325.webp",
-    "artist": "Lake Hurwitz"
+    "artist": "Lake Hurwitz",
+    "nameRu": "Охота на слабых",
+    "textRu": "Призовите Пса войны за каждого раненого юнита."
   },
   {
     "id": 10326,
@@ -6369,7 +6943,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10326.webp",
-    "artist": "JiHun Lee"
+    "artist": "JiHun Lee",
+    "nameRu": "Хватит магии!",
+    "textRu": "Перейдите к фазе боя."
   },
   {
     "id": 10327,
@@ -6394,7 +6970,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10327.webp",
-    "artist": "JiHun Lee"
+    "artist": "JiHun Lee",
+    "nameRu": "Героическая решимость",
+    "textRu": "Красный герой навсегда получает эффект «После розыгрыша карты стоимостью не больше 2, кроме предметов, этот герой навсегда получает +2 к здоровью»."
   },
   {
     "id": 10328,
@@ -6419,7 +6997,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10328.webp",
-    "artist": "Yongjae Choi"
+    "artist": "Yongjae Choi",
+    "nameRu": "Ганг",
+    "textRu": "Выберите союзного чёрного героя и другого юнита на любой линии. Они сражаются друг с другом."
   },
   {
     "id": 10330,
@@ -6444,7 +7024,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10330.webp",
-    "artist": "Yongjae Choi"
+    "artist": "Yongjae Choi",
+    "nameRu": "Божья сила",
+    "textRu": "Красный герой навсегда получает +4 к атаке."
   },
   {
     "id": 10331,
@@ -6469,7 +7051,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10331.webp",
-    "artist": "Mike Azevedo"
+    "artist": "Mike Azevedo",
+    "nameRu": "Гнев золота",
+    "textRu": "Потратьте всё золото. За каждую потраченную монету нанесите случайному союзнику или врагу 4 урона."
   },
   {
     "id": 10332,
@@ -6494,7 +7078,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10332.webp",
-    "artist": "Kieran Yanner"
+    "artist": "Kieran Yanner",
+    "nameRu": "План убийства",
+    "textRu": "Чёрный герой получает +8 к атаке до конца раунда. Назначьте ему цель в бою."
   },
   {
     "id": 10334,
@@ -6519,7 +7105,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10334.webp",
-    "artist": "John Stanko"
+    "artist": "John Stanko",
+    "nameRu": "Парад звёзд",
+    "textRu": "Ваша башня получает +3 к мане до конца раунда."
   },
   {
     "id": 10335,
@@ -6544,7 +7132,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10335.webp",
-    "artist": "Mike Azevedo"
+    "artist": "Mike Azevedo",
+    "nameRu": "Призвать резервы",
+    "textRu": "Призовите двух Крипов ближнего боя на любую линию."
   },
   {
     "id": 10336,
@@ -6569,7 +7159,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10336.webp",
-    "artist": "Lake Hurwitz"
+    "artist": "Lake Hurwitz",
+    "nameRu": "Лучше поздно, чем никогда",
+    "textRu": "Призовите Крипа ближнего боя на любую линию."
   },
   {
     "id": 10338,
@@ -6594,7 +7186,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10338.webp",
-    "artist": "Wisnu Tan"
+    "artist": "Wisnu Tan",
+    "nameRu": "Божественное вмешательство",
+    "textRu": "Союзники получают неуязвимость к урону до конца раунда."
   },
   {
     "id": 10339,
@@ -6619,7 +7213,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10339.webp",
-    "artist": "Livia Prima"
+    "artist": "Livia Prima",
+    "nameRu": "Порыв ветра",
+    "textRu": "Наложите безмолвие на вражеского героя и соседних с ним союзников до конца раунда."
   },
   {
     "id": 10340,
@@ -6644,7 +7240,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10340.webp",
-    "artist": "Clint Cearley"
+    "artist": "Clint Cearley",
+    "nameRu": "Рука бога",
+    "textRu": "Полностью исцелите всех союзников и дайте им неуязвимость к урону до конца раунда."
   },
   {
     "id": 10341,
@@ -6669,7 +7267,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10341.webp",
-    "artist": "Bayard Wu"
+    "artist": "Bayard Wu",
+    "nameRu": "Дуэль",
+    "textRu": "Выберите союзного красного героя и другого юнита. Они сражаются друг с другом."
   },
   {
     "id": 10342,
@@ -6694,7 +7294,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10342.webp",
-    "artist": "JiHun Lee"
+    "artist": "JiHun Lee",
+    "nameRu": "Напроситься на драку",
+    "textRu": "Выберите союзного героя. Он провоцирует врагов. Назначьте ему цель в бою."
   },
   {
     "id": 10344,
@@ -6719,7 +7321,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10344.webp",
-    "artist": "Bayard Wu"
+    "artist": "Bayard Wu",
+    "nameRu": "Очистить палубу",
+    "textRu": "Союзные герои получают +4 к рассечению до конца раунда."
   },
   {
     "id": 10347,
@@ -6744,7 +7348,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10347.webp",
-    "artist": "Jana Schirmer"
+    "artist": "Jana Schirmer",
+    "nameRu": "Защитное цветение",
+    "textRu": "Призовите две Стены Розолесья."
   },
   {
     "id": 10348,
@@ -6769,7 +7375,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10348.webp",
-    "artist": "Sam Carr"
+    "artist": "Sam Carr",
+    "nameRu": "Благоволение Всевидящего",
+    "textRu": "Зелёный герой навсегда получает эффект «Союзники получают +2 к регенерации»."
   },
   {
     "id": 10349,
@@ -6794,7 +7402,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10349.webp",
-    "artist": "JiHun Lee"
+    "artist": "JiHun Lee",
+    "nameRu": "Нарастающий гнев",
+    "textRu": "Красный герой навсегда получает эффект «После розыгрыша карты стоимостью не больше 2, кроме предметов, этот герой навсегда получает +1 к атаке»."
   },
   {
     "id": 10350,
@@ -6819,7 +7429,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10350.webp",
-    "artist": "Wisnu Tan"
+    "artist": "Wisnu Tan",
+    "nameRu": "Подлый удар",
+    "textRu": "Оглушите блокирующего союзного красного героя юнита до конца раунда. Нанесите этому юниту 2 урона."
   },
   {
     "id": 10352,
@@ -6844,7 +7456,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10352.webp",
-    "artist": "Daniel Romanovsky"
+    "artist": "Daniel Romanovsky",
+    "nameRu": "Удар молнии",
+    "textRu": "Нанесите вражеской башне 6 урона."
   },
   {
     "id": 10353,
@@ -6869,7 +7483,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10353.webp",
-    "artist": "Daniel Romanovsky"
+    "artist": "Daniel Romanovsky",
+    "nameRu": "Молния Дамокла",
+    "textRu": "Нанесите вражеской башне 20 урона."
   },
   {
     "id": 10354,
@@ -6894,7 +7510,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10354.webp",
-    "artist": "Randy Vargas"
+    "artist": "Randy Vargas",
+    "nameRu": "Точный выстрел",
+    "textRu": "Нанесите юниту на любой линии 4 урона."
   },
   {
     "id": 10355,
@@ -6919,7 +7537,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10355.webp",
-    "artist": "Svetlin Velinov"
+    "artist": "Svetlin Velinov",
+    "nameRu": "Пространственный портал",
+    "textRu": "Призовите трёх Крипов ближнего боя."
   },
   {
     "id": 10358,
@@ -6944,7 +7564,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10358.webp",
-    "artist": "Darkken"
+    "artist": "Darkken",
+    "nameRu": "Восстановительные работы",
+    "textRu": "Восстановите своей башне 8 здоровья."
   },
   {
     "id": 10359,
@@ -6969,7 +7591,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10359.webp",
-    "artist": "Sung Choi"
+    "artist": "Sung Choi",
+    "nameRu": "Выиграть время",
+    "textRu": "Добавьте двум случайным картам в руке противника по 2 блокировки."
   },
   {
     "id": 10360,
@@ -6994,7 +7618,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10360.webp",
-    "artist": "Darek Zabrocki"
+    "artist": "Darek Zabrocki",
+    "nameRu": "Дружественный огонь",
+    "textRu": "Выберите двух врагов. Они сражаются друг с другом."
   },
   {
     "id": 10361,
@@ -7019,7 +7645,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10361.webp",
-    "artist": "Wisnu Tan"
+    "artist": "Wisnu Tan",
+    "nameRu": "Согласованная атака",
+    "textRu": "Чёрный герой навсегда получает эффект «После розыгрыша чёрной карты этот герой и соседние с ним союзники получают +2 к атаке до конца раунда»."
   },
   {
     "id": 10365,
@@ -7044,7 +7672,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10365.webp",
-    "artist": "Forrest Imel"
+    "artist": "Forrest Imel",
+    "nameRu": "Обманный манёвр",
+    "textRu": "Поменяйте союзника местами с одним из соседних с ним союзников."
   },
   {
     "id": 10366,
@@ -7069,7 +7699,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10366.webp",
-    "artist": "Robert Simon"
+    "artist": "Robert Simon",
+    "nameRu": "Новые приказы",
+    "textRu": "Выберите союзника и назначьте ему цель в бою."
   },
   {
     "id": 10367,
@@ -7094,7 +7726,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10367.webp",
-    "artist": "Forrest Imel"
+    "artist": "Forrest Imel",
+    "nameRu": "Разорвать броню",
+    "textRu": "Юнит навсегда теряет броню в количестве, равном его текущей броне."
   },
   {
     "id": 10368,
@@ -7119,7 +7753,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10368.webp",
-    "artist": "Livia Prima"
+    "artist": "Livia Prima",
+    "nameRu": "Благословение Авернуса",
+    "textRu": "Юнит навсегда получает +2 к атаке."
   },
   {
     "id": 10370,
@@ -7144,7 +7780,9 @@
     "initiative": true,
     "abilities": [],
     "art": "assets/cards/10370.webp",
-    "artist": "Forrest Imel"
+    "artist": "Forrest Imel",
+    "nameRu": "Сквозь боль",
+    "textRu": "Красный герой получает +2 к броне до конца раунда. Получите инициативу."
   },
   {
     "id": 10373,
@@ -7169,7 +7807,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10373.webp",
-    "artist": "Jana Schirmer"
+    "artist": "Jana Schirmer",
+    "nameRu": "Душа весны",
+    "textRu": "Герой навсегда получает эффект «После розыгрыша зелёной карты этот герой и соседние с ним союзники получают +4 к регенерации до конца раунда»."
   },
   {
     "id": 10374,
@@ -7194,7 +7834,9 @@
     "initiative": true,
     "abilities": [],
     "art": "assets/cards/10374.webp",
-    "artist": "Alix Branwyn"
+    "artist": "Alix Branwyn",
+    "nameRu": "Магический натиск",
+    "textRu": "Нанесите вражеской башне 2 урона. Возьмите карту. Получите инициативу."
   },
   {
     "id": 10376,
@@ -7219,7 +7861,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10376.webp",
-    "artist": "Jason Kang"
+    "artist": "Jason Kang",
+    "nameRu": "Дистанционный подрыв",
+    "textRu": "Нанесите 5 урона каждому врагу напротив свободной боевой позиции."
   },
   {
     "id": 10377,
@@ -7244,7 +7888,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10377.webp",
-    "artist": "Magali Villeneuve"
+    "artist": "Magali Villeneuve",
+    "nameRu": "Туман войны",
+    "textRu": "Каждый враг с вероятностью 50% обезоруживается до конца раунда."
   },
   {
     "id": 10378,
@@ -7269,7 +7915,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10378.webp",
-    "artist": "Kieran Yanner"
+    "artist": "Kieran Yanner",
+    "nameRu": "Божественное предназначение",
+    "textRu": "Юнит навсегда получает неуязвимость к урону."
   },
   {
     "id": 10379,
@@ -7294,7 +7942,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10379.webp",
-    "artist": "Bayard Wu"
+    "artist": "Bayard Wu",
+    "nameRu": "Запугивание",
+    "textRu": "Переместите юнита на случайную другую линию."
   },
   {
     "id": 10382,
@@ -7319,7 +7969,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10382.webp",
-    "artist": "John Stanko"
+    "artist": "John Stanko",
+    "nameRu": "Обряд очищения",
+    "textRu": "Снимите с героя эффекты противника."
   },
   {
     "id": 10385,
@@ -7344,7 +7996,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10385.webp",
-    "artist": "James Paick"
+    "artist": "James Paick",
+    "nameRu": "Знамёна Тресдин",
+    "textRu": "Красный герой навсегда получает эффект «После розыгрыша красной карты этот герой и соседние с ним союзники получают +1 к атаке и +1 к броне до конца раунда»."
   },
   {
     "id": 10391,
@@ -7369,7 +8023,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10391.webp",
-    "artist": "Lake Hurwitz"
+    "artist": "Lake Hurwitz",
+    "nameRu": "Принуждение",
+    "textRu": "Выберите юнита и назначьте ему цель в бою. Возьмите карту."
   },
   {
     "id": 10396,
@@ -7394,7 +8050,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10396.webp",
-    "artist": "Forrest Imel"
+    "artist": "Forrest Imel",
+    "nameRu": "Застигнут врасплох",
+    "textRu": "Оглушите героя, пока он не экипирует предмет."
   },
   {
     "id": 10399,
@@ -7419,7 +8077,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10399.webp",
-    "artist": "Stepan Alekseev"
+    "artist": "Stepan Alekseev",
+    "nameRu": "Неустанная погоня",
+    "textRu": "Выберите юнита на другой линии. Переместите случайного союзного чёрного героя с этой линии на выбранную. Нанесите выбранному юниту 2 урона."
   },
   {
     "id": 10402,
@@ -7444,7 +8104,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10402.webp",
-    "artist": "JiHun Lee"
+    "artist": "JiHun Lee",
+    "nameRu": "Башенный обстрел",
+    "textRu": "Нанесите каждому врагу 2 урона."
   },
   {
     "id": 10403,
@@ -7469,7 +8131,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10403.webp",
-    "artist": "Darek Zabrocki"
+    "artist": "Darek Zabrocki",
+    "nameRu": "Кража силы",
+    "textRu": "Один юнит получает −4 к атаке, а другой — +4 к атаке до конца раунда."
   },
   {
     "id": 10404,
@@ -7494,7 +8158,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10404.webp",
-    "artist": "Michael Kommark"
+    "artist": "Michael Kommark",
+    "nameRu": "Под покровом ночи",
+    "textRu": "Переместите союзного чёрного героя на другую линию. Он получает +4 к атаке и +7 к осаде до конца своей следующей фазы боя."
   },
   {
     "id": 10410,
@@ -7519,7 +8185,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10410.webp",
-    "artist": "Jana Schirmer"
+    "artist": "Jana Schirmer",
+    "nameRu": "Умерщвление",
+    "textRu": "Уничтожьте крипа."
   },
   {
     "id": 10411,
@@ -7544,7 +8212,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10411.webp",
-    "artist": "Bayard Wu"
+    "artist": "Bayard Wu",
+    "nameRu": "Хитрый план",
+    "textRu": "Поменяйте юнита местами с одним из соседних с ним союзников. Возьмите карту."
   },
   {
     "id": 10412,
@@ -7569,7 +8239,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10412.webp",
-    "artist": "James Paick"
+    "artist": "James Paick",
+    "nameRu": "Гроза",
+    "textRu": "Нанесите каждому врагу 4 урона."
   },
   {
     "id": 10413,
@@ -7594,7 +8266,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10413.webp",
-    "artist": "Darek Zabrocki"
+    "artist": "Darek Zabrocki",
+    "nameRu": "Вперёд, в атаку!",
+    "textRu": "Союзники получают +2 к осаде до конца раунда и меняют свои цели в бою на юнита или башню прямо напротив них."
   },
   {
     "id": 10415,
@@ -7619,7 +8293,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10415.webp",
-    "artist": "JiHun Lee"
+    "artist": "JiHun Lee",
+    "nameRu": "Сопутствующий урон",
+    "textRu": "Чёрный герой навсегда получает +3 к осаде."
   },
   {
     "id": 10416,
@@ -7644,7 +8320,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10416.webp",
-    "artist": "E.M. Gist"
+    "artist": "E.M. Gist",
+    "nameRu": "Слежка",
+    "textRu": "Награда за убийство героя увеличивается на 10 до его гибели."
   },
   {
     "id": 10417,
@@ -7669,7 +8347,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10417.webp",
-    "artist": "James Paick"
+    "artist": "James Paick",
+    "nameRu": "Сработавшая ловушка",
+    "textRu": "Призовите двух Кентавров-охотников на любую линию."
   },
   {
     "id": 10418,
@@ -7694,7 +8374,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10418.webp",
-    "artist": "Daarken"
+    "artist": "Daarken",
+    "nameRu": "Чревовещание",
+    "textRu": "Выберите юнита. Он провоцирует врагов."
   },
   {
     "id": 10419,
@@ -7719,7 +8401,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10419.webp",
-    "artist": "JiHun Lee"
+    "artist": "JiHun Lee",
+    "nameRu": "Вязкая слизь",
+    "textRu": "Юнит навсегда получает −2 к броне."
   },
   {
     "id": 10420,
@@ -7744,7 +8428,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10420.webp",
-    "artist": "Chris Rahn"
+    "artist": "Chris Rahn",
+    "nameRu": "Акт неповиновения",
+    "textRu": "Наложите на юнита безмолвие до конца раунда."
   },
   {
     "id": 10421,
@@ -7769,7 +8455,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10421.webp",
-    "artist": "Daarken"
+    "artist": "Daarken",
+    "nameRu": "Калечащий удар",
+    "textRu": "Герой навсегда получает −2 к атаке."
   },
   {
     "id": 10422,
@@ -7794,7 +8482,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10422.webp",
-    "artist": "Daarken"
+    "artist": "Daarken",
+    "nameRu": "Шёпот безумия",
+    "textRu": "Оглушите врага и всех союзных героев на всех линиях до конца раунда."
   },
   {
     "id": 10424,
@@ -7819,7 +8509,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10424.webp",
-    "artist": "Livia Prima"
+    "artist": "Livia Prima",
+    "nameRu": "Любой ценой",
+    "textRu": "Нанесите каждому юниту 6 урона."
   },
   {
     "id": 10425,
@@ -7844,7 +8536,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10425.webp",
-    "artist": "Darek Zabrocki"
+    "artist": "Darek Zabrocki",
+    "nameRu": "Час триумфа",
+    "textRu": "Союзные герои навсегда получают +4 к атаке, броне, здоровью, рассечению, ответному урону и осаде."
   },
   {
     "id": 10536,
@@ -7869,7 +8563,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10536.webp",
-    "artist": "JiHun Lee"
+    "artist": "JiHun Lee",
+    "nameRu": "Дух бури",
+    "textRu": "Перегрузка · После розыгрыша чёрной карты на любой линии Дух бури получает +2 к атаке до конца своей следующей фазы боя."
   },
   {
     "id": 10538,
@@ -7894,7 +8590,9 @@
     "initiative": false,
     "abilities": [],
     "art": "assets/cards/10538.webp",
-    "artist": "JiHun Lee"
+    "artist": "JiHun Lee",
+    "nameRu": "Шаровая молния",
+    "textRu": "Переместите союзного чёрного героя на свободную боевую позицию на любой линии."
   },
   {
     "id": 90000,
@@ -7922,13 +8620,17 @@
         "name": "甲盾冲击",
         "en": "Shield Crash",
         "text": "跃起冲击，对正对及左右相邻的敌人各造成2点伤害。每个实际受伤的英雄提供2点护盾，小兵提供1点护盾；护盾吸收伤害，本回合有效。",
-        "cooldown": 1
+        "cooldown": 1,
+        "nameRu": "Удар щитом",
+        "textRu": "Подпрыгните и нанесите по 2 урона врагу напротив и соседним с ним врагам. Каждый герой, получивший урон, даёт 2 щита, а крип — 1. Щит поглощает урон и действует до конца раунда."
       }
     ],
     "art": "assets/dota2/pangolier.png",
     "artist": "Valve Corporation",
     "expansion": "dota2",
-    "aliases": "滚滚"
+    "aliases": "滚滚",
+    "nameRu": "Пангольер",
+    "textRu": "Удар щитом · Подпрыгните и нанесите по 2 урона врагу напротив и соседним с ним врагам. Каждый герой, получивший урон, даёт 2 щита, а крип — 1. Щит поглощает урон и действует до конца раунда."
   },
   {
     "id": 90001,
@@ -7954,7 +8656,9 @@
     "abilities": [],
     "art": "assets/dota2/pangolier_lucky_shot.png",
     "artist": "Valve Corporation",
-    "expansion": "dota2"
+    "expansion": "dota2",
+    "nameRu": "Удачный удар",
+    "textRu": "Нанесите врагу 2 урона. С вероятностью 50% обезоружьте его до конца раунда."
   },
   {
     "id": 90002,
@@ -7981,7 +8685,9 @@
     "art": "assets/dota2/pangolier_gyroshell.png",
     "artist": "Valve Corporation",
     "expansion": "dota2",
-    "requiredHero": "pangolier"
+    "requiredHero": "pangolier",
+    "nameRu": "Раскат грома",
+    "textRu": "Требуется способный действовать и не обездвиженный Пангольер на этой линии. Выберите свободную союзную позицию здесь. Пангольер сворачивается в шар и катится по случайной кривой, нанося по пути другим юнитам по 1 урона за столкновение, не больше двух раз каждому. Если рядом с раненым юнитом есть свободная позиция слева или справа, он случайно сдвигается на одну позицию. Конечная позиция остаётся свободной для Пангольера."
   },
   {
     "id": 90003,
@@ -8009,13 +8715,17 @@
         "name": "暗影之境",
         "en": "Shadow Realm",
         "text": "进入暗影之境，无法被攻击。下次攻击额外造成1点伤害，期间每使用一张与自身英雄颜色相同的卡牌再增加1点，额外伤害最多3点；攻击后结束。",
-        "cooldown": 2
+        "cooldown": 2,
+        "nameRu": "Царство теней",
+        "textRu": "Герой не может быть атакован. Следующая атака наносит на 1 больше урона; каждая сыгранная за это время карта цвета героя увеличивает прибавку ещё на 1, максимум до 3. Эффект заканчивается после атаки."
       }
     ],
     "art": "assets/dota2/dark_willow.png",
     "artist": "Valve Corporation",
     "expansion": "dota2",
-    "aliases": "花仙子 小仙女"
+    "aliases": "花仙子 小仙女",
+    "nameRu": "Тёмная ива",
+    "textRu": "Царство теней · Герой не может быть атакован. Следующая атака наносит на 1 больше урона; каждая сыгранная за это время карта цвета героя увеличивает прибавку ещё на 1, максимум до 3. Эффект заканчивается после атаки."
   },
   {
     "id": 90004,
@@ -8041,7 +8751,9 @@
     "abilities": [],
     "art": "assets/dota2/dark_willow_bramble_maze.png",
     "artist": "Valve Corporation",
-    "expansion": "dota2"
+    "expansion": "dota2",
+    "nameRu": "Терновый лабиринт",
+    "textRu": "Заполните все существующие свободные союзные позиции на этой линии Терновниками с 0 атаки и 1 здоровья. Они исчезают в начале следующего раунда. При атаке Терновник наносит атакующему 1 чистого урона и обездвиживает его до конца раунда: тот не может перемещаться, использовать Кинжал скачка или вернуться к фонтану."
   },
   {
     "id": 90005,
@@ -8068,7 +8780,9 @@
     "art": "assets/dota2/dark_willow_terrorize.png",
     "artist": "Valve Corporation",
     "expansion": "dota2",
-    "requiredHero": "dark_willow"
+    "requiredHero": "dark_willow",
+    "nameRu": "Ужас",
+    "textRu": "Призовите Джекса на выбранную союзную позицию этой линии. Он срабатывает и исчезает после следующего розыгрыша карты способности; сам призыв не считается. Нанесите врагу напротив 2 урона и обезоружьте его. Если в месте призыва есть Терновник, вместо этого нанесите 3 урона и переверните врага от страха до конца раунда. Перевёрнутого юнита нельзя выбрать целью, он не может колдовать, атаковать и подвергаться атакам. Герой напротив вместо этого наносит башне половину урона."
   },
   {
     "id": 90006,
@@ -8094,7 +8808,9 @@
     "abilities": [],
     "art": "assets/dota2/dark_willow_bramble_maze.png",
     "artist": "Valve Corporation",
-    "expansion": "dota2"
+    "expansion": "dota2",
+    "nameRu": "Терновник",
+    "textRu": "Существует до конца раунда. При атаке наносит атакующему 1 чистого урона и обездвиживает его на один раунд."
   },
   {
     "id": 90007,
@@ -8124,13 +8840,17 @@
         "en": "Primed Strike",
         "text": "被动：齐天大圣每次攻击获得1点能量。主动：消耗3点能量，对一个单位造成4点伤害；此后召唤的猴子猴孙永久+1攻击，可叠加。",
         "textEn": "Passive: gains 1 energy each time he attacks. Active: spend 3 energy to deal 4 damage to a unit; all Monkey Soldiers summoned afterwards gain +1 attack permanently (stacks).",
-        "cooldown": 0
+        "cooldown": 0,
+        "nameRu": "Заряженный удар",
+        "textRu": "За каждую атаку Король обезьян получает 1 энергию, которая сохраняется между раундами. Накопив не меньше 3 энергии, он может потратить 3 энергии и нанести юниту 4 урона. Все Обезьяны-воины, призванные после этого, навсегда получают +1 к атаке; эффект складывается."
       }
     ],
     "art": "assets/dota2/monkey_king.png",
     "artist": "Valve Corporation",
     "expansion": "dota2",
-    "aliases": "孙悟空 大圣 mk"
+    "aliases": "孙悟空 大圣 mk",
+    "nameRu": "Король обезьян",
+    "textRu": "Пассивно: за каждую атаку герой получает 1 энергию. Активно: потратьте 3 энергии и нанесите юниту 4 урона; все Обезьяны-воины, призванные после этого, навсегда получают +1 к атаке. Эффект складывается."
   },
   {
     "id": 90008,
@@ -8157,7 +8877,9 @@
     "art": "assets/dota2/monkey_king_wukongs_command.png",
     "artist": "Valve Corporation",
     "expansion": "dota2",
-    "requiredHero": "monkey_king"
+    "requiredHero": "monkey_king",
+    "nameRu": "Войско Вуконга",
+    "textRu": "Требуется способный действовать Король обезьян на этой линии. Заполните все свободные союзные позиции Обезьянами-воинами. Они не атакуют строения, исчезают после двух атак и не дают награды или эффектов гибели."
   },
   {
     "id": 90009,
@@ -8184,7 +8906,9 @@
     "art": "assets/dota2/monkey_king_tree_dance.png",
     "artist": "Valve Corporation",
     "expansion": "dota2",
-    "aliases": "丛林一跃 树舞 tree dance"
+    "aliases": "丛林一跃 树舞 tree dance",
+    "nameRu": "Ловкий манёвр",
+    "textRu": "Выберите союзного героя на этой линии, переместите его на свободную союзную позицию здесь и призовите Обезьяну-воина 1/1 на его прежнее место."
   },
   {
     "id": 90010,
@@ -8210,7 +8934,9 @@
     "abilities": [],
     "art": "assets/dota2/monkey_king_wukongs_command.png",
     "artist": "Valve Corporation",
-    "expansion": "dota2"
+    "expansion": "dota2",
+    "nameRu": "Обезьяна-воин",
+    "textRu": "Призванная Обезьяна-воин не атакует строения. После двух атак она немедленно исчезает, не давая награды и не вызывая эффектов гибели."
   },
   {
     "id": 90011,
@@ -8240,13 +8966,17 @@
         "en": "Blast Off",
         "text": "选择一个单位，造成等同于炸弹人当前生命值一半（向上取整）的透甲伤害；炸弹人受到同等数值的伤害，但生命最低维持1点。",
         "textEn": "Deal piercing damage to a unit equal to half of Techies' current health (rounded up); Techies takes the same amount but keeps at least 1 health.",
-        "cooldown": 2
+        "cooldown": 2,
+        "nameRu": "Взрывной прыжок",
+        "textRu": "Выберите юнита: нанесите ему чистый урон, равный половине текущего здоровья Подрывников с округлением вверх. Подрывники получают столько же урона, но сохраняют не меньше 1 здоровья."
       }
     ],
     "art": "assets/dota2/techies.png",
     "artist": "Valve Corporation",
     "expansion": "dota2",
-    "aliases": "炸弹 工程师 地精 techies"
+    "aliases": "炸弹 工程师 地精 techies",
+    "nameRu": "Подрывники",
+    "textRu": "Выберите юнита: нанесите ему чистый урон, равный половине текущего здоровья Подрывников с округлением вверх. Подрывники получают столько же урона, но сохраняют не меньше 1 здоровья."
   },
   {
     "id": 90012,
@@ -8272,7 +9002,9 @@
     "abilities": [],
     "art": "assets/dota2/techies_proximity_mines.png",
     "artist": "Valve Corporation",
-    "expansion": "dota2"
+    "expansion": "dota2",
+    "nameRu": "Мины близости",
+    "textRu": "Установите скрытую от врага мину под союзным юнитом на этой линии: не больше одной на юнита. Она автоматически взрывается, когда юнит становится целью вражеской карты или способности, погибает либо попадает под Реактивный разряд. Взрыв наносит каждому соседнему врагу 8 урона. Союзные заклинания и обычные атаки сами по себе не вызывают взрыв; взорвать мину вручную нельзя."
   },
   {
     "id": 90013,
@@ -8298,7 +9030,9 @@
     "abilities": [],
     "art": "assets/dota2/techies_reactive_tazer.png",
     "artist": "Valve Corporation",
-    "expansion": "dota2"
+    "expansion": "dota2",
+    "nameRu": "Реактивный разряд",
+    "textRu": "Обезоружьте случайного союзника и до двух случайных врагов на этой линии на один раунд. Если на обезоруженном союзнике установлена Мина близости, она взрывается."
   },
   {
     "id": 90014,
@@ -8328,13 +9062,17 @@
         "en": "Lil' Shredder",
         "text": "快速射击：对正对的1个敌方单位快速攻击3次，每次造成1点透甲伤害（无视护甲）。第5回合起升级：改为对正对的至多3个相邻敌方单位各快速攻击3次。",
         "textEn": "Rapidly attack the opposing unit 3 times for 1 piercing damage each, ignoring armor. From round 5 it hits up to 3 opposing neighbors.",
-        "cooldown": 2
+        "cooldown": 2,
+        "nameRu": "Маленький крошитель",
+        "textRu": "Трижды быстро атакуйте юнита напротив, нанося каждым попаданием 1 чистого урона, игнорирующего броню. С пятого раунда способность атакует до трёх соседних врагов напротив."
       }
     ],
     "art": "assets/dota2/snapfire.png",
     "artist": "Valve Corporation",
     "expansion": "dota2",
-    "aliases": "老太婆 老奶奶 饼干 火婆 snapfire"
+    "aliases": "老太婆 老奶奶 饼干 火婆 snapfire",
+    "nameRu": "Беатрикс",
+    "textRu": "Маленький крошитель · Трижды быстро атакуйте юнита напротив, нанося каждым попаданием 1 чистого урона, игнорирующего броню. С пятого раунда способность атакует до трёх соседних врагов напротив."
   },
   {
     "id": 90015,
@@ -8360,7 +9098,9 @@
     "abilities": [],
     "art": "assets/dota2/snapfire_firesnap_cookie.png",
     "artist": "Valve Corporation",
-    "expansion": "dota2"
+    "expansion": "dota2",
+    "nameRu": "Огненное печенье",
+    "textRu": "Накормите печеньем союзного юнита на этой линии: нанесите ему 2 чистого урона, переместите на одну позицию вперёд и оглушите врага напротив него до конца раунда. Юнит получает метку печенья до конца раунда."
   },
   {
     "id": 90016,
@@ -8386,7 +9126,9 @@
     "abilities": [],
     "art": "assets/dota2/snapfire_mortimer_kisses.png",
     "artist": "Valve Corporation",
-    "expansion": "dota2"
+    "expansion": "dota2",
+    "nameRu": "Поцелуи Мортимера",
+    "textRu": "Мортимер дважды плюёт лавой только на соседнюю линию. Каждый плевок выбирает там случайную цель и наносит ей и соседним с ней союзникам по 4 урона. Если на текущей линии есть юниты с меткой печенья, один случайный из них перебрасывается на случайную позицию выбранной линии. Требуется способный действовать красный герой на текущей линии."
   },
   {
     "id": 90017,
@@ -8416,13 +9158,17 @@
         "en": "Catchy Lick",
         "text": "驱散本路所有友方单位的负面状态（沉默、缴械、眩晕、恐惧翻牌、缠绕、中毒、减攻减甲等），每净化1个单位朗戈回复1点生命，并把友方单位拉向靠近朗戈的空位。每次使用青蛙能量+1（上限5点）。",
         "textEn": "Purge every allied unit in this lane of negative effects (silence, disarm, stun, fear-flip, root, poison, negative attack/armor). Heal Largo 1 per unit cleansed, then pull allies toward the empty slots beside him. Grants +1 Frog Energy per use (cap 5).",
-        "cooldown": 2
+        "cooldown": 2,
+        "nameRu": "Цепкий язык",
+        "textRu": "Снимите с каждого союзника на этой линии отрицательные эффекты: безмолвие, обезоруживание, оглушение, переворот от страха, обездвиживание, яд, снижение атаки и брони. Восстановите Ларго 1 здоровья за каждого очищенного юнита, затем притяните союзников к свободным позициям рядом с ним. Каждое применение даёт 1 лягушачью энергию, максимум 5."
       }
     ],
     "art": "assets/dota2/largo.png",
     "artist": "Valve Corporation",
     "expansion": "dota2",
-    "aliases": "青蛙 蛤蟆 蛙哥 舔一下 吸一下 largo"
+    "aliases": "青蛙 蛤蟆 蛙哥 舔一下 吸一下 largo",
+    "nameRu": "Ларго",
+    "textRu": "Снимите с каждого союзника на этой линии отрицательные эффекты: безмолвие, обезоруживание, оглушение, переворот от страха, обездвиживание, яд, снижение атаки и брони. Восстановите Ларго 1 здоровья за каждого очищенного юнита, затем притяните союзников к свободным позициям рядом с ним. Каждое применение даёт 1 лягушачью энергию, максимум 5."
   },
   {
     "id": 90018,
@@ -8448,7 +9194,9 @@
     "abilities": [],
     "art": "assets/dota2/largo_frogstomp.png",
     "artist": "Valve Corporation",
-    "expansion": "dota2"
+    "expansion": "dota2",
+    "nameRu": "Лягушачий топот",
+    "textRu": "Бросьте лягушку на сторону врага: она прыгает между вражескими юнитами на этой линии, нанося по 1 урона за прыжок. Базово делает 2 прыжка и ещё по одному за каждую накопленную лягушачью энергию. Расходует всю энергию; максимум энергии — 5."
   },
   {
     "id": 90019,
@@ -8475,6 +9223,8 @@
     "art": "assets/dota2/largo_amphibian_rhapsody.png",
     "artist": "Valve Corporation",
     "expansion": "dota2",
-    "aliases": "琴瑟和鸣 朗戈大招 和鸣 狂想曲"
+    "aliases": "琴瑟和鸣 朗戈大招 和鸣 狂想曲",
+    "nameRu": "Земноводная рапсодия",
+    "textRu": "Требуется способный действовать красный герой на этой линии. До конца раунда каждая следующая сыгранная карта, кроме предметов, вызывает резонанс: союзники на этой линии восстанавливают 1 здоровья и получают +1 к атаке до конца раунда, а враги получают 1 урона. Карта, направленная на самого Ларго, удваивает лечение и урон до 2. Пока звучит рапсодия, каждая гибель вражеского крипа даёт 1 лягушачью энергию, а героя — 2."
   }
 ]

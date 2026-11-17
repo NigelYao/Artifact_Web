@@ -48,6 +48,8 @@ patches={'axe':{'attack':6,'health':10},'bloodseeker':{'health':7},'blood_rage':
 for c in out:c.update(patches.get(c['key'],{}))
 from build_expansion_data import expansion_cards
 out.extend(expansion_cards())
+from localize_cards import localize_cards
+localize_cards(out)
 (root/'dist/data.js').write_text('/* Public Classic card metadata, localized client text and credited card art. */\nwindow.ARTIFACT_CARDS = '+json.dumps(out,ensure_ascii=False,separators=(',',':'))+';\n',encoding='utf8')
 (root/'dist/cards.json').write_text(json.dumps(out,ensure_ascii=False,indent=2),encoding='utf8')
 print('Generated',len(out),'cards;',sum(c['type']=='Hero' for c in out),'heroes')
